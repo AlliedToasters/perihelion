@@ -1,0 +1,773 @@
+/* ==========================================================================
+   Perihelion Ghost Theme — Dark, reading-focused design for serial fiction
+   ========================================================================== */
+
+:root {
+    --bg: #0d1117;
+    --bg-elevated: #161b22;
+    --bg-card: #1c2128;
+    --text: #c9d1d9;
+    --text-muted: #6b7280;
+    --text-bright: #e6edf3;
+    --accent: #e8913a;
+    --accent-dim: #6b3a0a;
+    --accent-glow: rgba(232, 145, 58, 0.15);
+    --border: #21262d;
+    --font-body: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+    --max-width: 680px;
+    --header-height: 56px;
+}
+
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.75;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--text-bright);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.site-main {
+    padding-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+}
+
+/* ==========================================================================
+   Site Header — Minimal, sticky
+   ========================================================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background: rgba(13, 17, 23, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.site-nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.site-title:hover {
+    color: var(--text-bright);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-links a {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+.nav-links a:hover {
+    color: var(--text);
+}
+
+/* ==========================================================================
+   Reading Progress Bar
+   ========================================================================== */
+
+.progress-bar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--accent);
+    z-index: 101;
+    transition: width 0.1s linear;
+}
+
+/* ==========================================================================
+   Hero / Landing
+   ========================================================================== */
+
+.hero {
+    text-align: center;
+    padding: 5rem 0 3rem;
+}
+
+.hero-title {
+    font-family: var(--font-ui);
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.hero-tagline {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+.hero-rule {
+    width: 60px;
+    height: 1px;
+    background: var(--accent-dim);
+    margin: 2.5rem auto 0;
+}
+
+/* ==========================================================================
+   Section Headings
+   ========================================================================== */
+
+.section-heading {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   Chapter List (Table of Contents)
+   ========================================================================== */
+
+.chapter-list-section {
+    margin-bottom: 4rem;
+}
+
+.chapter-list {
+    list-style: none;
+    counter-reset: none;
+}
+
+.chapter-card {
+    border-left: 2px solid var(--border);
+    transition: border-color 0.2s, background 0.2s;
+}
+.chapter-card:hover {
+    border-left-color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.chapter-card-link {
+    display: block;
+    padding: 1rem 0 1rem 1.5rem;
+    color: inherit;
+    text-decoration: none;
+}
+.chapter-card-link:hover {
+    color: inherit;
+}
+
+.chapter-card-number {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.2rem;
+}
+
+.chapter-card-title {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-bright);
+}
+
+.chapter-card-excerpt {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Updates Section (non-chapter posts)
+   ========================================================================== */
+
+.updates-section {
+    margin-bottom: 4rem;
+}
+
+.updates-list {
+    list-style: none;
+}
+
+.update-card a {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    color: inherit;
+    align-items: baseline;
+    border-bottom: 1px solid var(--border);
+}
+.update-card a:hover {
+    color: inherit;
+}
+.update-card a:hover .update-title {
+    color: var(--accent);
+}
+
+.update-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.update-title {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+/* ==========================================================================
+   Post (Chapter Reading View)
+   ========================================================================== */
+
+.post-container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.post-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-meta {
+    margin-bottom: 0.75rem;
+}
+
+.post-chapter-number {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.post-title {
+    font-family: var(--font-ui);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-bright);
+    line-height: 1.3;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+/* Post body — the main reading area */
+.post-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    color: var(--text-bright);
+    margin: 2.5rem 0 1rem;
+    line-height: 1.3;
+}
+
+.post-body h1 { font-size: 1.6rem; }
+.post-body h2 { font-size: 1.35rem; }
+.post-body h3 { font-size: 1.15rem; }
+
+.post-body p {
+    margin-bottom: 1.3rem;
+}
+
+.post-body hr {
+    border: none;
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--text-muted);
+}
+.post-body hr::before {
+    content: "\00b7  \00b7  \00b7";
+    letter-spacing: 0.5em;
+    font-size: 1.2rem;
+}
+
+.post-body blockquote {
+    border-left: 2px solid var(--accent-dim);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.post-body code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--bg-card);
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+}
+
+.post-body pre {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
+.post-body pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.post-body ul,
+.post-body ol {
+    margin: 1rem 0 1.3rem 1.5rem;
+}
+
+.post-body li {
+    margin-bottom: 0.4rem;
+}
+
+.post-body strong {
+    color: var(--text-bright);
+    font-weight: 600;
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Chapter Navigation
+   ========================================================================== */
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 1.5rem 0;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+}
+
+.chapter-nav-prev,
+.chapter-nav-next {
+    flex: 1;
+}
+
+.chapter-nav-home {
+    flex: 0 0 auto;
+    padding: 0 1rem;
+}
+
+.chapter-nav-next {
+    text-align: right;
+}
+
+.chapter-nav a {
+    color: var(--text-muted);
+}
+.chapter-nav a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Page Template (static pages)
+   ========================================================================== */
+
+.page-container {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.page-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-title {
+    font-family: var(--font-ui);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-bright);
+}
+
+.page-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+.page-body p { margin-bottom: 1.3rem; }
+.page-body h2 {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    margin: 2rem 0 1rem;
+}
+
+/* ==========================================================================
+   Tag & Author Archive Pages
+   ========================================================================== */
+
+.tag-header,
+.author-header {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.tag-title,
+.author-name {
+    font-family: var(--font-ui);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-bright);
+}
+
+.tag-description,
+.author-bio {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.tag-post a {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    color: inherit;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+}
+.tag-post a:hover .tag-post-title {
+    color: var(--accent);
+}
+
+.tag-post-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.tag-post-title {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+}
+
+.pagination a {
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+.pagination a:hover {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-text {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.footer-credit {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+.footer-credit a {
+    color: var(--text-muted);
+}
+.footer-credit a:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   Ghost Koenig Editor Cards
+   Required CSS classes for Ghost's built-in content cards.
+   ========================================================================== */
+
+.kg-width-wide {
+    max-width: 1040px;
+    margin-left: calc(50% - 520px);
+    margin-right: calc(50% - 520px);
+}
+
+.kg-width-full {
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+@media (max-width: 1080px) {
+    .kg-width-wide {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Gallery */
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    gap: 0.75rem;
+}
+
+.kg-gallery-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.kg-gallery-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Bookmark card */
+.kg-bookmark-card {
+    margin: 1.5rem 0;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+.kg-bookmark-container:hover {
+    border-color: var(--accent-dim);
+}
+
+.kg-bookmark-content {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.kg-bookmark-title {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-bright);
+    line-height: 1.4;
+}
+
+.kg-bookmark-description {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+    max-height: 3rem;
+    overflow: hidden;
+}
+
+.kg-bookmark-metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    gap: 0.5rem;
+}
+
+.kg-bookmark-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+    font-family: var(--font-ui);
+}
+
+.kg-bookmark-author::after {
+    content: "\00b7";
+    margin: 0 0.25rem;
+}
+
+.kg-bookmark-thumbnail {
+    flex: 0 0 160px;
+}
+
+.kg-bookmark-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 500px) {
+    .kg-bookmark-container {
+        flex-direction: column-reverse;
+    }
+    .kg-bookmark-thumbnail {
+        flex: none;
+        width: 100%;
+        max-height: 160px;
+    }
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    :root {
+        --header-height: 48px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        letter-spacing: 0.12em;
+    }
+
+    .post-title {
+        font-size: 1.5rem;
+    }
+
+    .chapter-nav {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .chapter-card-link {
+        padding-left: 1rem;
+    }
+}

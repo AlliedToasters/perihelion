@@ -1,0 +1,29 @@
+{
+  "name": "perihelion-theme",
+  "description": "A dark, reading-focused Ghost theme for the Perihelion serial novel",
+  "version": "1.0.0",
+  "engines": {
+    "ghost-api": "v5",
+    "ghost": ">=5.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Perihelion",
+    "email": "perihelion@example.com"
+  },
+  "config": {
+    "posts_per_page": 50,
+    "image_sizes": {
+      "s": { "width": 300 },
+      "m": { "width": 600 },
+      "l": { "width": 1200 }
+    }
+  },
+  "keywords": [
+    "ghost-theme",
+    "serial-fiction",
+    "dark-mode",
+    "reading",
+    "sci-fi"
+  ]
+}

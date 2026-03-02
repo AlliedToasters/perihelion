@@ -1,0 +1,42 @@
+{{!< default}}
+
+<div class="container">
+    <section class="hero">
+        <h1 class="hero-title">{{@site.title}}</h1>
+        <p class="hero-tagline">{{@site.description}}</p>
+        <div class="hero-rule"></div>
+    </section>
+
+    {{!-- Chapter list: ascending chronological order (oldest first = chapter 1 at top) --}}
+    {{#get "posts" filter="tag:chapter" order="published_at asc" limit="all" include="tags"}}
+        {{#if posts}}
+        <section class="chapter-list-section">
+            <h2 class="section-heading">Table of Contents</h2>
+            <ol class="chapter-list">
+                {{#foreach posts}}
+                    {{> chapter-card}}
+                {{/foreach}}
+            </ol>
+        </section>
+        {{/if}}
+    {{/get}}
+
+    {{!-- Non-chapter posts (announcements, notes, etc.) --}}
+    {{#get "posts" filter="tag:-chapter" order="published_at desc" limit="5"}}
+        {{#if posts}}
+        <section class="updates-section">
+            <h2 class="section-heading">Updates</h2>
+            <ul class="updates-list">
+                {{#foreach posts}}
+                <li class="update-card">
+                    <a href="{{url}}">
+                        <span class="update-date">{{date format="D MMM YYYY"}}</span>
+                        <span class="update-title">{{title}}</span>
+                    </a>
+                </li>
+                {{/foreach}}
+            </ul>
+        </section>
+        {{/if}}
+    {{/get}}
+</div>
