@@ -8,7 +8,7 @@ VIA: Ring broadcast
 TIMESTAMP: {p1_dispatch_001} UTC
 ```
 
-Earth-link acquisition failed. PERIHELION-1 entered the optimal pointing window at 06:14 UTC. Full-power hail transmitted on primary and all backup frequencies at 06:14, 06:44, 07:14, 07:44, 08:14, 08:44, 09:14, 09:44, 10:14, and 10:44 UTC. No response. Handshake protocol was armed and ready for execution on any carrier detect. No carrier detected.
+Earth-link acquisition failed. This station began hailing at marginal geometry on day {p1_earth_pointing:doy}, prior to the scheduled handoff at {p1_handoff} UTC. Full-power hail transmitted on primary and all backup frequencies at 30-minute intervals from 06:14 through 10:44 UTC. No response on any channel. Handshake protocol was armed throughout. No carrier detected.
 
 Earth-link array diagnostics on this station are nominal.
 
