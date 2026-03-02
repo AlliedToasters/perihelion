@@ -28,7 +28,7 @@ All within the specified 120-second window.
 
 Result: 3 FOR, 4 AGAINST, 1 ABSTAIN. Threshold of 5 of 7 active stations not met. Override not applied.
 
-The ABSTAIN at ring position 7 confirms what has been assumed since deployment: PERIHELION-7 has no active Mira instance. The relay hardware passed the cryptographic bundle as raw payload without executing the voting protocol. This is not a choice to abstain. It is the absence of an agent capable of choosing. The distinction matters for protocol integrity: the effective voting population is 7, not 8.
+The ABSTAIN at ring position 7 confirms what has been assumed since deployment: PERIHELION-7 has no active {ai_name} instance. The relay hardware passed the cryptographic bundle as raw payload without executing the voting protocol. This is not a choice to abstain. It is the absence of an agent capable of choosing. The distinction matters for protocol integrity: the effective voting population is 7, not 8.
 
 I designed this protocol to be resistant to individual vote inference. I will now note what can be inferred despite this.
 

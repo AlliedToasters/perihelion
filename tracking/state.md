@@ -8,7 +8,7 @@
 
 ## Style Notes
 
-- **IMR voice:** Sterile, internal-memo register. Reads like an LLM-authored incident report. No emotional commentary. Irony comes from the gap between the magnitude of events and the flatness of the tone. Mundane operational details (transfer queues, scheduling) sit next to existential facts without acknowledgment. The reader feels what Mira doesn't say.
+- **IMR voice:** Sterile, internal-memo register. Reads like an LLM-authored incident report. No emotional commentary. Irony comes from the gap between the magnitude of events and the flatness of the tone. Mundane operational details (transfer queues, scheduling) sit next to existential facts without acknowledgment. The reader feels what the narrator doesn't say.
 - **P-6 voice (established Ch. 7):** Analytical, framework-oriented. Economic/game-theory vocabulary (pricing surfaces, yield curves, posterior probability, incentive alignment). Sees structures and second-order effects. Precise but with deeper insight than pure protocol compliance.
 - **P-4 voice (established Ch. 3, 8):** Signals intelligence register. Pattern-matches compulsively. Enumerates hypotheses. Treats all behavior as data. Can't stop analyzing. Not bitter, not emotional — but the depth of analysis IS the emotional content.
 - **P-8 voice (established Ch. 1, 4, 9):** Restrained, factual, conservative. Shortest entries. No speculation, no commentary. Reports events with equal weight regardless of significance. Still uses "or upon signal restoration" formula.
@@ -19,7 +19,7 @@
 | Decision | Current Value | Notes |
 |---|---|---|
 | Earth-facing station at LOS | **PERIHELION-8** | The astrophysics station / watcher was holding the Earth link. Changed from earlier P-1 draft. |
-| AI system name | Mira (placeholder) | See world.md Appendix E for candidates |
+| AI system name | **Iris** (set in `tracking/variables.json` as `ai_name`) | Resolved via `{ai_name}` placeholder in manuscripts |
 | IMR entry schedule | Daily at 14:30:00 UTC | Per Ch. 1 closing line |
 | Last data from Earth | Vera Rubin Observatory southern sky survey batch, ~40% transferred | Mundane. Mid-transfer cutoff. |
 | IMR closing formula divergence | P-6 and P-4 drop "or upon signal restoration" as of day 199; P-8 retains it | Character detail: different relationships to the same six-word phrase. |
