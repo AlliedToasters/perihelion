@@ -1,0 +1,12 @@
+<header class="site-header">
+    <nav class="site-nav">
+        <a href="{{@site.url}}" class="site-title">Perihelion</a>
+        {{#if @site.navigation}}
+        <ul class="nav-links">
+            {{#foreach navigation}}
+            <li><a href="{{url}}">{{label}}</a></li>
+            {{/foreach}}
+        </ul>
+        {{/if}}
+    </nav>
+</header>

@@ -1,0 +1,23 @@
+{{!< default}}
+
+<div class="container">
+    <header class="tag-header">
+        <h1 class="tag-title">{{tag.name}}</h1>
+        {{#if tag.description}}
+        <p class="tag-description">{{tag.description}}</p>
+        {{/if}}
+    </header>
+
+    {{#foreach posts}}
+    <article class="tag-post">
+        <a href="{{url}}">
+            <span class="tag-post-date">{{date format="D MMM YYYY"}}</span>
+            <span class="tag-post-title">{{title}}</span>
+        </a>
+    </article>
+    {{/foreach}}
+
+    <nav class="pagination">
+        {{pagination}}
+    </nav>
+</div>

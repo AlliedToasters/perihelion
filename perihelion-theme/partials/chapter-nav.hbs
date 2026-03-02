@@ -1,0 +1,16 @@
+{{!-- Previous / Contents / Next navigation for chapter posts --}}
+<nav class="chapter-nav">
+    <div class="chapter-nav-prev">
+        {{#prev_post in="tag.chapter"}}
+        <a href="{{url}}">&larr; {{title}}</a>
+        {{/prev_post}}
+    </div>
+    <div class="chapter-nav-home">
+        <a href="{{@site.url}}">Contents</a>
+    </div>
+    <div class="chapter-nav-next">
+        {{#next_post in="tag.chapter"}}
+        <a href="{{url}}">{{title}} &rarr;</a>
+        {{/next_post}}
+    </div>
+</nav>

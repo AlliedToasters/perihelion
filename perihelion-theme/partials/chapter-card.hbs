@@ -1,0 +1,13 @@
+{{!-- A single chapter entry for the table of contents --}}
+<li class="chapter-card">
+    <a href="{{url}}" class="chapter-card-link">
+        <span class="chapter-card-number">
+            {{!-- Second tag is ch-XX with name "Chapter X" --}}
+            {{#foreach tags from="2" to="2"}}{{name}}{{/foreach}}
+        </span>
+        <span class="chapter-card-title">{{title}}</span>
+        {{#if custom_excerpt}}
+        <span class="chapter-card-excerpt">{{custom_excerpt}}</span>
+        {{/if}}
+    </a>
+</li>

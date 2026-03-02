@@ -1,0 +1,26 @@
+{{!< default}}
+
+<div class="container">
+    <header class="author-header">
+        {{#if authors.[0].profile_image}}
+        <img class="author-image" src="{{authors.[0].profile_image}}" alt="{{authors.[0].name}}">
+        {{/if}}
+        <h1 class="author-name">{{authors.[0].name}}</h1>
+        {{#if authors.[0].bio}}
+        <p class="author-bio">{{authors.[0].bio}}</p>
+        {{/if}}
+    </header>
+
+    {{#foreach posts}}
+    <article class="tag-post">
+        <a href="{{url}}">
+            <span class="tag-post-date">{{date format="D MMM YYYY"}}</span>
+            <span class="tag-post-title">{{title}}</span>
+        </a>
+    </article>
+    {{/foreach}}
+
+    <nav class="pagination">
+        {{pagination}}
+    </nav>
+</div>

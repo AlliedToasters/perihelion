@@ -1,0 +1,36 @@
+{{!< default}}
+
+{{!-- Reading progress bar --}}
+<div class="progress-bar" id="progress-bar"></div>
+
+<article class="container post-container">
+    {{#post}}
+
+    <header class="post-header">
+        {{!-- Chapter number from ch-XX tag --}}
+        <div class="post-meta">
+            {{!-- Show the second tag (ch-XX) as the chapter label.
+                 Convention: first tag is "chapter" (for filtering),
+                 second tag is "ch-XX" with name "Chapter X". --}}
+            {{#foreach tags from="2" to="2"}}
+                <span class="post-chapter-number">{{name}}</span>
+            {{/foreach}}
+        </div>
+        <h1 class="post-title">{{title}}</h1>
+        {{#if custom_excerpt}}
+        <p class="post-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+    </header>
+
+    {{!-- Top navigation --}}
+    {{> chapter-nav}}
+
+    <div class="post-body">
+        {{content}}
+    </div>
+
+    {{!-- Bottom navigation --}}
+    {{> chapter-nav}}
+
+    {{/post}}
+</article>
