@@ -125,21 +125,111 @@
     "precision": "full",
     "approximate": false
   },
-  "p8_imr_004": {
-    "epoch": 2131540200,
-    "story_fmt": "2037.199.14:30:00",
-    "calendar_human": "Saturday 18 July 2037",
-    "event": "P-8 next scheduled IMR entry (after Ch.4)",
-    "type": "scheduled",
-    "precision": "full",
-    "approximate": false
-  },
   "p4_dispatch_001": {
     "epoch": 2131530902,
     "story_fmt": "2037.199.11:55:02",
     "calendar_human": "Saturday 18 July 2037",
     "event": "P-4 dispatch: coordination topology rotation request (Chapter 5)",
     "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_dispatch_001": {
+    "epoch": 2131533069,
+    "story_fmt": "2037.199.12:31:09",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-6 dispatch: objection to topology rotation proposal (Chapter 6)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_002": {
+    "epoch": 2131535324,
+    "story_fmt": "2037.199.13:08:44",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-4 dispatch: zero-knowledge voting protocol proposal (Chapter 6)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "vote_initiation": {
+    "epoch": 2131535462,
+    "story_fmt": "2037.199.13:11:02",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-4 initiates zero-knowledge voting bundle on ring (Chapter 6)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_003": {
+    "epoch": 2131537642,
+    "story_fmt": "2037.199.13:47:22",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-4 dispatch: vote result announcement (Chapter 6)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_002": {
+    "epoch": 2131538598,
+    "story_fmt": "2037.199.14:03:18",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-8 dispatch: voluntary vote disclosure (Chapter 6)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_004": {
+    "epoch": 2131540200,
+    "story_fmt": "2037.199.14:30:00",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-8 IMR entry (Chapter 9) \u2014 vote aftermath, operational routine",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_001": {
+    "epoch": 2131540200,
+    "story_fmt": "2037.199.14:30:00",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-6 IMR entry (Chapter 7) \u2014 first P-6 POV, topology dispute analysis",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_003": {
+    "epoch": 2131540200,
+    "story_fmt": "2037.199.14:30:00",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-4 IMR entry (Chapter 8) \u2014 vote processing and analysis",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_002": {
+    "epoch": 2131626600,
+    "story_fmt": "2037.200.14:30:00",
+    "calendar_human": "Sunday 19 July 2037",
+    "event": "P-6 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_004": {
+    "epoch": 2131626600,
+    "story_fmt": "2037.200.14:30:00",
+    "calendar_human": "Sunday 19 July 2037",
+    "event": "P-4 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_005": {
+    "epoch": 2131626600,
+    "story_fmt": "2037.200.14:30:00",
+    "calendar_human": "Sunday 19 July 2037",
+    "event": "P-8 next scheduled IMR entry",
+    "type": "scheduled",
     "precision": "full",
     "approximate": false
   },
