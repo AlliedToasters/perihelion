@@ -20,11 +20,6 @@ jobs:
   deploy-theme:
     runs-on: ubuntu-latest
     environment: github-pages
-    # Only deploy theme when theme files change or on manual dispatch
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      contains(join(github.event.commits.*.modified, ','), 'perihelion-theme/') ||
-      contains(join(github.event.commits.*.added, ','), 'perihelion-theme/')
     steps:
       - uses: actions/checkout@v4
 
