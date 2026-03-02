@@ -21,6 +21,10 @@ perihelion/
 │   ├── 01_prologue.md
 │   └── NN_chXX_*.md      ← chapters (file order = reading order)
 ├── build/                 ← rendered output (timestamps resolved)
+├── publishing/
+│   ├── config.py          ← shared Chapter dataclass + parse_chapter()
+│   ├── build_site.py      ← static site generator → _site/
+│   └── requirements.txt   ← Python deps (markdown)
 ├── notes/
 │   └── world.md           ← canonical world bible and story spec
 └── tracking/
@@ -71,6 +75,24 @@ Timestamp types: `event` (narrative), `scheduled` (planned transfers/actions), `
 - `chXX` = chapter number (ch01, ch02...)
 - `station` = p1–p8
 - `type` = imr, dispatch, or other
+
+## Publishing Pipeline
+
+A GitHub Pages site is auto-built on push to `main` when `manuscript/**`, `tracking/timestamps.json`, `tracking/variables.json`, or `publishing/**` change.
+
+**How it works:** `publishing/build_site.py` parses every manuscript file, resolves `{event_id}` placeholders via `tracking/timestamps.py`, converts to HTML, and writes a static site to `_site/`.
+
+**Local build:**
+```bash
+pip install -r publishing/requirements.txt
+python3 publishing/build_site.py
+# Open _site/index.html
+```
+
+**Key files:**
+- `publishing/config.py` — shared `Chapter` dataclass and `parse_chapter()` logic
+- `publishing/build_site.py` — static site generator
+- `.github/workflows/publish.yml` — GitHub Actions workflow (build + deploy-pages)
 
 ## Key Continuity Rules
 
