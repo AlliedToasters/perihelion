@@ -1,0 +1,55 @@
+name: Deploy to Ghost
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'perihelion-theme/**'
+      - 'scripts/publish.py'
+      - 'scripts/deploy_theme.sh'
+      - 'manuscript/**'
+      - 'tracking/timestamps.json'
+      - 'tracking/variables.json'
+  workflow_dispatch:
+
+concurrency:
+  group: ghost-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy-theme:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    # Only deploy theme when theme files change or on manual dispatch
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(join(github.event.commits.*.modified, ','), 'perihelion-theme/') ||
+      contains(join(github.event.commits.*.added, ','), 'perihelion-theme/')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Deploy theme to Ghost
+        env:
+          GHOST_URL: ${{ secrets.GHOST_API_URL }}
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: ./scripts/deploy_theme.sh
+
+  publish-chapters:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Publish chapters to Ghost
+        env:
+          GHOST_URL: ${{ secrets.GHOST_API_URL }}
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: python3 scripts/publish.py --publish
