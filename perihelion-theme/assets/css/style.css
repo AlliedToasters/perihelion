@@ -178,6 +178,38 @@ img {
 }
 
 /* ==========================================================================
+   Epigraph (displayed inline on homepage)
+   ========================================================================== */
+
+.epigraph-section {
+    max-width: 520px;
+    margin: 0 auto 3rem;
+    padding: 2rem 0;
+}
+
+.epigraph-body blockquote {
+    border-left: 2px solid var(--accent-dim);
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.epigraph-body blockquote p {
+    margin-bottom: 0.5rem;
+}
+
+.epigraph-body p:last-child {
+    text-align: right;
+    font-family: var(--font-ui);
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
    Section Headings
    ========================================================================== */
 

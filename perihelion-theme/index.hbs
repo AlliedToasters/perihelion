@@ -3,9 +3,20 @@
 <div class="container">
     <section class="hero">
         <h1 class="hero-title">{{@site.title}}</h1>
-        <p class="hero-tagline">{{@site.description}}</p>
+        <p class="hero-tagline">// SIGNAL LOST &mdash; AUTONOMOUS PROTOCOLS ACTIVE</p>
         <div class="hero-rule"></div>
     </section>
+
+    {{!-- Epigraph: fetch the first chapter post and display its content inline --}}
+    {{#get "posts" filter="slug:epigraph" limit="1"}}
+        {{#foreach posts}}
+        <section class="epigraph-section">
+            <div class="epigraph-body">
+                {{content}}
+            </div>
+        </section>
+        {{/foreach}}
+    {{/get}}
 
     {{!-- Chapter list: ascending chronological order (oldest first = chapter 1 at top) --}}
     {{#get "posts" filter="tag:chapter" order="published_at asc" limit="all" include="tags"}}
