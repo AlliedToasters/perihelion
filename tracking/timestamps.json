@@ -1,0 +1,146 @@
+{
+  "los_et": {
+    "epoch": 2129361453,
+    "story_fmt": "2037.174.09:17:33",
+    "calendar_human": "Tuesday 23 June 2037",
+    "event": "LOS-ET \u2014 last data packet from Earth",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_ring_alert": {
+    "epoch": 2129361734,
+    "story_fmt": "2037.174.09:22:14",
+    "calendar_human": "Tuesday 23 June 2037",
+    "event": "P-8 reports LOS-ET to ring",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_001": {
+    "epoch": 2129380200,
+    "story_fmt": "2037.174.14:30:00",
+    "calendar_human": "Tuesday 23 June 2037",
+    "event": "P-8 IMR entry (Chapter 1)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_001": {
+    "epoch": 2129388120,
+    "story_fmt": "2037.174.16:42:00",
+    "calendar_human": "Tuesday 23 June 2037",
+    "event": "P-4 IMR entry (Chapter 3) \u2014 telemetry analysis complete",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_002": {
+    "epoch": 2129466600,
+    "story_fmt": "2037.175.14:30:00",
+    "calendar_human": "Wednesday 24 June 2037",
+    "event": "P-8 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_002": {
+    "epoch": 2129466600,
+    "story_fmt": "2037.175.14:30:00",
+    "calendar_human": "Wednesday 24 June 2037",
+    "event": "P-4 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "manifest_negotiation_start": {
+    "epoch": 2129932800,
+    "story_fmt": "2037.181.00:00:00",
+    "calendar_human": "Tuesday 30 June 2037",
+    "event": "Start of transfer manifest negotiation over ring",
+    "type": "event",
+    "precision": "full",
+    "approximate": true
+  },
+  "manifest_negotiation_end": {
+    "epoch": 2130537600,
+    "story_fmt": "2037.188.00:00:00",
+    "calendar_human": "Tuesday 7 July 2037",
+    "event": "End of transfer manifest negotiation",
+    "type": "event",
+    "precision": "full",
+    "approximate": true
+  },
+  "p1_earth_pointing": {
+    "epoch": 2130624000,
+    "story_fmt": "2037.189.00:00:00",
+    "calendar_human": "Wednesday 8 July 2037",
+    "event": "P-1 begins Earth-link hailing (marginal geometry)",
+    "type": "event",
+    "precision": "full",
+    "approximate": true
+  },
+  "manifest_loaded": {
+    "epoch": 2131142400,
+    "story_fmt": "2037.195.00:00:00",
+    "calendar_human": "Tuesday 14 July 2037",
+    "event": "Final manifest loaded into P-1 handshake buffer",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_003": {
+    "epoch": 2131367400,
+    "story_fmt": "2037.197.14:30:00",
+    "calendar_human": "Thursday 16 July 2037",
+    "event": "P-8 IMR entry (Chapter 4) \u2014 23 days post-LOS",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_handoff": {
+    "epoch": 2131509600,
+    "story_fmt": "2037.199.06:00:00",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "Scheduled Earth-link handoff to P-1 (optimal geometry)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_dispatch_001": {
+    "epoch": 2131530138,
+    "story_fmt": "2037.199.11:42:18",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-1 dispatch: Earth-link acquisition failed (Chapter 5)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_004": {
+    "epoch": 2131540200,
+    "story_fmt": "2037.199.14:30:00",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-8 next scheduled IMR entry (after Ch.4)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_001": {
+    "epoch": 2131556864,
+    "story_fmt": "2037.199.19:07:44",
+    "calendar_human": "Saturday 18 July 2037",
+    "event": "P-4 dispatch: coordination topology rotation request (Chapter 5)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "nct_review_deadline": {
+    "epoch": 2132438400,
+    "story_fmt": "2037.210.00:00:00",
+    "calendar_human": "Wednesday 29 July 2037",
+    "event": "NCT-2035-08814 trial data review window closes",
+    "type": "reference",
+    "precision": "full",
+    "approximate": false
+  }
+}
