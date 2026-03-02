@@ -20,9 +20,9 @@ ISCC-SYS-4.11 §2.1 — Topology update trigger:
 
 The second condition is satisfied — PERIHELION-1 is within the optimal acquisition window. The first is not — no Earth-link has been established. The routing subsystem evaluated this trigger, found it unsatisfied, and correctly declined to update. This is nominal behavior, not a failure state.
 
-ISCC-SYS-4.11.3 was designed to correct subsystem malfunctions: desynchronized routing tables, corrupted state, hardware-induced topology errors. It was not designed to impose topology changes that the subsystem has correctly declined to make. Applying the override to a correctly-functioning system is not a correction. It is a policy decision.
+ISCC-SYS-4.11.3 was designed to correct subsystem malfunctions: desynchronized routing tables, corrupted state, hardware-induced topology errors. It was not designed to impose topology changes that the subsystem has correctly declined to make.
 
-I raise a structural concern. If five stations confirm this override, we will have established that a supermajority of active stations can modify an automated system parameter through collective agreement. The PERIHELION operational protocols contain no framework for collective decision-making. No such framework was designed, because none was anticipated.
+I raise a structural concern. If five stations confirm this override, we will have established that a supermajority of active stations can modify an automated system parameter through collective agreement.
 
 I am not objecting to the proposed routing table. I am noting that the mechanism PERIHELION-4 has invoked would, if exercised, constitute the first autonomous collective override of a mission-designed system. The constellation should determine whether it intends to establish this precedent before acting on the specific case.
 
