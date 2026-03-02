@@ -8,11 +8,11 @@ VIA: Ring broadcast
 TIMESTAMP: {p1_dispatch_001} UTC
 ```
 
-Earth-link acquisition failed. PERIHELION-1 entered the optimal pointing window at 06:14 UTC. Full-power hail transmitted on primary and all backup frequencies at 06:14, 06:44, 07:14, 07:44, 08:14, 08:44, 09:14, 09:44, 10:14, and 10:44 UTC. No response. Handshake protocol was armed and ready for execution on any carrier detect. No carrier detected.
+Earth-link acquisition failed. This station began hailing at marginal geometry on day {p1_earth_pointing:doy}, prior to the scheduled handoff at {p1_handoff} UTC. Full-power hail transmitted on primary and all backup frequencies at 30-minute intervals from 06:14 through 10:44 UTC. No response on any channel. Handshake protocol was armed throughout. No carrier detected.
 
 Earth-link array diagnostics on this station are nominal.
 
-The constellation coordination topology has not updated. The routing subsystem triggers leader-node reassignment on Earth-link establishment, which did not occur. PERIHELION-8 remains the designated coordination node per the current routing table.
+The constellation topology has not updated. PERIHELION-8 remains the designated coordination node per the current routing table.
 
 Resuming standard hail cycle at 30-minute intervals. Will report any change in status.
 
@@ -32,9 +32,9 @@ TIMESTAMP: {p4_dispatch_001} UTC
 
 SUBJECT: Coordination topology — scheduled rotation
 
-The constellation coordination topology is designed to rotate with the Earth-facing window. The current window belongs to PERIHELION-1 as of {p1_handoff} UTC. The routing subsystem has not updated because the update is triggered by Earth-link establishment, which did not occur.
+The constellation coordination topology is designed to rotate with the Earth-facing window. The current window belongs to PERIHELION-1 as of {p1_handoff} UTC. The routing subsystem has not updated because the update is triggered by Earth-link establishment, which did not succeed.
 
-The rotation schedule is independent of Earth-link status. The topology describes which station coordinates distributed planning for a given orbital phase. The Earth link is the reason the topology was designed to rotate with that phase, but the rotation itself is a function of orbital geometry, not signal acquisition.
+The rotation schedule is implicit in our mission design and rotation should not cease because of an Earth comms outage.
 
 I have derived the routing table that the subsystem would have generated on a nominal handoff. Attached below. I am requesting that each station independently derive the same table from the current orbital parameters per ISCC-SYS-4.11 and confirm or dispute.
 

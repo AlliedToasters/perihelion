@@ -35,6 +35,15 @@
     "precision": "full",
     "approximate": false
   },
+  "p8_dispatch_001": {
+    "epoch": 2129390122,
+    "story_fmt": "2037.174.17:15:22",
+    "calendar_human": "Tuesday 23 June 2037",
+    "event": "P-8 dispatch: inbound transfer interruption manifest (Chapter 2)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p8_imr_002": {
     "epoch": 2129466600,
     "story_fmt": "2037.175.14:30:00",
@@ -126,8 +135,8 @@
     "approximate": false
   },
   "p4_dispatch_001": {
-    "epoch": 2131556864,
-    "story_fmt": "2037.199.19:07:44",
+    "epoch": 2131530902,
+    "story_fmt": "2037.199.11:55:02",
     "calendar_human": "Saturday 18 July 2037",
     "event": "P-4 dispatch: coordination topology rotation request (Chapter 5)",
     "type": "event",

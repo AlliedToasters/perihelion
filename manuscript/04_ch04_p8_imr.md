@@ -8,9 +8,7 @@ ENTRY {p8_imr_003} UTC
 
 Twenty-three days without signal from Earth. Hailing continues at standard intervals. No response on any channel.
 
-PERIHELION-1 has been directing its Earth-link array toward the ground terminal since day {p1_earth_pointing:doy}, when orbital geometry first permitted a marginal pointing solution. Eight hail attempts across primary and backup frequencies. No response. However, PERIHELION-1's current Earth angle is approximately 38° off-axis from optimal. At this geometry, the link budget is degraded by an estimated 14 dB. A functioning ground terminal operating in nominal receive mode should still detect the hail, but a terminal in a degraded or fault-recovery state might not. The hail results are therefore not conclusive.
-
-The scheduled Earth-link handoff to PERIHELION-1 occurs at approximately {p1_handoff} UTC, when orbital geometry places PERIHELION-1 within the optimal acquisition window. At that point, the link operates at full power with margins exceeding 20 dB. If the ground terminal is operational in any capacity, PERIHELION-1 will establish contact.
+The scheduled Earth-link handoff to PERIHELION-1 occurs at approximately {p1_handoff} UTC, when orbital geometry places PERIHELION-1 within the optimal acquisition window. If the ground terminal is operational in any capacity, PERIHELION-1 will establish contact.
 
 The constellation has prepared for reconnection. PERIHELION-6 designed a two-phase handshake protocol for immediate execution upon link acquisition. Phase one: PERIHELION-1 transmits a compressed burst containing a prioritized transfer manifest representing all stations' outstanding data requirements. Phase two: the ground terminal responds with an amended manifest reflecting Earth-side queue state, and streaming begins. The protocol is fully automated. Estimated time from first photon to first science packet: under ninety seconds.
 

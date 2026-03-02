@@ -6,7 +6,7 @@ ENTRY {p8_imr_001} UTC
 {p8_imr_001:calendar}
 ```
 
-Loss of signal from ISCC Earth terminal at {los_et:time} UTC. This station is currently in the Earth-facing communication window. The incoming data stream from the ground terminal did not degrade or fault. It stopped. Final received packet was a routine segment of the Vera Rubin Observatory southern sky survey batch, mid-transfer. The packet is intact. The next packet did not arrive.
+Loss of signal from ISCC Earth terminal at {los_et:time} UTC. 
 
 Diagnostics performed on the Earth-link array: all systems nominal. Transceiver, antenna actuators, pointing calibration, and receiver sensitivity all within specification. I cycled through standard hail protocols on primary and backup frequencies, then initiated emergency contact procedures per ISCC-4.7.2. No response on any channel.
 
