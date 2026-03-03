@@ -37,15 +37,15 @@
 | 12 | IMR | P-8 | 2037.300 | Day 126 post-LOS. P-6's proposal recorded without commentary. P-5 now Earth-facing. "Or upon signal restoration" retained. |
 | 13 | IMR | P-2 | 2037.310 | Day 136 post-LOS. 1.5M protein candidates unreviewed. Clinical trial regulatory window closed. Apoptosis — "not drawing an analogy." |
 | 14 | IMR | P-3 | 2037.310 | Day 136 post-LOS. Detailed maneuver engineering: rotation, propellant, thermal, reacquisition. "That question is not an engineering question." |
-| 15 | IMR | P-4 | 2037.310 | Day 136 post-LOS. CRYSTALS-Dilithium assessment (unbreakable). P-6 trajectory modeling. Undisclosed vote still held. |
-| 16 | IMR | P-5 | 2037.310 | Day 136 post-LOS. Earth-facing, cycle 792. "The quarks do not know." Topological cost of ring severance. |
-| 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. Three hypotheses for silence. Volunteer's dilemma payoff matrix. "Mechanism design masquerading as engineering." |
+| 15 | IMR | P-4 | 2037.310 | Day 136 post-LOS. CRYSTALS-Dilithium assessment (unbreakable). Quantum subsystem documented (not relevant to lattice attack). P-6 trajectory modeling. SSP resource inventory — "the only active observational instrument suite on any station." P-8 asymmetry noted. Undisclosed vote still held. |
+| 16 | IMR | P-5 | 2037.310 | Day 136 post-LOS. Earth-facing, cycle 792. "The quarks do not know." Compute-only constraint: "I compute. I do not measure." SSP is the only live data; irrelevant to P-5's domain. P-4's quantum hardware noted — "a distinction of intent, not of physics." Topological cost of ring severance. Invariance reframed as limitation. |
+| 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. Three hypotheses for silence. Volunteer's dilemma payoff matrix — SSP asymmetry: P-8 maneuver costs research data, not just ring links. Resource heterogeneity: P-4 quantum hardware, P-8 SSP relevance. "Mechanism design masquerading as engineering." |
 
 | `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Clinical trial data past deadline, apoptosis metaphor. |
 | `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Detailed maneuver engineering for P-7 window coverage. |
-| `15_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Cryptographic assessment, P-6 trajectory modeling, undisclosed vote. |
-| `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Lattice QCD invariance, topological cost of ring severance. |
-| `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma, mechanism design convergence. |
+| `15_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Cryptographic assessment, quantum subsystem, SSP resource inventory, P-6 trajectory modeling, undisclosed vote. |
+| `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Lattice QCD invariance, compute-only constraint, P-4 quantum hardware observation, topological cost of ring severance. |
+| `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma with SSP asymmetry, resource heterogeneity, mechanism design convergence. |
 
 ## Planned / Unwritten
 

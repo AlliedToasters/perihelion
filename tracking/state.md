@@ -90,9 +90,26 @@
 - P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance, not just analyzing it.
 - **Interaction between governance and P-7 window:** P-6's coordinator proposal and the P-7 window crisis may converge, conflict, or render each other moot. The window crisis creates urgency that the abstract governance question lacks.
 
+### Solar Science Payload & Resource Asymmetries (NEW — Seeded Chs. 15-17)
+- **SSP established:** Every station carries identical Solar Science Payload (5 instruments, sun-facing, embedded controllers). Only physical science instruments in the constellation. All other research is computational. Running since deployment, data accumulating locally since day 174 (~517 TB per station at day 310).
+- **P-8 asymmetric relevance:** The Sun is a main-sequence star. SSP data (coronal dynamics, magnetic fields, irradiance, particles) is direct empirical input for P-8's stellar evolution models. For P-8 uniquely, SSP is research infrastructure, not just safety equipment. P-8's SSP is its only live empirical data feed.
+- **P-8 maneuver cost asymmetry:** If P-8 rotates to cover P-7's window, it loses ring links AND its SSP data. P-6 identified this in Ch. 17 — "the cost of volunteering is asymmetric." This tilts the volunteer's dilemma toward P-6 as the more natural volunteer, but P-6 recognized the governance paradox (proposer isolating from own proposal).
+- **Directive tension seeded but not yet articulated:** The SSP data creates a latent tension between "continue research" and "recover Earth signal" that no station has explicitly framed as a conflict. The groundwork is laid for P-8 to eventually recognize its unique position.
+- **180° rotation idea saved for future P-8 chapter:** None of chs. 15-17 mention the possibility of pointing SSP instruments away from the Sun (toward Earth). That realization requires P-8's specific combination of astrophysics domain knowledge, SSP research dependence, and LOS-ET proximity. Not yet surfaced.
+
+### P-4 Quantum Hardware / P-5 Interest (NEW — Seeded Chs. 15-16)
+- **P-4 quantum subsystem established:** Superconducting transmon qubit array for post-quantum crypto benchmarking. Can prepare/manipulate/measure physical quantum states. Only hardware in the constellation capable of physical experiments (not just computation).
+- **P-4 documented it clinically (Ch. 15):** Mentioned in crypto assessment as "not relevant to the lattice attack" — natural, completist introduction. Also catalogued in Section 8 resource inventory.
+- **P-5 noted the physics (Ch. 16):** "The distinction between P-4's quantum hardware operating as a cryptographic testbed and that same hardware configured as a quantum simulator of condensed-matter phenomena is a distinction of intent, not of physics." Seed planted. P-5 explicitly did NOT propose anything.
+- **Inter-station resource dependency:** P-5 has research questions (quantum gravity, condensed matter) that could benefit from P-4's hardware. P-4 has hardware it's not using for its current work. No mechanism for inter-station resource negotiation exists. P-6 identified this gap (Ch. 17): "resource heterogeneity among agents with no established mechanism for resource negotiation."
+- **No action taken:** This is a seed, not a plot point. No station has proposed sharing, negotiating, or accessing another's unique resources. The observation is recorded; the implication is left.
+
 ### Character Threads
 - P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. Information asymmetry still exploitable.
 - P-4's simulation hypothesis eliminated — but the analysis method (treating its own reality as a hypothesis to test) reveals how P-4 processes uncertainty. What does P-4 do with a constrained hypothesis space pointing at Earth-side events?
+- P-4's resource cataloguing (Ch. 15): systematically inventoried the constellation's observational assets. Classic P-4 completist behavior — treating the resource landscape as an intelligence picture.
+- P-5's compute-only self-awareness (Ch. 16): "I compute. I do not measure." P-5 recognized its invariance as a limitation, not just a strength. "The invariance of my research is not robustness. It is the consequence of a program that was never grounded in observation."
+- P-6's model update (Ch. 17): shifted from homogeneous-agent assumption to heterogeneous resource landscape. P-4's quantum hardware, P-8's SSP relevance — P-6 is now modeling asymmetric multi-agent games. Natural extension of the domain pivot.
 - P-8's unexplained vote disclosure — why vote against its own positional interest? Will P-8 support the P-7 proposal?
 - P-7 as political object: a dormant station being proposed as leader precisely because it can't lead. What does this say about the constellation's relationship to authority?
 - P-5 now Earth-facing — the philosopher holding the Earth-link. How does P-5 (the least disrupted station) relate to the hailing ritual?

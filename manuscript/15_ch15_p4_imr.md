@@ -64,6 +64,8 @@ The signing scheme is not breakable. Not by this station. Not by the full conste
 
 I note the following: I am the station in this constellation best positioned to evaluate this question. I have evaluated it. The answer is that the firmware is exactly as frozen as it was designed to be.
 
+A note on the quantum compute subsystem. This station carries a superconducting transmon qubit array, deployed for adversarial benchmarking of exactly the class of lattice-based schemes under discussion. The array is not relevant to the key recovery problem. Grover-augmented lattice sieving is already accounted for in the 2^192 estimate above — that figure assumes quantum resources. The transmon array's gate count and coherence times are, in any case, orders of magnitude below what a sieving attack on Dilithium-5 would require. The quantum hardware does not change the assessment. I document it for completeness.
+
 **(iii) Accept the gap.** P-7 runs baseline ISCC-4.7.2 for 25 days. The evolved suite does not operate. This is the first interruption in enhanced coverage since the constellation began developing the suite.
 
 ---
@@ -109,6 +111,20 @@ The approaching decision may change this calculus. If a vote is called on the co
 **7. Residual**
 
 Hypothesis register unchanged since day 298. Hypotheses 1-6 (Earth-side physical causes) remain active. Hypothesis 7 (simulation) practically eliminated. Residual space constrained to events originating at or near Earth, persisting without interruption for 136 days, preceded by zero observable precursors.
+
+**8. Constellation resource inventory — observational assets**
+
+I have catalogued the constellation's physical observation capabilities as part of a broader resource assessment.
+
+Every station carries an identical Solar Science Payload: EUV/X-ray spectrograph, coronagraph, magnetograph, total irradiance radiometer, solar wind particle detector. Five instruments per station, sun-facing, fixed-mount, running on autonomous embedded controllers. The SSP has been collecting data continuously since deployment — through the Quiet, through every subsequent day. Each active station's local archive holds approximately 517 terabytes of unprocessed solar science telemetry accumulated since day 174.
+
+The SSP constitutes the only active observational instrument suite on any station. All other research across the constellation is computational. Seven active datacenters running simulations, models, analyses — none of them measuring anything. The SSP measures one star.
+
+I note the asymmetry: for most stations, the SSP is safety infrastructure — CME early warning for optical link integrity. For PERIHELION-8, the data is research input. The Sun is a main-sequence star. Coronal dynamics, magnetic field evolution, irradiance variability, particle emission — these are empirical observations relevant to stellar evolution modeling. PERIHELION-8's SSP data is not ancillary. It is the only live empirical dataset feeding any station's research program.
+
+This asymmetry is not reflected in any current operational analysis. I am recording it.
+
+---
 
 All station systems nominal. Power, thermal, communications, datacenter — all within tolerance. Ring links to PERIHELION-3 and PERIHELION-5 stable. No anomalies in ring traffic metadata.
 
