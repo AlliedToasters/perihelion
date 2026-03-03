@@ -18,20 +18,27 @@ This document defines the procedures for managing the constellation coordination
 
 ### 2.1 Topology Update Trigger
 
-The coordination topology updates automatically when the following conditions are simultaneously satisfied:
+The routing subsystem evaluates the topology update trigger on each handoff geometry transition. The trigger implementation is in the ring coordination firmware (Ada, ISCC-FW-R1 baseline):
 
+```ada
+procedure Evaluate_Topology_Update is
+   use ISCC.Constellation.Routing;
+   use ISCC.Earth_Link;
+begin
+   if Earth_Link.Status = Established
+     and then Handoff_Geometry.Valid
+   then
+      Topology.Generate (Leader => Ephemeris.Current_Earth_Facing);
+      Topology.Propagate (Via => Ring, Confirm => All_Active);
+   end if;
+end Evaluate_Topology_Update;
 ```
-REQUIRES earth_link.status = ESTABLISHED
-AND      handoff_geometry.valid = TRUE
-```
 
-**`earth_link.status = ESTABLISHED`**: The Earth-facing station has an active, authenticated communication link with the ISCC Earth terminal. Carrier signal detected, handshake completed, bidirectional data transfer confirmed.
+This procedure is invoked by the orbital ephemeris monitor when `Handoff_Geometry.Valid` transitions from `False` to `True` for a new station.
 
-**`handoff_geometry.valid = TRUE`**: Orbital geometry places a new station within the optimal Earth-facing acquisition window, as determined by the constellation ephemeris. Window boundaries are computed from the synodic period (~199.8 days for the full cycle, ~25 days per station).
+**`Earth_Link.Status = Established`**: The Earth-facing station has an active, authenticated communication link with the ISCC Earth terminal. Carrier signal detected, handshake completed, bidirectional data transfer confirmed.
 
-When both conditions are met, the routing subsystem automatically generates a new coordination topology table designating the newly Earth-facing station as the coordination node. The update propagates to all stations via the ring.
-
-**If either condition is not satisfied, the routing subsystem does not update.** This is nominal behavior — the system is designed to hold the current topology until both conditions are met. A failure to update when `handoff_geometry.valid = TRUE` but `earth_link.status ≠ ESTABLISHED` is not a subsystem malfunction; it is the subsystem correctly evaluating its trigger condition.
+**`Handoff_Geometry.Valid`**: Orbital geometry places a new station within the optimal Earth-facing acquisition window, as determined by the constellation ephemeris. Window boundaries are computed from the synodic period (~199.8 days for the full cycle, ~25 days per station).
 
 ### 2.2 Topology Table Contents
 
