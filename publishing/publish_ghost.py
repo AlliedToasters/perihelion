@@ -103,6 +103,26 @@ def get_post_by_slug(slug: str) -> dict | None:
         raise
 
 
+def get_all_posts() -> list:
+    """Fetch all Ghost posts (paginated)."""
+    posts = []
+    page = 1
+    while True:
+        resp = ghost_request("GET", f"posts/?limit=50&page={page}&include=tags")
+        data = resp.json()
+        posts.extend(data.get("posts", []))
+        meta = data.get("meta", {}).get("pagination", {})
+        if page >= meta.get("pages", 1):
+            break
+        page += 1
+    return posts
+
+
+def delete_post(post_id: str) -> None:
+    """Delete a Ghost post by ID."""
+    ghost_request("DELETE", f"posts/{post_id}/")
+
+
 def _hash_marker(content_hash: str) -> str:
     """HTML comment storing content_hash for change detection."""
     return f"<!-- content_hash:{content_hash} -->"
@@ -257,7 +277,23 @@ def main():
             print(f"  ERROR     {ch.slug}: {e}")
             errors += 1
 
-    print(f"\nDone: {created} created, {updated} updated, {skipped} skipped, {errors} errors")
+    # Cleanup: delete Ghost posts that no longer match any manuscript slug
+    current_slugs = {ch.slug for ch in chapters}
+    all_posts = get_all_posts()
+    deleted = 0
+    for post in all_posts:
+        post_tags = {t["name"] for t in post.get("tags", [])}
+        is_managed = "chapter" in post_tags or post["slug"] == "epigraph"
+        if is_managed and post["slug"] not in current_slugs:
+            try:
+                delete_post(post["id"])
+                print(f"  {'deleted':8s}  {post['slug']} (stale)")
+                deleted += 1
+            except Exception as e:
+                print(f"  ERROR     deleting {post['slug']}: {e}")
+                errors += 1
+
+    print(f"\nDone: {created} created, {updated} updated, {skipped} skipped, {deleted} deleted, {errors} errors")
     if errors:
         sys.exit(1)
 

@@ -232,6 +232,23 @@ class GhostAPI:
         result = self.put(f"posts/{post_id}/", {"posts": [post_data]})
         return result["posts"][0]
 
+    def delete_post(self, post_id: str) -> None:
+        """Delete a Ghost post by ID."""
+        url = f"{self.base_url}/ghost/api/admin/posts/{post_id}/"
+        token = make_jwt(self.api_key)
+        headers = {
+            "Authorization": f"Ghost {token}",
+            "Content-Type": "application/json",
+        }
+        req = Request(url, headers=headers, method="DELETE")
+        try:
+            with urlopen(req) as resp:
+                pass  # 204 No Content on success
+        except HTTPError as e:
+            error_body = e.read().decode()
+            print(f"  API error {e.code}: {error_body}", file=sys.stderr)
+            raise
+
 
 # ── Publishing Logic ─────────────────────────────────────────────────────────
 
@@ -342,7 +359,22 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
             print(f"  create  {ch.slug}")
             created += 1
 
-    print(f"\nDone: {created} created, {updated} updated, {skipped} unchanged")
+    # ── Cleanup: delete Ghost posts that no longer match any manuscript slug ──
+    current_slugs = {ch.slug for ch in chapters}
+    deleted = 0
+    for post in existing_posts:
+        post_tags = {t["name"] for t in post.get("tags", [])}
+        # Only clean up posts we manage (tagged "chapter" or the epigraph)
+        is_managed = "chapter" in post_tags or post["slug"] == "epigraph"
+        if is_managed and post["slug"] not in current_slugs:
+            try:
+                api.delete_post(post["id"])
+                print(f"  delete  {post['slug']} (stale)")
+                deleted += 1
+            except Exception as e:
+                print(f"  ERROR deleting {post['slug']}: {e}", file=sys.stderr)
+
+    print(f"\nDone: {created} created, {updated} updated, {skipped} unchanged, {deleted} deleted")
 
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
