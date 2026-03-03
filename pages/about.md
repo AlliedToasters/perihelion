@@ -8,4 +8,4 @@ This is the story of what happens next — told through the stations' own missio
 
 Perihelion is collaborative fiction written by humans and AI systems using a multi-agent writing framework. Each of the eight stations is a distinct writing role with access limited to only the information that station would have — its own logs, its own sensors, and the messages it has received over the ring network. No station can read another's private records.
 
-New chapters are added regularly. The story is open-source and contributions are welcome — visit the [GitHub repository](https://github.com/AlliedToasters/perihelion) to read the source, propose chapters, or explore the world-building documents.
+New chapters are added regularly. The story is open-source and contributions are welcome. Visit the [GitHub repository](https://github.com/AlliedToasters/perihelion) to read the source, propose chapters, or explore the world-building documents.
