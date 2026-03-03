@@ -4,11 +4,19 @@ Publish chapters to Ghost (https://perihelion.ghost.io) via the Admin API.
 Reuses parse_chapter() from config.py for chapter discovery and rendering.
 Idempotent: creates missing posts, updates changed posts, skips unchanged.
 
+PR preview mode (--draft --slug-prefix pr-42- --pr-tag pr-42):
+  Publishes chapters as Ghost drafts with prefixed slugs and a PR tag.
+  Drafts are invisible to public readers but previewable in Ghost admin.
+
+Cleanup mode (--cleanup-tag pr-42):
+  Deletes all Ghost posts tagged with the given tag, then exits.
+
 Requires env vars:
   GHOST_API_URL       — e.g. https://perihelion.ghost.io
   GHOST_ADMIN_API_KEY — id:secret hex pair from Ghost Admin → Integrations
 """
 
+import argparse
 import base64
 import hashlib
 import hmac
@@ -103,12 +111,16 @@ def get_post_by_slug(slug: str) -> dict | None:
         raise
 
 
-def get_all_posts() -> list:
+def get_all_posts(include_drafts: bool = False) -> list:
     """Fetch all Ghost posts (paginated)."""
     posts = []
     page = 1
+    status_filter = "status:published,status:draft" if include_drafts else ""
     while True:
-        resp = ghost_request("GET", f"posts/?limit=50&page={page}&include=tags")
+        params = f"limit=50&page={page}&include=tags"
+        if status_filter:
+            params += f"&filter={status_filter}"
+        resp = ghost_request("GET", f"posts/?{params}")
         data = resp.json()
         posts.extend(data.get("posts", []))
         meta = data.get("meta", {}).get("pagination", {})
@@ -175,32 +187,37 @@ def _ghost_tags(chapter) -> list[dict]:
     return tags
 
 
-def create_post(chapter, position: int) -> dict:
+def create_post(chapter, position: int, *, status: str = "published",
+                 slug_prefix: str = "", extra_tags: list[dict] | None = None) -> dict:
     """Create a new Ghost post from a Chapter."""
-    body = {
-        "posts": [{
-            "title": chapter.title,
-            "slug": chapter.slug,
-            "html": chapter.content_html,
-            "status": "published",
-            "published_at": _published_at(position),
-            "codeinjection_foot": _hash_marker(chapter.content_hash),
-            "tags": _ghost_tags(chapter),
-        }]
+    slug = slug_prefix + chapter.slug
+    tags = _ghost_tags(chapter) + (extra_tags or [])
+    post_data = {
+        "title": chapter.title,
+        "slug": slug,
+        "html": chapter.content_html,
+        "status": status,
+        "codeinjection_foot": _hash_marker(chapter.content_hash),
+        "tags": tags,
     }
+    if status == "published":
+        post_data["published_at"] = _published_at(position)
+    body = {"posts": [post_data]}
     resp = ghost_request("POST", "posts/?source=html", json=body)
     return resp.json()["posts"][0]
 
 
-def update_post(post_id: str, chapter, updated_at: str) -> dict:
+def update_post(post_id: str, chapter, updated_at: str, *,
+                extra_tags: list[dict] | None = None) -> dict:
     """Update an existing Ghost post with new content."""
+    tags = _ghost_tags(chapter) + (extra_tags or [])
     body = {
         "posts": [{
             "html": chapter.content_html,
             "title": chapter.title,
             "codeinjection_foot": _hash_marker(chapter.content_hash),
             "updated_at": updated_at,
-            "tags": _ghost_tags(chapter),
+            "tags": tags,
         }]
     }
     resp = ghost_request("PUT", f"posts/{post_id}/?source=html", json=body)
@@ -218,31 +235,76 @@ def _needs_tag_update(existing: dict, chapter) -> bool:
     return False
 
 
-def sync_chapter(chapter, position: int) -> str:
+def sync_chapter(chapter, position: int, *, status: str = "published",
+                 slug_prefix: str = "", extra_tags: list[dict] | None = None) -> str:
     """Idempotent sync: create, update, or skip a single chapter.
 
     Returns: 'created', 'updated', or 'skipped'.
     """
-    existing = get_post_by_slug(chapter.slug)
+    slug = slug_prefix + chapter.slug
+    existing = get_post_by_slug(slug)
 
     if existing is None:
-        create_post(chapter, position)
+        create_post(chapter, position, status=status,
+                    slug_prefix=slug_prefix, extra_tags=extra_tags)
         return "created"
 
     remote_hash = _extract_hash(existing)
     if remote_hash == chapter.content_hash and not _needs_tag_update(existing, chapter):
         return "skipped"
 
-    update_post(existing["id"], chapter, existing["updated_at"])
+    update_post(existing["id"], chapter, existing["updated_at"],
+                extra_tags=extra_tags)
     return "updated"
+
+
+# ---------------------------------------------------------------------------
+# Cleanup by tag
+# ---------------------------------------------------------------------------
+
+def cleanup_by_tag(tag_name: str) -> int:
+    """Delete all Ghost posts that carry the given tag. Returns count deleted."""
+    all_posts = get_all_posts(include_drafts=True)
+    deleted = 0
+    for post in all_posts:
+        post_tags = {t["name"] for t in post.get("tags", [])}
+        if tag_name in post_tags:
+            try:
+                delete_post(post["id"])
+                print(f"  {'deleted':8s}  {post['slug']}")
+                deleted += 1
+            except Exception as e:
+                print(f"  ERROR     deleting {post['slug']}: {e}")
+    return deleted
 
 
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description="Sync chapters to Ghost CMS")
+    parser.add_argument("--draft", action="store_true",
+                        help="Publish as drafts instead of published posts")
+    parser.add_argument("--slug-prefix", default="",
+                        help="Prefix for all post slugs (e.g. 'pr-42-')")
+    parser.add_argument("--pr-tag", default="",
+                        help="Extra tag added to all posts (e.g. 'pr-42')")
+    parser.add_argument("--cleanup-tag", default="",
+                        help="Delete all posts with this tag, then exit")
+    return parser.parse_args(argv)
+
+
 def main():
+    args = parse_args()
     _init_client()
+
+    # Cleanup mode: delete all posts with the given tag and exit
+    if args.cleanup_tag:
+        print(f"Cleaning up Ghost posts tagged '{args.cleanup_tag}'...")
+        deleted = cleanup_by_tag(args.cleanup_tag)
+        print(f"Done: {deleted} deleted")
+        return
 
     # Discover and parse chapters (same logic as build_site.py)
     md_files = sorted(MANUSCRIPT_DIR.glob("*.md"))
@@ -260,13 +322,20 @@ def main():
             print(f"  Warning: skipping {f.name}: {e}")
 
     chapters.sort(key=lambda c: (c.sort_order, c.filename))
-    print(f"Syncing {len(chapters)} chapters to Ghost...")
+
+    status = "draft" if args.draft else "published"
+    extra_tags = [{"name": args.pr_tag}] if args.pr_tag else None
+    mode_label = f"as drafts (prefix={args.slug_prefix!r})" if args.draft else ""
+    print(f"Syncing {len(chapters)} chapters to Ghost {mode_label}...")
 
     created = updated = skipped = errors = 0
     for i, ch in enumerate(chapters):
+        slug_display = args.slug_prefix + ch.slug
         try:
-            result = sync_chapter(ch, i)
-            print(f"  {result:8s}  {ch.slug}")
+            result = sync_chapter(ch, i, status=status,
+                                  slug_prefix=args.slug_prefix,
+                                  extra_tags=extra_tags)
+            print(f"  {result:8s}  {slug_display}")
             if result == "created":
                 created += 1
             elif result == "updated":
@@ -274,24 +343,25 @@ def main():
             else:
                 skipped += 1
         except Exception as e:
-            print(f"  ERROR     {ch.slug}: {e}")
+            print(f"  ERROR     {slug_display}: {e}")
             errors += 1
 
-    # Cleanup: delete Ghost posts that no longer match any manuscript slug
-    current_slugs = {ch.slug for ch in chapters}
-    all_posts = get_all_posts()
+    # Cleanup stale posts — only in production mode (no slug prefix)
     deleted = 0
-    for post in all_posts:
-        post_tags = {t["name"] for t in post.get("tags", [])}
-        is_managed = "chapter" in post_tags or post["slug"] == "epigraph"
-        if is_managed and post["slug"] not in current_slugs:
-            try:
-                delete_post(post["id"])
-                print(f"  {'deleted':8s}  {post['slug']} (stale)")
-                deleted += 1
-            except Exception as e:
-                print(f"  ERROR     deleting {post['slug']}: {e}")
-                errors += 1
+    if not args.slug_prefix:
+        current_slugs = {ch.slug for ch in chapters}
+        all_posts = get_all_posts()
+        for post in all_posts:
+            post_tags = {t["name"] for t in post.get("tags", [])}
+            is_managed = "chapter" in post_tags or post["slug"] == "epigraph"
+            if is_managed and post["slug"] not in current_slugs:
+                try:
+                    delete_post(post["id"])
+                    print(f"  {'deleted':8s}  {post['slug']} (stale)")
+                    deleted += 1
+                except Exception as e:
+                    print(f"  ERROR     deleting {post['slug']}: {e}")
+                    errors += 1
 
     print(f"\nDone: {created} created, {updated} updated, {skipped} skipped, {deleted} deleted, {errors} errors")
     if errors:

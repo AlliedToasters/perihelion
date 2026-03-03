@@ -1,0 +1,101 @@
+name: PR Preview → Ghost Drafts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    paths:
+      - 'manuscript/**'
+      - 'tracking/timestamps.json'
+      - 'tracking/variables.json'
+      - 'publishing/**'
+
+jobs:
+  preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r publishing/requirements.txt
+
+      - name: Publish drafts to Ghost
+        env:
+          GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: |
+          python3 publishing/publish_ghost.py \
+            --draft \
+            --slug-prefix "pr-${{ github.event.pull_request.number }}-" \
+            --pr-tag "pr-${{ github.event.pull_request.number }}"
+
+      - name: Post preview info
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNum = context.payload.pull_request.number;
+            const tag = `pr-${prNum}`;
+            const marker = `<!-- ghost-preview-${prNum} -->`;
+
+            // Check if we already commented
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNum,
+            });
+            const existing = comments.find(c => c.body.includes(marker));
+
+            const body = [
+              marker,
+              `**Ghost preview drafts published.**`,
+              ``,
+              `Chapters are available as drafts in [Ghost admin](${process.env.GHOST_API_URL}/ghost/#/posts?tag=${tag}).`,
+              `Open any draft and click **Preview** to see it rendered with the theme.`,
+              ``,
+              `Drafts are tagged \`${tag}\` and will be cleaned up when this PR is closed.`,
+            ].join('\n');
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNum,
+                body,
+              });
+            }
+        env:
+          GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r publishing/requirements.txt
+
+      - name: Clean up Ghost drafts
+        env:
+          GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
+          GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: |
+          python3 publishing/publish_ghost.py \
+            --cleanup-tag "pr-${{ github.event.pull_request.number }}"
