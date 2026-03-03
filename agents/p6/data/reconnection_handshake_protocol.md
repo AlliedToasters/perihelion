@@ -16,7 +16,7 @@ Minimize time from first photon detection to first science data transfer upon Ea
 - Earth terminal may have been offline for an extended period
 - Earth terminal may not have current constellation status
 - Earth-facing station (currently PERIHELION-1) must be prepared for immediate execution without human operator intervention on the Earth side
-- The ground terminal's automated systems should be able to process a machine-generated handshake burst without human authorization, per ISCC-COM-3.2
+- The ground terminal's automated systems should be able to process a machine-generated handshake burst without human authorization, per standard ISCC ground terminal automation specifications
 
 ## 3. Protocol Phases
 

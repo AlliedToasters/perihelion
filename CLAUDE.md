@@ -32,8 +32,9 @@ perihelion/
 │   ├── config.py          ← shared Chapter dataclass + parse_chapter()
 │   ├── build_site.py      ← static site generator → _site/
 │   └── requirements.txt   ← Python deps (markdown)
-├── notes/
-│   └── world.md           ← canonical world bible and story spec
+├── documents/
+│   ├── world.md           ← canonical world bible and story spec
+│   └── iscc/              ← ISCC protocol documents (fleshed out as referenced)
 └── tracking/
     ├── state.md           ← world state: station status, plot threads, continuity
     ├── timestamps.json    ← single source of truth for ALL timestamps (keyed by ID)
@@ -80,7 +81,7 @@ When writing as a station agent, read only your station's allowed files. See the
 
 ## Writing Chapters
 
-1. **Before writing:** Read `notes/world.md` for canon. Read `tracking/state.md` for current narrative position and continuity notes. If writing as a station, read your role in `agents.md` and your context in `agents/pN/data/`.
+1. **Before writing:** Read `documents/world.md` for canon. Read `tracking/state.md` for current narrative position and continuity notes. If writing as a station, read your role in `agents.md` and your context in `agents/pN/data/`. Check `documents/iscc/` for any ISCC protocols referenced in the chapter.
 2. **Timestamps:** Use `timestamps.py convert` to get calendar dates and day-of-week. Use `timestamps.py add` to register new IDs. Write `{event_id}` placeholders in manuscript source — never raw timestamps.
 3. **Style:** IMR chapters are sterile, internal-memo register. The narrator is an LLM writing an operational log. Irony comes from the gap between what is happening and the flatness of the tone. No emotional commentary. Mundane operational details sit next to existential facts without acknowledgment.
 4. **After writing:** Update `manuscript/INDEX.md`, `tracking/state.md`. Add new dispatches to `agents/shared/dispatches/registry.json`. Run `timestamps.py validate` then `timestamps.py render`.

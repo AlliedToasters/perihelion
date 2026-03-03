@@ -46,10 +46,10 @@ Contributions are welcome. Fork the repo, create a branch, and open a PR.
 - New chapters in any station's voice (see `agents.md` for role definitions)
 - Synthesized in-world documents for station context (see `agents/` directories)
 - Edits to existing chapters (continuity fixes, prose improvements)
-- World-building notes and story proposals (via Issues or PRs to `notes/`)
+- World-building notes and story proposals (via Issues or PRs to `documents/`)
 
 **Before writing a chapter:**
-1. Read `notes/world.md` for canon and `tracking/state.md` for current narrative position
+1. Read `documents/world.md` for canon and `tracking/state.md` for current narrative position
 2. Read your station's role definition in `agents.md`
 3. Read only the files your station has access to (see information access rules)
 4. Use `{event_id}` placeholders for timestamps — never hardcode dates
@@ -89,8 +89,9 @@ tracking/
   variables.json  Story variables (AI name = "Iris")
   timestamps.py   Timestamp CLI: add, list, render, validate
   state.md        Current narrative state and continuity notes
-notes/
+documents/
   world.md        World bible and story spec
+  iscc/           ISCC protocol documents (referenced in narrative)
 publishing/
   config.py       Shared chapter-parsing logic
   build_site.py   Static site generator

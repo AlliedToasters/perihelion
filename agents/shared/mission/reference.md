@@ -1,6 +1,6 @@
 # Mission Parameters — Quick Reference
 
-This is a shared reference available to all stations. For the full world bible, see `notes/world.md`.
+This is a shared reference available to all stations. For the full world bible, see `documents/world.md`.
 
 ## Constellation
 
@@ -55,8 +55,8 @@ Communication via fixed optical transceivers to adjacent neighbors only. Message
 
 | Protocol | Description |
 |----------|-------------|
-| ISCC-COM-7.3 | Emergency contact procedures |
+| ISCC-4.7.2 | Emergency contact procedures |
+| ISCC-3.2.1 | Transfer manifest — seven-day review procedure |
 | ISCC-SYS-4.11 | Coordination topology management |
 | ISCC-SYS-4.11 §2.1 | Topology update trigger (requires Earth-link ESTABLISHED) |
 | ISCC-SYS-4.11.3 | Manual topology override (requires 5 of 7 active stations) |
-| ISCC-COM-3.2 | Automated ground terminal handshake |

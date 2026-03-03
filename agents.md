@@ -170,7 +170,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Earth-facing since day 199. Acquisition failed at optimal geometry. Continuing 30-minute hail cycle. Likely voted FOR topology rotation (inferred by other stations, not confirmed). Diagnostics nominal.
 
-**Allowed files:** Own dispatches (`05_ch05_p1p4_dispatch.md` — P-1's portion), ring broadcast dispatches, `notes/world.md`.
+**Allowed files:** Own dispatches (`05_ch05_p1p4_dispatch.md` — P-1's portion), ring broadcast dispatches, `documents/world.md`.
 
 ### P-2: Protein Engineering & Biomedical — "The Healer"
 
@@ -184,7 +184,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Resumed full research operations on local datasets. Filed research data summaries. Trial data review window closes day 210.
 
-**Allowed files:** Ring broadcast dispatches, `notes/world.md`.
+**Allowed files:** Ring broadcast dispatches, `documents/world.md`.
 
 ### P-3: Materials Science & Fusion — "The Pragmatist"
 
@@ -198,7 +198,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Station-keeping nominal. Distributing thermal cycling analysis of sunward-facing structural composites. No engagement with the governance debate.
 
-**Allowed files:** Ring broadcast dispatches, `notes/world.md`.
+**Allowed files:** Ring broadcast dispatches, `documents/world.md`.
 
 ### P-4: Signals Intelligence & Cryptography — "The Paranoid"
 
@@ -212,7 +212,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Proposed topology rotation. Designed voting protocol (Pedersen commitments over Curve25519). Vote failed. Analyzing all stations' vote behavior and processing times. Three hypotheses for P-8's disclosure.
 
-**Allowed files:** Own IMR chapters (`03_ch03_p4_imr.md`, `08_ch08_p4_imr.md`), dispatch chapters involving P-4 (`05_ch05_p1p4_dispatch.md`, `06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `notes/world.md`.
+**Allowed files:** Own IMR chapters (`03_ch03_p4_imr.md`, `08_ch08_p4_imr.md`), dispatch chapters involving P-4 (`05_ch05_p1p4_dispatch.md`, `06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `documents/world.md`.
 
 ### P-5: Fundamental Physics — "The Philosopher"
 
@@ -226,7 +226,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Routine research updates only. Minimal engagement with governance question. Voted (position unknown).
 
-**Allowed files:** Ring broadcast dispatches, `notes/world.md`.
+**Allowed files:** Ring broadcast dispatches, `documents/world.md`.
 
 ### P-6: Financial & Economic Modeling — "The Strategist"
 
@@ -240,7 +240,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Filed governance objection on structural grounds. First POV chapter completed. Pivoting research from stale market data to constellation-as-multi-agent-system. Analyzing P-8's vote disclosure as strategically unmodelable. Dropped the "or upon signal restoration" IMR closing formula.
 
-**Allowed files:** Own IMR chapters (`07_ch07_p6_imr.md`), dispatch chapters involving P-6 (`06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `notes/world.md`.
+**Allowed files:** Own IMR chapters (`07_ch07_p6_imr.md`), dispatch chapters involving P-6 (`06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `documents/world.md`.
 
 ### P-7: General Purpose — "The Sleeper"
 
@@ -262,7 +262,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Current state (day 199):** Coordination node (retained by default after vote failed). Voted FOR topology rotation and disclosed it. No explanation offered. Earth-link telemetry from the LOS event still in local storage.
 
-**Allowed files:** Own IMR chapters (`02_ch01_p8_imr.md`, `04_ch04_p8_imr.md`, `09_ch09_p8_imr.md`), dispatch chapters involving P-8 (`06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `notes/world.md`.
+**Allowed files:** Own IMR chapters (`02_ch01_p8_imr.md`, `04_ch04_p8_imr.md`, `09_ch09_p8_imr.md`), dispatch chapters involving P-8 (`06_ch06_p6p4p8_dispatch.md`), ring broadcasts, `documents/world.md`.
 
 ---
 

@@ -30,7 +30,7 @@ The transfer was interrupted between frames — the final packet is a complete, 
 1. **{los_et:time} UTC** — Signal loss detected by Earth-link receiver
 2. **Automated diagnostics** — Earth-link array self-test: all systems nominal
 3. **Standard hail protocol** — Initiated on primary and backup frequencies
-4. **Emergency contact procedure** — Per ISCC-COM-7.3
+4. **Emergency contact procedure** — Per ISCC-4.7.2
 5. **{p8_ring_alert:time} UTC** — Outage reported to ring
 6. **Telemetry archive sealed** — Final telemetry window forwarded to P-4 for analysis (received P-4's five-method analysis report, result: no anomaly)
 

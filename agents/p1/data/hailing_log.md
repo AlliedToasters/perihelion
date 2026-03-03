@@ -9,7 +9,7 @@ STATUS: ACTIVE — No response received on any channel
 
 ## Hailing Parameters
 
-- **Protocol:** ISCC-COM-7.3 emergency contact procedure
+- **Protocol:** ISCC-4.7.2 emergency contact procedure
 - **Primary frequency:** Earth-link optical (standard channel)
 - **Backup frequencies:** All configured backup channels cycled per protocol
 - **Interval:** 30 minutes

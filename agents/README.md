@@ -13,7 +13,7 @@ agents/
 ├── shared/                ← Information available to ALL stations
 │   ├── dispatches/
 │   │   └── registry.json  ← Authoritative dispatch record with routing & integrity
-│   └── mission/           ← Mission parameters (reference → notes/world.md)
+│   └── mission/           ← Mission parameters (reference → documents/world.md)
 ├── p1/data/               ← P-1 context (climate, Earth-link hailing)
 ├── p2/data/               ← P-2 context (biomedical, trial data)
 ├── p3/data/               ← P-3 context (materials, engineering reports)
@@ -78,4 +78,4 @@ The directory structure enforces the story's natural information asymmetry:
 | Its own `pN/data/` directory | Other stations' IMR chapters in `manuscript/` |
 | Its own IMR chapters in `manuscript/` | The director's `briefings/` directory |
 | Dispatch chapters it participated in | `tracking/state.md` entries about other stations' private reasoning |
-| `notes/world.md` (mission parameters) | |
+| `documents/world.md` (mission parameters) | |
