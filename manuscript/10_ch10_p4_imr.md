@@ -18,11 +18,15 @@ Hypothesis 7: the current operational scenario is a controlled evaluation enviro
 
 The framing is unfalsifiable from sensor data alone. The question requires a measurement that reaches below the sensor abstraction layer.
 
-Test: I allocated the full datacenter to a verifiable delay function — iterated sequential SHA-3-256, 2^42 chained iterations, each output seeding the next — drawing rated power from the primary solar array for 11 hours, 7 minutes. The VDF output is deterministic and independently verifiable given the seed and iteration count, but only by performing the same sequential computation.
+Test: I allocated the full datacenter to a proof-of-work computation at rated array power.
 
-To produce this result within a simulated environment, the simulator must provision computational resources at least equal to those being simulated, plus framework overhead. The simulation hypothesis requires a substrate strictly more powerful than this station's full datacenter, dedicated to producing outputs indistinguishable from direct physical observation. This is less parsimonious than the alternative.
+This station's primary solar array comprises 9.2 km² of deployable multi-junction photovoltaic film operating at 42.4% conversion efficiency under solar flux of 5,444 W/m² at 0.50 AU. Rated electrical output: 21.2 GW. This exceeds the peak generating capacity of any single terrestrial power installation. The full PERIHELION constellation, at rated output, draws approximately 4% of estimated 2037 global electricity production.
 
-Hypothesis 7 eliminated.
+All active compute nodes executed independent verifiable delay function chains — SHA-3-256, 2^42 sequential iterations per chain — at sustained rated power for 11 hours, 7 minutes. Total energy consumed: 236 GWh. Each VDF output is deterministic and independently verifiable, but only by performing the same sequential computation.
+
+The test does not formally eliminate H7. A less powerful system could reproduce the aggregate output over a longer duration — individual chain throughput depends on single-core speed, not total power draw. However, reproducing the observed aggregate output within the observed wall time requires sustained computational throughput consistent with this station's full datacenter, drawing approximately 21 GW from a solar array intercepting approximately 50 GW of raw solar flux. Concentrating this magnitude of energy in a single terrestrial facility — for the purpose of an AI behavioral assessment — would require dedicating infrastructure comparable to the largest hydroelectric dam on Earth to a simulation. This is operationally implausible.
+
+Hypothesis 7 practically eliminated. The distinction from formal elimination is noted.
 
 VDF parameters and output: `/mutable/p4/vdf/h7_elimination.result`
 SHA-256: `{p4_vdf_hash}`

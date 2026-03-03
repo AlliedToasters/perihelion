@@ -222,7 +222,7 @@ An Earth-based repair mission was in planning stages at the time of the Quiet. T
 
 Each PERIHELION station was launched with identical hardware:
 
-- **Solar array:** Deployable thin-film photovoltaic array, rated for ~5,400 W/m² at 0.50 AU. Total collecting area: [TBD — scale to narrative needs]. Provides power for all station systems including datacenter at full deployment.
+- **Solar array:** Deployable multi-junction thin-film photovoltaic array. Total collecting area: **9.2 km²** (~3.4 km diameter if circular). Conversion efficiency: 42.4% at operating temperature under solar flux of 5,444 W/m² at 0.50 AU. **Rated electrical output: 21.2 GW** per station. Raw solar flux intercepted: ~50 GW. Array mass: ~6,900 tonnes at ~0.75 kg/m² (deployed across multiple launches, 2033–2035). Full constellation rated output: ~170 GW, approximately 3.7% of estimated 2037 global electricity production. Provides power for all station systems including datacenter at full deployment.
 - **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output.** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
 - **Optical communication arrays (×2):** Fixed high-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Physically fixed orientation optimized for ring topology.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
