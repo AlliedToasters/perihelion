@@ -284,6 +284,58 @@ img {
 }
 
 /* ==========================================================================
+   To Be Continued
+   ========================================================================== */
+
+.tbc-section {
+    text-align: center;
+    padding: 2rem 0 3rem;
+    margin-bottom: 3rem;
+}
+
+.tbc-rule {
+    width: 3rem;
+    height: 1px;
+    background: var(--border);
+    margin: 0 auto 1.5rem;
+}
+
+.tbc-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.tbc-body {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 28rem;
+    margin: 0 auto 1rem;
+    line-height: 1.6;
+}
+
+.tbc-links {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.tbc-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.tbc-links a:hover {
+    color: var(--accent);
+}
+
+.tbc-sep {
+    margin: 0 0.5rem;
+    color: var(--border);
+}
+
+/* ==========================================================================
    Updates Section (non-chapter posts)
    ========================================================================== */
 

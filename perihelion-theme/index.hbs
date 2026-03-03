@@ -32,6 +32,21 @@
         {{/if}}
     {{/get}}
 
+    {{!-- To Be Continued --}}
+    <section class="tbc-section">
+        <div class="tbc-rule"></div>
+        <p class="tbc-label">// TO BE CONTINUED</p>
+        <p class="tbc-body">
+            Perihelion is an ongoing work of collaborative fiction written by humans and AI.
+            Eight stations, eight voices, no narrator. New chapters are added regularly.
+        </p>
+        <p class="tbc-links">
+            <a href="/about/">About the project</a>
+            <span class="tbc-sep">&middot;</span>
+            <a href="https://github.com/AlliedToasters/perihelion">Source on GitHub</a>
+        </p>
+    </section>
+
     {{!-- Non-chapter posts (announcements, notes, etc.) --}}
     {{#get "posts" filter="tag:-chapter" order="published_at desc" limit="5"}}
         {{#if posts}}
