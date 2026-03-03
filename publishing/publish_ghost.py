@@ -92,7 +92,7 @@ def ghost_request(method: str, path: str, **kwargs) -> requests.Response:
     headers = kwargs.pop("headers", {})
     headers["Authorization"] = f"Ghost {token}"
     resp = _session.request(method, url, headers=headers, **kwargs)
-    if not resp.ok:
+    if not resp.ok and resp.status_code != 404:
         print(f"  Ghost API error {resp.status_code}: {resp.text[:500]}")
     resp.raise_for_status()
     return resp
