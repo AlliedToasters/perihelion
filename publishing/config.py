@@ -60,7 +60,7 @@ def parse_chapter(filepath: Path) -> Chapter:
 
     # Resolve timestamps / variables
     data = ts.load()
-    variables = ts.load_variables()
+    variables = ts.resolve_file_hashes(ts.load_variables())
     rendered_md = ts.render_text(raw, data, variables)
 
     # Convert to HTML — import markdown lazily so the rest of the module
