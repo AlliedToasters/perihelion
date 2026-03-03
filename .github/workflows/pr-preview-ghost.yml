@@ -13,7 +13,7 @@ jobs:
   preview:
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment: ghost-preview
     steps:
       - uses: actions/checkout@v4
 
@@ -81,7 +81,7 @@ jobs:
   cleanup:
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment: ghost-preview
     steps:
       - uses: actions/checkout@v4
 
