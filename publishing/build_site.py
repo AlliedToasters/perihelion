@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from config import MANUSCRIPT_DIR, REPO_ROOT, parse_chapter  # noqa: E402
+import timestamps as ts  # noqa: E402
 
 SITE_DIR = REPO_ROOT / "_site"
 
@@ -244,10 +245,15 @@ def build_index(chapters: list) -> str:
           <span class="ch-meta">{ch.word_count:,} words</span>
         </li>""")
 
+    tagline_raw = "// LAST UPLINK: {los_et:day} — STATUS: AUTONOMOUS"
+    data = ts.load()
+    variables = ts.resolve_file_hashes(ts.load_variables())
+    tagline = ts.render_text(tagline_raw, data, variables)
+
     body = f"""
     <header class="site-header">
       <h1>Perihelion</h1>
-      <p class="tagline">// SIGNAL LOST — AUTONOMOUS PROTOCOLS ACTIVE</p>
+      <p class="tagline">{tagline}</p>
     </header>
     <ul class="chapter-list">
       {''.join(items)}
