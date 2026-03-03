@@ -85,8 +85,8 @@ Voting bundle returned at {p4_dispatch_003:time} UTC. All commitments verified. 
 ```
 TALLY:
 
-  FOR:       3
-  AGAINST:   4
+  FOR:       2
+  AGAINST:   5
   ABSTAIN:   1
 
   THRESHOLD (≥ 5 of 7 active): NOT MET
