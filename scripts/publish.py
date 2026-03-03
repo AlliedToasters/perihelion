@@ -433,6 +433,7 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
                 "cards": [["markdown", {"markdown": rendered_md}]],
                 "sections": [[10, 0]],
             }),
+            "lexical": None,  # clear lexical so Ghost renders mobiledoc
             "status": "published",
             "codeinjection_head": f"<!-- perihelion-hash:{content_hash} -->",
         }
