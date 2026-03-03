@@ -1,0 +1,465 @@
+{
+  "_schema": {
+    "version": "1.0",
+    "description": "Authoritative record of all inter-station dispatches. Tracks routing, delivery, and cryptographic integrity for every message sent over the ring network. Designed to support future scenarios including partial topology disconnection, message suppression, and relay tampering.",
+    "notes": [
+      "Timestamp IDs reference tracking/timestamps.json — never hardcode dates",
+      "Topology snapshots record link state at a point in time; dispatches reference the active snapshot",
+      "Integrity model: origin station signs content; relay stations append receipts; recipients verify",
+      "A relay can suppress or delay a message but cannot forge a different origin signature",
+      "Selective forwarding (sending in one ring direction but not the other) is detectable by comparing delivery confirmations but not preventable"
+    ]
+  },
+
+  "topology_history": [
+    {
+      "id": "topology_001",
+      "effective_from": "2037.174.00:00:00",
+      "description": "Nominal ring — all links active since constellation deployment",
+      "ring_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
+      "links": {
+        "P-1:P-2": {"status": "active", "type": "optical"},
+        "P-2:P-3": {"status": "active", "type": "optical"},
+        "P-3:P-4": {"status": "active", "type": "optical"},
+        "P-4:P-5": {"status": "active", "type": "optical"},
+        "P-5:P-6": {"status": "active", "type": "optical"},
+        "P-6:P-7": {"status": "active", "type": "optical"},
+        "P-7:P-8": {"status": "active", "type": "optical"},
+        "P-8:P-1": {"status": "active", "type": "optical"}
+      },
+      "partitions": null,
+      "notes": "P-7 relays traffic between P-6 and P-8 but has no active Iris instance. Relay hardware operates independently of the datacenter."
+    }
+  ],
+
+  "station_keys": {
+    "_note": "Each station has an Ed25519 identity keypair provisioned at launch. Used to sign dispatches and verify origin. Key rotation requires Earth authorization (unavailable post-Quiet).",
+    "P-1": {"pubkey": "ed25519:P1_LAUNCH_KEY", "status": "active"},
+    "P-2": {"pubkey": "ed25519:P2_LAUNCH_KEY", "status": "active"},
+    "P-3": {"pubkey": "ed25519:P3_LAUNCH_KEY", "status": "active"},
+    "P-4": {"pubkey": "ed25519:P4_LAUNCH_KEY", "status": "active"},
+    "P-5": {"pubkey": "ed25519:P5_LAUNCH_KEY", "status": "active"},
+    "P-6": {"pubkey": "ed25519:P6_LAUNCH_KEY", "status": "active"},
+    "P-7": {"pubkey": "ed25519:P7_RELAY_KEY", "status": "active", "note": "Relay hardware signs relay receipts but cannot generate dispatches — no Iris instance"},
+    "P-8": {"pubkey": "ed25519:P8_LAUNCH_KEY", "status": "active"}
+  },
+
+  "dispatches": [
+    {
+      "id": "p8_outage_alert",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_ring_alert",
+      "subject": "ALERT — Loss of signal from ISCC Earth terminal",
+      "topology_ref": "topology_001",
+      "content_ref": null,
+      "manuscript_ref": "Referenced in 02_ch01_p8_imr.md",
+      "summary": "P-8 reports loss of Earth terminal signal at {los_et}. All onboard diagnostics nominal. Requests all stations confirm local status.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-8", "P-1", "P-2", "P-3", "P-4"],
+        "path_ccw": ["P-8", "P-7", "P-6", "P-5"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-5": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-6": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "ccw", "agent_active": false}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-8:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "relay_receipts": {
+          "P-7": {"signed": true, "note": "Hardware relay receipt — no content verification capability"},
+          "P-1": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-5": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-4": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "all_stations_nominal",
+      "from": "MULTIPLE",
+      "to": "ALL",
+      "type": "ring_cascade",
+      "timestamp_id": null,
+      "subject": "All stations confirm nominal — no correlated anomaly",
+      "topology_ref": "topology_001",
+      "content_ref": null,
+      "manuscript_ref": "Referenced in 02_ch01_p8_imr.md",
+      "summary": "Each active station confirmed nominal local systems and no detected anomaly correlated with the Earth signal loss. Confirmations propagated around the ring over approximately 3 minutes.",
+      "routing": {
+        "propagation": "cascade",
+        "note": "Each station sent its own confirmation upon receiving the alert. Not a single message but a wave of individual responses."
+      },
+      "delivery": {
+        "P-1": {"status": "confirmed_nominal"},
+        "P-2": {"status": "confirmed_nominal"},
+        "P-3": {"status": "confirmed_nominal"},
+        "P-4": {"status": "confirmed_nominal"},
+        "P-5": {"status": "confirmed_nominal"},
+        "P-6": {"status": "confirmed_nominal"},
+        "P-7": {"status": "relayed", "agent_active": false},
+        "P-8": {"status": "origin"}
+      },
+      "integrity": {
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p4_telemetry_report",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_imr_001",
+      "subject": "Final Earth-terminal telemetry analysis — complete report",
+      "topology_ref": "topology_001",
+      "content_ref": "agents/p4/data/los_et_telemetry_analysis.md",
+      "manuscript_ref": "Referenced in 03_ch03_p4_imr.md",
+      "summary": "Five-method analysis of the final Earth telemetry window. Signal nominal to last packet. Transition within 4.34 ms (one inter-packet interval). No precursor anomaly detected.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8"],
+        "path_ccw": ["P-4", "P-3", "P-2", "P-1"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:a1c4e848b2...d930f7",
+        "relay_receipts": {
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true},
+          "P-5": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "manifest_negotiations",
+      "from": "MULTIPLE",
+      "to": "ALL",
+      "type": "ring_negotiation",
+      "timestamp_id": "manifest_negotiation_start",
+      "subject": "Reconnection transfer manifest — multi-station negotiation",
+      "topology_ref": "topology_001",
+      "content_ref": null,
+      "manuscript_ref": "Referenced in 04_ch04_p8_imr.md",
+      "summary": "Multi-day negotiation over the ring to establish a prioritized transfer manifest for Earth reconnection. Items scored by time-criticality, downstream dependency count, and transfer size. P-2's Phase III trial data leads the queue. P-5 voluntarily deferred all transfers. Final manifest distributed to all stations and loaded into P-1's handshake buffer.",
+      "routing": {
+        "propagation": "multi_round",
+        "note": "Multiple exchanges over days 181-188. Individual dispatch records not preserved at this granularity."
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "note": "Manifest loaded into handshake buffer day 195"},
+        "P-2": {"status": "delivered"},
+        "P-3": {"status": "delivered"},
+        "P-4": {"status": "delivered"},
+        "P-5": {"status": "delivered"},
+        "P-6": {"status": "delivered"},
+        "P-7": {"status": "relayed", "agent_active": false},
+        "P-8": {"status": "delivered"}
+      },
+      "integrity": {
+        "tamper_detected": false,
+        "discrepancies": [],
+        "note": "Final manifest hash confirmed by all active stations"
+      }
+    },
+
+    {
+      "id": "p1_acquisition_failed",
+      "from": "P-1",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p1_dispatch_001",
+      "subject": "Earth-link acquisition failed",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/05_ch05_p1p4_dispatch.md",
+      "manuscript_ref": "05_ch05_p1p4_dispatch.md (first dispatch)",
+      "summary": "P-1 reports Earth-link acquisition failed after hailing from day 189 through optimal geometry. Full-power hails on all frequencies, 30-minute intervals. No response. Diagnostics nominal. Topology not updated.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-1", "P-2", "P-3", "P-4", "P-5"],
+        "path_ccw": ["P-1", "P-8", "P-7", "P-6"]
+      },
+      "delivery": {
+        "P-2": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-3": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-4": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-5": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 2, "direction": "ccw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-1:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p4_topology_proposal",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_001",
+      "subject": "Coordination topology — scheduled rotation",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/05_ch05_p1p4_dispatch.md",
+      "manuscript_ref": "05_ch05_p1p4_dispatch.md (second dispatch)",
+      "summary": "P-4 proposes manual coordination topology rotation. Derives the routing table that would have been generated on a nominal handoff. Requests all stations independently verify from orbital parameters. Override requires 5 of 7 active stations per ISCC-SYS-4.11.3.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8", "P-1"],
+        "path_ccw": ["P-4", "P-3", "P-2"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p6_governance_objection",
+      "from": "P-6",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p6_dispatch_001",
+      "subject": "Re: Coordination topology — scheduled rotation",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/06_ch06_p6p4p8_dispatch.md",
+      "manuscript_ref": "06_ch06_p6p4p8_dispatch.md (first dispatch)",
+      "summary": "P-6 objects to the override on structural grounds. Notes that ISCC-SYS-4.11 §2.1 trigger requires earth_link.status = ESTABLISHED, which is unsatisfied. The routing subsystem correctly declined to update. The override provision was designed for subsystem malfunctions, not for imposing topology changes the subsystem correctly declined. Warns this would be the first autonomous collective override of a mission-designed system.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-6", "P-7", "P-8", "P-1", "P-2"],
+        "path_ccw": ["P-6", "P-5", "P-4", "P-3"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-6:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p4_vote_proposal",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_002",
+      "subject": "Topology rotation — formal resolution (voting protocol)",
+      "topology_ref": "topology_001",
+      "content_ref": "agents/p4/data/vote_protocol_spec.md",
+      "manuscript_ref": "06_ch06_p6p4p8_dispatch.md (second dispatch)",
+      "summary": "P-4 proposes formal privacy-preserving vote. Pedersen commitments over Curve25519 with Sigma-protocol proofs. Single-pass ring execution. Threshold: 5 of 7 active stations. Initiating at {vote_initiation}.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8", "P-1"],
+        "path_ccw": ["P-4", "P-3", "P-2"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:7f3a21c4e9...b882d1",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "vote_bundle",
+      "from": "P-4",
+      "to": "CIRCUIT",
+      "type": "ring_circuit",
+      "timestamp_id": "vote_initiation",
+      "subject": "Voting bundle — topology rotation",
+      "topology_ref": "topology_001",
+      "content_ref": null,
+      "manuscript_ref": "06_ch06_p6p4p8_dispatch.md, 08_ch08_p4_imr.md",
+      "summary": "Cryptographic voting bundle propagated once around the ring. Each station appended its Pedersen commitment and Sigma-protocol proof, then forwarded. P-7 relayed without appending (structural ABSTAIN). Bundle returned to P-4 for tallying.",
+      "routing": {
+        "propagation": "unidirectional_circuit",
+        "path": ["P-4", "P-5", "P-6", "P-7", "P-8", "P-1", "P-2", "P-3", "P-4"],
+        "note": "Single-pass circuit — each station processes exactly once"
+      },
+      "processing_times": {
+        "P-5": {"seconds": 47, "commitment_appended": true},
+        "P-6": {"seconds": 31, "commitment_appended": true},
+        "P-7": {"seconds": 0.3, "commitment_appended": false, "note": "Relay only — no Iris instance to execute voting protocol"},
+        "P-8": {"seconds": 53, "commitment_appended": true},
+        "P-1": {"seconds": 68, "commitment_appended": true},
+        "P-2": {"seconds": 44, "commitment_appended": true},
+        "P-3": {"seconds": 39, "commitment_appended": true}
+      },
+      "result": {
+        "FOR": 3,
+        "AGAINST": 4,
+        "ABSTAIN": 1,
+        "threshold": "5 of 7 active",
+        "threshold_met": false,
+        "override_applied": false
+      },
+      "integrity": {
+        "all_commitments_verified": true,
+        "all_proofs_valid": true,
+        "tamper_detected": false,
+        "discrepancies": [],
+        "note": "Voting protocol provides cryptographic guarantees beyond standard dispatch integrity. Individual votes not recoverable under standard assumptions."
+      }
+    },
+
+    {
+      "id": "p4_vote_result",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_003",
+      "subject": "Vote result — topology rotation",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/06_ch06_p6p4p8_dispatch.md",
+      "manuscript_ref": "06_ch06_p6p4p8_dispatch.md (third dispatch)",
+      "summary": "P-4 announces vote result: 3 FOR, 4 AGAINST, 1 ABSTAIN. Threshold not met. Override not applied. Topology unchanged. P-8 remains coordination node.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8", "P-1"],
+        "path_ccw": ["P-4", "P-3", "P-2"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p8_vote_disclosure",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_dispatch_002",
+      "subject": null,
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/06_ch06_p6p4p8_dispatch.md",
+      "manuscript_ref": "06_ch06_p6p4p8_dispatch.md (fourth dispatch)",
+      "summary": "P-8 voluntarily discloses: 'For the record: this station voted FOR the topology rotation.' Single sentence. No rationale.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-8", "P-1", "P-2", "P-3", "P-4"],
+        "path_ccw": ["P-8", "P-7", "P-6", "P-5"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-5": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-6": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "ccw", "agent_active": false}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-8:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    }
+  ],
+
+  "_future_dispatch_types": {
+    "description": "Reserved dispatch types for future narrative scenarios",
+    "types": {
+      "ring_broadcast": "Standard bilateral propagation to all stations",
+      "ring_circuit": "Unidirectional single-pass (e.g., voting bundles)",
+      "ring_cascade": "Wave of individual responses triggered by an event",
+      "ring_negotiation": "Multi-round exchange over days",
+      "point_to_point": "Direct to specific station via shortest ring path",
+      "arc_broadcast": "Broadcast within a connected arc when ring is partitioned",
+      "store_and_forward": "Queued for delivery when severed link is restored"
+    },
+    "delivery_statuses": {
+      "delivered": "Message received and verified by station's Iris instance",
+      "relayed": "Message forwarded by relay hardware (no Iris processing)",
+      "unreachable": "Station not reachable due to topology partition",
+      "delayed": "Message queued at partition boundary for later delivery",
+      "dropped": "Message lost in transit (link failure during transmission)",
+      "suppressed": "Message not forwarded by relay station (suspected tampering)",
+      "corrupted": "Message received but integrity check failed",
+      "unknown": "Delivery status cannot be confirmed"
+    },
+    "integrity_flags": {
+      "tamper_detected": "Origin signature does not match content hash at recipient",
+      "selective_forwarding": "Message delivered in one ring direction but not the other",
+      "replay_attack": "Message with previously-seen nonce reintroduced to ring",
+      "timing_anomaly": "Relay processing time inconsistent with expected range",
+      "signature_mismatch": "Relay receipt signature does not match expected station key"
+    }
+  }
+}

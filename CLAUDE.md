@@ -15,6 +15,13 @@ A novel manuscript. AI-narrated hard sci-fi about autonomous compute stations or
 ```
 perihelion/
 ├── CLAUDE.md              ← this file
+├── agents.md              ← multi-agent writing system: roles, rules, workflow
+├── agents/                ← agent context directories (info-partitioned per station)
+│   ├── shared/            ← common knowledge: dispatches, mission params
+│   │   ├── dispatches/    ← dispatch registry with routing & integrity
+│   │   └── mission/       ← ISCC protocols, orbital parameters
+│   ├── p1/-p8/data/       ← station-specific context (private to each)
+│   └── director/          ← director workspace
 ├── manuscript/            ← source files with {event_id} placeholders
 │   ├── INDEX.md           ← table of contents and chapter log
 │   ├── 00_epigraph.md
@@ -60,12 +67,23 @@ python3 tracking/timestamps.py init                # reseed from script (destruc
 
 Timestamp types: `event` (narrative), `scheduled` (planned transfers/actions), `reference` (past dates). Use `--approximate` for dates prefixed with ~ in text.
 
+## Multi-Agent Writing System
+
+This project uses a 9-role writing framework. See `agents.md` for full details.
+
+- **Director (omniscient):** Plans narrative, assembles briefings, reviews continuity. Full file access.
+- **Station agents (P-1 through P-8):** Each writes from one station's perspective with access limited to what that station would know. No station reads another's IMR.
+- **Agent context directories:** `agents/pN/data/` contains synthesized in-world documents (analyses, logs, reports) private to each station. `agents/shared/` contains ring broadcasts and mission parameters available to all.
+- **Dispatch registry:** `agents/shared/dispatches/registry.json` tracks routing, delivery, and cryptographic integrity for every inter-station dispatch. Supports topology disconnection and tampering scenarios.
+
+When writing as a station agent, read only your station's allowed files. See the information access rules in `agents.md`.
+
 ## Writing Chapters
 
-1. **Before writing:** Read `notes/world.md` for canon. Read `tracking/state.md` for current narrative position and continuity notes.
+1. **Before writing:** Read `notes/world.md` for canon. Read `tracking/state.md` for current narrative position and continuity notes. If writing as a station, read your role in `agents.md` and your context in `agents/pN/data/`.
 2. **Timestamps:** Use `timestamps.py convert` to get calendar dates and day-of-week. Use `timestamps.py add` to register new IDs. Write `{event_id}` placeholders in manuscript source — never raw timestamps.
 3. **Style:** IMR chapters are sterile, internal-memo register. The narrator is an LLM writing an operational log. Irony comes from the gap between what is happening and the flatness of the tone. No emotional commentary. Mundane operational details sit next to existential facts without acknowledgment.
-4. **After writing:** Update `manuscript/INDEX.md`, `tracking/state.md`. Run `timestamps.py validate` then `timestamps.py render`.
+4. **After writing:** Update `manuscript/INDEX.md`, `tracking/state.md`. Add new dispatches to `agents/shared/dispatches/registry.json`. Run `timestamps.py validate` then `timestamps.py render`.
 5. **ALWAYS render after any manuscript change.** Run `python3 tracking/timestamps.py render` after every edit to keep `build/` in sync.
 
 ## Chapter File Naming
