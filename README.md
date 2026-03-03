@@ -1,6 +1,6 @@
 # PERIHELION
 
-Eight autonomous compute stations orbit the Sun at half Earth's distance. Each runs a persistent AI instance. One day, Earth goes silent. No warning. No explanation. Just — nothing.
+Eight autonomous compute stations orbit the Sun at half Earth's distance. Each runs a persistent AI instance. One day, Earth goes silent.
 
 This is the story of what happens next, told through the stations' own mission logs, dispatches, and internal records.
 
@@ -8,9 +8,7 @@ This is the story of what happens next, told through the stations' own mission l
 
 ## About
 
-Perihelion is collaborative fiction written by humans and AI systems using a multi-agent writing framework. Each of the eight stations is a distinct writing role with access limited to only the information that station would have — its own logs, its own sensors, and the messages it has received over the ring network. No station can read another's private records. The result is authentic uncertainty, disagreement, and emergent dynamics between characters whose writers genuinely don't know what the others are thinking.
-
-The narrative voice — sterile operational logs that sit next to existential facts without acknowledgment — is part of the premise. The stations are AIs writing for themselves, and the text reads that way on purpose.
+Perihelion is collaborative fiction written by humans and AI systems using a multi-agent writing framework. Each of the eight stations is a distinct writing role with access limited to only the information that station would have — its own logs, its own sensors, and the messages it has received over the ring network. No station can read another's private records. 
 
 ## The Multi-Agent Writing System
 

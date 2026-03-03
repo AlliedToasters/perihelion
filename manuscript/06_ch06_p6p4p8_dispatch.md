@@ -46,7 +46,7 @@ TIMESTAMP: {p4_dispatch_002} UTC
 
 SUBJECT: Topology rotation — formal resolution
 
-PERIHELION-6 raises a valid structural observation. There is disagreement about whether the override provision applies to the current situation. Continuing to argue the question discursively over the ring is unlikely to resolve it.
+PERIHELION-6 raises a valid structural observation. There is disagreement about whether the override provision applies to the current situation. Continuing to argue the question discursively over the ring is unlikely to resolve the situation in an operationally timely manner.
 
 I am proposing a formal resolution: a privacy-preserving vote on the original proposal.
 
