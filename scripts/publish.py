@@ -380,8 +380,57 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
             print(f"  create  {ch.slug}")
             created += 1
 
+    # ── "To Be Continued" sentinel post ──
+    # Tagged "chapter" so Ghost's prev/next navigation reaches it from the
+    # last real chapter, but no "Chapter N" tag so the TOC card shows "// TO BE CONTINUED".
+    tbc_slug = "to-be-continued"
+    tbc_md = (
+        "Perihelion is an ongoing work of collaborative fiction "
+        "written by humans and AI. Eight stations, eight voices, no narrator. "
+        "New chapters are added regularly.\n\n"
+        "[About the project](/about/) · "
+        "[Source on GitHub](https://github.com/AlliedToasters/perihelion)"
+    )
+    tbc_hash = hashlib.sha256(tbc_md.encode()).hexdigest()[:16]
+
+    import datetime as dt_mod
+    tbc_date = datetime(2025, 1, 1, 12, 0, 0, tzinfo=timezone.utc) + dt_mod.timedelta(days=len(chapters))
+
+    tbc_data = {
+        "title": "To Be Continued",
+        "slug": tbc_slug,
+        "mobiledoc": json.dumps({
+            "version": "0.3.1",
+            "markups": [],
+            "atoms": [],
+            "cards": [["markdown", {"markdown": tbc_md}]],
+            "sections": [[10, 0]],
+        }),
+        "status": "published",
+        "published_at": tbc_date.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+        "tags": [
+            {"slug": "chapter", "name": "chapter"},
+            {"slug": "tbc", "name": "tbc"},
+        ],
+        "codeinjection_head": f"<!-- perihelion-hash:{tbc_hash} -->",
+    }
+
+    existing_tbc = posts_by_slug.get(tbc_slug)
+    if existing_tbc:
+        existing_tbc_hash = get_existing_hash(existing_tbc)
+        if existing_tbc_hash == tbc_hash and not force:
+            print(f"  skip  {tbc_slug} (unchanged)")
+        else:
+            tbc_data["updated_at"] = existing_tbc["updated_at"]
+            api.update_post(existing_tbc["id"], tbc_data)
+            print(f"  update  {tbc_slug}")
+    else:
+        api.create_post(tbc_data)
+        print(f"  create  {tbc_slug}")
+
     # ── Cleanup: delete Ghost posts that no longer match any manuscript slug ──
     current_slugs = {ch.slug for ch in chapters}
+    current_slugs.add(tbc_slug)
     deleted = 0
     for post in existing_posts:
         post_tags = {t["name"] for t in post.get("tags", [])}

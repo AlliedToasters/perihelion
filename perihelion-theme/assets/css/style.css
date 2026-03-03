@@ -335,6 +335,36 @@ img {
     color: var(--border);
 }
 
+/* TBC full page (reached via chapter pagination) */
+.tbc-page {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.tbc-page-inner {
+    text-align: center;
+    max-width: 28rem;
+    margin: 0 auto 4rem;
+}
+
+.tbc-page-body {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.tbc-page-body p {
+    margin-bottom: 1rem;
+}
+
+.tbc-page-body a {
+    color: var(--text-muted);
+}
+
+.tbc-page-body a:hover {
+    color: var(--accent);
+}
+
 /* ==========================================================================
    Updates Section (non-chapter posts)
    ========================================================================== */

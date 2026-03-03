@@ -1,17 +1,42 @@
 {{!< default}}
 
+{{#post}}
+{{#has tag="tbc"}}
+
+{{!-- "To Be Continued" sentinel page --}}
+<article class="container tbc-page">
+    <div class="tbc-page-inner">
+        <div class="tbc-rule"></div>
+        <p class="tbc-label">// TO BE CONTINUED</p>
+        <div class="tbc-page-body">
+            {{content}}
+        </div>
+    </div>
+
+    {{!-- Navigation back (no "next" from here) --}}
+    <nav class="chapter-nav">
+        <div class="chapter-nav-prev">
+            {{#prev_post in="tag.chapter"}}
+            <a href="{{url}}">&larr; {{title}}</a>
+            {{/prev_post}}
+        </div>
+        <div class="chapter-nav-home">
+            <a href="{{@site.url}}">Contents</a>
+        </div>
+        <div class="chapter-nav-next"></div>
+    </nav>
+</article>
+
+{{else}}
+
 {{!-- Reading progress bar --}}
 <div class="progress-bar" id="progress-bar"></div>
 
 <article class="container post-container">
-    {{#post}}
 
     <header class="post-header">
         {{!-- Chapter number from ch-XX tag --}}
         <div class="post-meta">
-            {{!-- Show the second tag (ch-XX) as the chapter label.
-                 Convention: first tag is "chapter" (for filtering),
-                 second tag is "ch-XX" with name "Chapter X". --}}
             {{#foreach tags from="2" to="2"}}
                 <span class="post-chapter-number">{{name}}</span>
             {{/foreach}}
@@ -32,5 +57,7 @@
     {{!-- Bottom navigation --}}
     {{> chapter-nav}}
 
-    {{/post}}
 </article>
+
+{{/has}}
+{{/post}}

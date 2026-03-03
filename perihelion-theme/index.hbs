@@ -19,7 +19,8 @@
     {{/get}}
 
     {{!-- Chapter list: ascending chronological order (oldest first = chapter 1 at top) --}}
-    {{#get "posts" filter="tag:chapter" order="published_at asc" limit="all" include="tags"}}
+    {{!-- Exclude the "to-be-continued" sentinel post from the TOC --}}
+    {{#get "posts" filter="tag:chapter+slug:-to-be-continued" order="published_at asc" limit="all" include="tags"}}
         {{#if posts}}
         <section class="chapter-list-section">
             <h2 class="section-heading">Table of Contents</h2>
