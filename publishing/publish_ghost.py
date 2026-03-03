@@ -134,6 +134,27 @@ def _published_at(position: int) -> str:
 # Create / Update
 # ---------------------------------------------------------------------------
 
+def _ghost_tags(chapter) -> list[dict]:
+    """Build the Ghost tag list for a chapter.
+
+    The theme expects:
+      - Tag 1: "chapter" (used by index.hbs to build the TOC)
+      - Tag 2: "Chapter N" (used by chapter-card.hbs for the label)
+    The epigraph is fetched by slug, not by tag, so it skips the chapter tag.
+    """
+    tags = []
+    is_epigraph = chapter.slug == "epigraph"
+
+    if not is_epigraph:
+        tags.append({"name": "chapter"})
+        if chapter.chapter_number:
+            tags.append({"name": f"Chapter {chapter.chapter_number}"})
+
+    # Append the default metadata tags
+    tags.extend({"name": t} for t in chapter.tags)
+    return tags
+
+
 def create_post(chapter, position: int) -> dict:
     """Create a new Ghost post from a Chapter."""
     body = {
@@ -144,7 +165,7 @@ def create_post(chapter, position: int) -> dict:
             "status": "published",
             "published_at": _published_at(position),
             "codeinjection_foot": _hash_marker(chapter.content_hash),
-            "tags": [{"name": t} for t in chapter.tags],
+            "tags": _ghost_tags(chapter),
         }]
     }
     resp = ghost_request("POST", "posts/?source=html", json=body)
@@ -159,11 +180,22 @@ def update_post(post_id: str, chapter, updated_at: str) -> dict:
             "title": chapter.title,
             "codeinjection_foot": _hash_marker(chapter.content_hash),
             "updated_at": updated_at,
-            "tags": [{"name": t} for t in chapter.tags],
+            "tags": _ghost_tags(chapter),
         }]
     }
     resp = ghost_request("PUT", f"posts/{post_id}/?source=html", json=body)
     return resp.json()["posts"][0]
+
+
+def _needs_tag_update(existing: dict, chapter) -> bool:
+    """Check if the remote post is missing expected tags."""
+    remote_tags = {t["name"] for t in existing.get("tags", [])}
+    is_epigraph = chapter.slug == "epigraph"
+    if not is_epigraph and "chapter" not in remote_tags:
+        return True
+    if chapter.chapter_number and f"Chapter {chapter.chapter_number}" not in remote_tags:
+        return True
+    return False
 
 
 def sync_chapter(chapter, position: int) -> str:
@@ -178,7 +210,7 @@ def sync_chapter(chapter, position: int) -> str:
         return "created"
 
     remote_hash = _extract_hash(existing)
-    if remote_hash == chapter.content_hash:
+    if remote_hash == chapter.content_hash and not _needs_tag_update(existing, chapter):
         return "skipped"
 
     update_post(existing["id"], chapter, existing["updated_at"])

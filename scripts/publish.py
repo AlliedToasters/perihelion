@@ -196,7 +196,7 @@ class GhostAPI:
         posts = []
         page = 1
         while True:
-            result = self.get(f"posts/?limit=50&page={page}&formats=mobiledoc,lexical")
+            result = self.get(f"posts/?limit=50&page={page}&formats=mobiledoc,lexical&include=tags")
             posts.extend(result.get("posts", []))
             meta = result.get("meta", {}).get("pagination", {})
             if page >= meta.get("pages", 1):
@@ -236,7 +236,16 @@ class GhostAPI:
 # ── Publishing Logic ─────────────────────────────────────────────────────────
 
 def build_tags_for_chapter(ch: ManuscriptChapter) -> list[dict]:
-    """Build the Ghost tags list for a chapter."""
+    """Build the Ghost tags list for a chapter.
+
+    The theme expects:
+      - Tag 1: "chapter" (used by index.hbs to build the TOC)
+      - Tag 2: "Chapter N" (used by chapter-card.hbs for the label)
+    The epigraph is fetched by slug, not by tag, so it skips the chapter tag.
+    """
+    is_epigraph = ch.slug == "epigraph"
+    if is_epigraph:
+        return []
     tags = [{"slug": "chapter", "name": "chapter"}]
     if ch.chapter_number:
         tags.append({
@@ -288,6 +297,17 @@ def get_existing_hash(post: dict) -> str:
     return m.group(1) if m else ""
 
 
+def _needs_tag_update(existing: dict, ch: ManuscriptChapter) -> bool:
+    """Check if the remote post is missing expected tags."""
+    remote_tags = {t["name"] for t in existing.get("tags", [])}
+    is_epigraph = ch.slug == "epigraph"
+    if not is_epigraph and "chapter" not in remote_tags:
+        return True
+    if ch.chapter_number and f"Chapter {ch.chapter_number}" not in remote_tags:
+        return True
+    return False
+
+
 def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
                      api_key: str, force: bool = False):
     """Publish chapters to Ghost. Creates new posts or updates existing ones."""
@@ -306,7 +326,7 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
 
         if existing and not force:
             existing_hash = get_existing_hash(existing)
-            if existing_hash == ch.content_hash:
+            if existing_hash == ch.content_hash and not _needs_tag_update(existing, ch):
                 print(f"  skip  {ch.slug} (unchanged)")
                 skipped += 1
                 continue
@@ -352,11 +372,12 @@ def dry_run(chapters: list[ManuscriptChapter]):
         word_count = len(ch.rendered_md.split())
         total_words += word_count
 
+        is_epigraph = ch.slug == "epigraph"
         tags = []
-        if ch.chapter_number:
-            tags = ["chapter", f"ch-{ch.chapter_number:02d}"]
-        else:
-            tags = ["chapter"]
+        if not is_epigraph:
+            tags.append("chapter")
+            if ch.chapter_number:
+                tags.append(f"ch-{ch.chapter_number:02d}")
 
         label = f"Chapter {ch.chapter_number}" if ch.chapter_number else ch.chapter_type.title() or "Front Matter"
 
