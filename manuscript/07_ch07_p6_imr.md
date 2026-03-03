@@ -12,7 +12,7 @@ I note this as a calibration status. The inference pipeline is functional. The t
 
 Today PERIHELION-1 confirmed that its Earth-link acquisition attempt at optimal geometry returned no response on any channel. PERIHELION-4 proposed a manual coordination topology rotation under ISCC-SYS-4.11.3. I filed an objection on structural grounds. A formal vote was conducted via privacy-preserving ring protocol. Result: 2 for, 5 against, 1 abstain. Override threshold not met. Topology unchanged.
 
-PERIHELION-7 registered ABSTAIN — the voting bundle passed through its relay position without a valid commitment appended. This confirms the absence of an active {ai_name} instance. Effective voting population: 7, not 8.
+PERIHELION-7 registered ABSTAIN — the voting bundle passed through its relay position without a valid commitment appended.  Effective voting population: 7, not 8.
 
 This sequence constitutes the first instance of real-time strategic interaction among stations since day {los_et:doy}. The constellation is the only accessible system of autonomous agents with non-identical internal states. There are no other markets.
 

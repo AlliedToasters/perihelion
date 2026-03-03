@@ -32,7 +32,7 @@ The protocol preserves individual anonymity, but the distribution is nearly full
 ### 4.1 Known Positions
 
 - **PERIHELION-8:** Voted FOR, per voluntary public disclosure.
-- **PERIHELION-7:** Registered ABSTAIN. The voting bundle passed through its relay position without a valid commitment appended, consistent with the absence of an active Iris instance. This is now a confirmed operational data point: PERIHELION-7 is dormant, not merely quiet.
+- **PERIHELION-7:** Registered ABSTAIN. The voting bundle passed through its relay position without a valid commitment appended, expected as P-7 is in relay-only mode.
 
 ### 4.2 Inferred Positions
 
