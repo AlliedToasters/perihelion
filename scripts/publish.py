@@ -236,11 +236,11 @@ class GhostAPI:
     # ── Pages API ──
 
     def get_all_pages(self) -> list:
-        """Fetch all Ghost pages (paginated)."""
+        """Fetch all Ghost pages (paginated), including drafts."""
         pages = []
         page_num = 1
         while True:
-            result = self.get(f"pages/?limit=50&page={page_num}")
+            result = self.get(f"pages/?limit=50&page={page_num}&status=all")
             pages.extend(result.get("pages", []))
             meta = result.get("meta", {}).get("pagination", {})
             if page_num >= meta.get("pages", 1):
@@ -467,6 +467,7 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
     # Fetch all Ghost pages and index by slug
     ghost_pages = api.get_all_pages()
     pages_by_slug = {p["slug"]: p for p in ghost_pages}
+    print(f"  found {len(ghost_pages)} Ghost pages: {[p['slug'] for p in ghost_pages]}")
 
     for filename, target_slug in MANAGED_PAGES.items():
         source = PAGES_DIR / filename
