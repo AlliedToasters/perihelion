@@ -108,7 +108,7 @@ VIA: Ring broadcast
 TIMESTAMP: {p8_dispatch_002} UTC
 ```
 
-For the record: this station voted FOR the topology rotation.
+For the record: PERIHELION-8 voted FOR the topology rotation.
 
 ```
 END DISPATCH
