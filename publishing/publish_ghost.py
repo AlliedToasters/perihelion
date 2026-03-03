@@ -98,10 +98,13 @@ def ghost_request(method: str, path: str, **kwargs) -> requests.Response:
     return resp
 
 
-def get_post_by_slug(slug: str) -> dict | None:
+def get_post_by_slug(slug: str, *, include_drafts: bool = False) -> dict | None:
     """Fetch an existing Ghost post by slug, or None if not found."""
     try:
-        resp = ghost_request("GET", f"posts/slug/{slug}/")
+        params = f"posts/slug/{slug}/"
+        if include_drafts:
+            params += "?filter=status:draft,status:published"
+        resp = ghost_request("GET", params)
         data = resp.json()
         posts = data.get("posts", [])
         return posts[0] if posts else None
@@ -236,26 +239,27 @@ def _needs_tag_update(existing: dict, chapter) -> bool:
 
 
 def sync_chapter(chapter, position: int, *, status: str = "published",
-                 slug_prefix: str = "", extra_tags: list[dict] | None = None) -> str:
+                 slug_prefix: str = "", extra_tags: list[dict] | None = None) -> tuple[str, dict | None]:
     """Idempotent sync: create, update, or skip a single chapter.
 
-    Returns: 'created', 'updated', or 'skipped'.
+    Returns: (action, post_data) where action is 'created', 'updated', or 'skipped'.
     """
     slug = slug_prefix + chapter.slug
-    existing = get_post_by_slug(slug)
+    is_draft = status == "draft"
+    existing = get_post_by_slug(slug, include_drafts=is_draft)
 
     if existing is None:
-        create_post(chapter, position, status=status,
-                    slug_prefix=slug_prefix, extra_tags=extra_tags)
-        return "created"
+        post = create_post(chapter, position, status=status,
+                           slug_prefix=slug_prefix, extra_tags=extra_tags)
+        return "created", post
 
     remote_hash = _extract_hash(existing)
     if remote_hash == chapter.content_hash and not _needs_tag_update(existing, chapter):
-        return "skipped"
+        return "skipped", existing
 
-    update_post(existing["id"], chapter, existing["updated_at"],
-                extra_tags=extra_tags)
-    return "updated"
+    post = update_post(existing["id"], chapter, existing["updated_at"],
+                       extra_tags=extra_tags)
+    return "updated", post
 
 
 # ---------------------------------------------------------------------------
@@ -292,6 +296,8 @@ def parse_args(argv=None):
                         help="Extra tag added to all posts (e.g. 'pr-42')")
     parser.add_argument("--cleanup-tag", default="",
                         help="Delete all posts with this tag, then exit")
+    parser.add_argument("--preview-urls", default="",
+                        help="Write JSON manifest of preview URLs to this path")
     return parser.parse_args(argv)
 
 
@@ -329,12 +335,13 @@ def main():
     print(f"Syncing {len(chapters)} chapters to Ghost {mode_label}...")
 
     created = updated = skipped = errors = 0
+    preview_manifest = []
     for i, ch in enumerate(chapters):
         slug_display = args.slug_prefix + ch.slug
         try:
-            result = sync_chapter(ch, i, status=status,
-                                  slug_prefix=args.slug_prefix,
-                                  extra_tags=extra_tags)
+            result, post_data = sync_chapter(ch, i, status=status,
+                                             slug_prefix=args.slug_prefix,
+                                             extra_tags=extra_tags)
             print(f"  {result:8s}  {slug_display}")
             if result == "created":
                 created += 1
@@ -342,9 +349,21 @@ def main():
                 updated += 1
             else:
                 skipped += 1
+            if post_data and post_data.get("uuid"):
+                preview_manifest.append({
+                    "title": ch.title,
+                    "slug": slug_display,
+                    "chapter_number": ch.chapter_number,
+                    "uuid": post_data["uuid"],
+                    "preview_url": f"{_api_url}/p/{post_data['uuid']}/",
+                })
         except Exception as e:
             print(f"  ERROR     {slug_display}: {e}")
             errors += 1
+
+    if args.preview_urls and preview_manifest:
+        Path(args.preview_urls).write_text(json.dumps(preview_manifest, indent=2))
+        print(f"Preview manifest written to {args.preview_urls}")
 
     # Cleanup stale posts — only in production mode (no slug prefix)
     deleted = 0
