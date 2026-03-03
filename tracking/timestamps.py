@@ -217,6 +217,7 @@ def cmd_render(single_file=None):
         return
 
     BUILD_DIR.mkdir(exist_ok=True)
+    rendered_names = set()
     count = 0
     for md_file in sorted(MANUSCRIPT_DIR.glob("*.md")):
         if md_file.name == "INDEX.md":
@@ -224,8 +225,20 @@ def cmd_render(single_file=None):
         rendered = render_text(md_file.read_text(), data, variables)
         out_path = BUILD_DIR / md_file.name
         out_path.write_text(rendered)
+        rendered_names.add(md_file.name)
         count += 1
-    print(f"Rendered {count} files to {BUILD_DIR}/")
+
+    # Remove stale build files that no longer have a manuscript source
+    stale = 0
+    for build_file in BUILD_DIR.glob("*.md"):
+        if build_file.name not in rendered_names:
+            build_file.unlink()
+            stale += 1
+
+    msg = f"Rendered {count} files to {BUILD_DIR}/"
+    if stale:
+        msg += f" (removed {stale} stale)"
+    print(msg)
 
 
 def cmd_validate():
