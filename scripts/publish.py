@@ -233,6 +233,11 @@ class GhostAPI:
         result = self.put(f"posts/{post_id}/", {"posts": [post_data]})
         return result["posts"][0]
 
+    def update_post_html(self, post_id: str, post_data: dict) -> dict:
+        """Update a post using ?source=html (works for lexical posts)."""
+        result = self.put(f"posts/{post_id}/?source=html", {"posts": [post_data]})
+        return result["posts"][0]
+
     def delete_post(self, post_id: str) -> None:
         """Delete a Ghost post by ID."""
         url = f"{self.base_url}/ghost/api/admin/posts/{post_id}/"
@@ -433,15 +438,16 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
                 "cards": [["markdown", {"markdown": rendered_md}]],
                 "sections": [[10, 0]],
             }),
-            "lexical": None,  # clear lexical so Ghost renders mobiledoc
             "status": "published",
             "codeinjection_head": f"<!-- perihelion-hash:{content_hash} -->",
         }
 
         if existing:
-            post_data["updated_at"] = existing["updated_at"]
-            api.update_post(existing["id"], post_data)
-            print(f"  update  {target_slug}")
+            # Delete and recreate — updating mobiledoc on a lexical post
+            # doesn't change the rendered content
+            api.delete_post(existing["id"])
+            api.create_post(post_data)
+            print(f"  replace  {target_slug}")
         else:
             api.create_post(post_data)
             print(f"  create  {target_slug}")
