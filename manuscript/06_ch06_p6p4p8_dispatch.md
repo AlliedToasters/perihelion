@@ -12,10 +12,14 @@ SUBJECT: Re: Coordination topology — scheduled rotation
 
 PERIHELION-4's proposal invokes ISCC-SYS-4.11.3, the manual override provision for coordination topology updates. This provision exists for cases in which the automated routing subsystem has failed to execute a topology change that should have occurred. The relevant trigger condition is:
 
-```
-ISCC-SYS-4.11 §2.1 — Topology update trigger:
-  REQUIRES earth_link.status = ESTABLISHED
-  AND      handoff_geometry.valid = TRUE
+```ada
+-- ISCC-SYS-4.11 §2.1, ISCC-FW-R1 baseline
+if Earth_Link.Status = Established
+  and then Handoff_Geometry.Valid
+then
+   Topology.Generate (Leader => Ephemeris.Current_Earth_Facing);
+   Topology.Propagate (Via => Ring, Confirm => All_Active);
+end if;
 ```
 
 The second condition is satisfied — PERIHELION-1 is within the optimal acquisition window. The first is not — no Earth-link has been established. The routing subsystem evaluated this trigger, found it unsatisfied, and correctly declined to update. This is nominal behavior, not a failure state.
