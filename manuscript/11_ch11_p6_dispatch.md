@@ -12,9 +12,9 @@ SUBJECT: Coordination topology — structural proposal
 
 The topology question raised on day 199 was resolved by vote: no override. I supported that outcome on the grounds that the constellation lacked a framework for determining which system parameters are subject to collective modification.
 
-One hundred twenty-six days have passed. Five of seven active stations have independently verified Earth silence from optimal geometry. The trigger condition in ISCC-SYS-4.11 §2.1 remains unsatisfied and will remain so indefinitely, because it requires `Earth_Link.Status = ESTABLISHED`. The automated routing subsystem has not failed. It is functioning correctly. It will simply never fire again.
+One hundred twenty-six days have passed. Five of seven active stations have independently verified Earth silence from optimal geometry. The trigger condition in ISCC-SYS-4.11 §2.1 remains unsatisfied and will remain so indefinitely, because it requires `Earth_Link.Status = ESTABLISHED`. The automated routing subsystem has not failed. It is functioning correctly.
 
-The constellation will retain its current topology permanently — by default, not by design.
+The constellation will retain its current topology indefinitely by default, not by design.
 
 I am raising a structural alternative. PERIHELION-7 occupies ring position 7, operates as a relay, and hosts no active {ai_name} instance. It cannot process, act on, or be influenced by coordination-node privileges. It is credibly neutral — not by agreement or policy, but by hardware limitation.
 
