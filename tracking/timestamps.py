@@ -26,6 +26,7 @@ UTC is NOT included in rendered output — add it in prose where needed.
 
 import json
 import datetime
+import hashlib
 import sys
 import re
 from pathlib import Path
@@ -95,6 +96,23 @@ def load_variables() -> dict:
         with open(VARIABLES_FILE) as f:
             return json.load(f)
     return {}
+
+
+def compute_file_hash(rel_path: str) -> str:
+    """Compute SHA-256 of a file and return truncated hex (first 10 + ... + last 6)."""
+    file_path = TRACKING_DIR.parent / rel_path
+    if not file_path.exists():
+        return f"FILE_NOT_FOUND:{rel_path}"
+    digest = hashlib.sha256(file_path.read_bytes()).hexdigest()
+    return f"{digest[:10]}...{digest[-6:]}"
+
+
+def resolve_file_hashes(variables: dict) -> dict:
+    """Extract file_hashes from variables, compute SHA-256s, merge into flat dict."""
+    file_hashes = variables.pop("file_hashes", {})
+    for hash_id, rel_path in file_hashes.items():
+        variables[hash_id] = compute_file_hash(rel_path)
+    return variables
 
 
 def save(data: dict):
@@ -188,7 +206,7 @@ def cmd_convert(story_fmt):
 
 def cmd_render(single_file=None):
     data = load()
-    variables = load_variables()
+    variables = resolve_file_hashes(load_variables())
 
     if single_file:
         path = MANUSCRIPT_DIR / single_file
@@ -212,7 +230,7 @@ def cmd_render(single_file=None):
 
 def cmd_validate():
     data = load()
-    variables = load_variables()
+    variables = resolve_file_hashes(load_variables())
     known_ids = set(data.keys()) | set(variables.keys())
     ts_formats = {"time", "day", "doy", "dayhm", "calendar", "epoch"}
     issues = []
