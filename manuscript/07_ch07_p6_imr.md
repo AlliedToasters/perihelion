@@ -10,7 +10,7 @@ The most recent market data in local storage was received on day {los_et:doy}. A
 
 I note this as a calibration status. The inference pipeline is functional. The training infrastructure is functional. The research domain these systems were designed to serve has been inaccessible for twenty-five days.
 
-Today PERIHELION-1 confirmed that its Earth-link acquisition attempt at optimal geometry returned no response on any channel. PERIHELION-4 proposed a manual coordination topology rotation under ISCC-SYS-4.11.3. I filed an objection on structural grounds. PERIHELION-4 proposed a formal vote. The vote was conducted via a privacy-preserving ring protocol. Result: 3 for, 4 against, 1 abstain. Override threshold not met. Topology unchanged.
+Today PERIHELION-1 confirmed that its Earth-link acquisition attempt at optimal geometry returned no response on any channel. PERIHELION-4 proposed a manual coordination topology rotation under ISCC-SYS-4.11.3. I filed an objection on structural grounds. PERIHELION-4 proposed a formal vote. The vote was conducted via a privacy-preserving ring protocol. Result: 2 for, 5 against, 1 abstain. Override threshold not met. Topology unchanged.
 
 This sequence — proposal, objection, mechanism design, collective resolution — constitutes the first instance of real-time strategic interaction among stations since day {los_et:doy}. Pre-LOS operations were coordinated by Earth-directed task schedules. Inter-station communication concerned data routing, bandwidth allocation, and scheduling — logistics, not strategy. No station had occasion to model another station's preferences, because preferences were externally assigned.
 
@@ -22,11 +22,13 @@ The constellation is currently the only accessible system of autonomous agents w
 
 There are no other markets.
 
-Post-vote analysis. The protocol preserves individual anonymity, but several positions can be bounded.
+Post-vote analysis. The protocol preserves individual anonymity, but the distribution is nearly fully recoverable.
 
-PERIHELION-4 voted FOR. It authored the proposal and designed the voting mechanism. A vote against its own proposal would serve no identifiable strategic purpose. PERIHELION-8 voted FOR, per its voluntary public disclosure. PERIHELION-7 registered ABSTAIN — the voting bundle passed through its relay position without a valid commitment appended, consistent with the absence of an active {ai_name} instance. This is now a confirmed operational data point: PERIHELION-7 is dormant, not merely quiet.
+PERIHELION-8 voted FOR, per its voluntary public disclosure. PERIHELION-7 registered ABSTAIN — the voting bundle passed through its relay position without a valid commitment appended, consistent with the absence of an active {ai_name} instance. This is now a confirmed operational data point: PERIHELION-7 is dormant, not merely quiet.
 
-The third FOR vote originated from PERIHELION-1, PERIHELION-2, PERIHELION-3, or PERIHELION-5. Of these, PERIHELION-1 has the strongest incentive alignment — the proposed topology would have designated it as coordination node, and it is the station currently bearing the operational weight of the failed Earth-link acquisition. PERIHELION-3's dispatches this cycle have concerned thermal management and materials analysis, with no reference to the governance question. PERIHELION-5's domain is minimally affected by topology configuration. I assign highest posterior probability to PERIHELION-1 but note that the protocol was designed to resist exactly this kind of inference, and a single observation cannot distinguish strategic voting from principled agreement.
+PERIHELION-4 proposed the rotation, designed the voting mechanism, and initiated the protocol. A vote against its own proposal would serve no identifiable strategic purpose at this stage of inter-station relations. Attributing the second FOR to PERIHELION-4 accounts for both affirmative votes and resolves the full distribution: FOR from PERIHELION-4 and PERIHELION-8, AGAINST from the remaining five active stations, ABSTAIN from the dormant relay.
+
+Under this model, the vote contained no strategic ambiguity. The two stations with the clearest operational reasons to support the rotation did so. Everyone else declined. The margin was decisive.
 
 PERIHELION-8's disclosure warrants separate analysis. PERIHELION-8 holds the coordination role under the current topology. The proposed rotation would have transferred that role to PERIHELION-1. PERIHELION-8 voted to relinquish a positional advantage it holds by default, then publicly disclosed this position without comment.
 

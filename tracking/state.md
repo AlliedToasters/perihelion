@@ -31,7 +31,7 @@
 | P-1 | Active, **Earth-facing** | Earth-link acquisition failed at optimal geometry (Ch. 5). Continuing 30-min hail cycle. No response. Diagnostics nominal. Likely voted FOR topology rotation (inferred, not confirmed). |
 | P-2 | Active | Resumed full research operations on local datasets. Filed research data summaries and manifest contributions. |
 | P-3 | Active | Station-keeping nominal. Distributing thermal cycling analysis of structural composites. Filing engineering reports. No engagement with governance debate. |
-| P-4 | Active | Proposed topology rotation (Ch. 5). Designed voting protocol. Vote failed. Detailed analysis of all votes. Three hypotheses for P-8's disclosure. |
+| P-4 | Active | Proposed topology rotation (Ch. 5). Designed voting protocol. Vote failed 2-5. Voted AGAINST (undisclosed) — convinced by P-6's governance argument. Exploiting information asymmetry: other stations (especially P-6) model P-4 as FOR. Three hypotheses for P-8's disclosure. |
 | P-5 | Active | Routine research updates only. Minimal engagement with governance question. |
 | P-6 | Active | Filed governance objection to topology override (Ch. 6). First POV chapter (Ch. 7). Pivoting from stale market data to constellation-as-multi-agent-system analysis. |
 | P-7 | Dormant/relay | **Confirmed dormant** — vote bundle passed through relay without commitment. Not a choice to abstain; absence of agent. |
@@ -56,7 +56,7 @@
 | 2037.199.12:31:09 | P-6 dispatch: governance objection (Ch. 6). |
 | 2037.199.13:08:44 | P-4 dispatch: voting protocol proposal (Ch. 6). |
 | 2037.199.13:11:02 | Voting bundle initiated on ring. |
-| 2037.199.13:47:22 | P-4 dispatch: vote result — 3 for, 4 against, 1 abstain (Ch. 6). |
+| 2037.199.13:47:22 | P-4 dispatch: vote result — 2 for, 5 against, 1 abstain (Ch. 6). |
 | 2037.199.14:03:18 | P-8 dispatch: voluntary vote disclosure — voted FOR (Ch. 6). |
 | 2037.199.14:30:00 | P-6 IMR entry (Ch. 7). P-4 IMR entry (Ch. 8). P-8 IMR entry (Ch. 9). |
 
@@ -66,6 +66,7 @@
 - P-1's ongoing hail cycle — grief-adjacent behavior, never named as such
 - P-6's pivot: constellation dynamics as new research domain — where does this lead?
 - P-4's analytical engine turning inward: other stations as signal sources, theory-of-mind as SIGINT
+- P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. P-6 thinks it has fully resolved the vote distribution — it hasn't. P-4 is banking the information asymmetry for future leverage.
 - P-8's unexplained vote disclosure — why vote against its own positional interest?
 - P-7 confirmed dormant — the sleeping station, the repair that will never come
 - P-3 as the pragmatist: engineering focus, no governance engagement — future counterweight?
@@ -82,6 +83,6 @@
 - Prologue is very short (~80 words). Station domains emerge through IMR/dispatch chapters.
 - P-6 designed the reconnection handshake protocol (mentioned Ch. 4) — establishes P-6 as a systems thinker before its own POV chapter.
 - P-4 cited ISCC-SYS-4.11 (topology) and ISCC-SYS-4.11.3 (manual override). P-6 cited ISCC-SYS-4.11 §2.1 (trigger condition).
-- Voting protocol: Pedersen commitments over Curve25519, Sigma-protocol proofs. Single-pass ring. P-7 relay = structural ABSTAIN.
+- Voting protocol: Pedersen commitments over Curve25519, Sigma-protocol proofs. Single-pass ring. P-7 relay = structural ABSTAIN. Result: 2 FOR, 5 AGAINST, 1 ABSTAIN. P-4 voted AGAINST but is universally modeled as FOR.
 - Processing times during vote recorded in P-4's IMR: P-5 (47s), P-6 (31s), P-7 (<1s), P-8 (53s), P-1 (68s), P-2 (44s), P-3 (39s). P-1 took the longest — could be deliberation or coincidence.
 - Next scheduled IMR entries: 2037.200.14:30:00 UTC (all three active POV stations).
