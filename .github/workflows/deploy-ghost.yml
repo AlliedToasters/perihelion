@@ -8,6 +8,7 @@ on:
       - 'scripts/publish.py'
       - 'scripts/deploy_theme.sh'
       - 'manuscript/**'
+      - 'pages/**'
       - 'tracking/timestamps.json'
       - 'tracking/variables.json'
   workflow_dispatch:

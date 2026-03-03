@@ -31,6 +31,7 @@ from urllib.parse import urljoin
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MANUSCRIPT_DIR = REPO_ROOT / "manuscript"
+PAGES_DIR = REPO_ROOT / "pages"
 
 # Add tracking to path for timestamp resolution
 sys.path.insert(0, str(REPO_ROOT / "tracking"))
@@ -377,6 +378,74 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
     print(f"\nDone: {created} created, {updated} updated, {skipped} unchanged, {deleted} deleted")
 
 
+# ── Managed Pages ────────────────────────────────────────────────────────────
+
+# Maps source files in pages/ to their Ghost post slug.
+MANAGED_PAGES = {
+    "about.md": "coming-soon",
+}
+
+
+def sync_pages(ghost_url: str, api_key: str, force: bool = False):
+    """Sync managed pages (pages/ dir) to Ghost posts by slug."""
+    if not PAGES_DIR.is_dir():
+        return
+
+    api = GhostAPI(ghost_url, api_key)
+    data = ts.load()
+    variables = ts.load_variables()
+
+    for filename, target_slug in MANAGED_PAGES.items():
+        source = PAGES_DIR / filename
+        if not source.exists():
+            print(f"  warning: {source} not found, skipping", file=sys.stderr)
+            continue
+
+        raw = source.read_text()
+        rendered_md = ts.render_text(raw, data, variables)
+        content_hash = hashlib.sha256(rendered_md.encode()).hexdigest()[:16]
+
+        # Look up existing post by slug
+        existing_posts = api.get_all_posts()
+        existing = None
+        for p in existing_posts:
+            if p["slug"] == target_slug:
+                existing = p
+                break
+
+        if existing and not force:
+            existing_hash = get_existing_hash(existing)
+            if existing_hash == content_hash:
+                print(f"  skip  {target_slug} (unchanged)")
+                continue
+
+        # Extract title from first heading
+        title_match = re.search(r"^#\s+(.+)", rendered_md, re.MULTILINE)
+        title = title_match.group(1).strip() if title_match else filename.replace(".md", "").title()
+
+        post_data = {
+            "title": title,
+            "slug": target_slug,
+            "mobiledoc": json.dumps({
+                "version": "0.3.1",
+                "markups": [],
+                "atoms": [],
+                "cards": [["markdown", {"markdown": rendered_md}]],
+                "sections": [[10, 0]],
+            }),
+            "status": "published",
+            "codeinjection_head": f"<!-- perihelion-hash:{content_hash} -->",
+        }
+
+        if existing:
+            post_data["updated_at"] = existing["updated_at"]
+            api.update_post(existing["id"], post_data)
+            print(f"  update  {target_slug}")
+        else:
+            api.create_post(post_data)
+            print(f"  create  {target_slug}")
+
+
 # ── CLI ──────────────────────────────────────────────────────────────────────
 
 def load_chapters() -> list[ManuscriptChapter]:
@@ -462,6 +531,9 @@ def main():
 
     print(f"Publishing to {ghost_url}...")
     publish_chapters(chapters, ghost_url, api_key, force=args.force)
+
+    print("\nSyncing pages...")
+    sync_pages(ghost_url, api_key, force=args.force)
 
 
 if __name__ == "__main__":
