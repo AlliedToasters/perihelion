@@ -233,10 +233,25 @@ class GhostAPI:
         result = self.put(f"posts/{post_id}/", {"posts": [post_data]})
         return result["posts"][0]
 
-    def update_post_html(self, post_id: str, post_data: dict) -> dict:
-        """Update a post using ?source=html (works for lexical posts)."""
-        result = self.put(f"posts/{post_id}/?source=html", {"posts": [post_data]})
-        return result["posts"][0]
+    # ── Pages API ──
+
+    def get_all_pages(self) -> list:
+        """Fetch all Ghost pages (paginated)."""
+        pages = []
+        page_num = 1
+        while True:
+            result = self.get(f"pages/?limit=50&page={page_num}")
+            pages.extend(result.get("pages", []))
+            meta = result.get("meta", {}).get("pagination", {})
+            if page_num >= meta.get("pages", 1):
+                break
+            page_num += 1
+        return pages
+
+    def update_page_html(self, page_id: str, page_data: dict) -> dict:
+        """Update a Ghost page using ?source=html."""
+        result = self.put(f"pages/{page_id}/?source=html", {"pages": [page_data]})
+        return result["pages"][0]
 
     def delete_post(self, post_id: str) -> None:
         """Delete a Ghost post by ID."""
@@ -385,20 +400,73 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
 
 # ── Managed Pages ────────────────────────────────────────────────────────────
 
-# Maps source files in pages/ to their Ghost post slug.
+# Maps source files in pages/ to their Ghost page slug.
 MANAGED_PAGES = {
     "about.md": "coming-soon",
 }
 
 
+def _md_to_html(text: str) -> str:
+    """Convert markdown to HTML using only stdlib.
+
+    Handles paragraphs, headings, horizontal rules, links, bold, and italic.
+    Good enough for simple about-page content without requiring pip packages.
+    """
+    import html as html_mod
+    lines = text.strip().split("\n")
+    out = []
+    paragraph = []
+
+    def flush_para():
+        if paragraph:
+            raw = " ".join(paragraph)
+            raw = html_mod.escape(raw)
+            # bold
+            raw = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", raw)
+            # italic
+            raw = re.sub(r"\*(.+?)\*", r"<em>\1</em>", raw)
+            # links
+            raw = re.sub(r"\[(.+?)\]\((.+?)\)", r'<a href="\2">\1</a>', raw)
+            # em-dash
+            raw = raw.replace(" --- ", " &mdash; ").replace("---", "&mdash;")
+            raw = raw.replace(" -- ", " &ndash; ").replace("--", "&ndash;")
+            out.append(f"<p>{raw}</p>")
+            paragraph.clear()
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            flush_para()
+        elif stripped.startswith("# "):
+            flush_para()
+            heading = html_mod.escape(stripped[2:])
+            out.append(f"<h1>{heading}</h1>")
+        elif stripped.startswith("## "):
+            flush_para()
+            heading = html_mod.escape(stripped[3:])
+            out.append(f"<h2>{heading}</h2>")
+        elif stripped == "---" or stripped == "***":
+            flush_para()
+            out.append("<hr>")
+        else:
+            paragraph.append(stripped)
+
+    flush_para()
+    return "\n".join(out)
+
+
 def sync_pages(ghost_url: str, api_key: str, force: bool = False):
-    """Sync managed pages (pages/ dir) to Ghost posts by slug."""
+    """Sync managed pages (pages/ dir) to Ghost pages by slug."""
     if not PAGES_DIR.is_dir():
         return
 
     api = GhostAPI(ghost_url, api_key)
     data = ts.load()
     variables = ts.load_variables()
+
+    # Fetch all Ghost pages and index by slug
+    ghost_pages = api.get_all_pages()
+    pages_by_slug = {p["slug"]: p for p in ghost_pages}
 
     for filename, target_slug in MANAGED_PAGES.items():
         source = PAGES_DIR / filename
@@ -410,13 +478,7 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
         rendered_md = ts.render_text(raw, data, variables)
         content_hash = hashlib.sha256(rendered_md.encode()).hexdigest()[:16]
 
-        # Look up existing post by slug
-        existing_posts = api.get_all_posts()
-        existing = None
-        for p in existing_posts:
-            if p["slug"] == target_slug:
-                existing = p
-                break
+        existing = pages_by_slug.get(target_slug)
 
         if existing and not force:
             existing_hash = get_existing_hash(existing)
@@ -428,29 +490,32 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
         title_match = re.search(r"^#\s+(.+)", rendered_md, re.MULTILINE)
         title = title_match.group(1).strip() if title_match else filename.replace(".md", "").title()
 
-        post_data = {
+        html = _md_to_html(rendered_md)
+
+        page_data = {
             "title": title,
-            "slug": target_slug,
-            "mobiledoc": json.dumps({
-                "version": "0.3.1",
-                "markups": [],
-                "atoms": [],
-                "cards": [["markdown", {"markdown": rendered_md}]],
-                "sections": [[10, 0]],
-            }),
+            "html": html,
             "status": "published",
             "codeinjection_head": f"<!-- perihelion-hash:{content_hash} -->",
         }
 
         if existing:
-            # Delete and recreate — updating mobiledoc on a lexical post
-            # doesn't change the rendered content
-            api.delete_post(existing["id"])
-            api.create_post(post_data)
-            print(f"  replace  {target_slug}")
+            page_data["updated_at"] = existing["updated_at"]
+            api.update_page_html(existing["id"], page_data)
+            print(f"  update  {target_slug}")
         else:
-            api.create_post(post_data)
-            print(f"  create  {target_slug}")
+            print(f"  warning: Ghost page '{target_slug}' not found, skipping", file=sys.stderr)
+
+    # Clean up any stale posts with managed-page slugs (from earlier bugs)
+    managed_slugs = set(MANAGED_PAGES.values())
+    all_posts = api.get_all_posts()
+    for post in all_posts:
+        if post["slug"] in managed_slugs:
+            try:
+                api.delete_post(post["id"])
+                print(f"  delete  post/{post['slug']} (stale, now a page)")
+            except Exception as e:
+                print(f"  ERROR deleting post/{post['slug']}: {e}", file=sys.stderr)
 
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
