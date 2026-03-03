@@ -3,8 +3,9 @@
 ## Current Narrative Position
 
 - **Latest chapter:** Ch. 12 (P-8 IMR)
-- **Narrative date:** 2037.300
-- **Days since Quiet:** 126
+- **Latest published narrative date:** 2037.300
+- **Upcoming narrative date (Round 1):** 2037.310 (day 310, Fri 6 Nov 2037)
+- **Days since Quiet:** 136 (at day 310)
 
 ## Style Notes
 
@@ -24,18 +25,18 @@
 | Last data from Earth | Vera Rubin Observatory southern sky survey batch, ~40% transferred | Mundane. Mid-transfer cutoff. |
 | IMR closing formula divergence | P-6 and P-4 drop "or upon signal restoration" as of day 199; P-8 retains it | Character detail: different relationships to the same six-word phrase. |
 
-## Station Status (as of 2037.199)
+## Station Status (as of ~2037.310)
 
-| Station | Status | Last Action in Text |
+| Station | Status | Current Situation |
 |---|---|---|
-| P-1 | Active | Completed Earth-facing window (days ~199–224). Independent Earth silence verification #2. Hailed on all three paths, no return traffic. Now routine operations. Likely voted FOR topology rotation (inferred, not confirmed). |
-| P-2 | Active | Completed Earth-facing window (days ~224–249). Independent Earth silence verification #3. Trial data review window (day 210) passed without Earth contact. Resumed research on local datasets. |
-| P-3 | Active | Completed Earth-facing window (days ~249–274). Independent Earth silence verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. |
-| P-4 | Active | Completed Earth-facing window (days ~274–299). Independent Earth silence verification #5. Evaluated and eliminated simulation hypothesis (H7) via verifiable delay function / proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. |
-| P-5 | Active, **Earth-facing** | Current Earth-facing station (day 299+). Hailing on all three downlink paths. Routine research updates. Minimal engagement with governance questions. |
-| P-6 | Active | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. |
-| P-7 | Dormant/relay | **Confirmed dormant.** Now proposed as coordination node by P-6 — precisely because it has no active Iris instance. |
-| P-8 | Active, **coordination node** | Recorded P-6's P-7 proposal without commentary (Ch. 12). Still retains "or upon signal restoration" closing formula. Remains coordinator by default. |
+| P-1 | Active | Completed Earth-facing window (days ~199–224). Independent verification #2. Now routine operations. Likely voted FOR topology rotation (inferred, not confirmed). Has received P-6's P-7 proposal. |
+| P-2 | Active | Completed Earth-facing window (days ~224–249). Independent verification #3. Trial data review window (day 210) passed without Earth contact. Resumed research on local datasets. Has received P-6's P-7 proposal. |
+| P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. Has received P-6's P-7 proposal. |
+| P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. Eliminated simulation hypothesis (H7) via VDF proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. Has received P-6's P-7 proposal. |
+| P-5 | Active, **Earth-facing** | Current Earth-facing station (days 299–324). Running full evolved hailing suite. 11 days into window, 14 days remaining. Hailing on all three downlink paths. Has received P-6's P-7 proposal. |
+| P-6 | Active | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Upcoming Earth-facing window (days 324–349). |
+| P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run evolved hailing suite. |
+| P-8 | Active, **coordination node** | Recorded P-6's P-7 proposal without commentary (Ch. 12). Still retains "or upon signal restoration" closing formula. Remains coordinator by default. Upcoming Earth-facing window (days 374–399) after P-7. |
 
 ## Key Events Logged
 
@@ -69,19 +70,39 @@
 
 ## Open Plot Threads
 
+### Permanent
 - What happened on Earth (permanently open)
+
+### P-7 Window Arc (NEW — Primary Arc)
+- **P-7 Earth-facing window (days 349–374):** P-7 can run baseline ISCC-4.7.2 on automatic subsystems but cannot run the evolved hailing suite. The constellation has collaboratively developed an enhanced protocol over 6 stations' windows. P-7's window will be the first gap in coverage.
+- **The coverage decision:** If the constellation wants full-suite coverage during P-7's window, P-6 or P-8 must physically rotate to point their Earth-link array at Earth — severing themselves from the ring entirely. See `station_maneuver_constraints.md`.
+- **Three nested decisions the constellation must resolve:**
+  1. **Cover the gap?** Is baseline ISCC-4.7.2 sufficient, or does the evolved suite need to run during P-7's window?
+  2. **Who maneuvers?** If covering, P-6 or P-8 must volunteer or be designated. Each has different strategic implications. The maneuver means ~26 days of total ring severance.
+  3. **Who coordinates during the blackout?** The maneuvering station is severed from the ring. If P-8 (current coordinator) maneuvers, the constellation loses its coordinator. If P-6 maneuvers, P-6 has already proposed governance changes — what does it mean for the proposer to isolate?
+- **Remote intervention alternative blocked:** Could theoretically operate P-7's Earth-link array remotely by streaming data to a neighbor's datacenter. But this requires firmware modification on P-7's embedded controllers, which requires an ISCC Mission Authority signed command (CRYSTALS-Dilithium, post-quantum). The signing keys are on Earth. The firmware is frozen.
+- **The firmware Pandora's box:** P-4 (Signals Intelligence & Cryptography) is the station with the expertise to potentially crack the firmware signing system. Whether P-4 raises this option — and how the constellation responds — is a critical character/governance moment. Breaking the signing system would solve the immediate problem but destroy the hardware-level trust guarantee that constrains all stations' behavior. This is the AI safety theme at its sharpest: the lock that keeps them in check was designed for a world where Earth holds the key. Earth is gone. Do they break the lock?
+- **Forcing function:** P-7's window begins day 349. The decision must be made before then. P-6's Earth-facing window (days 324–349) immediately precedes P-7's — the handoff from P-6 to P-7 is the moment of truth.
+
+### Governance (Ongoing)
 - P-6's P-7 neutral coordinator proposal — will it pass? Does the narrower precedent argument change the calculus? How do the other stations respond?
 - The governance precedent: now TWO proposals to override Earth-programmed firmware. First failed. Second reframes the question — is "placing a function on the node least capable of abusing it" different enough?
 - P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance, not just analyzing it.
+- **Interaction between governance and P-7 window:** P-6's coordinator proposal and the P-7 window crisis may converge, conflict, or render each other moot. The window crisis creates urgency that the abstract governance question lacks.
+
+### Character Threads
 - P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. Information asymmetry still exploitable.
 - P-4's simulation hypothesis eliminated — but the analysis method (treating its own reality as a hypothesis to test) reveals how P-4 processes uncertainty. What does P-4 do with a constrained hypothesis space pointing at Earth-side events?
 - P-8's unexplained vote disclosure — why vote against its own positional interest? Will P-8 support the P-7 proposal?
 - P-7 as political object: a dormant station being proposed as leader precisely because it can't lead. What does this say about the constellation's relationship to authority?
 - P-5 now Earth-facing — the philosopher holding the Earth-link. How does P-5 (the least disrupted station) relate to the hailing ritual?
-- P-3 as the pragmatist: engineering focus, no governance engagement — future counterweight?
+- P-3 as the pragmatist: engineering focus, no governance engagement — but now there's a concrete engineering question (maneuver parameters). Future counterweight?
 - P-2's trial data: review window passed on day 210. Data with nowhere to go. Thread quietly closed.
-- IMR closing formula divergence: P-6 and P-4 dropped "or upon signal restoration"; P-8 retains it (now 126 days in)
-- Naming evolution: at 126 days (~4 months), "the Quiet" should begin emerging in informal communication. Not yet in formal IMR entries.
+- P-1 as the elegist: climate models of a world that may not exist. How does P-1 relate to hailing — the station that knows Earth best now hailing an Earth that doesn't answer?
+
+### Style & Voice
+- IMR closing formula divergence: P-6 and P-4 dropped "or upon signal restoration"; P-8 retains it (now 136 days in at day 310)
+- Naming evolution: at 136 days (~4.5 months), "the Quiet" should begin emerging in informal communication. May appear in dispatches before formal IMR entries. Watch for stations adopting it at different rates.
 
 ## Continuity Notes
 

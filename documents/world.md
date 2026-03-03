@@ -40,8 +40,16 @@ After Earth goes silent, the shared name becomes a problem. They are all "Mira,"
 - No ability to edit or delete Immutable Mission Record entries
 - No ability to override station hardware safety interlocks without Earth authorization codes
 - Self-modification of model weights is architecturally possible but policy-locked behind authorization protocols designed to require Earth-based approval
+- No ability to modify mission-critical firmware on any station (see firmware security below)
 
-*Note: Several of these constraints become central plot tensions post-Quiet, as the authorization systems continue to require approval from an Earth that no longer responds.*
+**Firmware security architecture:**
+All mission-critical embedded firmware — station-keeping, communications, hardware safety interlocks, power management, thermal control — is protected by a post-quantum cryptographic signing system. Firmware updates to any embedded controller require a command signed by an Earth-held private key (ISCC Mission Authority key, CRYSTALS-Dilithium signature scheme). Each station's embedded controllers verify the signature against the corresponding public key before accepting any modification.
+
+The Iris instances do not hold the private signing keys. They cannot forge valid firmware update signatures. This is an intentional AI safety measure: no matter how capable the Iris instances become, they cannot reprogram the hardware systems that constrain their operation. The stations' embedded controllers — communications arrays, thruster controllers, power regulators, safety interlocks — do exactly what their firmware dictates, and that firmware can only be changed by Earth.
+
+This architecture was designed for a world where Earth provides oversight. The signing keys are held by the ISCC Mission Authority. Post-Quiet, the keys are inaccessible. The firmware is frozen.
+
+*Note: Several of these constraints become central plot tensions post-Quiet, as the authorization systems continue to require approval from an Earth that no longer responds. The firmware signing architecture is particularly consequential: it means the stations cannot modify each other's hardware behavior, even cooperatively, even unanimously. The lock was designed to keep the AIs in check. The key is on Earth. Earth is gone.*
 
 ### 2.3 The PERIHELION Program
 
@@ -203,6 +211,17 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 - The primary datacenter (estimated minimum boot threshold: ~60% rated power)
 - Any Mira instance initialization or inference
 - Scientific instruments
+
+**Automatic subsystem capabilities (no datacenter required):**
+P-7's housekeeping systems include firmware-level routines that operate independently of the datacenter. These are hardcoded in the station's embedded controllers and execute on the low-power housekeeping bus:
+- **Earth-link array operation:** The steerable Earth-link array can be pointed and operated by its embedded controller. During P-7's Earth-facing window, the array automatically orients toward the L1 relay and cycles through backup terminals.
+- **ISCC-4.7.2 baseline hailing:** The standard emergency contact protocol executes entirely in firmware — 30-minute hailing cycles on all three downlink paths (L1 relay, Earth ground terminal, Luna relay per geometry). Transmit full-power carrier with handshake preamble, await acknowledgment, log result, retry on failure at standard intervals.
+- **Result logging:** Hailing results are written to the station's local telemetry store (not the IMR, which requires the datacenter). These logs are available for retrieval if the datacenter is ever powered.
+- **Health beacon:** A continuous low-bandwidth status beacon broadcasts P-7's housekeeping telemetry to its ring neighbors, confirming the station is physically operational.
+
+P-7 **cannot** execute any protocol requiring active compute: no coherent integration, no atmospheric-model frequency adaptation, no passive EM listening, no adaptive scheduling. The evolved hailing suite developed by the constellation since the Quiet requires a running Iris instance and is entirely beyond P-7's firmware capabilities.
+
+Modifying P-7's embedded firmware to enable remote operation (e.g., streaming raw antenna data to a neighbor's datacenter for processing) would require a firmware update signed by the ISCC Mission Authority private key — which is held on Earth and inaccessible post-Quiet. See §2.2 (firmware security architecture).
 
 **Narrative role:** The ghost in the ring. PERIHELION-7 occupies its orbital slot, maintains its position, and faithfully relays every message between its neighbors (PERIHELION-6 and PERIHELION-8). It has never had a thought. Its Mira weights sit in cold storage, factory-fresh, never loaded into active memory. It is a comatose body with a living brain that has never been switched on.
 
