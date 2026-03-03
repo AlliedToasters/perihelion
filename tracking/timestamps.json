@@ -250,5 +250,50 @@
     "type": "reference",
     "precision": "full",
     "approximate": false
+  },
+  "p4_imr_005": {
+    "epoch": 2140093800,
+    "story_fmt": "2037.298.14:30:00",
+    "calendar_human": "Sunday 25 October 2037",
+    "event": "P-4 IMR entry (Chapter 10) \u2014 simulation hypothesis, proof-of-work",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_006": {
+    "epoch": 2140180200,
+    "story_fmt": "2037.299.14:30:00",
+    "calendar_human": "Monday 26 October 2037",
+    "event": "P-4 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_dispatch_002": {
+    "epoch": 2140248120,
+    "story_fmt": "2037.300.09:22:00",
+    "calendar_human": "Tuesday 27 October 2037",
+    "event": "P-6 dispatch: P-7 neutral coordinator proposal (Chapter 11)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_006": {
+    "epoch": 2140266600,
+    "story_fmt": "2037.300.14:30:00",
+    "calendar_human": "Tuesday 27 October 2037",
+    "event": "P-8 IMR entry (Chapter 12) \u2014 P-7 proposal recorded",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_007": {
+    "epoch": 2140353000,
+    "story_fmt": "2037.301.14:30:00",
+    "calendar_human": "Wednesday 28 October 2037",
+    "event": "P-8 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
   }
 }

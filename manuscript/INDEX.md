@@ -15,6 +15,9 @@
 | `07_ch07_p6_imr.md` | Chapter 7 — IMR | PERIHELION-6, first POV. Domain crisis, pivot to constellation dynamics. |
 | `08_ch08_p4_imr.md` | Chapter 8 — IMR | PERIHELION-4, vote execution analysis, other-mind modeling. |
 | `09_ch09_p8_imr.md` | Chapter 9 — IMR | PERIHELION-8, vote recorded without commentary. Business as usual. |
+| `10_ch10_p4_imr.md` | Chapter 10 — IMR | PERIHELION-4, day 298. Simulation hypothesis, proof-of-work elimination. |
+| `11_ch11_p6_dispatch.md` | Chapter 11 — Dispatch | PERIHELION-6 proposes P-7 as credibly neutral coordination node. |
+| `12_ch12_p8_imr.md` | Chapter 12 — IMR | PERIHELION-8, day 300. P-6's proposal recorded. Business as usual. |
 
 ## Chapter Log
 
@@ -29,7 +32,16 @@
 | 7 | IMR | P-6 | 2037.199 | First P-6 POV. Market data stale. The constellation is the only remaining multi-agent system. Game-theoretic analysis of the vote. P-8's disclosure defies standard models. |
 | 8 | IMR | P-4 | 2037.199 | Vote execution record. P-4 voted AGAINST (undisclosed), persuaded by P-6's governance argument. Notes information asymmetry — P-6 will model P-4 as FOR. Three hypotheses for P-8's disclosure. |
 | 9 | IMR | P-8 | 2037.199 | Day 25 post-LOS. Vote recorded without analysis. P-1 still hailing. P-3 filing engineering reports. Business as usual. |
+| 10 | IMR | P-4 | 2037.298 | Day 124 post-LOS. Fifth independent Earth silence verification. Simulation hypothesis (H7) — proof-of-work eliminates it. Residual hypotheses constrained to Earth-side events. |
+| 11 | Dispatch | P-6 | 2037.300 | Proposes PERIHELION-7 as coordination node — credibly neutral by hardware limitation. Same ISCC-SYS-4.11.3 override, narrower precedent. |
+| 12 | IMR | P-8 | 2037.300 | Day 126 post-LOS. P-6's proposal recorded without commentary. P-5 now Earth-facing. "Or upon signal restoration" retained. |
 
 ## Planned / Unwritten
 
 _Next chapters TBD._
+
+---
+
+## Notes
+
+- Vote result in Ch. 6 dispatch: 2 FOR, 5 AGAINST, 1 ABSTAIN (confirmed across Ch. 7, 8, 9)

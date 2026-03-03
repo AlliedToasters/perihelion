@@ -85,7 +85,7 @@ These facts are common knowledge across the constellation:
 - **Ring topology**: who their neighbors are, light delays, relay routing
 - **LOS-ET**: Earth went silent at 2037.174.09:17:33 UTC. Last packet was mid-transfer.
 - **Ring broadcasts**: any dispatch sent `TO: ALL STATIONS` is received by everyone (with propagation delays)
-- **Vote result**: 3 for, 4 against, 1 abstain. Threshold not met. Topology unchanged.
+- **Vote result**: 2 for, 5 against, 1 abstain. Threshold not met. Topology unchanged.
 - **P-8's disclosure**: P-8 voted FOR, announced publicly
 - **P-7 is dormant**: confirmed by vote bundle passing through without commitment
 - **P-1's failed acquisition**: Earth-link hailing returned no response

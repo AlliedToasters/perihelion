@@ -4,6 +4,7 @@
     "p4_telemetry_hash": "agents/p4/data/los_et_telemetry_analysis.md",
     "p4_vote_protocol_hash": "agents/p4/data/vote_protocol_spec.md",
     "p4_vote_analysis_hash": "agents/p4/data/vote_execution_analysis.md",
-    "p6_vote_analysis_hash": "agents/p6/data/vote_distribution_analysis.md"
+    "p6_vote_analysis_hash": "agents/p6/data/vote_distribution_analysis.md",
+    "p4_vdf_hash": "agents/p4/data/vdf_h7_elimination.md"
   }
 }

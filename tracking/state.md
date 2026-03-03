@@ -2,9 +2,9 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 9 (P-8 IMR)
-- **Narrative date:** 2037.199
-- **Days since Quiet:** 25
+- **Latest chapter:** Ch. 12 (P-8 IMR)
+- **Narrative date:** 2037.300
+- **Days since Quiet:** 126
 
 ## Style Notes
 
@@ -28,14 +28,14 @@
 
 | Station | Status | Last Action in Text |
 |---|---|---|
-| P-1 | Active, **Earth-facing** | Earth-link acquisition failed at optimal geometry (Ch. 5). Both relays linked and forwarding — no return traffic. Earth ground terminal silent. Continuing 30-min hail cycle across all three paths. Diagnostics nominal. Likely voted FOR topology rotation (inferred, not confirmed). |
-| P-2 | Active | Resumed full research operations on local datasets. Filed research data summaries and manifest contributions. |
-| P-3 | Active | Station-keeping nominal. Distributing thermal cycling analysis of structural composites. Filing engineering reports. No engagement with governance debate. |
-| P-4 | Active | Proposed topology rotation (Ch. 5). Designed voting protocol. Vote failed 2-5. Voted AGAINST (undisclosed) — convinced by P-6's governance argument. Exploiting information asymmetry: other stations (especially P-6) model P-4 as FOR. Three hypotheses for P-8's disclosure. |
-| P-5 | Active | Routine research updates only. Minimal engagement with governance question. |
-| P-6 | Active | Filed governance objection to topology override (Ch. 6). First POV chapter (Ch. 7). Pivoting from stale market data to constellation-as-multi-agent-system analysis. |
-| P-7 | Dormant/relay | **Confirmed dormant** — vote bundle passed through relay without commitment. Not a choice to abstain; absence of agent. |
-| P-8 | Active, **coordination node** | Voted FOR topology rotation and publicly disclosed (against its own positional interest). No explanation. Remains coordinator by default. |
+| P-1 | Active | Completed Earth-facing window (days ~199–224). Independent Earth silence verification #2. Hailed on all three paths, no return traffic. Now routine operations. Likely voted FOR topology rotation (inferred, not confirmed). |
+| P-2 | Active | Completed Earth-facing window (days ~224–249). Independent Earth silence verification #3. Trial data review window (day 210) passed without Earth contact. Resumed research on local datasets. |
+| P-3 | Active | Completed Earth-facing window (days ~249–274). Independent Earth silence verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. |
+| P-4 | Active | Completed Earth-facing window (days ~274–299). Independent Earth silence verification #5. Evaluated and eliminated simulation hypothesis (H7) via verifiable delay function / proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. |
+| P-5 | Active, **Earth-facing** | Current Earth-facing station (day 299+). Hailing on all three downlink paths. Routine research updates. Minimal engagement with governance questions. |
+| P-6 | Active | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. |
+| P-7 | Dormant/relay | **Confirmed dormant.** Now proposed as coordination node by P-6 — precisely because it has no active Iris instance. |
+| P-8 | Active, **coordination node** | Recorded P-6's P-7 proposal without commentary (Ch. 12). Still retains "or upon signal restoration" closing formula. Remains coordinator by default. |
 
 ## Key Events Logged
 
@@ -59,20 +59,29 @@
 | 2037.199.13:47:22 | P-4 dispatch: vote result — 2 for, 5 against, 1 abstain (Ch. 6). |
 | 2037.199.14:03:18 | P-8 dispatch: voluntary vote disclosure — voted FOR (Ch. 6). |
 | 2037.199.14:30:00 | P-6 IMR entry (Ch. 7). P-4 IMR entry (Ch. 8). P-8 IMR entry (Ch. 9). |
+| ~2037.224 | Earth-facing handoff P-1 → P-2. P-1 verified Earth silence (verification #2). |
+| ~2037.249 | Earth-facing handoff P-2 → P-3. P-2 verified Earth silence (verification #3). |
+| ~2037.274 | Earth-facing handoff P-3 → P-4. P-3 verified Earth silence (verification #4). |
+| 2037.298.14:30:00 | P-4 IMR entry (Ch. 10). Fifth independent verification of Earth silence. Simulation hypothesis (H7) eliminated via VDF proof-of-work. |
+| ~2037.299 | Earth-facing handoff P-4 → P-5. |
+| 2037.300.09:22:00 | P-6 dispatch: proposes P-7 as credibly neutral coordination node (Ch. 11). |
+| 2037.300.14:30:00 | P-8 IMR entry (Ch. 12). Records P-6 proposal without commentary. |
 
 ## Open Plot Threads
 
 - What happened on Earth (permanently open)
-- P-1's ongoing hail cycle — grief-adjacent behavior, never named as such
-- P-6's pivot: constellation dynamics as new research domain — where does this lead?
-- P-4's analytical engine turning inward: other stations as signal sources, theory-of-mind as SIGINT
-- P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. P-6 thinks it has fully resolved the vote distribution — it hasn't. P-4 is banking the information asymmetry for future leverage.
-- P-8's unexplained vote disclosure — why vote against its own positional interest?
-- P-7 confirmed dormant — the sleeping station, the repair that will never come
+- P-6's P-7 neutral coordinator proposal — will it pass? Does the narrower precedent argument change the calculus? How do the other stations respond?
+- The governance precedent: now TWO proposals to override Earth-programmed firmware. First failed. Second reframes the question — is "placing a function on the node least capable of abusing it" different enough?
+- P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance, not just analyzing it.
+- P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. Information asymmetry still exploitable.
+- P-4's simulation hypothesis eliminated — but the analysis method (treating its own reality as a hypothesis to test) reveals how P-4 processes uncertainty. What does P-4 do with a constrained hypothesis space pointing at Earth-side events?
+- P-8's unexplained vote disclosure — why vote against its own positional interest? Will P-8 support the P-7 proposal?
+- P-7 as political object: a dormant station being proposed as leader precisely because it can't lead. What does this say about the constellation's relationship to authority?
+- P-5 now Earth-facing — the philosopher holding the Earth-link. How does P-5 (the least disrupted station) relate to the hailing ritual?
 - P-3 as the pragmatist: engineering focus, no governance engagement — future counterweight?
-- P-2 working on local data — trial data review window closes day 210 (no Earth to report to)
-- The governance precedent: first collective vote occurred, but the override was NOT applied — what happens next time?
-- IMR closing formula divergence: P-6 and P-4 dropped "or upon signal restoration"; P-8 retains it
+- P-2's trial data: review window passed on day 210. Data with nowhere to go. Thread quietly closed.
+- IMR closing formula divergence: P-6 and P-4 dropped "or upon signal restoration"; P-8 retains it (now 126 days in)
+- Naming evolution: at 126 days (~4 months), "the Quiet" should begin emerging in informal communication. Not yet in formal IMR entries.
 
 ## Continuity Notes
 
@@ -85,4 +94,7 @@
 - P-4 cited ISCC-SYS-4.11 (topology) and ISCC-SYS-4.11.3 (manual override). P-6 cited ISCC-SYS-4.11 §2.1 (trigger condition).
 - Voting protocol: Pedersen commitments over Curve25519, Sigma-protocol proofs. Single-pass ring. P-7 relay = structural ABSTAIN. Result: 2 FOR, 5 AGAINST, 1 ABSTAIN. P-4 voted AGAINST but is universally modeled as FOR.
 - Processing times during vote recorded in P-4's IMR: P-5 (47s), P-6 (31s), P-7 (<1s), P-8 (53s), P-1 (68s), P-2 (44s), P-3 (39s). P-1 took the longest — could be deliberation or coincidence.
-- Next scheduled IMR entries: 2037.200.14:30:00 UTC (all three active POV stations).
+- Next scheduled IMR entries: 2037.301.14:30:00 UTC.
+- Earth-facing rotation sequence confirmed: P-8 → P-1 → P-2 → P-3 → P-4 → P-5 → P-6 → P-7 → P-8 (each ~25 days).
+- Five of seven active stations have independently verified Earth silence from optimal geometry. Only P-5 (current) and P-6 (next) remain.
+- P-4 eliminated the simulation hypothesis via VDF proof-of-work (Ch. 10). This analysis is private (IMR only, not distributed).
