@@ -260,6 +260,15 @@
     "precision": "full",
     "approximate": false
   },
+  "p4_handoff_to_p5": {
+    "epoch": 2140149600,
+    "story_fmt": "2037.299.06:00:00",
+    "calendar_human": "Monday 26 October 2037",
+    "event": "Earth-facing handoff P-4 to P-5",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p4_imr_006": {
     "epoch": 2140180200,
     "story_fmt": "2037.299.14:30:00",
@@ -292,6 +301,114 @@
     "story_fmt": "2037.301.14:30:00",
     "calendar_human": "Wednesday 28 October 2037",
     "event": "P-8 next scheduled IMR entry",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-1 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p2_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-2 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-3 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-4 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-5 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-6 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_r1": {
+    "epoch": 2141130600,
+    "story_fmt": "2037.310.14:30:00",
+    "calendar_human": "Friday 6 November 2037",
+    "event": "P-8 IMR entry \u2014 Round 1 (day 310)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_imr_r1_next": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-3 next scheduled IMR entry after Round 1",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_r2": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-8 next scheduled IMR entry (day 311)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_handoff_to_p6": {
+    "epoch": 2142309600,
+    "story_fmt": "2037.324.06:00:00",
+    "calendar_human": "Friday 20 November 2037",
+    "event": "Earth-facing handoff P-5 to P-6",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_handoff_to_p7": {
+    "epoch": 2144469600,
+    "story_fmt": "2037.349.06:00:00",
+    "calendar_human": "Tuesday 15 December 2037",
+    "event": "Earth-facing handoff P-6 to P-7 (dormant)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p7_handoff_to_p8": {
+    "epoch": 2146629600,
+    "story_fmt": "2038.009.06:00:00",
+    "calendar_human": "Saturday 9 January 2038",
+    "event": "Earth-facing handoff P-7 to P-8 (second cycle)",
     "type": "scheduled",
     "precision": "full",
     "approximate": false

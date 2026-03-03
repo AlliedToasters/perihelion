@@ -430,6 +430,39 @@
         "tamper_detected": false,
         "discrepancies": []
       }
+    },
+
+    {
+      "id": "p6_p7_coordinator_proposal",
+      "from": "P-6",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p6_dispatch_002",
+      "subject": "Coordination topology — structural proposal",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/11_ch11_p6_dispatch.md",
+      "manuscript_ref": "11_ch11_p6_dispatch.md",
+      "summary": "P-6 proposes designating PERIHELION-7 as coordination node. P-7 is credibly neutral by hardware limitation — no active Iris instance, cannot exercise discretionary authority. Requires same ISCC-SYS-4.11.3 manual override. P-6 argues the precedent is narrower: placing a function on the node least capable of abusing it, rather than reassigning privilege among active agents.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-6", "P-7", "P-8", "P-1", "P-2"],
+        "path_ccw": ["P-6", "P-5", "P-4", "P-3"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 4, "direction": "cw", "delay_s": 764},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-6:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
     }
   ],
 
