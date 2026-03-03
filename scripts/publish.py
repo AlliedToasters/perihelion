@@ -402,7 +402,7 @@ def publish_chapters(chapters: list[ManuscriptChapter], ghost_url: str,
 
 # Maps source files in pages/ to their Ghost page slug.
 MANAGED_PAGES = {
-    "about.md": "coming-soon",
+    "about.md": "about",
 }
 
 
@@ -467,7 +467,6 @@ def sync_pages(ghost_url: str, api_key: str, force: bool = False):
     # Fetch all Ghost pages and index by slug
     ghost_pages = api.get_all_pages()
     pages_by_slug = {p["slug"]: p for p in ghost_pages}
-    print(f"  found {len(ghost_pages)} Ghost pages: {[p['slug'] for p in ghost_pages]}")
 
     for filename, target_slug in MANAGED_PAGES.items():
         source = PAGES_DIR / filename
