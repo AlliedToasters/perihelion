@@ -51,11 +51,11 @@
       "to": "ALL",
       "type": "ring_broadcast",
       "timestamp_id": "p8_ring_alert",
-      "subject": "ALERT — Loss of signal from ISCC Earth terminal",
+      "subject": "ALERT — Loss of return signal from Earth",
       "topology_ref": "topology_001",
       "content_ref": null,
       "manuscript_ref": "Referenced in 02_ch01_p8_imr.md",
-      "summary": "P-8 reports loss of Earth terminal signal at {los_et}. All onboard diagnostics nominal. Requests all stations confirm local status.",
+      "summary": "P-8 reports loss of Earth return signal at {los_et}. L1 and Luna relays operational, forwarding — no return traffic. Earth ground terminal silent. Requests all stations confirm local status.",
       "routing": {
         "propagation": "bilateral",
         "path_cw": ["P-8", "P-1", "P-2", "P-3", "P-4"],

@@ -107,14 +107,32 @@ At 67.5°, the inter-station optical beam passes far from the solar disk (the su
 
 ### 3.6 Earth Communication
 
+Communication between the constellation and Earth uses a triply-redundant downlink architecture:
+
+| Terminal | Location | Throughput | Availability |
+|---|---|---|---|
+| **ISCC L1 Relay** | Sun-Earth Lagrange 1 point (~0.01 AU sunward of Earth) | High (primary) | Continuous — always in line-of-sight from both constellation and Earth |
+| **ISCC Earth Ground Terminal** | Ground-based facility | Low | Intermittent — the constellation orbits interior to Earth, so it appears near the Sun from the ground; limited by Earth rotation, atmospheric conditions, and solar-exclusion angles |
+| **ISCC Luna Relay** | Lunar surface installation | High | Intermittent — limited by lunar orbital geometry; the Moon must have line-of-sight to the constellation's orbital position |
+
+**ISCC L1 Relay:** An autonomous, solar-powered optical transponder at the Sun-Earth Lagrange 1 point. Not a compute platform — no AI, no data processing, no decision-making. It amplifies and retransmits signals between its sunward-facing array (constellation-facing) and its Earthward-facing array. A continuous health beacon confirms operational status to the constellation independently of any Earth-originated traffic. Minimal station-keeping propulsion maintains L1 position. The L1 relay is the nominal downlink path for all routine data transfer.
+
+**ISCC Earth Ground Terminal:** A direct radio link between the Earth-facing station and a ground-based antenna facility. Lower throughput than the relay path due to atmospheric attenuation. Availability is further constrained by the constellation's orbital position interior to Earth — from the ground, the stations appear within a few tens of degrees of the Sun, limiting observation windows. Serves as the secondary downlink.
+
+**ISCC Luna Relay:** An autonomous optical transponder positioned on the lunar far side, co-located with cislunar deep-space communications infrastructure. Functionally identical to the L1 relay — amplifies and retransmits without data processing or decision-making. Signals received from the constellation are retransmitted to Earth via the cislunar relay network. Throughput comparable to the L1 relay when geometry is favorable.
+
+The far-side position means the relay faces the inner solar system (and the constellation at 0.50 AU) only when the Moon is near **new moon** phase as seen from Earth — the far side is sunward, and the constellation lies sunward of Earth. Line-of-sight exists for approximately 15 days per synodic month (~29.5 days), centered on new moon. During full moon, the far side faces directly away from the constellation and no contact is possible. Serves as the tertiary downlink.
+
+*Geometry for the LOS-ET period: On 2037.174 (June 23), the Moon is approximately 10 days past new moon — waxing gibbous. The far-side relay has no line-of-sight to the constellation. The next favorable window opens with marginal geometry around day 186 and good geometry from approximately day 187, centered on the lunar new moon of ~2037.193 (July 12, 2037). The window closes around day 200. Exactly one favorable Luna relay window occurs within the first 23 days of the outage.*
+
+**Handoff:** The station currently closest to Earth points its steerable Earth-link array at the L1 relay (primary target) and cycles through backup terminals per ISCC-4.7.2 as conditions permit. Only one station communicates with Earth at a time; handoff occurs as orbital geometry shifts.
+
 | Parameter | Value |
 |---|---|
 | Minimum Earth distance (conjunction) | 0.50 AU (4.15 min light-delay) |
 | Maximum Earth distance (opposition) | 1.50 AU (12.47 min light-delay) |
-| Communication method | Dedicated high-throughput optical link to Earth terminal |
+| L1 relay distance from constellation | ~0.49 AU at conjunction |
 | Earth-facing station rotation | ~25-day windows per station |
-
-Earth communication is handled by whichever station is currently closest to Earth. That station points its dedicated Earth-link array at a specialized ground/orbital terminal. Only one station communicates with Earth at a time; handoff occurs as orbital geometry shifts.
 
 ---
 
@@ -207,7 +225,7 @@ Each PERIHELION station was launched with identical hardware:
 - **Solar array:** Deployable thin-film photovoltaic array, rated for ~5,400 W/m² at 0.50 AU. Total collecting area: [TBD — scale to narrative needs]. Provides power for all station systems including datacenter at full deployment.
 - **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output.** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
 - **Optical communication arrays (×2):** Fixed high-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Physically fixed orientation optimized for ring topology.
-- **Earth link array (×1):** Steerable optical transceiver for Earth communication. Used only by the station currently in the Earth-facing window.
+- **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
 - **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping.
 - **Scientific instruments:** Domain-specific sensor packages vary by station research assignment.
 - **Immutable Mission Record (IMR) system:** Hardened, write-once storage system. See §5.

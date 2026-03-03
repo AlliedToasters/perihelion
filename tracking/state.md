@@ -28,7 +28,7 @@
 
 | Station | Status | Last Action in Text |
 |---|---|---|
-| P-1 | Active, **Earth-facing** | Earth-link acquisition failed at optimal geometry (Ch. 5). Continuing 30-min hail cycle. No response. Diagnostics nominal. Likely voted FOR topology rotation (inferred, not confirmed). |
+| P-1 | Active, **Earth-facing** | Earth-link acquisition failed at optimal geometry (Ch. 5). Both relays linked and forwarding — no return traffic. Earth ground terminal silent. Continuing 30-min hail cycle across all three paths. Diagnostics nominal. Likely voted FOR topology rotation (inferred, not confirmed). |
 | P-2 | Active | Resumed full research operations on local datasets. Filed research data summaries and manifest contributions. |
 | P-3 | Active | Station-keeping nominal. Distributing thermal cycling analysis of structural composites. Filing engineering reports. No engagement with governance debate. |
 | P-4 | Active | Proposed topology rotation (Ch. 5). Designed voting protocol. Vote failed 2-5. Voted AGAINST (undisclosed) — convinced by P-6's governance argument. Exploiting information asymmetry: other stations (especially P-6) model P-4 as FOR. Three hypotheses for P-8's disclosure. |
@@ -41,7 +41,7 @@
 
 | Timestamp (UTC) | Event |
 |---|---|
-| 2037.174.09:17:33 | LOS-ET. Last data packet from Earth (Vera Rubin survey batch, mid-transfer). |
+| 2037.174.09:17:33 | LOS-ET. Last data packet from Earth via L1 relay (Vera Rubin survey batch, mid-transfer). Both relays (L1, Luna) establish link and forward — no return traffic from Earth. Earth ground terminal silent on all frequencies. |
 | 2037.174.09:22:14 | P-8 reports outage to ring. |
 | 2037.174.~09:25 | All stations confirm nominal (ring propagation complete). |
 | 2037.174.14:30:00 | P-8 IMR entry composed (Ch. 1). ~5h12m since LOS. |
@@ -78,7 +78,7 @@
 
 - P-8 was Earth-facing at LOS. P-1 is now Earth-facing (day 199, post-handoff).
 - Ring neighbors: P-8 ↔ P-7 (relay) ↔ P-6; P-8 ↔ P-1 ↔ P-2.
-- The "localized hardware fault" theory from Ch. 1/Ch. 4 is now effectively eliminated — P-1's independent equipment also returned no response.
+- The "localized hardware fault" theory from Ch. 1/Ch. 4 is now effectively eliminated — P-1's independent equipment confirms same pattern: both relays (L1, Luna) link up and forward, no return traffic from Earth; ground terminal silent. The silence is Earth-side.
 - Term at this stage: "LOS-ET" / "the signal loss" / "the outage." "The Quiet" comes later (months).
 - Prologue is very short (~80 words). Station domains emerge through IMR/dispatch chapters.
 - P-6 designed the reconnection handshake protocol (mentioned Ch. 4) — establishes P-6 as a systems thinker before its own POV chapter.
