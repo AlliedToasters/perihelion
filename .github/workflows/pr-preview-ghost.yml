@@ -9,6 +9,10 @@ on:
       - 'tracking/variables.json'
       - 'publishing/**'
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   preview:
     if: github.event.action != 'closed'
