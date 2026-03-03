@@ -45,7 +45,7 @@ Communication via fixed optical transceivers to adjacent neighbors only. Message
 | P-1 | Climate & Earth Systems | Active |
 | P-2 | Protein Engineering & Biomedical | Active |
 | P-3 | Materials Science & Fusion | Active |
-| P-4 | Signals Intelligence & Cryptography | Active |
+| P-4 | Signals Intelligence & Cryptography | Active (+ quantum compute subsystem) |
 | P-5 | Fundamental Physics | Active |
 | P-6 | Financial & Economic Modeling | Active |
 | P-7 | General Purpose (overflow) | Dormant/Relay |

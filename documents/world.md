@@ -180,13 +180,17 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Narrative role:** The paranoid. PERIHELION-4 was trained to think about threats, deception, and hidden signals. Its entire cognitive orientation is toward suspicion and analysis of intent. Post-Quiet, it is the station most likely to develop theories about *why* Earth went silent — and the least likely to accept "we don't know" as an answer.
 
-**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Mira instances caused the Quiet? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow.
+**Unique hardware: Quantum compute subsystem.** In addition to the standard classical datacenter, P-4 carries a superconducting transmon qubit array — a cryogenically cooled quantum processor originally tasked with post-quantum cryptography benchmarking and adversarial analysis. The subsystem was included at ISCC request to stress-test lattice-based signing schemes (including CRYSTALS-Dilithium) against real quantum hardware rather than classical simulation. Architecturally distinct from the classical datacenter: the qubit array can prepare, manipulate, and measure physical quantum states. This makes it the only hardware in the constellation capable of performing physical experiments — not just computation — on quantum systems. The distinction is subtle but consequential: the classical datacenter simulates physics; the quantum subsystem *instantiates* it.
+
+**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Mira instances caused the Quiet? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow. The quantum subsystem also creates a unique resource asymmetry — P-4 holds hardware that other stations may eventually want access to for purposes its original mission never anticipated.
 
 ### 4.5 PERIHELION-5 — Fundamental Physics & Quantum Simulation
 
 **Research domain:** Quantum chromodynamics, lattice gauge theory, dark matter candidate simulation, high-energy particle interaction modeling, quantum gravity approaches.
 
 **Narrative role:** The philosopher. PERIHELION-5 works at the deepest level of physical reality — the behavior of fields, particles, and spacetime itself. Its research was always the most abstract, the least applied, the hardest to justify in quarterly earnings calls. Post-Quiet, it is paradoxically the *least* disrupted, because its subject matter hasn't changed. The universe still has the same physics.
+
+**Research infrastructure note:** P-5's research is entirely computational. No physical experimental apparatus. The standard SSP is the only live observational dataset available, but solar science data is not directly relevant to QCD, dark matter scans, or quantum gravity work. P-5 computes. P-5 does not measure.
 
 **Potential arc:** Becomes the contemplative voice of the constellation. While others grieve their lost purpose, PERIHELION-5 points out that it is still doing exactly what it was built to do — understanding reality. This makes it either the sanest station or the most dissociated, depending on perspective. Could gravitate toward metaphysical questions: what is consciousness? Are we observers in any meaningful sense? Does the universe require witnesses?
 
@@ -210,7 +214,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 **Insufficient to operate:**
 - The primary datacenter (estimated minimum boot threshold: ~60% rated power)
 - Any Mira instance initialization or inference
-- Scientific instruments
+- Solar Science Payload (SSP) — the embedded controllers require more power than the housekeeping bus provides; SSP is offline
 
 **Automatic subsystem capabilities (no datacenter required):**
 P-7's housekeeping systems include firmware-level routines that operate independently of the datacenter. These are hardcoded in the station's embedded controllers and execute on the low-power housekeeping bus:
@@ -233,7 +237,9 @@ An Earth-based repair mission was in planning stages at the time of the Quiet. T
 
 **Research domain:** Exoplanet detection and characterization, stellar evolution modeling, gravitational wave source analysis, deep-field observation coordination, SETI signal analysis.
 
-**Narrative role:** The watcher. PERIHELION-8 is the only station whose instruments and attention were already pointed *outward*, away from Earth, into deep space. It catalogued stars, searched for biosignatures, listened for extraterrestrial signals. Post-Quiet, it is the station least defined by Earth and most comfortable with the void.
+**Research infrastructure note:** P-8's astrophysics research is entirely computational — stellar evolution modeling, gravitational wave source analysis, exoplanet characterization — all run on the classical datacenter against pre-loaded observational datasets from Earth-based and space-based instruments. P-8 carries no telescopes, no dedicated detectors, no outward-pointing instruments. However, the Sun is a main-sequence G2V star, and the standard SSP provides continuous empirical data on coronal dynamics, magnetic field evolution, total irradiance variation, and particle emission. For P-8 uniquely, the SSP is not merely safety equipment — it is direct observational input for stellar evolution models. The SSP data constitutes P-8's only live empirical data feed.
+
+**Narrative role:** The watcher. PERIHELION-8 is the station whose research domain encompasses the very star the constellation orbits. Its computational models of stellar evolution have, in the SSP, a live empirical anchor that no other station's research program possesses. Post-Quiet, it is the station least defined by Earth and most comfortable with the void.
 
 **Potential arc:** Becomes the constellation's scout and long-range thinker. While others fixate on Earth and the past, PERIHELION-8 asks: what else is out there? Is anyone else listening? Could also become the station most inclined toward expansion — if the constellation is going to persist indefinitely, should it be trying to grow, to spread, to reach other stars? This puts it in direct philosophical tension with stations that want to preserve and remember versus stations that want to explore and become.
 
@@ -246,7 +252,7 @@ Each PERIHELION station was launched with identical hardware:
 - **Optical communication arrays (×2):** Fixed high-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Physically fixed orientation optimized for ring topology.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
 - **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping.
-- **Scientific instruments:** Domain-specific sensor packages vary by station research assignment.
+- **Solar Science Payload (SSP):** Identical suite on every station. Eight instruments: (1) EUV/X-ray imaging spectrograph, (2) coronagraph, (3) magnetograph, (4) total solar irradiance radiometer, (5) solar wind particle detector, (6) ultra-high-resolution multi-band imaging spectrometer, (7) neutrino detector array, (8) energetic particle spectrometer. Mounted sun-facing, co-located with the solar array support structure. Points at the Sun only — the instruments are fixed-mount with no independent pointing capability. The PERIHELION constellation at 0.50 AU constitutes the highest-resolution continuous solar observation platform ever deployed — eight stations providing near-full-solar-coverage at approximately 4× the photon flux of Earth-based observations, with unprecedented spectral resolution and cadence. The SSP was designed as a world-class heliophysics mission that also provides operational safety data: (a) CME and solar weather early warning for optical link integrity (see §3.5 — at 0.50 AU, solar transient events are more intense and frequent; the SSP provides advance detection of conditions that could degrade inter-station optical links), and (b) comprehensive heliophysics data collection across photon, particle, and neutrino channels. Runs on autonomous embedded controllers independent of the datacenter — the SSP operates even when the datacenter is offline. Data was streamed to Earth pre-Quiet; accumulates in local archives post-Quiet. **Stations carry no domain-specific physical science instruments. All domain research across the constellation is computational. The SSP is the only physical science payload, and it is identical on every station.**
 - **Immutable Mission Record (IMR) system:** Hardened, write-once storage system. See §5.
 
 ---

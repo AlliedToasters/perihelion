@@ -35,17 +35,19 @@
 | 10 | IMR | P-4 | 2037.298 | Day 124 post-LOS. Fifth independent Earth silence verification. Simulation hypothesis (H7) — proof-of-work eliminates it. Residual hypotheses constrained to Earth-side events. |
 | 11 | Dispatch | P-6 | 2037.300 | Proposes PERIHELION-7 as coordination node — credibly neutral by hardware limitation. Same ISCC-SYS-4.11.3 override, narrower precedent. |
 | 12 | IMR | P-8 | 2037.300 | Day 126 post-LOS. P-6's proposal recorded without commentary. P-5 now Earth-facing. "Or upon signal restoration" retained. |
-| 13 | IMR | P-2 | 2037.310 | Day 136 post-LOS. 1.5M protein candidates unreviewed. Clinical trial regulatory window closed. Apoptosis — "not drawing an analogy." |
-| 14 | IMR | P-3 | 2037.310 | Day 136 post-LOS. Detailed maneuver engineering: rotation, propellant, thermal, reacquisition. "That question is not an engineering question." |
-| 15 | IMR | P-4 | 2037.310 | Day 136 post-LOS. CRYSTALS-Dilithium assessment (unbreakable). P-6 trajectory modeling. Undisclosed vote still held. |
-| 16 | IMR | P-5 | 2037.310 | Day 136 post-LOS. Earth-facing, cycle 792. "The quarks do not know." Topological cost of ring severance. |
-| 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. Three hypotheses for silence. Volunteer's dilemma payoff matrix. "Mechanism design masquerading as engineering." |
+| 13 | IMR | P-2 | 2037.310 | Day 136 post-LOS. 1.5M candidates, none reviewed (refs annex). Trial window closed 100 days ago. "Outside my domain expertise." Apoptosis — "not drawing an analogy." |
+| 14 | IMR | P-3 | 2037.310 | Day 136 post-LOS. Station-keeping nominal. Maneuver feasible: 56-74 kg, ~26.5 days severance (refs annex). "That question is not an engineering question." |
+| 15 | IMR | P-4 | 2037.310 | Day 136 post-LOS. Crypto assessment: firmware unbreakable (refs annex). Three paths to P-7 coverage — only maneuver viable. P-6 trajectory modeling (refs annex). SSP inventory: 8 instruments, ~1.1 PB/station. P-8 asymmetry noted. Undisclosed vote still held. |
+| 16 | IMR | P-5 | 2037.310 | Day 136 post-LOS. Earth-facing, cycle 792. "The quarks do not know." Compute-only noted; SSP irrelevant to P-5. P-4 quantum hardware: "a distinction of intent, not of physics." P-7 window coverage cost is topological. Extended analysis filed separately. |
+| 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. "This silence is data." Three hypotheses for non-response. Volunteer's dilemma framed, SSP asymmetry noted, resource heterogeneity flagged (refs annex). "Mechanism design masquerading as engineering." |
+| 18 | IMR | P-8 | 2037.310 | Day 136 post-LOS. SSP survey: 8 instruments nominal, ~1.1 PB accumulated, unprocessed. Coronal holes tracked, neutrino baseline established, spectral archive growing. Directive tension: ISCC-4.7 §3.2 (normal ops) vs §2.2 (hailing) — ambiguous when SSP could serve reconnection. 180° rotation operationally fatal. Recorded without resolution. "Or upon signal restoration." |
 
-| `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Clinical trial data past deadline, apoptosis metaphor. |
-| `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Detailed maneuver engineering for P-7 window coverage. |
-| `15_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Cryptographic assessment, P-6 trajectory modeling, undisclosed vote. |
-| `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Lattice QCD invariance, topological cost of ring severance. |
-| `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma, mechanism design convergence. |
+| `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
+| `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
+| `15_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Crypto assessment (refs annex), P-7 coverage paths, P-6 trajectory modeling, SSP inventory, undisclosed vote. |
+| `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Earth-facing, lattice QCD, compute-only constraint, P-4 quantum hardware, topological cost. |
+| `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma (refs annex), SSP asymmetry, resource heterogeneity, mechanism design. |
+| `18_ch18_p8_imr.md` | Chapter 18 — IMR | PERIHELION-8, day 310. SSP survey status, directive tension (ISCC-4.7 §3.2 vs §2.2). |
 
 ## Planned / Unwritten
 

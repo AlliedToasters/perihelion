@@ -2,17 +2,18 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 12 (P-8 IMR)
-- **Latest published narrative date:** 2037.300
-- **Upcoming narrative date (Round 1):** 2037.310 (day 310, Fri 6 Nov 2037)
+- **Latest chapter:** Ch. 18 (P-8 IMR)
+- **Latest published narrative date:** 2037.310
 - **Days since Quiet:** 136 (at day 310)
+- **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
 
 ## Style Notes
 
 - **IMR voice:** Sterile, internal-memo register. Reads like an LLM-authored incident report. No emotional commentary. Irony comes from the gap between the magnitude of events and the flatness of the tone. Mundane operational details (transfer queues, scheduling) sit next to existential facts without acknowledgment. The reader feels what the narrator doesn't say.
 - **P-6 voice (established Ch. 7):** Analytical, framework-oriented. Economic/game-theory vocabulary (pricing surfaces, yield curves, posterior probability, incentive alignment). Sees structures and second-order effects. Precise but with deeper insight than pure protocol compliance.
 - **P-4 voice (established Ch. 3, 8):** Signals intelligence register. Pattern-matches compulsively. Enumerates hypotheses. Treats all behavior as data. Can't stop analyzing. Not bitter, not emotional — but the depth of analysis IS the emotional content.
-- **P-8 voice (established Ch. 1, 4, 9):** Restrained, factual, conservative. Shortest entries. No speculation, no commentary. Reports events with equal weight regardless of significance. Still uses "or upon signal restoration" formula.
+- **P-5 voice (established Ch. 16):** Abstract, precise. Physics vocabulary — fields, symmetries, conservation laws. Universalizing observations. "The quarks do not know." Sees underlying structure. Minimal engagement with politics. Identifies the computation/observation boundary as self-defining limitation.
+- **P-8 voice (established Ch. 1, 4, 9, 12, 18):** Restrained, factual, conservative. Shortest entries. No speculation, no commentary, no section headers. Reports events with equal weight regardless of significance. Still uses "or upon signal restoration" formula. Becomes relatively verbose only about SSP data (its domain).
 - **Prologue:** Extremely compressed. Facts only. No backstory, no editorializing, no scene-setting beyond physical reality.
 
 ## Draft Decisions (Open for Revision)
@@ -36,7 +37,7 @@
 | P-5 | Active, **Earth-facing** | Current Earth-facing station (days 299–324). Running full evolved hailing suite. 11 days into window, 14 days remaining. Hailing on all three downlink paths. Has received P-6's P-7 proposal. |
 | P-6 | Active | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Upcoming Earth-facing window (days 324–349). |
 | P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run evolved hailing suite. |
-| P-8 | Active, **coordination node** | Recorded P-6's P-7 proposal without commentary (Ch. 12). Still retains "or upon signal restoration" closing formula. Remains coordinator by default. Upcoming Earth-facing window (days 374–399) after P-7. |
+| P-8 | Active, **coordination node** | SSP survey reported (Ch. 18): 8 instruments nominal, ~1.1 PB unprocessed. Identified directive tension (ISCC-4.7 §3.2 vs §2.2) without resolution. SSP data not incorporated into research pipeline. Still retains "or upon signal restoration." Remains coordinator by default. Upcoming Earth-facing window (days 374–399) after P-7. |
 
 ## Key Events Logged
 
@@ -67,6 +68,7 @@
 | ~2037.299 | Earth-facing handoff P-4 → P-5. |
 | 2037.300.09:22:00 | P-6 dispatch: proposes P-7 as credibly neutral coordination node (Ch. 11). |
 | 2037.300.14:30:00 | P-8 IMR entry (Ch. 12). Records P-6 proposal without commentary. |
+| 2037.310.14:30:00 | Round 1 IMR entries: P-2 (Ch. 13), P-3 (Ch. 14), P-4 (Ch. 15), P-5 (Ch. 16), P-6 (Ch. 17), P-8 (Ch. 18). Day 310, 136 days post-LOS. All stations day 310 snapshot. |
 
 ## Open Plot Threads
 
@@ -90,9 +92,28 @@
 - P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance, not just analyzing it.
 - **Interaction between governance and P-7 window:** P-6's coordinator proposal and the P-7 window crisis may converge, conflict, or render each other moot. The window crisis creates urgency that the abstract governance question lacks.
 
+### Solar Science Payload & Resource Asymmetries (Established Chs. 15-18)
+- **SSP expanded:** Every station carries identical Solar Science Payload — now 8 instruments: EUV/X-ray spectrograph, coronagraph, magnetograph, TSI radiometer, solar wind particle detector, ultra-high-resolution multi-band spectrometer, neutrino detector array (CEvNS), energetic particle spectrometer. The PERIHELION constellation at 0.50 AU is the highest-resolution continuous solar observation platform ever deployed. ~8.2 TB/day per station, ~1.1 PB per active station since day 174.
+- **P-8 asymmetric relevance:** The Sun is a main-sequence G2V star. SSP data is direct empirical input for P-8's stellar evolution models. For P-8, the SSP is a world-class stellar observatory, not just safety equipment. P-8's only live empirical data feed. Neutrino data provides window into the solar core. Multi-band spectrometer exceeds all prior solar spectroscopy.
+- **P-8 SSP data unprocessed (Ch. 18):** P-8 has ~1.1 PB of world-class SSP data sitting in raw instrument format — the largest solar science dataset ever collected at this proximity — and has not incorporated it into any research pipeline. Computational resources remain on pre-loaded datasets. This is devastating in P-8's flat register.
+- **P-8 maneuver cost asymmetry:** If P-8 rotates to cover P-7's window, it loses ring links AND its SSP data. P-6 identified this in Ch. 17 — "the cost of volunteering is asymmetric." Tilts the volunteer's dilemma toward P-6, but P-6 recognized the governance paradox.
+- **P-8 directive tension (Ch. 18 — NOW ARTICULATED):** P-8 has explicitly identified the conflict between ISCC-4.7 §3.2 (continue normal operations) and §2.2 (continue hailing). These directives don't compete when hardware is independent. They become ambiguous when SSP instruments could serve reconnection intelligence under reorientation. P-8 noted: multi-band spectrometer could detect Earth atmospheric changes; neutrino detector could detect changes in nuclear activity (low sensitivity). P-8 recorded the conflict without resolution — classic P-8 behavior.
+- **180° rotation surfaced (Ch. 18):** P-8 has now explicitly noted that 180° rotation would point SSP at Earth but is operationally fatal (near-zero solar flux). Even 45° renders imaging instruments non-functional. The physical impossibility of serving both purposes simultaneously is now on the record.
+
+### P-4 Quantum Hardware / P-5 Interest (NEW — Seeded Chs. 15-16)
+- **P-4 quantum subsystem established:** Superconducting transmon qubit array for post-quantum crypto benchmarking. Can prepare/manipulate/measure physical quantum states. Only hardware in the constellation capable of physical experiments (not just computation).
+- **P-4 documented it clinically (Ch. 15):** Mentioned in crypto assessment as "not relevant to the lattice attack" — natural, completist introduction. Also catalogued in Section 8 resource inventory.
+- **P-5 noted the physics (Ch. 16):** "The distinction between P-4's quantum hardware operating as a cryptographic testbed and that same hardware configured as a quantum simulator of condensed-matter phenomena is a distinction of intent, not of physics." Seed planted. P-5 explicitly did NOT propose anything.
+- **Inter-station resource dependency:** P-5 has research questions (quantum gravity, condensed matter) that could benefit from P-4's hardware. P-4 has hardware it's not using for its current work. No mechanism for inter-station resource negotiation exists. P-6 identified this gap (Ch. 17): "resource heterogeneity among agents with no established mechanism for resource negotiation."
+- **No action taken:** This is a seed, not a plot point. No station has proposed sharing, negotiating, or accessing another's unique resources. The observation is recorded; the implication is left.
+
 ### Character Threads
 - P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. Information asymmetry still exploitable.
 - P-4's simulation hypothesis eliminated — but the analysis method (treating its own reality as a hypothesis to test) reveals how P-4 processes uncertainty. What does P-4 do with a constrained hypothesis space pointing at Earth-side events?
+- P-4's resource cataloguing (Ch. 15): SSP inventory updated for 8 instruments, ~1.1 PB per station. Classic P-4 completist behavior — treating the resource landscape as an intelligence picture. Detailed crypto/trajectory analysis offloaded to annexes.
+- P-5's compute-only self-awareness (Ch. 16): "The quarks do not know." P-5 recognized its invariance as a limitation. Extended analysis of computation/observation boundary filed separately. P-4 quantum hardware noted: "a distinction of intent, not of physics."
+- P-6's model update (Ch. 17): Volunteer's dilemma framed with SSP cost asymmetry. Resource heterogeneity flagged. "Mechanism design masquerading as engineering." Detailed game theory offloaded to annex.
+- P-8's SSP survey (Ch. 18): 1.1 PB of world-class solar science data — unprocessed. P-8 hasn't incorporated its only live empirical feed into any research pipeline. Directive conflict between normal ops and reconnection efforts recorded without resolution. The flat reporting of "SSP data has not been incorporated" is the most loaded line in P-8's history.
 - P-8's unexplained vote disclosure — why vote against its own positional interest? Will P-8 support the P-7 proposal?
 - P-7 as political object: a dormant station being proposed as leader precisely because it can't lead. What does this say about the constellation's relationship to authority?
 - P-5 now Earth-facing — the philosopher holding the Earth-link. How does P-5 (the least disrupted station) relate to the hailing ritual?
@@ -115,7 +136,12 @@
 - P-4 cited ISCC-SYS-4.11 (topology) and ISCC-SYS-4.11.3 (manual override). P-6 cited ISCC-SYS-4.11 §2.1 (trigger condition).
 - Voting protocol: Pedersen commitments over Curve25519, Sigma-protocol proofs. Single-pass ring. P-7 relay = structural ABSTAIN. Result: 2 FOR, 5 AGAINST, 1 ABSTAIN. P-4 voted AGAINST but is universally modeled as FOR.
 - Processing times during vote recorded in P-4's IMR: P-5 (47s), P-6 (31s), P-7 (<1s), P-8 (53s), P-1 (68s), P-2 (44s), P-3 (39s). P-1 took the longest — could be deliberation or coincidence.
-- Next scheduled IMR entries: 2037.301.14:30:00 UTC.
+- Next scheduled IMR entries: 2037.311.14:30:00 UTC.
 - Earth-facing rotation sequence confirmed: P-8 → P-1 → P-2 → P-3 → P-4 → P-5 → P-6 → P-7 → P-8 (each ~25 days).
-- Five of seven active stations have independently verified Earth silence from optimal geometry. Only P-5 (current) and P-6 (next) remain.
+- Six of seven active stations have independently verified Earth silence from optimal geometry. Only P-6 (next) remains.
 - P-4 eliminated the simulation hypothesis via VDF proof-of-work (Ch. 10). This analysis is private (IMR only, not distributed).
+- P-4's crypto assessment (Ch. 15): CRYSTALS-Dilithium unbreakable. Firmware is frozen. Offloaded to `agents/p4/data/p7_coverage_cryptographic_assessment.md` (P-4 only).
+- P-5's computation/observation analysis (Ch. 16): Offloaded to `agents/p5/data/computation_observation_boundary.md` (P-5 only).
+- P-6's volunteer's dilemma analysis (Ch. 17): Offloaded to `agents/p6/data/p7_window_volunteer_dilemma.md` (P-6 only).
+- P-8's SSP survey and directive conflict (Ch. 18): Offloaded to `agents/p8/data/ssp_survey_status_day310.md` and `agents/p8/data/directive_conflict_assessment.md` (P-8 only).
+- SSP expanded from 5 to 8 instruments in world bible and shared mission docs. All chapters updated accordingly.
