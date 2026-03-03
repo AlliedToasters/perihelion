@@ -10,7 +10,7 @@ TIMESTAMP: {p8_dispatch_001} UTC
 
 SUBJECT: Inbound transfer interruption — affected manifest
 
-Earth terminal signal lost {los_et:time} UTC (ref: ring alert 174-001). Not restored. All scheduled and in-progress transfers suspended. Affected items by destination:
+Earth return signal lost {los_et:time} UTC (ref: ring alert 174-001). Not restored. L1 relay operational — forwarding, no return traffic. Luna relay geometry unfavorable until approximately day {luna_window_open:doy}. Earth ground terminal silent. All scheduled and in-progress transfers suspended. Affected items by destination:
 
 **PERIHELION-1**
 - ERA6 Global Atmospheric Reanalysis, monthly update (2037-06). Scheduled 174.20:00. Not initiated.

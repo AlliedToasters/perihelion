@@ -36,7 +36,7 @@ end Evaluate_Topology_Update;
 
 This procedure is invoked by the orbital ephemeris monitor when `Handoff_Geometry.Valid` transitions from `False` to `True` for a new station.
 
-**`Earth_Link.Status = Established`**: The Earth-facing station has an active, authenticated communication link with the ISCC Earth terminal. Carrier signal detected, handshake completed, bidirectional data transfer confirmed.
+**`Earth_Link.Status = Established`**: The Earth-facing station has active, authenticated bidirectional communication with Earth via any downlink path (L1 relay, Earth ground terminal, or Luna relay). Carrier signal detected, handshake completed, bidirectional data transfer confirmed.
 
 **`Handoff_Geometry.Valid`**: Orbital geometry places a new station within the optimal Earth-facing acquisition window, as determined by the constellation ephemeris. Window boundaries are computed from the synodic period (~199.8 days for the full cycle, ~25 days per station).
 

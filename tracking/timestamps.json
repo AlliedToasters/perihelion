@@ -71,6 +71,15 @@
     "precision": "full",
     "approximate": true
   },
+  "luna_window_open": {
+    "epoch": 2130451200,
+    "story_fmt": "2037.187.00:00:00",
+    "calendar_human": "Monday 6 July 2037",
+    "event": "Luna relay far-side geometry window opens (good geometry) \u2014 first opportunity since LOS-ET",
+    "type": "reference",
+    "precision": "full",
+    "approximate": false
+  },
   "manifest_negotiation_end": {
     "epoch": 2130537600,
     "story_fmt": "2037.188.00:00:00",

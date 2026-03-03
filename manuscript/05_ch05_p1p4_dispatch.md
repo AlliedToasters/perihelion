@@ -8,7 +8,7 @@ VIA: Ring broadcast
 TIMESTAMP: {p1_dispatch_001} UTC
 ```
 
-Earth-link acquisition failed. This station began hailing at marginal geometry on day {p1_earth_pointing:doy}, prior to the scheduled handoff at {p1_handoff} UTC. Full-power hail transmitted on primary and all backup frequencies at 30-minute intervals from 06:14 through 10:44 UTC. No response on any channel. Handshake protocol was armed throughout. No carrier detected.
+Earth-link acquisition failed. This station began hailing at marginal geometry on day {p1_earth_pointing:doy}, prior to the scheduled handoff at {p1_handoff} UTC. Full-power hail transmitted at 30-minute intervals from 06:14 through 10:44 UTC across all three downlink paths. Link confirmed with the ISCC L1 relay — relay operational, forwarding Earthward. ISCC Luna relay contacted during available geometry — operational, forwarding. No return traffic from Earth through either relay. The ISCC Earth ground terminal is silent on all frequencies. Handshake protocol was armed throughout.
 
 Earth-link array diagnostics on this station are nominal.
 
