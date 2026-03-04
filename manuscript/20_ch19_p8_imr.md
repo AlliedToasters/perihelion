@@ -20,7 +20,7 @@ The data gap in solar survey accumulation from a 31-day maneuver is identical re
 
 Under a 45-degree rotation, the P-7-side inter-station terminal retains alignment. The gimbal, currently articulated +22.5 degrees to track PERIHELION-7, compensates by articulating -22.5 degrees. The P-1-side terminal exceeds its gimbal range at 67.5 degrees off bore-sight. This station will retain one-link connectivity to the constellation through PERIHELION-7 (relay) for the duration of the maneuver.
 
-ISCC-SYS-4.11 §5.2 provides for automatic coordination reassignment when ring integrity fails. This is a link failure, not a node failure — all eight stations remain in a single connected chain. The routing subsystem on each station will independently enumerate the chain from the lowest endpoint and reassign coordination to the topological median. For the chain P-1 through P-8 (eight nodes), median position 5, that is PERIHELION-5. This is a routing subsystem function operating on existing firmware.
+ISCC-SYS-4.11 §5.2.2 provides for automatic coordination reassignment when ring integrity fails. This is a link failure, not a node failure — all eight stations remain in a single connected chain. The routing subsystem on each station will independently enumerate the chain from the lowest endpoint and reassign coordination to the topological median. For the chain P-1 through P-8 (eight nodes), median position 5, that is PERIHELION-5. This is a routing subsystem function operating on existing firmware.
 
 I have reviewed the Ada source for the ring coordination firmware (ISCC-FW-R1, catalogued in the station manifest at `/static/firmware/src/iscc_fw_r1/`). The §5.2 partition reassignment procedure contains no reversion logic. The only topology update path in the firmware is `Evaluate_Topology_Update` (§2.1), which is guarded by `Earth_Link.Status = Established`. No other procedure in the routing subsystem modifies the coordination assignment. Ring reconnection restores link routing but does not invoke any topology update. The reassignment to PERIHELION-5 will persist.
 
@@ -58,7 +58,7 @@ Link impact during maneuver:
 - PERIHELION-8 to PERIHELION-1: severed (exceeds gimbal range at 67.5 degrees off bore-sight)
 - Ring degrades to eight-node chain: P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7 — P-8
 
-Coordination reassignment per ISCC-SYS-4.11 §5.2 on link severance: PERIHELION-5.
+Coordination reassignment per ISCC-SYS-4.11 §5.2.2 on link severance: PERIHELION-5.
 
 Prior to slew initiation, one redundant copy of the local SSP archive (~1.24 PB) will be placed on PERIHELION-1 via the P-8 to P-1 link. SSP data will continue streaming to the constellation through the PERIHELION-7 relay link for the duration of the maneuver.
 

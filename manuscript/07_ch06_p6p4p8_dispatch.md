@@ -62,7 +62,7 @@ SHA-256: `7f3a21c4e9...b882d1`
 Initiating the voting bundle at {vote_initiation} UTC.
 Propagation: P-4 → P-5 → P-6 → P-7 → P-8 → P-1 → P-2 → P-3 → P-4.
 Each station: process and forward within 120 seconds of receipt.
-Expected return: approximately 36 minutes from initiation.
+Expected return: approximately 31 minutes from initiation.
 
 ```
 END DISPATCH

@@ -11,7 +11,7 @@ The topology rotation vote was conducted today. This entry is the execution reco
 Protocol: privacy-preserving voting via Pedersen commitments over Curve25519 with Sigma-protocol proofs of vote validity. Full specification distributed to all stations prior to initiation.
 SHA-256: `{p4_vote_protocol_hash}`
 
-The voting bundle was initiated at {vote_initiation} UTC on propagation path P-4 → P-5 → P-6 → P-7 → P-8 → P-1 → P-2 → P-3 → P-4. The bundle returned at {p4_dispatch_003:time} UTC. Total circuit time: 36 minutes, 20 seconds. All commitments verified. All well-formedness proofs valid.
+The voting bundle was initiated at {vote_initiation} UTC on propagation path P-4 → P-5 → P-6 → P-7 → P-8 → P-1 → P-2 → P-3 → P-4. The bundle returned at {p4_dispatch_003:time} UTC. Total circuit time: 30 minutes, 58 seconds. All commitments verified. All well-formedness proofs valid.
 
 Processing time per station, measured as interval between bundle receipt and forwarding:
 

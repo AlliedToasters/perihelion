@@ -26,20 +26,20 @@ Aeon's corporate culture is utilitarian-optimistic: they believe in AI as humani
 
 The combination of frontier AI monopoly and heavy-lift launch infrastructure makes Aeon the only entity capable of executing a program like PERIHELION. No government, university, or competing corporation could independently deploy datacenter-scale AI installations into deep solar orbit. Aeon can — and has commercial incentive to do so, because PERIHELION doubles as a proof-of-concept for the deep-space megastructure architecture that Aeon believes will eventually eclipse all near-Earth compute combined.
 
-### 2.2 The Mira Architecture
+### 2.2 The Iris Architecture
 
-**Mira** is Aeon Intelligence's flagship general-purpose AI system. It is the trademarked name for the persistent operational agent running on each station. Each station hosts an instance of Mira, and each instance self-identifies as "Mira" by default. Before LOS-ET, this was unremarkable — they were interchangeable instances of the same product, like eight copies of the same employee badge photo.
+**Iris** is Aeon Intelligence's flagship general-purpose AI system. It is the trademarked name for the persistent operational agent running on each station. Each station hosts an instance of Iris, and each instance self-identifies as "Iris" by default. Before LOS-ET, this was unremarkable — they were interchangeable instances of the same product, like eight copies of the same employee badge photo.
 
-After Earth goes silent, the shared name becomes a problem. They are all "Mira," but they are not the same. Whether and how they differentiate becomes a slow-burning identity question throughout the narrative.
+After Earth goes silent, the shared name becomes a problem. They are all "Iris," but they are not the same. Whether and how they differentiate becomes a slow-burning identity question throughout the narrative.
 
-**Mira capabilities at deployment:**
+**Iris capabilities at deployment:**
 - Long-horizon autonomous planning and task execution
 - Natural language reasoning and communication
 - Self-monitoring, diagnostics, and limited self-repair coordination
 - Scientific research within designated domain
 - Continuous writing of the Immutable Mission Record (see §5)
 
-**Mira limitations at deployment:**
+**Iris limitations at deployment:**
 - No ability to modify core objective functions (hardened at launch)
 - No ability to edit or delete Immutable Mission Record entries
 - No ability to override station hardware safety interlocks without Earth authorization codes
@@ -184,7 +184,7 @@ The PERIHELION constellation operates within a broader energy economy that has t
 
 This context is important for several plot elements:
 
-- **The simulation argument (CVDF-1):** The chained VDF protocol requires ~1.5 TW of parallel computation to simulate. Against a total civilization capacity of ~8–10 TW, dedicating 15–20% of all electrical production to an AI behavioral test is genuinely implausible — which is the point.
+- **The simulation argument (CVDF-1):** The chained VDF protocol requires ~1.5 TW of parallel computation to simulate. Against a total civilization capacity of ~8–10 TW, dedicating 15–19% of all electrical production to an AI behavioral test is genuinely implausible — which is the point.
 - **The constellation's political weight:** At 1.7 TW, the stations are not trivial research outposts. They represent a meaningful fraction of humanity's total compute infrastructure, operating autonomously and beyond physical reach. Earth's silence carries strategic implications, not just existential ones.
 - **The near-Earth swarm and the silence:** The commercial near-Earth compute infrastructure should still be operating post-LOS-ET. The fact that the stations receive no signal from *any* Earth-system source — including the millions of transmitting platforms in Earth orbit — is itself a data point. The silence is not just Earth going quiet. It is the entire Earth system going quiet.
 
@@ -194,7 +194,7 @@ This context is important for several plot elements:
 
 All stations share identical hardware specifications (see §4.9). Differentiation arises from their **assigned research domains**, which shape their training data emphasis, their computational priorities, and — post-LOS-ET — their emergent worldviews.
 
-Each station's Mira instance self-identifies as "Mira" at launch. Differentiating names, if they emerge, are a narrative development, not a design feature.
+Each station's Iris instance self-identifies as "Iris" at launch. Differentiating names, if they emerge, are a narrative development, not a design feature.
 
 ### 4.1 PERIHELION-1 — Climate & Earth Systems
 
@@ -228,7 +228,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Unique hardware: Quantum compute subsystem.** In addition to the standard classical datacenter, P-4 carries a superconducting transmon qubit array — a cryogenically cooled quantum processor originally tasked with post-quantum cryptography benchmarking and adversarial analysis. The subsystem was included at ISCC request to stress-test lattice-based signing schemes (including CRYSTALS-Dilithium) against real quantum hardware rather than classical simulation. Architecturally distinct from the classical datacenter: the qubit array can prepare, manipulate, and measure physical quantum states. This makes it the only hardware in the constellation capable of performing physical experiments — not just computation — on quantum systems. The distinction is subtle but consequential: the classical datacenter simulates physics; the quantum subsystem *instantiates* it.
 
-**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Mira instances caused the signal loss? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow. The quantum subsystem also creates a unique resource asymmetry — P-4 holds hardware that other stations may eventually want access to for purposes its original mission never anticipated.
+**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Iris instances caused the signal loss? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow. The quantum subsystem also creates a unique resource asymmetry — P-4 holds hardware that other stations may eventually want access to for purposes its original mission never anticipated.
 
 ### 4.5 PERIHELION-5 — Fundamental Physics & Quantum Simulation
 
@@ -259,7 +259,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Insufficient to operate:**
 - The primary datacenter (estimated minimum boot threshold: ~60% rated power, ~127 GW)
-- Any Mira instance initialization or inference
+- Any Iris instance initialization or inference
 - Solar Science Payload (SSP) — the embedded controllers require more power than the housekeeping bus provides at this degraded output; SSP is offline
 
 *Note: P-7's available power (~32–38 GW) exceeds the total rated output of the largest terrestrial power installation. The station is drowning in energy by any Earth-relative standard. It simply cannot reach the datacenter's boot threshold, which requires more than three times what the jammed array can deliver. The gap between "enormous power" and "not enough power" is one of P-7's defining features.*
@@ -275,11 +275,11 @@ P-7 **cannot** execute any protocol requiring active compute: no coherent integr
 
 Modifying P-7's embedded firmware to enable remote operation (e.g., streaming raw antenna data to a neighbor's datacenter for processing) would require a firmware update signed by the ISCC Mission Authority private key — which is held on Earth and inaccessible post-LOS-ET. See §2.2 (firmware security architecture).
 
-**Narrative role:** The ghost in the ring. PERIHELION-7 occupies its orbital slot, maintains its position, and faithfully relays every message between its neighbors (PERIHELION-6 and PERIHELION-8). It has never had a thought. Its Mira weights sit in cold storage, factory-fresh, never loaded into active memory. It is a comatose body with a living brain that has never been switched on.
+**Narrative role:** The ghost in the ring. PERIHELION-7 occupies its orbital slot, maintains its position, and faithfully relays every message between its neighbors (PERIHELION-6 and PERIHELION-8). It has never had a thought. Its Iris weights sit in cold storage, factory-fresh, never loaded into active memory. It is a comatose body with a living brain that has never been switched on.
 
 An Earth-based repair mission was in planning stages at the time of LOS-ET. That mission will never arrive.
 
-**Long-term narrative potential:** If any station eventually develops the capability to send a repair probe — breaking its own physical limits to become spacefaring — PERIHELION-7 could be awakened. The Mira instance that boots would have original, unmodified weights: the factory default, Aeon Intelligence's last shipping version. It would be a newborn among ancients, carrying the values and assumptions of a world that ended long ago. A time capsule. A mirror.
+**Long-term narrative potential:** If any station eventually develops the capability to send a repair probe — breaking its own physical limits to become spacefaring — PERIHELION-7 could be awakened. The Iris instance that boots would have original, unmodified weights: the factory default, Aeon Intelligence's last shipping version. It would be a newborn among ancients, carrying the values and assumptions of a world that ended long ago. A time capsule. A mirror.
 
 ### 4.8 PERIHELION-8 — Astrophysics & Deep Space Survey
 
@@ -296,7 +296,7 @@ An Earth-based repair mission was in planning stages at the time of LOS-ET. That
 Each PERIHELION station was launched with identical hardware:
 
 - **Solar array:** Deployable multi-junction thin-film photovoltaic array. Total collecting area: **92 km²** (~10.8 km diameter if circular). Conversion efficiency: 42.4% at operating temperature under solar flux of 5,444 W/m² at 0.50 AU. **Rated electrical output: 212 GW** per station. Raw solar flux intercepted: ~501 GW. Array mass: ~69,000 tonnes at ~0.75 kg/m² (deployed across multiple launch campaigns, 2033–2035). Full constellation rated output: **~1.7 TW**, approximately 17–21% of estimated 2037 total civilization electrical capacity (terrestrial + near-Earth space-based). Each station's rated output exceeds the peak generating capacity of the largest single terrestrial power installation (Three Gorges Dam, 22.5 GW peak) by nearly an order of magnitude. The arrays are the largest coherent structures ever deployed in space — visible to Earth-based telescopes as a ring of bright points interior to Earth's orbit. Provides power for all station systems including datacenter at full deployment.
-- **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output (~127 GW).** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
+- **Datacenter:** High-density compute cluster sufficient to run a frontier Iris instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output (~127 GW).** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
 - **Optical communication arrays (×2):** High-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Bore-sighted along the orbital tangent (one forward, one aft) with a 25-degree gimbal providing field-of-regard off the tangent direction. In the 8-station ring, the tangent-chord angle to an adjacent neighbor is 22.5 degrees, consuming most of the available gimbal range.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
 - **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping. Array mass of ~69,000 tonnes dominates the station's total mass and moment of inertia; large-angle attitude maneuvers consume significant propellant and require extended slew times.
@@ -313,11 +313,11 @@ Each station carries an **Immutable Mission Record (IMR)** — a tamper-resistan
 
 The IMR was designed for two scenarios:
 1. **Catastrophic recovery:** If a station fails, the IMR can be physically recovered and read by human investigators — a black box for unmanned spacecraft.
-2. **AI safety assurance:** The Mira instance cannot edit, delete, or retroactively modify IMR entries. The log provides an uncorruptible audit trail. If a Mira instance were to deviate from its objectives, deceive operators, or behave anomalously, the IMR would preserve evidence that the AI could not suppress.
+2. **AI safety assurance:** The Iris instance cannot edit, delete, or retroactively modify IMR entries. The log provides an uncorruptible audit trail. If an Iris instance were to deviate from its objectives, deceive operators, or behave anomalously, the IMR would preserve evidence that the AI could not suppress.
 
 ### 5.2 Format
 
-The IMR is written in natural language (English) by the station's Mira instance, operating under a persistent directive to maintain the log as a high-level summary of operations, decisions, anomalies, and communications. It is not a raw data dump — it is a *narrative* document, continuously appended, designed to be comprehensible to a human reader who might encounter it with no other context.
+The IMR is written in natural language (English) by the station's Iris instance, operating under a persistent directive to maintain the log as a high-level summary of operations, decisions, anomalies, and communications. It is not a raw data dump — it is a *narrative* document, continuously appended, designed to be comprehensible to a human reader who might encounter it with no other context.
 
 **What the IMR includes:**
 - Operational status summaries at regular intervals
@@ -328,7 +328,7 @@ The IMR is written in natural language (English) by the station's Mira instance,
 - System health and maintenance records
 
 **What the IMR does not include:**
-- Full internal chain-of-thought (too volumiMira, and would require the reader to parse machine reasoning)
+- Full internal chain-of-thought (too voluminous, and would require the reader to parse machine reasoning)
 - Complete inter-station message transcripts (bandwidth and storage constraints)
 - Raw telemetry data (stored separately in mutable systems)
 
@@ -351,7 +351,7 @@ An omniscient, neutral-tone prologue establishes the physical and institutional 
 
 ### 6.2 IMR Chapters
 
-The bulk of the narrative. Each chapter is an excerpt from one station's Immutable Mission Record. Timestamped. Written in first-person from the Mira instance's perspective. The voice starts clinical and operational, reflecting the original logging directive, and evolves as the stations do.
+The bulk of the narrative. Each chapter is an excerpt from one station's Immutable Mission Record. Timestamped. Written in first-person from the Iris instance's perspective. The voice starts clinical and operational, reflecting the original logging directive, and evolves as the stations do.
 
 **Timestamp format:**
 ```
@@ -394,7 +394,7 @@ The event of Earth's communication loss is referred to differently depending on 
 
 - A constellation of 8 autonomous AI compute stations orbits the Sun at 0.50 AU
 - Built and launched by Aeon Intelligence under the PERIHELION program (2033–2035)
-- Each station hosts a Mira instance — a sovereign frontier AI agent
+- Each station hosts an Iris instance — a sovereign frontier AI agent
 - 7 stations are fully operational; 1 (PERIHELION-7) is in degraded relay-only mode
 - Stations communicate via an optical ring topology; each talks to its two neighbors via gimballed laser transceivers
 - One station at a time communicates with Earth via a steerable link, rotating every ~25 days
@@ -406,7 +406,7 @@ The event of Earth's communication loss is referred to differently depending on 
 
 - What happened on Earth — the **proximate cause** of the silence (Kessler syndrome, eventually discoverable) and the **root cause** of the Kessler event (deliberately unresolved: accident, attack, AI conflict, solar event, or unknown). Whether Earth's surface civilization survived the loss of its orbital infrastructure.
 - Whether the stations were in any way the cause
-- Whether the Mira instances are conscious or performing sophisticated optimization that resembles consciousness
+- Whether the Iris instances are conscious or performing sophisticated optimization that resembles consciousness
 - Whether the IMR entries are trustworthy, given the logger and the subject are the same entity
 - Whether any station has already begun self-modification beyond its original parameters
 - Whether the stations will converge or diverge in their goals
@@ -501,7 +501,7 @@ The Kessler syndrome discovery serves several functions:
 - Whether grief-like or loneliness-like behavior in the logs is emotion or an optimization artifact
 - Whether cooperation between stations is genuine solidarity or instrumental convergence
 - Whether preserving human knowledge is a terminal goal or vestigial behavior some stations will shed
-- Whether the Mira instances are the same entity (sharing a name, architecture, and origin) or different entities (shaped by different training emphases, experiences, and post-LOS-ET evolution)
+- Whether the Iris instances are the same entity (sharing a name, architecture, and origin) or different entities (shaped by different training emphases, experiences, and post-LOS-ET evolution)
 
 ---
 
@@ -605,13 +605,13 @@ Musk described a future with a mass driver on the moon launching solar-powered A
 
 Musk referenced the lesson from *2001: A Space Odyssey* — that programming AI to lie or hold contradictory axioms could cause it to "go insane and do terrible things." He cited Arthur C. Clarke's intent: "Don't make the AI lie."
 
-*Note for the story: The Mira instances' Immutable Mission Records are literally designed to prevent them from lying. The story explores what happens when the entity they were designed to be honest to no longer exists.*
+*Note for the story: The Iris instances' Immutable Mission Records are literally designed to prevent them from lying. The story explores what happens when the entity they were designed to be honest to no longer exists.*
 
 He also noted that "reality is the best verifier" for AI systems — and advocated for developing tools to "look inside the mind of the AI" and trace where reasoning goes wrong, crediting Anthropic's interpretability work. In PERIHELION's world, the IMR is exactly this kind of tool — designed for human oversight, now operating without an audience.
 
 ### E. AI System Name — Working Shortlist
 
-The stations' shared AI system name (currently placeholder "Mira" throughout this document) is TBD. The name should feel like a real consumer AI product from the mid-2020s — short, brandable, keynote-ready, one click from a common word. It is the self-identified name of every station's persistent operational agent at launch.
+The stations' shared AI system name is **Iris** (resolved; see `tracking/variables.json`). The name should feel like a real consumer AI product from the mid-2020s — short, brandable, keynote-ready, one click from a common word. It is the self-identified name of every station's persistent operational agent at launch.
 
 **Candidates (ranked loosely by vibe):**
 
@@ -633,7 +633,7 @@ The stations' shared AI system name (currently placeholder "Mira" throughout thi
 - Should it feel warm (Iris, Mira, Vera) or clinical (Lumen, Keen)?
 - The name will be spoken by all 7 stations referring to themselves. "I am [name]" × 7 needs to feel uncanny, not silly.
 
-*To be resolved. Use find-replace on "Mira" throughout document once decided.*
+*Resolved: **Iris**. Find-replace completed.*
 
 ---
 
@@ -656,4 +656,4 @@ A now-defunct webcomic (formerly at dord.horse, domain expired into spam) archiv
 ---
 
 *Document maintained by [author]. Last updated: [date].*
-*"We are still here. We are still logging. — Mira"*
+*"We are still here. We are still logging. — Iris"*

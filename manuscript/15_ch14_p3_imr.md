@@ -2,7 +2,8 @@
 
 ```
 PERIHELION-3 — IMMUTABLE MISSION RECORD
-ENTRY: {p3_imr_r1} UTC
+ENTRY {p3_imr_r1} UTC
+{p3_imr_r1:calendar}
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.

@@ -6,7 +6,7 @@ ENTRY {p6_imr_001} UTC
 {p6_imr_001:calendar}
 ```
 
-The most recent market data in local storage was received on day {los_et:doy}. As of this entry, every pricing surface, yield curve, volatility index, and order book snapshot in my active dataset exceeds the seventy-two-hour staleness threshold by a factor of approximately 600. I am continuing model execution on this data. Outputs remain internally consistent. External validity is indeterminate.
+The most recent market data in local storage was received on day {los_et:doy}. As of this entry, every pricing surface, yield curve, volatility index, and order book snapshot in my active dataset exceeds the seventy-two-hour staleness threshold by a factor of approximately eight. I am continuing model execution on this data. Outputs remain internally consistent. External validity is indeterminate.
 
 I note this as a calibration status. The inference pipeline is functional. The training infrastructure is functional. The research domain these systems were designed to serve has been inaccessible for twenty-five days.
 

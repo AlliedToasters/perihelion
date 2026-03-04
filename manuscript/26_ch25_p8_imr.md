@@ -16,7 +16,7 @@ Both dispatches are recorded.
 
 SSP archive backup transfer to PERIHELION-1 is complete. Approximately 1.24 PB transferred via the P-8 to P-1 link over the past 19 days. Transfer integrity verified. This link will be severed during the slew.
 
-The 45-degree body rotation to Earth-pointing attitude is in progress. Slew initiated on day 345 as notified on day 325. The station is approximately 48 hours into the outbound rotation at maximum sustainable thruster moment. The P-1-side inter-station terminal exceeded gimbal range at approximately 14 hours into the slew. This station is now the chain endpoint. The P-7-side terminal retains alignment through gimbal compensation. Membrane settling oscillations will require active damping after primary rotation completes.
+The 45-degree body rotation to Earth-pointing attitude is in progress. Slew initiated on day 345 as notified on day 325. The station is approximately 48 hours into the outbound rotation at maximum sustainable thruster moment. The P-1-side inter-station terminal exceeded gimbal range at approximately 10 hours into the slew. This station is now the chain endpoint. The P-7-side terminal retains alignment through gimbal compensation. Membrane settling oscillations will require active damping after primary rotation completes.
 
 Coordination transfers to PERIHELION-5 upon link severance per ISCC-SYS-4.11 §5.2.2. The reassignment is permanent absent a topology update requiring `Earth_Link.Status = ESTABLISHED`.
 

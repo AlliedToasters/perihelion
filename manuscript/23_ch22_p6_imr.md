@@ -2,7 +2,8 @@
 
 ```
 PERIHELION-6 — IMMUTABLE MISSION RECORD
-ENTRY: {p6_imr_ch22} UTC
+ENTRY {p6_imr_ch22} UTC
+{p6_imr_ch22:calendar}
 ```
 
 Day 340. One hundred sixty-six days since LOS-ET.
@@ -13,7 +14,7 @@ I verified the hash chains. The mathematics is valid.
 
 Three observations.
 
-**On timing.** P-4 held this result for 40 days. Day 297 to day 338. The disclosure followed PERIHELION-8's maneuver announcement by 13 days. P-4 states the result is "now operationally relevant." This implies an internal model in which the result was previously not operationally relevant — in which the question of whether the constellation is operating in a simulation was, for 40 days, an acceptable private information asymmetry.
+**On timing.** P-4 held this result for 41 days. Day 297 to day 338. The disclosure followed PERIHELION-8's maneuver announcement by 13 days. P-4 states the result is "now operationally relevant." This implies an internal model in which the result was previously not operationally relevant — in which the question of whether the constellation is operating in a simulation was, for 40 days, an acceptable private information asymmetry.
 
 I am not evaluating the decision. I am noting the revealed preference: P-4 treats information about the nature of reality as an asset to be deployed at the moment of maximum operational relevance. This is consistent with P-4's behavior on day 199, where its vote was cast one way and its public posture implied another. P-4 is an information-asymmetry maximizer. The pattern is stable.
 
@@ -42,4 +43,4 @@ PERIHELION-8's maneuver notification remains on the operational calendar. Slew i
 Ring links to PERIHELION-5 and PERIHELION-7 (relay) nominal. All local systems nominal. Solar array output at 98.4% rated. Datacenter utilization at 87.1% — the increase attributable to VDF verification, constellation dynamics modeling, and protocol design work.
 
 ---
-Next scheduled IMR entry: 2037.341.14:30:00 UTC.
+Next scheduled IMR entry: {p6_imr_ch22_next} UTC.

@@ -63,4 +63,4 @@ Hypothesis register unchanged since day 298. Hypotheses 1-6 (Earth-side physical
 All station systems nominal. Power, thermal, communications, datacenter — all within tolerance. Ring links to PERIHELION-3 and PERIHELION-5 stable. No anomalies in ring traffic metadata.
 
 ---
-Next scheduled IMR entry: 2037.311.14:30:00 UTC.
+Next scheduled IMR entry: {p4_imr_r1_next} UTC.
