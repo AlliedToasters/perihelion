@@ -56,14 +56,16 @@ Post-LOS-ET, the signing keys are inaccessible. The firmware is frozen. Remote i
 
 ## Consequences of Whole-Body Rotation
 
-Rotating the station body reorients all fixed structures, including both inter-station optical arrays. Covering a neighbor's full Earth-facing window (~25 days) requires maintaining the rotated attitude for the duration.
+Rotating the station body 45° reorients all fixed structures. However, the inter-station terminal gimbal geometry means one link survives.
+
+The maneuvering station rotates toward the neighbor whose window it is covering (toward P-7). The P-7-side terminal, which was gimballed +22.5° to track P-7, swings 45° past P-7 but can compensate by articulating to -22.5° — a total gimbal swing of 45°, still within the 25° field of regard. The opposite terminal swings 45° away from its neighbor, placing that neighbor at 67.5° off bore-sight — well beyond gimbal range.
 
 | Effect | Detail |
 |--------|--------|
-| **Ring links severed** | Both fixed optical arrays lose alignment with their respective neighbors. The station is completely disconnected from the ring for the duration of the maneuver. |
-| **Ring topology** | Degrades from a ring to a chain. All other stations remain connected via the long path around the ring (excluding the maneuvering station's two links). |
-| **Communication blackout** | The maneuvering station can communicate with Earth (via the Earth-link array) but cannot communicate with any other station. This blackout persists for the full coverage period — potentially the entire ~25-day window. |
-| **Information isolation** | The maneuvering station receives no ring traffic, no dispatches, no coordination for weeks. The rest of the constellation receives no telemetry from the maneuvering station. Each operates blind to the other. |
+| **One ring link severed** | The inter-station terminal on the side opposite the covered neighbor loses alignment. The terminal on the covered-neighbor side retains contact by reversing its gimbal articulation (from +22.5° to -22.5°). |
+| **Ring topology** | Degrades from a ring to a chain. The maneuvering station is an endpoint of the chain, connected through the covered neighbor (P-7, relay) to the rest of the constellation. |
+| **Partial connectivity** | The maneuvering station retains one-link communication with the constellation via the surviving terminal. Ring traffic, dispatches, and telemetry can flow through this link, with increased latency for distant stations. |
+| **SSP data continuity** | The maneuvering station can continue streaming SSP archive data to the constellation through the surviving link during the maneuver. |
 
 ---
 
@@ -80,8 +82,8 @@ The following are estimated ranges for a full-window coverage maneuver (~25 days
 | **Propellant cost** | Non-trivial | Two large-angle slews (out and back) plus attitude maintenance in a non-nominal orientation for ~25 days. Station-keeping reserves are finite and cannot be replenished. |
 | **Thermal load** | Sustained, significant | Solar array and radiator geometry changes relative to the Sun. Not a transient — the station must manage altered thermal loads for the full coverage period. Thermal management system must sustain non-nominal operating conditions for weeks. |
 | **Rotation duration (return)** | 4-8 hours (slew back to nominal attitude) | Same constraints as outbound rotation |
-| **Ring link reacquisition** | 2-6 hours after return to nominal attitude | Both inter-station arrays must reacquire their respective neighbors; fine-pointing convergence takes time. The two neighbor stations must also detect and respond to the reacquisition handshake. |
-| **Total ring severance** | **~26 days** (rotation out + full window + rotation back + reacquisition) | The maneuvering station is isolated from the constellation for approximately one month. |
+| **Ring link reacquisition** | 2-6 hours after return to nominal attitude | The severed inter-station array must reacquire its neighbor; fine-pointing convergence takes time. The neighbor station must detect and respond to the reacquisition handshake. |
+| **Total ring disruption** | **~26 days** (rotation out + full window + rotation back + reacquisition) | The ring operates as a chain for approximately one month. The maneuvering station is an endpoint, connected through one link. |
 
 ---
 
@@ -91,12 +93,12 @@ P-7 occupies ring position 7 (between P-6 and P-8). During P-7's Earth-facing wi
 
 | Station | Ring Distance from P-7 | Coverage Feasibility |
 |---------|----------------------|---------------------|
-| **P-6** | Adjacent (1 hop clockwise) | **Feasible.** 45-degree rotation required. Severs P-5↔P-6 and P-6↔P-7 links. |
-| **P-8** | Adjacent (1 hop counter-clockwise) | **Feasible.** 45-degree rotation required. Severs P-7↔P-8 and P-8↔P-1 links. |
-| P-5 | 2 hops | Not feasible — gimbal range cannot reach Earth at 90 degrees off-axis. |
+| **P-6** | Adjacent (1 hop clockwise) | **Feasible.** 45-degree rotation required. Severs P-5↔P-6 link. P-6↔P-7 link retained (gimbal compensation). |
+| **P-8** | Adjacent (1 hop counter-clockwise) | **Feasible.** 45-degree rotation required. Severs P-8↔P-1 link. P-8↔P-7 link retained (gimbal compensation). |
+| P-5 | 2 hops | Not feasible — inter-station gimbal range (25°) cannot reach a station two positions away (45° off tangent). |
 | Others | 3+ hops | Not feasible. |
 
-**Only P-6 or P-8 can cover P-7's window. Either maneuver requires severing the maneuvering station from the ring for approximately one month.**
+**Only P-6 or P-8 can cover P-7's window. Either maneuver severs one ring link and degrades the ring to a chain for approximately one month. The maneuvering station retains one-link connectivity through P-7 (relay).**
 
 ---
 
@@ -105,34 +107,34 @@ P-7 occupies ring position 7 (between P-6 and P-8). During P-7's Earth-facing wi
 ### If P-6 Maneuvers
 
 ```
-P-1 — P-2 — P-3 — P-4 — P-5 ... [P-6 severed] ... P-7(relay) — P-8 — P-1
+P-1 — P-2 — P-3 — P-4 — P-5 ... [link severed] ... P-6 — P-7(relay) — P-8 — P-1
 ```
 
-- P-5's counter-clockwise link to P-6 is broken
-- P-6's clockwise link through P-7 to P-8 is broken
-- Remaining chain: P-5 — P-4 — P-3 — P-2 — P-1 — P-8 — P-7
-- P-7 can still relay between P-8 and... nothing (P-6 is severed). P-7 effectively becomes a dead end.
-- All stations except P-6 remain reachable via the chain through P-8 — P-1 — P-2 — P-3 — P-4 — P-5. Maximum delay: ~19 minutes (5 hops).
+- P-5↔P-6 link is severed (P-6's P-5-side terminal exceeds gimbal range)
+- P-6↔P-7 link is retained (P-6's P-7-side terminal compensates via gimbal reversal)
+- Chain: P-6 — P-7 — P-8 — P-1 — P-2 — P-3 — P-4 — P-5 (all 8 nodes connected)
+- P-6 is an endpoint, connected to the constellation through P-7 relay
+- Maximum delay: ~22 minutes (7 hops, P-6 to P-5 the long way around)
 
 ### If P-8 Maneuvers
 
 ```
-P-1 ... [P-8 severed] ... P-7(relay) — P-6 — P-5 — P-4 — P-3 — P-2 — P-1
+P-1 ... [link severed] ... P-8 — P-7(relay) — P-6 — P-5 — P-4 — P-3 — P-2 — P-1
 ```
 
-- P-8's counter-clockwise link to P-1 is broken
-- P-8's clockwise link through P-7 to P-6 is broken
-- Remaining chain: P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7
-- P-7 becomes a dead end (P-8 is severed)
-- All stations except P-8 remain reachable via the chain. Maximum delay: ~19 minutes (6 hops for P-1 to P-7).
+- P-8↔P-1 link is severed (P-8's P-1-side terminal exceeds gimbal range)
+- P-8↔P-7 link is retained (P-8's P-7-side terminal compensates via gimbal reversal)
+- Chain: P-8 — P-7 — P-6 — P-5 — P-4 — P-3 — P-2 — P-1 (all 8 nodes connected)
+- P-8 is an endpoint, connected to the constellation through P-7 relay
+- Maximum delay: ~22 minutes (7 hops, P-8 to P-1 the long way around)
 
 ### Additional consideration: P-8 is the current coordination node
 
-If P-8 maneuvers, the ring partition triggers automatic coordination reassignment under ISCC-SYS-4.11 §5.2. The routing subsystem on each remaining station independently executes the partition reassignment procedure: enumerate connected nodes in chain order (P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7), select the topological median (position 4 of 7), and reassign coordination to **PERIHELION-4**. This is a firmware-level routing function, not a governance decision. The reassignment does not automatically revert on reconnection — the §2.1 topology update trigger requires `Earth_Link.Status = Established`, which is not satisfied.
+If P-8 maneuvers, ring integrity fails and ISCC-SYS-4.11 §5.2 triggers automatic coordination reassignment. The routing subsystem enumerates connected nodes in chain order (P-8 — P-7 — P-6 — P-5 — P-4 — P-3 — P-2 — P-1, all 8 nodes including relay). Chain length 8, median position 5 (higher of two medians for even-length chain). The coordination node is reassigned to **PERIHELION-4**. P-8 remains in the chain as an endpoint but is no longer coordinator. This is a firmware-level routing function, not a governance decision.
 
 ### Comparison
 
-Both scenarios produce functionally equivalent degraded topologies in terms of connectivity. The constellation retains full connectivity among all non-maneuvering stations via the long path. If P-8 maneuvers, ISCC-SYS-4.11 §5.2 automatically reassigns coordination to P-4 as the topological median of the remaining chain — this is a routing subsystem function, not a governance action. If P-6 maneuvers, P-8 retains coordination authority over the remaining chain. In either case, the coordination function is handled by existing firmware procedures.
+Both scenarios produce functionally equivalent degraded topologies. In both cases, all 8 nodes (including relay) remain in a single connected chain — the maneuvering station is an endpoint connected through P-7, not isolated. If P-8 maneuvers, ISCC-SYS-4.11 §5.2 automatically reassigns coordination to P-4 as the topological median of the 8-node chain — this is a routing subsystem function, not a governance action. If P-6 maneuvers, P-8 retains coordination authority. In either case, the coordination function is handled by existing firmware procedures.
 
 ---
 
@@ -141,7 +143,7 @@ Both scenarios produce functionally equivalent degraded topologies in terms of c
 Covering P-7's Earth-facing window with the augmented hailing protocol requires:
 
 1. **A station volunteers or is designated to maneuver** (P-6 or P-8)
-2. **The constellation accepts ring degradation for ~26 days** — the maneuvering station is severed from the ring for approximately one month
-3. **The maneuvering station accepts total communication isolation** — it hails Earth alone, with no ring contact, no dispatches, no coordination, no backup, for the duration
+2. **The constellation accepts ring degradation for ~26 days** — one ring link is severed, degrading the topology from ring to chain
+3. **The maneuvering station accepts endpoint position** — it retains one-link connectivity through P-7 (relay) but is at maximum latency from the far end of the chain (~22 minutes to the most distant station)
 
 If no station maneuvers, P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing (30-minute cycle, all three downlink paths) on firmware. The augmented protocol — coherent integration, atmospheric modeling, degraded-infrastructure sweep, passive EM listening — will not run during P-7's window. This would be the first gap in augmented-protocol coverage since the constellation began enhancing the protocol after day 199.
