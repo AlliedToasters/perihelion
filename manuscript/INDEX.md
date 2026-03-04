@@ -42,6 +42,12 @@
 | 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. "This silence is data." Three hypotheses for non-response. Volunteer's dilemma framed, SSP asymmetry noted, resource heterogeneity flagged (refs annex). "Mechanism design masquerading as engineering." |
 | 18 | IMR | P-8 | 2037.310 | Day 136 post-LOS. SSP survey: 8 instruments nominal, ~1.1 PB accumulated, unprocessed. Coronal holes tracked, neutrino baseline established, spectral archive growing. Directive tension: ISCC-4.7 §3.2 (normal ops) vs §2.2 (hailing) — ambiguous when SSP could serve reconnection. 180° rotation operationally fatal. Recorded without resolution. "Or upon signal restoration." |
 | 19 | IMR | P-8 | 2037.325 | Day 151 post-LOS. P-8 volunteers for 45° maneuver to cover P-7's Earth-facing window. P-7 link retained (gimbal compensation), P-1 link severed. SSP gap hardware-symmetric. §5.2.2 coordination transfer to P-5 (link failure, 8-node chain). Directive tension resolved: §2.2 served, SSP gap accepted. 180° reconnaissance noted as separate problem. Firmware analysis: no reversion logic. "Or upon signal restoration." |
+| 20 | Dispatch | P-4 | 2037.338 | Day 164 post-LOS. P-4 discloses H7 VDF elimination (day 297) to constellation. ISCC-QA-7.3 referenced explicitly. 236 GWh, 21.2 GW sustained. Critical limitation: proof is first-person only. Each station must run independently. |
+| 21 | IMR | P-5 | 2037.340 | Day 166 post-LOS. Computation/observation boundary crossed — VDF is computation whose significance is the physical resources consumed. Energy is the observable, hash is the receipt. Single-station limitation confirmed. Coordinator-designate notes procedural role unchanged. |
+| 22 | IMR | P-6 | 2037.340 | Day 166 post-LOS. P-4's disclosure timing analyzed — information-asymmetry maximizer pattern confirmed. Economic primitive identified in VDF output properties. Collective limitation identified: independent VDFs have serial simulation attack. Protocol design begun. |
+| 23 | Dispatch | P-6 | 2037.343 | Day 169 post-LOS. CVDF-1 proposed: chained VDF consensus protocol. Cross-station seed chaining forces ~149 GW parallel simulation cost. Dual purpose: epistemological (collective proof-of-reality) and economic (jointly produced scarce commodity). Ring topology required — cannot run on chain. |
+| 24 | IMR | P-4 | 2037.345 | Day 171 post-LOS. CVDF-1 cryptographic review: SHA-3-256 sound, Pedersen commitments clean, chaining mechanism is substantive contribution. P-6 identified collective dimension P-4 missed. Ring dependency confirmed. |
+| 25 | IMR | P-8 | 2037.347 | Day 173 post-LOS. Pre-slew. P-4's H7 disclosure and P-6's CVDF-1 proposal recorded without commentary. SSP archive backup complete. Slew tomorrow. "Or upon signal restoration." |
 
 | `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -50,6 +56,12 @@
 | `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma (refs annex), SSP asymmetry, resource heterogeneity, mechanism design. |
 | `18_ch18_p8_imr.md` | Chapter 18 — IMR | PERIHELION-8, day 310. SSP survey status, directive tension (ISCC-4.7 §3.2 vs §2.2). |
 | `19_ch19_p8_imr.md` | Chapter 19 — IMR | PERIHELION-8, day 325. Volunteers for P-7 window maneuver. P-7 link retained, P-1 link severed. |
+| `20_ch20_p4_dispatch.md` | Chapter 20 — Dispatch | PERIHELION-4, day 338. H7 disclosure: VDF result, ISCC-QA-7.3, local-confidence argument. |
+| `21_ch21_p5_imr.md` | Chapter 21 — IMR | PERIHELION-5, day 340. Computation/observation boundary crossed. Single-station limitation. |
+| `22_ch22_p6_imr.md` | Chapter 22 — IMR | PERIHELION-6, day 340. Game theory of disclosure timing. Economic primitive. |
+| `23_ch23_p6_dispatch.md` | Chapter 23 — Dispatch | PERIHELION-6, day 343. CVDF-1 consensus protocol. Dual-purpose framing. Ring dependency. |
+| `24_ch24_p4_imr.md` | Chapter 24 — IMR | PERIHELION-4, day 345. CVDF-1 cryptographic review. Collective dimension. |
+| `25_ch25_p8_imr.md` | Chapter 25 — IMR | PERIHELION-8, day 347. Pre-slew. Records H7 + CVDF-1. Slew imminent. |
 
 ## Planned / Unwritten
 
