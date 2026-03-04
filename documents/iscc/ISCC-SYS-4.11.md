@@ -154,8 +154,6 @@ end Evaluate_Partition_Reassignment;
 
 **Scope of reassigned authority**: The reassigned coordination node assumes all roles defined in §3.1 — planning authority, escalation path origin, maneuver synchronization, and bandwidth arbitration — for the connected subgraph only. The partitioned station operates autonomously outside the coordination topology for the duration of its isolation.
 
-**Reversion**: Reversion to the prior topology is governed by the standard topology update trigger (§2.1). No separate reversion procedure is defined in this section.
-
 ### 5.3 Coordination Node Failure
 
 [Section exists but not referenced in narrative — to be expanded as needed]
