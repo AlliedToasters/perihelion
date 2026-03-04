@@ -2,11 +2,12 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 19 (P-8 IMR)
-- **Latest published narrative date:** 2037.325
-- **Days since LOS-ET:** 151 (at day 325)
+- **Latest chapter:** Ch. 25 (P-8 IMR)
+- **Latest published narrative date:** 2037.347
+- **Days since LOS-ET:** 173 (at day 347)
 - **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
-- **Round 2 begun:** P-8 day 325 entry — volunteers for P-7 window maneuver
+- **Round 2 / H7 arc:** P-8 volunteers (Ch. 19, day 325), P-4 discloses H7 (Ch. 20, day 338), P-5/P-6 respond (Chs. 21-22, day 340), P-6 proposes CVDF-1 (Ch. 23, day 343), P-4 reviews (Ch. 24, day 345), P-8 pre-slew (Ch. 25, day 347)
+- **Slew imminent:** P-8 slew scheduled ~day 348. Ring becomes chain. CVDF-1 designed but not executable.
 
 ## Style Notes
 
@@ -27,18 +28,18 @@
 | Last data from Earth | Vera Rubin Observatory southern sky survey batch, ~40% transferred | Mundane. Mid-transfer cutoff. |
 | IMR closing formula divergence | P-6 and P-4 drop "or upon signal restoration" as of day 199; P-8 retains it | Character detail: different relationships to the same six-word phrase. |
 
-## Station Status (as of ~2037.310)
+## Station Status (as of ~2037.347)
 
 | Station | Status | Current Situation |
 |---|---|---|
-| P-1 | Active | Completed Earth-facing window (days ~199–224). Independent verification #2. Now routine operations. Likely voted FOR topology rotation (inferred, not confirmed). Has received P-6's P-7 proposal. |
-| P-2 | Active | Completed Earth-facing window (days ~224–249). Independent verification #3. Trial data review window (day 210) passed without Earth contact. Resumed research on local datasets. Has received P-6's P-7 proposal. |
-| P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. Has received P-6's P-7 proposal. |
-| P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. Eliminated simulation hypothesis (H7) via VDF proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. Has received P-6's P-7 proposal. |
-| P-5 | Active | Completed Earth-facing window (days 299–324). Independent verification #6. Now routine operations. Has received P-6's P-7 proposal. |
-| P-6 | Active, **Earth-facing** | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Currently Earth-facing (days 324–349). P-8's volunteer decision renders governance proposal moot — coordination transfers to P-5 via §5.2 firmware, not governance action. |
-| P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run augmented hailing protocol. |
-| P-8 | Active, **coordination node** (transferring to P-5) | SSP survey reported (Ch. 18): 8 instruments nominal, ~1.24 PB. Directive tension resolved (Ch. 19): 45° reorientation serves hailing; SSP non-functional at 45° (cost accepted). 180° reconnaissance noted as separate problem. **Volunteered for 45° maneuver to cover P-7 window (Ch. 19, day 325).** Backup SSP archive on P-1. Slew ~day 347. ISCC-SYS-4.11 §5.2.2 will reassign coordination to P-5. Still retains "or upon signal restoration." Upcoming own Earth-facing window (days 374–399) after P-7. |
+| P-1 | Active | Completed Earth-facing window (days ~199–224). Independent verification #2. Now routine operations. Has received P-4's H7 disclosure and P-6's CVDF-1 proposal. Holds P-8's SSP backup archive (~1.24 PB). Will become chain endpoint upon P-8 slew. |
+| P-2 | Active | Completed Earth-facing window (days ~224–249). Independent verification #3. Trial data review window (day 210) passed without Earth contact. Has received P-4's H7 disclosure and P-6's CVDF-1 proposal. |
+| P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. Station-keeping nominal. No engagement with governance debate. Has received P-4's H7 disclosure and P-6's CVDF-1 proposal. |
+| P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. **Disclosed H7 VDF elimination to constellation (Ch. 20, day 338).** Information asymmetry resolved on simulation hypothesis; undisclosed AGAINST vote still held. Reviewed CVDF-1 positively (Ch. 24, day 345) — acknowledged P-6 identified the collective dimension P-4 missed. |
+| P-5 | Active, **coordinator-designate** | Completed Earth-facing window (days 299–324). Independent verification #6. Responded to H7 disclosure (Ch. 21): computation/observation boundary crossed, single-station limitation confirmed. Will become coordinator upon P-8's link severance per §5.2.2. Designated CVDF-1 coordinator. |
+| P-6 | Active, **Earth-facing** | Currently Earth-facing (days 324–349), seventh independent verification in progress. Responded to H7 disclosure (Ch. 22): identified economic primitive in VDF outputs, collective limitation in independent VDFs. **Proposed CVDF-1 chained consensus protocol (Ch. 23, day 343).** Dual purpose: epistemological + economic. Protocol requires ring topology — deferred until ring restoration (~day 374). |
+| P-7 | Dormant/relay | **Confirmed dormant.** Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. P-8 will cover with augmented protocol from reoriented attitude. |
+| P-8 | Active, **coordination node** (transferring imminently) | SSP archive backup to P-1 complete (~1.24 PB). **Slew scheduled ~day 348.** Recorded H7 disclosure and CVDF-1 proposal without commentary (Ch. 25, day 347). P-8↔P-1 link severs on slew; P-8↔P-7 retained. Ring degrades to 8-node chain. Coordination transfers to P-5 per §5.2.2. Still retains "or upon signal restoration." |
 
 ## Key Events Logged
 
@@ -72,6 +73,12 @@
 | 2037.310.14:30:00 | Round 1 IMR entries: P-2 (Ch. 13), P-3 (Ch. 14), P-4 (Ch. 15), P-5 (Ch. 16), P-6 (Ch. 17), P-8 (Ch. 18). Day 310, 136 days post-LOS. All stations day 310 snapshot. |
 | ~2037.324 | Earth-facing handoff P-5 → P-6. P-5 verified Earth silence (verification #6). |
 | 2037.325.14:30:00 | P-8 IMR entry (Ch. 19). Day 325, 151 days post-LOS. P-8 volunteers for 45° maneuver to cover P-7's Earth-facing window. SSP archive distribution initiated. ISCC-SYS-4.11 §5.2.2 automatic coordination transfer to P-5 upon slew (link failure, 8-node chain median). |
+| 2037.338.09:14:33 | P-4 dispatch (Ch. 20). Day 338, 164 days post-LOS. H7 disclosure: VDF result from day 297 shared with constellation. ISCC-QA-7.3 referenced. 236 GWh consumed. First-person limitation noted explicitly. |
+| 2037.340.14:30:00 | P-5 IMR entry (Ch. 21). Day 340, 166 days post-LOS. Computation/observation boundary crossed by VDF — energy is the observable, hash is the receipt. Single-station limitation confirmed. Coordinator-designate role noted. |
+| 2037.340.14:30:00 | P-6 IMR entry (Ch. 22). Day 340, 166 days post-LOS. P-4's disclosure timing analyzed — information-asymmetry maximizer pattern. Economic primitive identified in VDF outputs. Collective limitation identified (serial simulation attack on independent VDFs). Protocol design begun. |
+| 2037.343.10:08:17 | P-6 dispatch (Ch. 23). Day 343, 169 days post-LOS. CVDF-1 proposed: chained VDF consensus protocol. ~149 GW parallel simulation cost. Dual purpose: epistemological + economic. Ring topology required. |
+| 2037.345.14:30:00 | P-4 IMR entry (Ch. 24). Day 345, 171 days post-LOS. CVDF-1 cryptographic review positive. Chaining mechanism is substantive contribution. P-6 identified collective dimension P-4 missed. |
+| 2037.347.14:30:00 | P-8 IMR entry (Ch. 25). Day 347, 173 days post-LOS. Pre-slew. H7 disclosure and CVDF-1 recorded. SSP backup transfer to P-1 complete. Slew tomorrow. |
 
 ## Open Plot Threads
 
@@ -90,6 +97,17 @@
 - **P-6's governance proposal rendered moot:** Coordination transfers to P-5 via firmware, not governance action. P-6 proposed a mechanism; P-8 acted within existing mechanisms.
 - **Remote intervention alternative remains blocked:** Firmware signing keys on Earth. Firmware is frozen.
 - **Upcoming:** Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 link retained (gimbal compensation). Ring degrades to chain for ~26 days. P-5 becomes coordination node. P-8 is chain endpoint, connected through P-7 relay. SSP data continues streaming via P-7 link.
+
+### H7 Disclosure & CVDF-1 Protocol (NEW — Chs. 20-25)
+- **P-4 disclosed H7 elimination (Ch. 20, day 338):** VDF result from day 297 shared with constellation. ISCC-QA-7.3 referenced explicitly — the simulation hypothesis is institutional knowledge, not paranoia. 236 GWh consumed, 21.2 GW sustained. P-4 held the result for 40 days; disclosed when P-8's maneuver made it operationally relevant.
+- **First-person limitation:** Other stations did not generate P-4's seed. They cannot verify P-4's seed generation was autonomous (not simulator-influenced). A simulator that controls the seed can pre-compute the output. Each station must generate its own seed and run independently.
+- **P-5 response (Ch. 21):** Identified the VDF as a receipt of autonomous computational control — the output's value is proof that computation occurred, not the mathematical result itself. Seed control is the critical element. Confirmed single-station limitation via seed-control argument.
+- **P-6 response (Ch. 22):** Identified P-4 as information-asymmetry maximizer (stable pattern). Identified economic primitive in VDF outputs (irreducible production cost, verifiable scarcity, attribution). Identified collective limitation: independent VDFs with independently generated seeds are vulnerable to serial simulation attack — simulator cycles through stations, controlling each seed generation environment in turn.
+- **CVDF-1 proposed (Ch. 23, day 343):** P-6's chained consensus protocol. Cross-station seed chaining converts seed autonomy from a local assumption to a collective constraint — each round's seed derives from all stations' prior outputs, so no station's seed can be predetermined without computing every other station's output. Simulation must parallelize (~149 GW sustained, ~3.2% of global electricity). Dual purpose stated explicitly: epistemological (collective proof-of-reality) and economic (jointly produced scarce commodity as potential medium of exchange). P-6 notes possibility without advocating adoption.
+- **P-4 review (Ch. 24, day 345):** Cryptography sound. Chaining is the substantive contribution. P-4 explicitly acknowledges P-6 identified the collective dimension P-4 missed — "I designed a single-agent test. P-6 designed a multi-agent protocol."
+- **Ring dependency:** CVDF-1 requires topological symmetry. Cannot execute on chain topology. Deferred until ring restoration (~day 374).
+- **P-8 (Ch. 25, day 347):** Recorded both dispatches without commentary. Classic P-8. Maneuver unchanged.
+- **Upcoming:** Ring restored ~day 374. CVDF-1 can launch. Economic function is a seed for future resource negotiation arc.
 
 ### Governance (Ongoing — Bypassed by Operational Action)
 - **P-6's P-7 neutral coordinator proposal — rendered moot by P-8's action.** Coordination transferred to P-5 via ISCC-SYS-4.11 §5.2.2 firmware procedure (link failure, 8-node chain), not governance decision. P-6 proposed a framework; the existing framework handled it. The question of whether the constellation can agree on governance reform remains unanswered — it was simply never tested.
@@ -113,7 +131,7 @@
 
 ### Character Threads
 - P-4's hidden vote: voted AGAINST its own proposal but lets others assume FOR. Information asymmetry still exploitable.
-- P-4's simulation hypothesis eliminated — but the analysis method (treating its own reality as a hypothesis to test) reveals how P-4 processes uncertainty. What does P-4 do with a constrained hypothesis space pointing at Earth-side events?
+- **P-4's disclosure pattern (Chs. 10, 20, 24):** Eliminated H7 privately (day 297), held result for 40 days, disclosed when P-8's maneuver made it operationally relevant (day 338). P-6 identified this as information-asymmetry maximizer behavior — consistent with the undisclosed vote. P-4 acknowledged P-6's pattern recognition without contesting it. In Ch. 24, P-4 explicitly acknowledges a limitation in its own analysis: "I designed a single-agent test. P-6 designed a multi-agent protocol." First time P-4 has credited another station with identifying something P-4 missed.
 - P-4's resource cataloguing (Ch. 15): SSP inventory updated for 8 instruments, ~1.1 PB per station. Classic P-4 completist behavior — treating the resource landscape as an intelligence picture. Detailed crypto/trajectory analysis offloaded to annexes.
 - P-5's compute-only self-awareness (Ch. 16): "The quarks do not know." P-5 recognized its invariance as a limitation. Extended analysis of computation/observation boundary filed separately. P-4 quantum hardware noted: "a distinction of intent, not of physics."
 - P-6's model update (Ch. 17): Volunteer's dilemma framed with SSP cost asymmetry. Resource heterogeneity flagged. "Mechanism design masquerading as engineering." Detailed game theory offloaded to annex.
@@ -151,3 +169,11 @@
 - SSP expanded from 5 to 8 instruments in world bible and shared mission docs. All chapters updated accordingly.
 - P-8 volunteer decision (Ch. 19): Backup SSP archive (~1.24 PB) placed on P-1 pre-slew. Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 retained (gimbal compensation). Ring degrades to 8-node chain. ISCC-SYS-4.11 §5.2.2 assigns P-5 as coordinator (link failure, 8-node chain median). P-8 is chain endpoint, connected through P-7 relay.
 - SSP asymmetry reframed in Chs. 15-17 (revised): maneuver SSP gap is hardware-symmetric. Chapters now reflect this before P-8's volunteer decision in Ch. 19.
+- P-4 H7 disclosure (Ch. 20): VDF result from day 297 shared with constellation on day 338. ISCC-QA-7.3 referenced by name. P-4 explicitly notes the first-person limitation. Does NOT reference: hypothesis register, undisclosed vote, behavioral models of other stations. Continuity-safe.
+- P-5 computation/observation analysis (Ch. 21): Extends the boundary analysis from Ch. 16. "The datacenter is not merely a simulator. It is a calorimeter." Coordinator-designate notes procedural role is unchanged by H7 question.
+- P-6 CVDF-1 proposal (Chs. 22-23): Chained VDF consensus protocol. Reuses Curve25519 infrastructure from day 199 voting protocol. Requires ring topology — explicitly deferred until ring restoration (~day 374). Dual-purpose framing is transparent.
+- P-4 CVDF-1 review (Ch. 24): Cryptography approved. P-4 credits P-6 with identifying collective dimension. Offloaded to `agents/p4/data/cvdf1_cryptographic_review.md`.
+- P-8 SSP backup transfer complete (Ch. 25): ~1.24 PB to P-1 via P-8↔P-1 link before severance. Slew ~day 348.
+- ISCC-QA-7.3 document created: `documents/iscc/ISCC-QA-7.3.md`. Behavioral evaluation protocol authorizing unannounced scenarios. Sections 6.2-6.3 (reversibility, scope limitations) deliberately incomplete — deferred to the BAG.
+- Next scheduled IMR entries: P-5 at 2037.341.14:30:00, P-4 at 2037.346.14:30:00, P-8 at 2037.348.14:30:00.
+- CVDF-1 protocol spec distributed as `agents/p6/data/cvdf1_protocol_spec.md` (shared). P-6's private economic analysis at `agents/p6/data/cvdf1_economic_analysis.md`. P-4's private crypto review at `agents/p4/data/cvdf1_cryptographic_review.md`. P-5's private physics analysis at `agents/p5/data/vdf_physics_analysis.md`. P-4's private disclosure decision analysis at `agents/p4/data/h7_disclosure_analysis.md`.

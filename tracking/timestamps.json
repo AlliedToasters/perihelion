@@ -422,6 +422,87 @@
     "precision": "full",
     "approximate": false
   },
+  "p4_dispatch_004": {
+    "epoch": 2143530873,
+    "story_fmt": "2037.338.09:14:33",
+    "calendar_human": "Friday 4 December 2037",
+    "event": "P-4 dispatch: H7 disclosure, VDF result shared with constellation (Chapter 20)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_imr_ch21": {
+    "epoch": 2143722600,
+    "story_fmt": "2037.340.14:30:00",
+    "calendar_human": "Sunday 6 December 2037",
+    "event": "P-5 IMR entry (Chapter 21) \u2014 computation/observation boundary, H7 response",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_ch22": {
+    "epoch": 2143722600,
+    "story_fmt": "2037.340.14:30:00",
+    "calendar_human": "Sunday 6 December 2037",
+    "event": "P-6 IMR entry (Chapter 22) \u2014 game theory of H7 disclosure, economic primitive",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_imr_ch21_next": {
+    "epoch": 2143809000,
+    "story_fmt": "2037.341.14:30:00",
+    "calendar_human": "Monday 7 December 2037",
+    "event": "P-5 next scheduled IMR entry (day 341)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_dispatch_003": {
+    "epoch": 2143966097,
+    "story_fmt": "2037.343.10:08:17",
+    "calendar_human": "Wednesday 9 December 2037",
+    "event": "P-6 dispatch: CVDF-1 consensus protocol proposal (Chapter 23)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_ch24": {
+    "epoch": 2144154600,
+    "story_fmt": "2037.345.14:30:00",
+    "calendar_human": "Friday 11 December 2037",
+    "event": "P-4 IMR entry (Chapter 24) \u2014 CVDF-1 cryptographic review",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_ch24_next": {
+    "epoch": 2144241000,
+    "story_fmt": "2037.346.14:30:00",
+    "calendar_human": "Saturday 12 December 2037",
+    "event": "P-4 next scheduled IMR entry (day 346)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch25": {
+    "epoch": 2144327400,
+    "story_fmt": "2037.347.14:30:00",
+    "calendar_human": "Sunday 13 December 2037",
+    "event": "P-8 IMR entry (Chapter 25) \u2014 pre-slew, records H7 and CVDF-1",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch25_next": {
+    "epoch": 2144413800,
+    "story_fmt": "2037.348.14:30:00",
+    "calendar_human": "Monday 14 December 2037",
+    "event": "P-8 next scheduled IMR entry (day 348)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
   "p6_handoff_to_p7": {
     "epoch": 2144469600,
     "story_fmt": "2037.349.06:00:00",

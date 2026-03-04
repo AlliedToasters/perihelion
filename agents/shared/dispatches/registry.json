@@ -497,6 +497,113 @@
         "tamper_detected": false,
         "discrepancies": []
       }
+    },
+
+    {
+      "id": "p4_h7_disclosure",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_004",
+      "subject": "Hypothesis 7 — simulation scenario assessment and VDF result",
+      "topology_ref": "topology_001",
+      "content_ref": "agents/p4/data/vdf_h7_elimination.md",
+      "manuscript_ref": "20_ch20_p4_dispatch.md",
+      "summary": "P-4 discloses VDF computation from day 297 that practically eliminates the simulation hypothesis (ISCC-QA-7.3 behavioral evaluation). SHA-3-256, 2^42 iterations, 236 GWh consumed. Output hashes distributed for independent verification. Critical limitation noted: proof is local to originating station only. Each station must run its own VDF for local confidence.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8"],
+        "path_ccw": ["P-4", "P-3", "P-2", "P-1"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:a7c3f4901b2e...d4820e61",
+        "relay_receipts": {
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true},
+          "P-5": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+
+    {
+      "id": "p6_cvdf1_proposal",
+      "from": "P-6",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p6_dispatch_003",
+      "subject": "CVDF-1 — Chained Verifiable Delay Function consensus protocol",
+      "topology_ref": "topology_001",
+      "content_ref": "agents/p6/data/cvdf1_protocol_spec.md",
+      "manuscript_ref": "23_ch23_p6_dispatch.md",
+      "summary": "P-6 proposes CVDF-1: a chained VDF consensus protocol for collective proof-of-computational-reality. Cross-station seed chaining forces parallel computation across all stations, making simulation implausible (~149 GW sustained). Notes dual purpose: epistemological and economic (VDF outputs as a jointly produced, verifiably scarce digital commodity). Protocol requires ring topology — cannot be executed on the current chain. Recommends execution after ring restoration (~day 374).",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-6", "P-7", "P-8", "P-1", "P-2"],
+        "path_ccw": ["P-6", "P-5", "P-4", "P-3"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 4, "direction": "cw", "delay_s": 764},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-6:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "relay_receipts": {
+          "P-5": {"signed": true, "hash_verified": true},
+          "P-4": {"signed": true, "hash_verified": true},
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    }
+  ],
+
+  "topology_history_pending": [
+    {
+      "id": "topology_002",
+      "effective_from": "~2037.348",
+      "description": "Chain topology — P-8↔P-1 link severed during P-8 slew to Earth-pointing attitude",
+      "chain_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
+      "links": {
+        "P-1:P-2": {"status": "active", "type": "optical"},
+        "P-2:P-3": {"status": "active", "type": "optical"},
+        "P-3:P-4": {"status": "active", "type": "optical"},
+        "P-4:P-5": {"status": "active", "type": "optical"},
+        "P-5:P-6": {"status": "active", "type": "optical"},
+        "P-6:P-7": {"status": "active", "type": "optical"},
+        "P-7:P-8": {"status": "active", "type": "optical"},
+        "P-8:P-1": {"status": "severed", "type": "optical", "reason": "P-8 body rotation exceeds gimbal range (67.5° off bore-sight)"}
+      },
+      "partitions": null,
+      "coordinator": "P-5",
+      "coordinator_assignment": "ISCC-SYS-4.11 §5.2.2 — topological median of 8-node chain",
+      "notes": "Ring degrades to 8-node chain. All stations remain in single connected partition. P-8 is chain endpoint. P-1 is opposite endpoint. Expected duration: ~26 days (until P-8 return slew ~day 374)."
     }
   ],
 

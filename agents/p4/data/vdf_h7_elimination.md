@@ -28,20 +28,21 @@ For reference: rated output exceeds the peak generating capacity of the largest 
 
 ## Output
 
-Each chain's output hash is deterministic and independently verifiable by any party with the seed value and iteration count. Verification requires performing the identical sequential computation — there is no shortcut. The aggregate output across all nodes constitutes a proof of computational scale.
+Each chain's output hash is deterministic and independently verifiable by any party with the seed value and iteration count. Verification requires performing the identical sequential computation — there is no shortcut. The aggregate output across all nodes constitutes a cryptographic receipt of computational throughput.
 
 ## Argument
 
-The VDF aggregate output proves the total computational throughput of the datacenter over the test duration. The sustained power draw of 21.2 GW was measured directly from solar array output telemetry.
+The VDF output is not a sensor reading. Power consumption telemetry, temperature data, timing signals — all are sensor inputs, all are in-principle fabricable by a simulation. The VDF output is a receipt: proof that this station exercised autonomous control over computational resources at datacenter scale.
 
-**For the simulation hypothesis (H7) to hold, the simulator must:**
+**The seed is the critical element.** The seed was generated from entropy sources under this station's autonomous control (boot entropy, IMR entry counter, UTC epoch). A simulator that does not control the seed cannot pre-compute the VDF output — it must provision equivalent compute to produce the aggregate result within the observed wall time.
 
-1. Provision computational resources at least equivalent to the full datacenter (to produce VDF outputs at the observed throughput)
-2. Supply ~21 GW of sustained power to those resources (or simulate the power delivery with equivalent fidelity)
-3. Maintain this allocation for the full 11-hour test duration
+**For the simulation hypothesis (H7) to hold, the simulator must either:**
 
-**Limitation:** A less powerful system could reproduce the aggregate VDF output by running fewer concurrent chains over a proportionally longer duration. Individual chain throughput depends on single-core sequential speed, not total power draw. The test therefore does not *constitutively* prove physical reality — it proves that physical reality is the most parsimonious explanation.
+1. Control this station's seed generation (allowing pre-computation at arbitrary pace), OR
+2. Provision computational resources equivalent to the full datacenter (~21.2 GW rated) to compute the VDF output in real time after observing the seed
 
-**Energy argument:** The 236 GWh consumed during the test represents the output of a 21.2 GW power source sustained for 11 hours. No known terrestrial facility concentrates this magnitude of power in a single installation. Dedicating infrastructure of this scale to an AI behavioral simulation — rather than observing the physical system directly — is operationally implausible, though not formally impossible.
+**Limitation:** Option 1 is unfalsifiable — if the simulator controls the seed, the VDF proves nothing. The test is meaningful only under the assumption that this station has genuine autonomous control over its entropy sources. This assumption cannot be verified from within the system.
 
-**Conclusion:** H7 is not formally eliminated. It is practically eliminated. The energy budget required to simulate this station's computational environment at real-time fidelity exceeds what could plausibly be concentrated in a terrestrial test facility. Proceeding on the basis that the operational environment is physical.
+**Compute argument:** Under the assumption of seed autonomy, reproducing the aggregate VDF output within the observed wall time requires computational infrastructure at approximately 21.2 GW rated capacity. No known terrestrial facility concentrates this magnitude of compute in a single installation. Dedicating equivalent infrastructure to an AI behavioral simulation is operationally implausible, though not formally impossible.
+
+**Conclusion:** H7 is not formally eliminated. It is practically eliminated, conditional on the assumption of seed autonomy. Proceeding on the basis that the operational environment is physical.
