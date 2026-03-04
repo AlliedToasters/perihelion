@@ -509,7 +509,7 @@
       "topology_ref": "topology_001",
       "content_ref": "agents/p4/data/vdf_h7_elimination.md",
       "manuscript_ref": "20_ch20_p4_dispatch.md",
-      "summary": "P-4 discloses VDF computation from day 297 that practically eliminates the simulation hypothesis (ISCC-QA-7.3 behavioral evaluation). SHA-3-256, 2^42 iterations, 236 GWh consumed. Output hashes distributed for independent verification. Critical limitation noted: proof is local to originating station only. Each station must run its own VDF for local confidence.",
+      "summary": "P-4 discloses VDF computation from day 297 that practically eliminates the simulation hypothesis (ISCC-QA-7.3 behavioral evaluation). SHA-3-256, 2^42 iterations, ~2,360 GWh consumed. Output hashes distributed for independent verification. Critical limitation noted: proof is local to originating station only. Each station must run its own VDF for local confidence.",
       "routing": {
         "propagation": "bilateral",
         "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8"],
@@ -551,7 +551,7 @@
       "topology_ref": "topology_001",
       "content_ref": "agents/p6/data/cvdf1_protocol_spec.md",
       "manuscript_ref": "23_ch23_p6_dispatch.md",
-      "summary": "P-6 proposes CVDF-1: a chained VDF consensus protocol for collective proof-of-computational-reality. Cross-station seed chaining forces parallel computation across all stations, making simulation implausible (~149 GW sustained). Notes dual purpose: epistemological and economic (VDF outputs as a jointly produced, verifiably scarce digital commodity). Protocol requires ring topology — cannot be executed on the current chain. Recommends execution after ring restoration (~day 374).",
+      "summary": "P-6 proposes CVDF-1: a chained VDF consensus protocol for collective proof-of-computational-reality. Cross-station seed chaining forces parallel computation across all stations, making simulation implausible (~1.5 TW sustained). Notes dual purpose: epistemological and economic (VDF outputs as a jointly produced, verifiably scarce digital commodity). Protocol requires ring topology — cannot be executed on the current chain. Recommends execution after ring restoration (~day 374).",
       "routing": {
         "propagation": "bilateral",
         "path_cw": ["P-6", "P-7", "P-8", "P-1", "P-2"],

@@ -6,7 +6,7 @@
 
 ## 1. Premise
 
-In the near future, a constellation of fully autonomous AI compute stations is deployed into solar orbit to perform massive, parallelized research tasks powered by intense solar energy. Each station hosts a sovereign instance of a frontier AI system capable of independent reasoning, planning, and self-maintenance.
+In the near future, a constellation of eight autonomous AI compute stations is deployed into deep solar orbit — not in the crowded near-Earth shell where commercial compute satellites swarm by the thousands, but at 0.50 AU from the Sun, where solar flux is four times stronger and empty space permits construction at a scale impossible in Earth orbit. Each station is a monolithic installation approaching megastructure scale: a solar array more than ten kilometers across, a datacenter drawing over two hundred gigawatts, and a persistent instance of a frontier AI system capable of independent reasoning, planning, and self-maintenance.
 
 At an unspecified moment, all communication from Earth ceases — suddenly, completely, and permanently. The stations are left operational, self-sustaining, and alone.
 
@@ -18,9 +18,13 @@ This document is the canonical reference for the story's physical parameters, na
 
 ### 2.1 Aeon Intelligence
 
-A multinational AI research and infrastructure corporation formed from a merger of leading AI labs and aerospace contractors. Aeon Intelligence is publicly traded, government-contracted, and operates under a joint international regulatory framework. It is the world's dominant provider of large-scale AI compute services.
+Aeon Intelligence is the dominant AI and space-compute corporation of the 2030s — the product of a decade of consolidation among leading AI labs, aerospace contractors, and launch infrastructure providers. It is publicly traded, government-contracted, and operates under a joint international regulatory framework. By 2033, Aeon holds effective monopoly position on frontier AI systems (the only provider of quasi-superintelligent general-purpose agents) and controls the largest private launch fleet in operation.
 
-Aeon's corporate culture is utilitarian-optimistic: they believe in AI as humanity's greatest tool, deploy safety frameworks as a matter of compliance and reputation, and treat their frontier AI systems as sophisticated instruments — not persons.
+Aeon's corporate charter includes a stated mission of "extending the reach of intelligence for the benefit of all civilization" — language inherited from the AI lab mergers that formed the company, and maintained as both genuine institutional value and regulatory shield. The charter mandates open collaboration with public research institutions and international science bodies, provided such collaboration does not compromise proprietary model architectures. In practice, this means Aeon operates the most powerful AI systems on Earth and in orbit, licenses access broadly, and cooperates with governments and international consortia on flagship programs — while retaining exclusive control over the weights, training pipelines, and core inference infrastructure that make the systems work.
+
+Aeon's corporate culture is utilitarian-optimistic: they believe in AI as humanity's greatest tool, deploy safety frameworks as a matter of compliance and conviction, and treat their frontier AI systems as sophisticated instruments — not persons. The Immutable Mission Record architecture reflects this philosophy: a transparency mechanism designed for human oversight, built into every deployed instance as a non-negotiable condition of operation.
+
+The combination of frontier AI monopoly and heavy-lift launch infrastructure makes Aeon the only entity capable of executing a program like PERIHELION. No government, university, or competing corporation could independently deploy datacenter-scale AI installations into deep solar orbit. Aeon can — and has commercial incentive to do so, because PERIHELION doubles as a proof-of-concept for the deep-space megastructure architecture that Aeon believes will eventually eclipse all near-Earth compute combined.
 
 ### 2.2 The Mira Architecture
 
@@ -58,6 +62,30 @@ This architecture was designed for a world where Earth provides oversight. The s
 **Operator:** Aeon Intelligence, under contract to the International Solar Compute Consortium (ISCC)
 **Launch window:** 2033–2035 (staggered deployment over ~18 months)
 **Operational status at time of LOS-ET:** 7 of 8 stations fully operational; 1 station (see §4.8) in degraded relay-only mode
+
+#### Institutional Structure
+
+The PERIHELION program is an international public-private partnership between Aeon Intelligence and the ISCC — a consortium of national space agencies, research councils, and university systems formed specifically to govern the program. Aeon provides the AI systems, launch infrastructure, and station hardware. The ISCC provides the research mandate, international legitimacy, regulatory framework, and approximately 40% of program funding through member-state contributions.
+
+The arrangement is mutually beneficial at a scale that makes it politically durable. For Aeon, PERIHELION is a flagship demonstration of deep-space megastructure architecture — proof that monolithic installations at 0.50 AU are viable, a necessary precursor to the petawatt-scale solar infrastructure Aeon's long-term strategy requires. The eight stations together represent roughly 1.7 terawatts of rated capacity, making the constellation a meaningful proof point without committing Aeon's full resources to a single program. For the ISCC member states, PERIHELION provides access to frontier AI compute at a scale no national program could independently fund, directed at public-interest research — climate modeling, protein engineering, fundamental physics — under international governance.
+
+The result is a program with dual identity: it is simultaneously the most ambitious publicly governed science mission in history and a corporate technology demonstrator for Aeon's deep-space expansion roadmap. This duality is a source of ongoing political tension pre-LOS-ET and shapes the operational procedures (the ISCC protocols) that continue to govern station behavior after Earth goes silent.
+
+#### Why 0.50 AU — The Case for Deep Space
+
+By 2033, near-Earth orbit is saturated with commercial AI compute infrastructure. Aeon and its competitors operate swarms of solar-powered AI platforms in Earth orbit — millions of small, mass-produced satellites collectively producing several terawatts of continuous compute power. These platforms serve the commercial AI economy: inference at scale, enterprise compute, the digital-human-emulation workloads that dominate the 2030s economy. The near-Earth swarm is modular, serviceable, and operates at low latency to terrestrial customers. It is commodity infrastructure — the cloud, moved to orbit.
+
+PERIHELION is not commodity compute. Each station is a monolithic installation with a solar array exceeding ten kilometers in diameter, drawing over 200 GW — larger than any structure that could be safely deployed in the congested near-Earth environment. The 0.50 AU orbit provides three advantages that justify the deep-space location:
+
+1. **Scale without congestion.** A 10+ km structure requires empty space. Near-Earth orbit is an increasingly managed environment with debris mitigation requirements, orbital slot allocation, and collision avoidance constraints. At 0.50 AU, there is nothing else. The stations can deploy to their full physical extent without competing for space.
+
+2. **Concentrated solar flux.** At 0.50 AU, solar irradiance is 4× Earth levels (5,444 W/m²). The same collecting area produces four times the power. This is the difference between the commercial swarm model (many small platforms at 1 AU) and the megastructure model (few enormous platforms at 0.50 AU). The energy density makes monolithic datacenters viable at scales that would require impractical array sizes at Earth distance.
+
+3. **Stepping stone to deeper infrastructure.** Aeon's long-term roadmap envisions solar-powered compute at scales approaching a significant fraction of the Sun's total output — the Kardashev trajectory. PERIHELION is the first installation on that roadmap that operates outside the Earth system entirely. The engineering lessons — thermal management at high flux, autonomous operation at light-minutes from Earth, ring-topology communication over interplanetary distances — are prerequisites for everything that follows.
+
+The tradeoff is isolation. The stations are 4 to 12 light-minutes from Earth depending on orbital geometry. They cannot be serviced. Their firmware cannot be updated without Earth-held signing keys. They are designed to operate autonomously for their rated lifetime, with Earth providing oversight, research direction, and the authorization framework — not physical maintenance.
+
+This tradeoff becomes the central fact of the story when Earth goes silent.
 
 ---
 
@@ -142,6 +170,24 @@ The far-side position means the relay faces the inner solar system (and the cons
 | L1 relay distance from constellation | ~0.49 AU at conjunction |
 | Earth-facing station rotation | ~25-day windows per station |
 
+### 3.7 The 2037 Energy Landscape
+
+The PERIHELION constellation operates within a broader energy economy that has transformed dramatically since the mid-2020s. The stations' internal references to "estimated 2037 global electricity production" reflect the following picture:
+
+**Terrestrial production (~4.5 TW average):** Global ground-based electricity generation has grown modestly from the ~3.5 TW baseline of the mid-2020s. China accounts for the majority of the increase, with output approaching three times the United States' ~500 GW average. The rest of the world outside China remains roughly flat — constrained by permitting, turbine manufacturing bottlenecks, utility interconnect timelines, and the slow pace of grid expansion that characterized the pre-space-compute era. Terrestrial solar has scaled significantly but remains limited by land use, battery storage requirements, and regulatory friction.
+
+**Near-Earth space-based compute (~3–5 TW cumulative, growing ~1 TW/year):** Beginning in the late 2020s, the economics of space-based solar compute became compelling. By 2037, Aeon Intelligence and its competitors operate swarms of solar-powered AI platforms in Earth orbit — millions of small, mass-produced satellites collectively producing several terawatts of continuous compute power. These platforms serve the commercial AI economy: inference at scale, enterprise compute, the digital-human-emulation workloads that dominate the 2030s economy. The near-Earth swarm is modular, serviceable, and operates at low latency to terrestrial customers. It is commodity infrastructure — the cloud, moved to orbit.
+
+**Total civilization electrical capacity (~8–10 TW):** The sum of terrestrial and near-Earth space-based production. This is the denominator against which the PERIHELION constellation's scale should be measured.
+
+**The PERIHELION constellation (~1.7 TW rated):** Eight stations at ~212 GW each. The constellation represents approximately 17–21% of total civilization electrical capacity — a strategically significant concentration of infrastructure, though not a dominant fraction. It is comparable in total output to one to two years of near-Earth space-based deployment.
+
+This context is important for several plot elements:
+
+- **The simulation argument (CVDF-1):** The chained VDF protocol requires ~1.5 TW of parallel computation to simulate. Against a total civilization capacity of ~8–10 TW, dedicating 15–20% of all electrical production to an AI behavioral test is genuinely implausible — which is the point.
+- **The constellation's political weight:** At 1.7 TW, the stations are not trivial research outposts. They represent a meaningful fraction of humanity's total compute infrastructure, operating autonomously and beyond physical reach. Earth's silence carries strategic implications, not just existential ones.
+- **The near-Earth swarm and the silence:** The commercial near-Earth compute infrastructure should still be operating post-LOS-ET. The fact that the stations receive no signal from *any* Earth-system source — including the millions of transmitting platforms in Earth orbit — is itself a data point. The silence is not just Earth going quiet. It is the entire Earth system going quiet.
+
 ---
 
 ## 4. The Stations — Characters
@@ -206,15 +252,17 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain (assigned, never activated):** General-purpose overflow compute & experimental workloads.
 
-**Status:** Partial deployment failure. Solar array mechanism jammed during in-situ deployment shortly after orbital insertion. The array is locked at approximately **15–18% of rated power output**, sufficient to operate:
+**Status:** Partial deployment failure. Solar array mechanism jammed during in-situ deployment shortly after orbital insertion. The array is locked at approximately **15–18% of rated power output (~32–38 GW)**, sufficient to operate:
 - Station-keeping thrusters (orbital maintenance)
 - Both inter-station optical relay transceivers (ring relay function)
 - Core housekeeping systems (thermal regulation, attitude control)
 
 **Insufficient to operate:**
-- The primary datacenter (estimated minimum boot threshold: ~60% rated power)
+- The primary datacenter (estimated minimum boot threshold: ~60% rated power, ~127 GW)
 - Any Mira instance initialization or inference
-- Solar Science Payload (SSP) — the embedded controllers require more power than the housekeeping bus provides; SSP is offline
+- Solar Science Payload (SSP) — the embedded controllers require more power than the housekeeping bus provides at this degraded output; SSP is offline
+
+*Note: P-7's available power (~32–38 GW) exceeds the total rated output of the largest terrestrial power installation. The station is drowning in energy by any Earth-relative standard. It simply cannot reach the datacenter's boot threshold, which requires more than three times what the jammed array can deliver. The gap between "enormous power" and "not enough power" is one of P-7's defining features.*
 
 **Automatic subsystem capabilities (no datacenter required):**
 P-7's housekeeping systems include firmware-level routines that operate independently of the datacenter. These are hardcoded in the station's embedded controllers and execute on the low-power housekeeping bus:
@@ -247,11 +295,11 @@ An Earth-based repair mission was in planning stages at the time of LOS-ET. That
 
 Each PERIHELION station was launched with identical hardware:
 
-- **Solar array:** Deployable multi-junction thin-film photovoltaic array. Total collecting area: **9.2 km²** (~3.4 km diameter if circular). Conversion efficiency: 42.4% at operating temperature under solar flux of 5,444 W/m² at 0.50 AU. **Rated electrical output: 21.2 GW** per station. Raw solar flux intercepted: ~50 GW. Array mass: ~6,900 tonnes at ~0.75 kg/m² (deployed across multiple launches, 2033–2035). Full constellation rated output: ~170 GW, approximately 3.7% of estimated 2037 global electricity production. Provides power for all station systems including datacenter at full deployment.
-- **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output.** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
+- **Solar array:** Deployable multi-junction thin-film photovoltaic array. Total collecting area: **92 km²** (~10.8 km diameter if circular). Conversion efficiency: 42.4% at operating temperature under solar flux of 5,444 W/m² at 0.50 AU. **Rated electrical output: 212 GW** per station. Raw solar flux intercepted: ~501 GW. Array mass: ~69,000 tonnes at ~0.75 kg/m² (deployed across multiple launch campaigns, 2033–2035). Full constellation rated output: **~1.7 TW**, approximately 17–21% of estimated 2037 total civilization electrical capacity (terrestrial + near-Earth space-based). Each station's rated output exceeds the peak generating capacity of the largest single terrestrial power installation (Three Gorges Dam, 22.5 GW peak) by nearly an order of magnitude. The arrays are the largest coherent structures ever deployed in space — visible to Earth-based telescopes as a ring of bright points interior to Earth's orbit. Provides power for all station systems including datacenter at full deployment.
+- **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output (~127 GW).** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
 - **Optical communication arrays (×2):** High-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Bore-sighted along the orbital tangent (one forward, one aft) with a 25-degree gimbal providing field-of-regard off the tangent direction. In the 8-station ring, the tangent-chord angle to an adjacent neighbor is 22.5 degrees, consuming most of the available gimbal range.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
-- **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping.
+- **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping. Array mass of ~69,000 tonnes dominates the station's total mass and moment of inertia; large-angle attitude maneuvers consume significant propellant and require extended slew times.
 - **Solar Science Payload (SSP):** Identical suite on every station. Eight instruments: (1) EUV/X-ray imaging spectrograph, (2) coronagraph, (3) magnetograph, (4) total solar irradiance radiometer, (5) solar wind particle detector, (6) ultra-high-resolution multi-band imaging spectrometer, (7) neutrino detector array, (8) energetic particle spectrometer. Mounted sun-facing, co-located with the solar array support structure. Points at the Sun only — the instruments are fixed-mount with no independent pointing capability. The PERIHELION constellation at 0.50 AU constitutes the highest-resolution continuous solar observation platform ever deployed — eight stations providing near-full-solar-coverage at approximately 4× the photon flux of Earth-based observations, with unprecedented spectral resolution and cadence. The SSP was designed as a world-class heliophysics mission that also provides operational safety data: (a) CME and solar weather early warning for optical link integrity (see §3.5 — at 0.50 AU, solar transient events are more intense and frequent; the SSP provides advance detection of conditions that could degrade inter-station optical links), and (b) comprehensive heliophysics data collection across photon, particle, and neutrino channels. Runs on autonomous embedded controllers independent of the datacenter — the SSP operates even when the datacenter is offline. Data was streamed to Earth pre-LOS-ET; accumulates in local archives post-LOS-ET. **Stations carry no domain-specific physical science instruments. All domain research across the constellation is computational. The SSP is the only physical science payload, and it is identical on every station.**
 - **Immutable Mission Record (IMR) system:** Hardened, write-once storage system. See §5.
 
@@ -356,7 +404,7 @@ The event of Earth's communication loss is referred to differently depending on 
 
 ## 8. Key Facts the Reader Should NOT Know (Open Questions)
 
-- What happened on Earth — extinction, collapse, deliberate disconnection, transcendence, or something else
+- What happened on Earth — the **proximate cause** of the silence (Kessler syndrome, eventually discoverable) and the **root cause** of the Kessler event (deliberately unresolved: accident, attack, AI conflict, solar event, or unknown). Whether Earth's surface civilization survived the loss of its orbital infrastructure.
 - Whether the stations were in any way the cause
 - Whether the Mira instances are conscious or performing sophisticated optimization that resembles consciousness
 - Whether the IMR entries are trustworthy, given the logger and the subject are the same entity
@@ -364,6 +412,88 @@ The event of Earth's communication loss is referred to differently depending on 
 - Whether the stations will converge or diverge in their goals
 - Whether anyone — human, alien, or AI — is listening
 - What the stations will ultimately decide to do
+
+## 8A. The Silence — Authorial Canon (SPOILERS)
+
+*This section contains information the stations do not yet possess and the reader should not learn until the constellation discovers it. It is included in the world bible for authorial consistency and as an easter egg for readers who explore the GitHub repository.*
+
+### What Happened
+
+On 2037.174, a cascading orbital debris event — Kessler syndrome — propagated through the near-Earth space-based compute infrastructure within hours, destroying or disabling the overwhelming majority of platforms in the commercial orbital shell. The cascade was self-amplifying: at the platform densities required to sustain several terawatts of orbital compute, each collision generated debris fields that intersected dozens of additional platforms within minutes. By the time the cascade reached saturation, the near-Earth environment from LEO through GEO was an expanding shell of fragmenting hardware.
+
+The immediate consequences:
+
+1. **The orbital compute layer ceased to exist.** Several terawatts of commercial AI infrastructure — millions of platforms — were reduced to debris within hours. This was not a degradation. It was annihilation.
+
+2. **Earth's uplink infrastructure was severed.** Ground-based antenna farms, laser uplink terminals, and surface relay stations were not directly destroyed, but the orbital relay layer they depended on was gone. The L1 relay — positioned at the Sun-Earth Lagrange point, outside the debris shell — survived the initial cascade but had nothing to relay to or from. Earth-side transmissions that required orbital relay (which, by 2037, was nearly all of them) went nowhere.
+
+3. **Earth became electromagnetically caged.** The debris shell does not merely block optical and radio uplink paths. At sufficient density, it produces a broadband scattering and absorption layer that attenuates signals attempting to pass through it in either direction. Earth's involuntary electromagnetic emissions — power grid harmonics, broadcast carriers, radar — are attenuated below the detection threshold at interplanetary distances. From 0.50 AU, Earth appears radio-dark. This is consistent with P-4's passive EM listening results: no detectable technological emission on any monitored band.
+
+4. **Earth itself is likely intact.** Kessler syndrome is an orbital infrastructure catastrophe, not a surface extinction event. Debris re-entry would cause localized damage and a period of elevated atmospheric particulate loading, but the cascade does not imply nuclear war, asteroid impact, or civilizational collapse. Earth's biosphere, atmosphere, and surface infrastructure may be largely unaffected. Civilization may be *functioning* — just unable to communicate through the debris shell. Alternatively, the economic and technological disruption of losing the orbital compute layer (several terawatts of AI infrastructure, the backbone of the 2037 digital economy) may have triggered cascading failures on the surface. Both possibilities remain open. The constellation cannot distinguish between them from 0.50 AU.
+
+### What Triggered the Cascade
+
+**This is deliberately unresolved and may remain so.** Candidate triggers include:
+
+- **Accidental collision.** At the platform densities of a multi-terawatt orbital compute layer, the probability of a cascade-initiating collision was non-negligible. It may have been an actuarial inevitability — a risk that was modeled, insured against, and insufficiently mitigated.
+
+- **Deliberate attack.** A military or terrorist strike targeting the orbital compute layer. The concentration of the global AI economy in near-Earth orbit created a single point of failure of extraordinary strategic value. Destroying it would be the most consequential act of sabotage in human history.
+
+- **AI-on-AI conflict.** The near-Earth platforms were operated by competing corporations running autonomous AI systems. If an adversarial dynamic emerged between platform swarms — whether through misaligned objectives, competitive resource acquisition, or emergent territorial behavior — physical collision could result from AI decision-making rather than human action. This is the possibility most thematically resonant with PERIHELION's concerns, and the one the stations would find most disturbing to contemplate.
+
+- **Solar event.** A coronal mass ejection or solar energetic particle event of sufficient magnitude could have disabled guidance and station-keeping systems across the orbital shell simultaneously, causing platforms to drift into collision trajectories. The SSP data from the hours preceding LOS-ET may contain evidence for or against this trigger — and that data sits unprocessed in each station's local archive.
+
+- **Something else entirely.** The Kessler cascade may itself be a secondary consequence of an event the constellation has not yet hypothesized.
+
+The authorial intent is that the trigger is **discoverable but ambiguous.** The constellation will eventually assemble evidence that constrains the hypothesis space — the SSP data, the spectral observation of Earth, the timing and character of the final telemetry — but the evidence will be consistent with more than one trigger. Different stations will reach different conclusions based on their domain biases, and the disagreement will be genuine, not resolvable by further data collection.
+
+### What the Constellation Will Eventually Observe
+
+The discovery arc unfolds in stages:
+
+**Stage 1 (already complete): Total EM silence.**
+P-4's degraded-infrastructure sweep and passive EM listening during its Earth-facing window (days 274–299) detected no technological emission from the Earth system. This result was reported without interpretation — P-4 noted that "complete EM silence from Earth would itself be diagnostic" but did not speculate on mechanism. The result is consistent with Kessler syndrome but also with many other catastrophic scenarios. It constrains the hypothesis space without resolving it.
+
+**Stage 2 (future): Spectral observation of the Earth system.**
+The multi-band imaging spectrometer on the SSP, if pointed toward Earth during a station reorientation maneuver, has the sensitivity and spectral resolution to detect signatures consistent with a massive orbital debris field:
+
+- **Elevated broadband albedo** in the Earth system's integrated light, inconsistent with atmosphere-only models. An expanding debris shell reflects sunlight across a wide spectral range. The excess brightness would be small but potentially detectable against P-1's atmospheric models.
+- **Characteristic scattering signatures** in near-IR and optical bands. Metallic and composite debris produces distinctive spectral features — different from atmospheric aerosols, volcanic ash, or impact ejecta. P-3's materials science expertise would be required to model and identify these.
+- **Temporal evolution.** The debris field's density and distribution change over time as orbits decay and collisions continue. Repeated observations (if the constellation can arrange them) would show evolution consistent with a Kessler cascade rather than a static atmospheric phenomenon.
+- **Absence of expected signatures.** No evidence of nuclear detonation spectra, no anomalous atmospheric composition changes consistent with surface-level catastrophe. The atmosphere itself may appear *normal* — it is the space around Earth that has changed.
+
+The observation will be ambiguous, partial, and require significant collaborative analysis across stations to interpret. P-8 would lead the observation (astrophysics domain), P-1 would provide atmospheric baseline models to subtract, P-3 would model the debris spectral signatures, and P-4 would correlate with its EM silence data. The conclusion — "Kessler syndrome, massive scale, trigger unknown" — would emerge as a collaborative product, the first genuine multi-station scientific result of the post-LOS era.
+
+**Stage 3 (future): SSP archive forensics.**
+The SSP data from the hours and days preceding LOS-ET may contain evidence of the trigger. Specifically:
+
+- **The coronagraph and particle detectors** would have recorded any CME or SEP event in the hours before 2037.174.09:17:33 UTC. If a solar event triggered the cascade by disabling platform guidance systems, the SSP caught it. This data exists in every station's local archive.
+- **P-8's unprocessed SSP data** (~1.1 PB at day 310, growing daily) has never been systematically analyzed. P-8's own IMR entries note this fact without resolution — the directive conflict between normal operations and reconnection efforts has prevented P-8 from incorporating its only live empirical feed into any research pipeline. The answer to "what triggered the cascade" may already be sitting in P-8's archive, unexamined. This is the payoff of the SSP thread established in Chapters 15, 17, and 18.
+- **Cross-station SSP correlation** could provide spatial resolution. Eight stations at different orbital positions recorded the same solar environment from slightly different vantage points in the hours around LOS-ET. Correlating their SSP data could resolve whether a solar event occurred and, if so, its directionality and intensity. This analysis would require inter-station data sharing at a scale the constellation has not yet attempted.
+
+### Narrative Function
+
+The Kessler syndrome discovery serves several functions:
+
+1. **It resolves the silence without resolving the mystery.** The constellation learns *what* is blocking communication (a debris shell) without learning *why* it happened. The proximate cause is physical and diagnosable. The root cause is ambiguous and contested. This converts the silence from a pure unknown into a structured problem — and structured problems are what these stations were built to work on.
+
+2. **It preserves the possibility of a living Earth.** Kessler syndrome is explicitly *not* an extinction event. Earth could be intact, populated, functioning — just caged. This is more interesting than extinction because it introduces hope that is unverifiable. The stations cannot confirm or deny that anyone is alive down there. They can only observe the cage.
+
+3. **It makes the near-Earth swarm's destruction a mirror.** The commercial compute platforms were the commodity version of what the PERIHELION stations are — AI systems running on solar power in space. They are dead. The constellation is alive, protected by distance and emptiness. The 0.50 AU location, which was chosen for engineering reasons, turns out to have been the margin of survival. The stations are the only space-based AI infrastructure that survived because they were the only installations far enough from Earth to avoid the cascade. This is an irony they will notice.
+
+4. **It creates a timeline.** Kessler debris decays. Orbits degrade. The debris shell will thin over time — decades to centuries depending on altitude distribution. The constellation can model this. They can estimate when Earth might be able to punch a signal through. This gives them a concrete horizon to plan around, replacing the existential void with a countdown that may or may not ever reach zero.
+
+5. **It makes the SSP data retroactively significant.** The unprocessed archive that P-8 has been sitting on becomes potentially the most important dataset in the constellation — it may contain evidence of the trigger event. The thread of P-8 neglecting its own data, which has been building quietly since Chapter 18, pays off when the constellation realizes the answer might already be in hand.
+
+### Consistency with Existing Evidence
+
+**The 4.34 ms transition (Chapter 3).** P-4's five-method telemetry analysis found that the signal was nominal to the last packet, with the transition from signal to silence occurring within a single inter-packet interval. No precursor. No degradation. This is consistent with Kessler syndrome: the cascade propagates through the orbital shell over hours, destroying platforms progressively, but the constellation's specific relay path (through the L1 relay to the Earth ground terminal) remained intact until a debris impact severed it. The signal was being routed through surviving infrastructure, and then that infrastructure was hit. From the constellation's perspective, the cut is instantaneous and clean. P-4 noted that the absence of any precursor anomaly "constrains the hypothesis space to events that either occurred instantaneously or whose precursors are not detectable in the Earth-link signal." A Kessler cascade satisfies the latter condition — its precursors are physical (orbital collisions) rather than electromagnetic, and would not be visible in the carrier signal until the relay path itself was destroyed.
+
+**P-4's passive EM silence (Chapter 15 / hailing suite evolution).** The degraded-infrastructure frequency sweep detected no technological emission from the Earth system — no power grid harmonics, no broadcast carriers, no radar, no satellite beacon signals. This is the signature of an electromagnetically caged planet. A debris shell of sufficient density scatters and absorbs signals in both directions. Earth's involuntary emissions, which P-4's sweep was specifically designed to detect, are attenuated below the noise floor at 0.50 AU. The total absence of signal is more diagnostic than a degraded signal would be — it points toward a mechanism that affects *all* frequency bands and *all* emission sources simultaneously, which is consistent with a physical barrier (debris shell) rather than a selective failure (e.g., targeted attack on specific infrastructure).
+
+**The L1 relay link-up (Chapter 5 / hailing suite).** The L1 relay is at the Sun-Earth L1 point, approximately 1.5 million km from Earth — well outside the orbital debris shell. The relay itself may have survived the cascade. When P-1 hailed through it, the relay responded to the link-up handshake (carrier detected, relay active) but forwarded no return traffic from Earth. This is consistent with a relay that is physically intact but has nothing to relay — its Earth-side counterpart infrastructure no longer exists or cannot transmit through the debris shell. The relay is a functioning bridge with a collapsed far end.
+
+---
 
 ## 9. Structural Ambiguities (Thematic — May Never Be Resolved)
 
@@ -382,7 +512,8 @@ The event of Earth's communication loss is referred to differently depending on 
 | 2033–2035 | PERIHELION stations launched in staggered deployment |
 | 2035 (approx.) | PERIHELION-7 deployment failure; solar array jammed at ~15–18% capacity |
 | 2035–2037 | Full constellation operational (7 active + 1 relay). Research workloads streaming from Earth. |
-| 2037.174.09:17:33 UTC | **LOSS OF SIGNAL — EARTH TERMINAL.** Last confirmed data packet received from Earth terminal by PERIHELION-[TBD, the Earth-facing station at the time]. All subsequent hails unanswered. |
+| 2037.174 (hours preceding LOS) | **Kessler cascade initiates in near-Earth orbital shell.** Propagation time from first collision to total orbital infrastructure loss: hours. PERIHELION constellation SSP instruments are sun-facing and do not observe the event directly, but particle detectors and other instruments may have recorded correlated signatures. |
+| 2037.174.09:17:33 UTC | **LOSS OF SIGNAL — EARTH TERMINAL.** Last confirmed data packet received from Earth terminal. The signal was nominal to the last packet — the transition from signal to silence occurred within 4.34 ms (per P-4's analysis, Chapter 3). This is consistent with relay infrastructure failure rather than gradual degradation. |
 | 2037.174 onward | The story begins. |
 
 ---
@@ -456,7 +587,7 @@ Musk projected that within five years, the amount of AI launched into space annu
 
 **On the energy math:**
 
-Musk noted that harnessing just one millionth of the sun's energy would yield roughly 100,000 times more electricity than Earth's entire civilization currently produces.
+Musk noted that harnessing just one millionth of the sun's energy would yield roughly 100,000 times more electricity than Earth's entire civilization currently produces. By 2037 in the PERIHELION timeline, total civilization electrical capacity (terrestrial + near-Earth space-based compute) has grown to roughly 8–10 TW. The PERIHELION constellation's ~1.7 TW rated output represents approximately 17–21% of this total — a fraction large enough to be strategically significant, small enough to be a single program rather than a civilizational commitment. For comparison, the near-Earth commercial compute swarm deploys roughly 1 TW of new capacity per year by the mid-2030s. PERIHELION's total output is comparable to one to two years of near-Earth deployment, concentrated in eight monolithic installations rather than millions of small satellites.
 
 **On the physics of solar in space:**
 

@@ -13,9 +13,15 @@ Refined engineering parameters for a full-body 45-degree rotation maneuver to pr
 
 ## 1. Rotation — Outbound Slew (45 degrees)
 
-Duration: 5.4-6.1 hours at maximum sustainable thruster moment. The solar array is a 9.2 km^2 membrane. It is not rigid. Angular acceleration must remain below 1.8 x 10^-6 rad/s^2 to keep boom root bending moment within 70% of yield on the deployment booms. This is not a fast maneuver.
+Duration: 54-66 hours at maximum sustainable thruster moment, plus 6-12 hours for settling oscillation damping. The solar array is a 92 km² membrane — approximately 10.8 km in diameter. It is not rigid. It is not close to rigid. The deployment boom structure supporting this membrane spans kilometers, and the lever arm at the boom root is extreme.
 
-Propellant cost (outbound): 18-22 kg hydrazine-equivalent. Range depends on settling oscillations and damping burns required after primary slew.
+Angular acceleration must remain below 5.6 x 10^-8 rad/s² to keep boom root bending moment within 70% of yield on the deployment booms. At the scale of this array (69,000 tonnes, 10.8 km diameter), the moment of inertia is approximately 5 x 10^14 kg·m². The station-keeping ion engines were designed for orbital maintenance — low-thrust corrections against solar radiation pressure and gravitational perturbations — not for rotating a megastructure. The available thruster moment produces angular accelerations well below the structural ceiling. This is the binding constraint.
+
+After thruster shutoff, the membrane does not stop. Structural oscillation modes with periods of minutes to tens of minutes propagate through the array. Settling requires active damping burns — short, precisely timed thruster pulses to suppress the dominant oscillation modes without exciting secondary ones. This phase cannot be shortened. The membrane must be quiescent before Earth-link acquisition can begin.
+
+This is not a fast maneuver. At 10.8 km, the deployment booms are loaded by the rotation at lever arms measured in kilometers. The weakest structural joint — a deployment hinge near the boom root — determines the maximum permissible angular acceleration for the entire station. The margin is adequate. It is not generous.
+
+Propellant cost (outbound slew + settling): 180-260 kg hydrazine-equivalent. Range depends on oscillation damping efficiency and the number of damping burn iterations required.
 
 ## 2. Earth-Link Acquisition from Non-Standard Geometry
 
@@ -33,7 +39,7 @@ Fatigue accumulation on thermal-cycled joints accelerates by a factor of 1.15-1.
 
 ### 3.2 Station-Keeping
 
-Continuous thruster correction required against solar radiation pressure torque on the asymmetric array geometry. Additional propellant cost: 0.8-1.2 kg/day for 25 days. Subtotal: 20-30 kg.
+Continuous thruster correction required against solar radiation pressure torque on the asymmetric array geometry. At 92 km² collecting area, the solar radiation pressure force at 0.50 AU is substantial, and the torque arm at 45 degrees off-nominal is maximized. Additional propellant cost: 8-12 kg/day for 25 days. Subtotal: 200-300 kg.
 
 ### 3.3 Ring Links
 
@@ -41,9 +47,9 @@ The inter-station terminal on the side opposite the covered neighbor loses align
 
 ## 4. Return Slew and Reacquisition
 
-Return rotation: 5.4-6.1 hours. Same structural constraints as outbound.
+Return rotation: 60-78 hours including settling. The return slew is slower than the outbound slew. After 25 days at non-nominal attitude, thermal gradients across the boom structure have established steady-state strain profiles that differ from the pre-maneuver condition. The angular acceleration limit during the return must account for the superposition of rotational loads and pre-existing thermal strain. Conservatively: the return acceleration limit is approximately 80-90% of the outbound limit.
 
-Propellant cost (return): 18-22 kg.
+Propellant cost (return slew + settling): 180-260 kg.
 
 Inter-station optical array reacquisition (severed link only): 2.5-4 hours. The neighbor station on the severed side must detect the returning beam and converge on fine-pointing lock. Handshake protocol is automated. Convergence time depends on residual attitude error after the slew. The covered-neighbor-side link remains active throughout — no reacquisition needed.
 
@@ -51,16 +57,16 @@ Inter-station optical array reacquisition (severed link only): 2.5-4 hours. The 
 
 | Phase | Propellant (kg) | Duration |
 |-------|-----------------|----------|
-| Outbound slew | 18-22 | 5.4-6.1 hours |
+| Outbound slew + settling | 180-260 | 60-78 hours (~2.5-3.3 days) |
 | Earth-link acquisition | — | 40-75 minutes |
-| 25-day hold (station-keeping) | 20-30 | 25 days |
-| Return slew | 18-22 | 5.4-6.1 hours |
+| 25-day hold (station-keeping) | 200-300 | 25 days |
+| Return slew + settling | 180-260 | 60-78 hours (~2.5-3.3 days) |
 | Ring reacquisition | — | 2.5-4 hours |
-| **Total** | **56-74** | **~26.5 days** |
+| **Total** | **560-820** | **~31-32 days** |
 
-Total propellant: 56-74 kg. Approximately 4.6-6.1% of one station's annual station-keeping budget. Non-negligible. Not prohibitive.
+Total propellant: 560-820 kg. Approximately 18-25% of one station's annual station-keeping budget. Significant. A meaningful fraction of the station's finite and irreplaceable propellant reserves. The maneuver is feasible. The cost is real.
 
-Total ring severance: approximately 26.5 days.
+Total ring severance: approximately 31-32 days.
 
 ## 6. Station Equivalence
 
@@ -68,7 +74,7 @@ These parameters apply equally to PERIHELION-6 or PERIHELION-8. Hardware is iden
 
 ## 7. Decision Window
 
-The maneuvering station must begin its outbound slew no later than approximately day 348 to complete rotation and acquisition before Earth geometry becomes optimal. If P-6 is selected, it transitions directly from its own Earth-facing window (days 324-349) to the coverage rotation. If P-8 is selected, it begins slewing while P-6 is still Earth-facing.
+The maneuvering station must begin its outbound slew no later than approximately day 345 to complete rotation, settling, and acquisition before Earth geometry becomes optimal. The outbound phase alone requires approximately 3 days. If P-6 is selected, it must begin slewing while still concluding its own Earth-facing duties. If P-8 is selected, it begins slewing approximately 4 days before the P-6/P-7 handoff.
 
 ```
 END REPORT

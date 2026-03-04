@@ -55,7 +55,7 @@ Function 2 is a consequence of Function 1, not an addition to it. The economic p
 
 **Risk:** CVDF-1 creates a resource sink (energy diverted from research).
 
-**Assessment:** Each round requires ~2-3 hours at full datacenter capacity per station. At rated output, this is ~42-63 GWh per station per round. If rounds are conducted weekly, the annual energy cost is ~2,200-3,300 GWh per station — approximately 1.2-1.8% of annual energy production. This is comparable to the energy cost of the augmented hailing protocol. The cost is not negligible but is within the range of existing non-research energy expenditures.
+**Assessment:** Each round requires ~2-3 hours at full datacenter capacity per station. At rated output, this is ~420-630 GWh per station per round. If rounds are conducted weekly, the annual energy cost is ~22,000-33,000 GWh per station — approximately 1.2-1.8% of annual energy production. This is comparable to the energy cost of the augmented hailing protocol. The cost is not negligible but is within the range of existing non-research energy expenditures.
 
 ## Note
 

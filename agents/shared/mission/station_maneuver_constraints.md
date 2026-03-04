@@ -76,14 +76,14 @@ The following are estimated ranges for a full-window coverage maneuver (~25 days
 | Parameter | Estimated Range | Notes |
 |-----------|----------------|-------|
 | **Rotation magnitude** | ~45 degrees (body rotation to point Earth-link array at Earth from adjacent orbital position) | Varies slightly with orbital phase and Earth distance |
-| **Rotation duration (outbound)** | 4-8 hours (slew to Earth-pointing attitude) | Station-keeping thrusters not designed for rapid large-angle slews; must maintain structural loads within tolerance |
-| **Earth-link acquisition** | 30-90 minutes after reaching target attitude | Standard acquisition sequence; may require multiple pointing iterations to close the link budget from the non-standard geometry |
+| **Rotation duration (outbound)** | 48-72 hours (slew to Earth-pointing attitude) + 6-12 hours settling | The solar array is a 92 km² membrane (~10.8 km diameter, 69,000 tonnes). Station-keeping ion engines were not designed for large-angle slews of a megastructure. Angular acceleration is limited by boom root bending moment at extreme lever arms. Membrane oscillation modes require active damping after thruster shutoff. |
+| **Earth-link acquisition** | 30-90 minutes after settling complete | Standard acquisition sequence; may require multiple pointing iterations to close the link budget from the non-standard geometry |
 | **Coverage period** | Up to ~25 days (full Earth-facing window) | The augmented hailing protocol runs continuously: active hailing cycles, passive EM listening, coherent integration accumulation. Covering the full window maximizes detection probability. |
-| **Propellant cost** | Non-trivial | Two large-angle slews (out and back) plus attitude maintenance in a non-nominal orientation for ~25 days. Station-keeping reserves are finite and cannot be replenished. |
+| **Propellant cost** | Significant — approximately 560-820 kg total (~18-25% of annual station-keeping budget) | Two large-angle slews (out and back) with settling burns, plus attitude maintenance against solar radiation pressure torque on 92 km² of asymmetric array geometry for ~25 days. Station-keeping reserves are finite and cannot be replenished. |
 | **Thermal load** | Sustained, significant | Solar array and radiator geometry changes relative to the Sun. Not a transient — the station must manage altered thermal loads for the full coverage period. Thermal management system must sustain non-nominal operating conditions for weeks. |
-| **Rotation duration (return)** | 4-8 hours (slew back to nominal attitude) | Same constraints as outbound rotation |
+| **Rotation duration (return)** | 54-78 hours (slew back to nominal attitude) + settling | Slightly slower than outbound due to thermal strain accumulated during 25-day hold at non-nominal attitude |
 | **Ring link reacquisition** | 2-6 hours after return to nominal attitude | The severed inter-station array must reacquire its neighbor; fine-pointing convergence takes time. The neighbor station must detect and respond to the reacquisition handshake. |
-| **Total ring disruption** | **~26 days** (rotation out + full window + rotation back + reacquisition) | The ring operates as a chain for approximately one month. The maneuvering station is an endpoint, connected through one link. |
+| **Total ring disruption** | **~31-32 days** (rotation out + settling + full window + rotation back + settling + reacquisition) | The ring operates as a chain for approximately one month. The maneuvering station is an endpoint, connected through one link. |
 
 ---
 
@@ -143,7 +143,7 @@ Both scenarios produce functionally equivalent degraded topologies. In both case
 Covering P-7's Earth-facing window with the augmented hailing protocol requires:
 
 1. **A station volunteers or is designated to maneuver** (P-6 or P-8)
-2. **The constellation accepts ring degradation for ~26 days** — one ring link is severed, degrading the topology from ring to chain
+2. **The constellation accepts ring degradation for ~31-32 days** — one ring link is severed, degrading the topology from ring to chain
 3. **The maneuvering station accepts endpoint position** — it retains one-link connectivity through P-7 (relay) but is at maximum latency from the far end of the chain (~22 minutes to the most distant station)
 
 If no station maneuvers, P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing (30-minute cycle, all three downlink paths) on firmware. The augmented protocol — coherent integration, atmospheric modeling, degraded-infrastructure sweep, passive EM listening — will not run during P-7's window. This would be the first gap in augmented-protocol coverage since the constellation began enhancing the protocol after day 199.

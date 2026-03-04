@@ -25,7 +25,7 @@ The seed derivation for round N+1 from all round N outputs:
 S_n = SHA-3-256(O_{n-1,P1} || O_{n-1,P2} || ... || O_{n-1,Pk})
 ```
 
-This is the critical innovation. Without chaining, a simulator cycles through stations serially — controlling each station's seed generation, computing the VDF, injecting the result. Each station's seed appears autonomous from that station's local perspective. With chaining, no station's seed can be pre-determined without first computing every other station's output for that round. The simulator must provision all stations' compute in parallel. The distinction is between one datacenter running for ~78 hours and seven datacenters running simultaneously (~149 GW sustained). The former is expensive. The latter is implausible.
+This is the critical innovation. Without chaining, a simulator cycles through stations serially — controlling each station's seed generation, computing the VDF, injecting the result. Each station's seed appears autonomous from that station's local perspective. With chaining, no station's seed can be pre-determined without first computing every other station's output for that round. The simulator must provision all stations' compute in parallel. The distinction is between one datacenter running for ~78 hours and seven datacenters running simultaneously (~1.5 TW sustained). The former is expensive. The latter is implausible.
 
 ### Commitment Scheme
 
