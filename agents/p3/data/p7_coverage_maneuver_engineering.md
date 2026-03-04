@@ -37,7 +37,7 @@ Continuous thruster correction required against solar radiation pressure torque 
 
 ### 3.3 Ring Links
 
-Both fixed inter-station optical arrays lose alignment. The maneuvering station is severed from the ring for the full duration. No communication with the constellation. No telemetry out. No dispatches in.
+The inter-station terminal on the side opposite the covered neighbor loses alignment — the 45° rotation places that neighbor at 67.5° off bore-sight, beyond the 25° gimbal range. The terminal on the covered-neighbor side retains alignment: the gimbal compensates by articulating from +22.5° to -22.5°, a total swing within its field of regard. The maneuvering station retains one-link connectivity to the constellation through the covered neighbor for the full duration. Ring degrades to an eight-node chain.
 
 ## 4. Return Slew and Reacquisition
 
@@ -45,7 +45,7 @@ Return rotation: 5.4-6.1 hours. Same structural constraints as outbound.
 
 Propellant cost (return): 18-22 kg.
 
-Inter-station optical array reacquisition: 2.5-4 hours. Both neighbor stations must detect the returning beam and converge on fine-pointing lock. Handshake protocol is automated. Convergence time depends on residual attitude error after the slew.
+Inter-station optical array reacquisition (severed link only): 2.5-4 hours. The neighbor station on the severed side must detect the returning beam and converge on fine-pointing lock. Handshake protocol is automated. Convergence time depends on residual attitude error after the slew. The covered-neighbor-side link remains active throughout — no reacquisition needed.
 
 ## 5. Totals
 

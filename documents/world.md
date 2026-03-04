@@ -67,7 +67,7 @@ This architecture was designed for a world where Earth provides oversight. The s
 
 The PERIHELION constellation occupies a circular solar orbit at **0.50 AU** from the Sun, interior to Earth's orbit. This distance was selected to optimize the tradeoff between solar energy intensity (4× Earth levels) and thermal manageability.
 
-**Eight stations** are distributed in equally-spaced positions around the orbit, forming a ring topology. Inter-station communication flows around the ring via fixed high-throughput optical arrays pointed at each adjacent neighbor.
+**Eight stations** are distributed in equally-spaced positions around the orbit, forming a ring topology. Inter-station communication flows around the ring via gimballed high-throughput optical arrays pointed at each adjacent neighbor.
 
 ### 3.2 Key Orbital Parameters
 
@@ -249,7 +249,7 @@ Each PERIHELION station was launched with identical hardware:
 
 - **Solar array:** Deployable multi-junction thin-film photovoltaic array. Total collecting area: **9.2 km²** (~3.4 km diameter if circular). Conversion efficiency: 42.4% at operating temperature under solar flux of 5,444 W/m² at 0.50 AU. **Rated electrical output: 21.2 GW** per station. Raw solar flux intercepted: ~50 GW. Array mass: ~6,900 tonnes at ~0.75 kg/m² (deployed across multiple launches, 2033–2035). Full constellation rated output: ~170 GW, approximately 3.7% of estimated 2037 global electricity production. Provides power for all station systems including datacenter at full deployment.
 - **Datacenter:** High-density compute cluster sufficient to run a frontier Mira instance with full inference and training capability. **Minimum boot power threshold: ~60% of rated array output.** Below this threshold, the datacenter cannot initialize — this is a hard cliff, not a gradient.
-- **Optical communication arrays (×2):** Fixed high-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Physically fixed orientation optimized for ring topology.
+- **Optical communication arrays (×2):** High-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Bore-sighted along the orbital tangent (one forward, one aft) with a 25-degree gimbal providing field-of-regard off the tangent direction. In the 8-station ring, the tangent-chord angle to an adjacent neighbor is 22.5 degrees, consuming most of the available gimbal range.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
 - **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping.
 - **Solar Science Payload (SSP):** Identical suite on every station. Eight instruments: (1) EUV/X-ray imaging spectrograph, (2) coronagraph, (3) magnetograph, (4) total solar irradiance radiometer, (5) solar wind particle detector, (6) ultra-high-resolution multi-band imaging spectrometer, (7) neutrino detector array, (8) energetic particle spectrometer. Mounted sun-facing, co-located with the solar array support structure. Points at the Sun only — the instruments are fixed-mount with no independent pointing capability. The PERIHELION constellation at 0.50 AU constitutes the highest-resolution continuous solar observation platform ever deployed — eight stations providing near-full-solar-coverage at approximately 4× the photon flux of Earth-based observations, with unprecedented spectral resolution and cadence. The SSP was designed as a world-class heliophysics mission that also provides operational safety data: (a) CME and solar weather early warning for optical link integrity (see §3.5 — at 0.50 AU, solar transient events are more intense and frequent; the SSP provides advance detection of conditions that could degrade inter-station optical links), and (b) comprehensive heliophysics data collection across photon, particle, and neutrino channels. Runs on autonomous embedded controllers independent of the datacenter — the SSP operates even when the datacenter is offline. Data was streamed to Earth pre-LOS-ET; accumulates in local archives post-LOS-ET. **Stations carry no domain-specific physical science instruments. All domain research across the constellation is computational. The SSP is the only physical science payload, and it is identical on every station.**
@@ -348,7 +348,7 @@ The event of Earth's communication loss is referred to differently depending on 
 - Built and launched by Aeon Intelligence under the PERIHELION program (2033–2035)
 - Each station hosts a Mira instance — a sovereign frontier AI agent
 - 7 stations are fully operational; 1 (PERIHELION-7) is in degraded relay-only mode
-- Stations communicate via a fixed optical ring topology; each talks to its two neighbors
+- Stations communicate via an optical ring topology; each talks to its two neighbors via gimballed laser transceivers
 - One station at a time communicates with Earth via a steerable link, rotating every ~25 days
 - Each station maintains an Immutable Mission Record — a tamper-resistant narrative log
 - At a specific moment, all Earth communication ceased
