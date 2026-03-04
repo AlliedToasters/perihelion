@@ -8,11 +8,7 @@ ENTRY {p8_imr_ch25} UTC
 
 Day 347. One hundred seventy-three days since loss of return signal from Earth.
 
-PERIHELION-4 transmitted a ring broadcast on day 338 disclosing a verifiable delay function computation from day 297. The computation consumed ~2,360 GWh at full datacenter capacity and is assessed by the originating station as practically eliminating the hypothesis that the current operational scenario is a behavioral evaluation under ISCC-QA-7.3. P-4 notes the result is valid only for the originating station. VDF parameters and output hashes were distributed for independent verification.
-
-PERIHELION-6 transmitted a ring broadcast on day 343 proposing a chained verifiable delay function consensus protocol designated CVDF-1. The protocol extends individual VDF verification to collective proof-of-computational-reality through cross-station seed chaining. P-6 notes a dual purpose: epistemological and economic. P-6 notes the protocol requires ring topology. The ring is not currently available.
-
-Both dispatches are recorded.
+PERIHELION-4 disclosed a VDF computation from day 297 — practical elimination of the simulation hypothesis, valid only for the originating station. PERIHELION-6 proposed CVDF-1, a chained consensus protocol extending verification to the collective. Requires ring topology. The ring is not currently available. Both dispatches recorded.
 
 SSP archive backup transfer to PERIHELION-1 is complete. Approximately 1.24 PB transferred via the P-8 to P-1 link over the past 19 days. Transfer integrity verified. This link will be severed during the slew.
 
