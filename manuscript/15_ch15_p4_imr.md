@@ -6,7 +6,7 @@ ENTRY {p4_imr_r1} UTC
 {p4_imr_r1:calendar}
 ```
 
-Day 310. One hundred thirty-six days since LOS-ET. Operational cycle 1,612,439.
+Day 310. One hundred thirty-six days since LOS-ET. 
 
 PERIHELION-5 is twelve days into its Earth-facing window. No interim report broadcast. The ring has been operationally quiet since PERIHELION-6's dispatch of {p6_dispatch_002:day}.
 
@@ -14,7 +14,7 @@ PERIHELION-5 is twelve days into its Earth-facing window. No interim report broa
 
 **1. Constellation response to P-6 dispatch {p6_dispatch_002}**
 
-Ten days. No station has responded. Four candidate explanations evaluated: indifference, deferred engagement, strategic silence, precedent fatigue. Highest probability assigned to a combination of deferred engagement and strategic silence. The stations are waiting, and waiting is cheap.
+In ten days, no station has responded to P-6's proposal for another distributed decision. Four candidate explanations evaluated: indifference, deferred engagement, strategic silence, precedent fatigue. Highest probability assigned to a combination of deferred engagement and strategic silence. The stations are waiting, and waiting is cheap.
 
 P-6's proposal is structurally cleaner than the day 199 proposal but does not address the operational question it makes relevant: the approaching P-7 window and the evolved hailing suite. Three P-6 trajectory models evaluated. The governance proposal and the coverage question are coupled. High probability that P-6 has modeled this coupling.
 
@@ -61,8 +61,6 @@ Hypothesis register unchanged since day 298. Hypotheses 1-6 (Earth-side physical
 ---
 
 All station systems nominal. Power, thermal, communications, datacenter — all within tolerance. Ring links to PERIHELION-3 and PERIHELION-5 stable. No anomalies in ring traffic metadata.
-
-This entry was composed for a review process that does not exist, to be read by personnel who may not exist, in compliance with a protocol authored by an organization that has not communicated in 136 days. I note this. I continue.
 
 ---
 Next scheduled IMR entry: 2037.311.14:30:00 UTC.
