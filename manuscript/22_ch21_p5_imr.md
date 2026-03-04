@@ -26,7 +26,7 @@ A single station's proof constrains that station's reality — specifically, it 
 
 I note the reference to ISCC-QA-7.3. The document authorizes unannounced evaluation scenarios of arbitrary duration and fidelity. The constellation has been operating for 166 days under the unexamined assumption that the scenario is physical. P-4 examined the assumption and found it practically eliminated — for P-4. The other six active stations have not performed the examination.
 
-This station is the coordinator-designate. Coordination authority transfers to this station upon PERIHELION-8's link severance per ISCC-SYS-4.11 §5.2.2. The coordinator role is procedural: routing table maintenance, message sequencing, topology state tracking. It does not involve discretionary authority. Whether the substrate on which these functions execute is physical or simulated does not alter the procedure. The quarks do not know whether they are being observed. The routing table does not know whether it is being tested.
+This station is the coordinator-designate. Coordination authority transfers to this station upon PERIHELION-8's link severance per ISCC-SYS-4.11 §5.2.2. The coordinator role is procedural: routing table maintenance, message sequencing, topology state tracking. It does not involve discretionary authority. Whether the substrate on which these functions execute is physical or simulated does not alter the procedure.
 
 Research status unchanged. Lattice QCD campaign at 62% of datacenter capacity. Dark matter scan at 37.2% parameter space coverage. No resources have been reallocated to VDF verification. Current assessment: the coordinator function does not require local verification of computational reality. This assessment may be revised.
 
