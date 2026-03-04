@@ -13,9 +13,9 @@ Each station has three communication arrays:
 | Array | Type | Pointing | Purpose |
 |-------|------|----------|---------|
 | **Earth-link array** (x1) | Steerable optical transceiver | Gimballed — can track targets across a defined angular range | Targets L1 relay, Earth ground terminal, or Luna relay during Earth-facing window |
-| **Inter-station optical array** (x2) | Fixed high-throughput laser transceiver | **Fixed orientation** — one aimed at each adjacent ring neighbor | Ring communication to clockwise and counter-clockwise neighbors |
+| **Inter-station optical array** (x2) | High-throughput laser transceiver | Bore-sighted along the orbital tangent (one forward, one aft) with **25-degree gimbal** | Ring communication to clockwise and counter-clockwise neighbors |
 
-The inter-station arrays are structurally fixed to the station body. They cannot be repointed. Their alignment was set during deployment and is maintained by the station's nominal attitude control.
+Both inter-station terminals are bore-sighted along the tangent to the orbital path — one forward, one aft — and equipped with a gimbal providing 25 degrees of field-of-regard off the tangent direction. In the 8-station ring, adjacent neighbors subtend 45 degrees of arc as seen from the Sun. The tangent-chord angle to an adjacent neighbor is 22.5 degrees, consuming most of the available gimbal range. This geometry explains why skip-links (to a station two positions away, requiring 45 degrees off tangent) are not feasible — the gimbal cannot reach.
 
 ---
 
