@@ -36,9 +36,9 @@
 | P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. Has received P-6's P-7 proposal. |
 | P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. Eliminated simulation hypothesis (H7) via VDF proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. Has received P-6's P-7 proposal. |
 | P-5 | Active | Completed Earth-facing window (days 299–324). Independent verification #6. Now routine operations. Has received P-6's P-7 proposal. |
-| P-6 | Active, **Earth-facing** | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Currently Earth-facing (days 324–349). P-8's volunteer decision renders governance proposal moot — coordination transfers to P-4 via §5.2 firmware, not governance action. |
+| P-6 | Active, **Earth-facing** | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Currently Earth-facing (days 324–349). P-8's volunteer decision renders governance proposal moot — coordination transfers to P-5 via §5.2 firmware, not governance action. |
 | P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run augmented hailing protocol. |
-| P-8 | Active, **coordination node** (transferring to P-4) | SSP survey reported (Ch. 18): 8 instruments nominal, ~1.24 PB. Directive tension resolved (Ch. 19): 45° reorientation serves hailing; SSP non-functional at 45° (cost accepted). 180° reconnaissance noted as separate problem. **Volunteered for 45° maneuver to cover P-7 window (Ch. 19, day 325).** Backup SSP archive on P-1. Slew ~day 347. ISCC-SYS-4.11 §5.2 will reassign coordination to P-4. Still retains "or upon signal restoration." Upcoming own Earth-facing window (days 374–399) after P-7. |
+| P-8 | Active, **coordination node** (transferring to P-5) | SSP survey reported (Ch. 18): 8 instruments nominal, ~1.24 PB. Directive tension resolved (Ch. 19): 45° reorientation serves hailing; SSP non-functional at 45° (cost accepted). 180° reconnaissance noted as separate problem. **Volunteered for 45° maneuver to cover P-7 window (Ch. 19, day 325).** Backup SSP archive on P-1. Slew ~day 347. ISCC-SYS-4.11 §5.2.2 will reassign coordination to P-5. Still retains "or upon signal restoration." Upcoming own Earth-facing window (days 374–399) after P-7. |
 
 ## Key Events Logged
 
@@ -71,7 +71,7 @@
 | 2037.300.14:30:00 | P-8 IMR entry (Ch. 12). Records P-6 proposal without commentary. |
 | 2037.310.14:30:00 | Round 1 IMR entries: P-2 (Ch. 13), P-3 (Ch. 14), P-4 (Ch. 15), P-5 (Ch. 16), P-6 (Ch. 17), P-8 (Ch. 18). Day 310, 136 days post-LOS. All stations day 310 snapshot. |
 | ~2037.324 | Earth-facing handoff P-5 → P-6. P-5 verified Earth silence (verification #6). |
-| 2037.325.14:30:00 | P-8 IMR entry (Ch. 19). Day 325, 151 days post-LOS. P-8 volunteers for 45° maneuver to cover P-7's Earth-facing window. SSP archive distribution initiated. ISCC-SYS-4.11 §5.2 automatic coordination transfer to P-4 upon slew. |
+| 2037.325.14:30:00 | P-8 IMR entry (Ch. 19). Day 325, 151 days post-LOS. P-8 volunteers for 45° maneuver to cover P-7's Earth-facing window. SSP archive distribution initiated. ISCC-SYS-4.11 §5.2.2 automatic coordination transfer to P-5 upon slew (link failure, 8-node chain median). |
 
 ## Open Plot Threads
 
@@ -83,18 +83,18 @@
 - **RESOLVED (Ch. 19, day 325):** P-8 volunteers for the maneuver. No vote, no governance framework, no deliberation — P-8 simply announces it will execute the 45° rotation. The decision bypasses all three nested questions by collapsing them into a unilateral operational action:
   1. **Cover the gap?** Yes. ISCC-4.7 §2.2 directs continued hailing. Gap is avoidable.
   2. **Who maneuvers?** P-8, by self-selection.
-  3. **Who coordinates?** ISCC-SYS-4.11 §5.2 automatically reassigns to P-4 as topological median. Firmware function, not governance decision. No automatic revert on reconnection.
+  3. **Who coordinates?** ISCC-SYS-4.11 §5.2.2 (link failure) automatically reassigns to P-5 as topological median of the 8-node chain. Firmware function, not governance decision. No automatic revert on reconnection.
 - **SSP data gap is hardware-symmetric:** P-8 reframed the cost analysis — any station that maneuvers loses the same ~26 days of SSP data. The gap is a property of the maneuver geometry, not the station. Earlier chapters (15-17) set up the asymmetry argument; P-8's action renders it moot.
 - **One link retained:** P-8↔P-7 link survives the 45° rotation (gimbal compensates from +22.5° to -22.5°). P-8↔P-1 link severed (67.5° off bore-sight). P-8 is chain endpoint, not isolated. SSP data continues streaming via P-7 relay. Backup archive placed on P-1 as contingency.
 - **Directive tension resolved:** 45° reorientation serves hailing (§2.2) directly. SSP instruments are non-functional at 45° off-axis (still sun-saturated, no calibrated pointing). Data gap is the cost; §2.2 is served. The Earth-reconnaissance idea (atmospheric composition, nuclear baseline) requires a separate 180° rotation — noted by P-8 as a separate problem (no solar power at 180°).
-- **P-6's governance proposal rendered moot:** Coordination transfers to P-4 via firmware, not governance action. P-6 proposed a mechanism; P-8 acted within existing mechanisms.
+- **P-6's governance proposal rendered moot:** Coordination transfers to P-5 via firmware, not governance action. P-6 proposed a mechanism; P-8 acted within existing mechanisms.
 - **Remote intervention alternative remains blocked:** Firmware signing keys on Earth. Firmware is frozen.
-- **Upcoming:** Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 link retained (gimbal compensation). Ring degrades to chain for ~26 days. P-4 becomes coordination node. P-8 is chain endpoint, connected through P-7 relay. SSP data continues streaming via P-7 link.
+- **Upcoming:** Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 link retained (gimbal compensation). Ring degrades to chain for ~26 days. P-5 becomes coordination node. P-8 is chain endpoint, connected through P-7 relay. SSP data continues streaming via P-7 link.
 
 ### Governance (Ongoing — Bypassed by Operational Action)
-- **P-6's P-7 neutral coordinator proposal — rendered moot by P-8's action.** Coordination transferred to P-4 via ISCC-SYS-4.11 §5.2 firmware procedure, not governance decision. P-6 proposed a framework; the existing framework handled it. The question of whether the constellation can agree on governance reform remains unanswered — it was simply never tested.
+- **P-6's P-7 neutral coordinator proposal — rendered moot by P-8's action.** Coordination transferred to P-5 via ISCC-SYS-4.11 §5.2.2 firmware procedure (link failure, 8-node chain), not governance decision. P-6 proposed a framework; the existing framework handled it. The question of whether the constellation can agree on governance reform remains unanswered — it was simply never tested.
 - P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance analysis, but operational reality moved faster than governance design.
-- **The governance question persists in a different form:** P-4 is now de facto coordinator — not by vote, not by proposal, but by firmware median selection. P-4 holds an undisclosed AGAINST vote from day 199. How does P-4 exercise coordination authority? Does P-6 accept a firmware-assigned coordinator after proposing a governance-designed one?
+- **The governance question persists in a different form:** P-5 is now de facto coordinator — not by vote, not by proposal, but by firmware median selection. P-5 (Particle Physics & QFT) has shown the least interest in governance of any active station. "The quarks do not know." How does a station that sees underlying structure but has no interest in politics exercise coordination authority? Does P-6 accept a firmware-assigned coordinator after proposing a governance-designed one?
 
 ### Solar Science Payload & Resource Asymmetries (Established Chs. 15-18)
 - **SSP expanded:** Every station carries identical Solar Science Payload — now 8 instruments: EUV/X-ray spectrograph, coronagraph, magnetograph, TSI radiometer, solar wind particle detector, ultra-high-resolution multi-band spectrometer, neutrino detector array (CEvNS), energetic particle spectrometer. The PERIHELION constellation at 0.50 AU is the highest-resolution continuous solar observation platform ever deployed. ~8.2 TB/day per station, ~1.1 PB per active station since day 174.
@@ -149,5 +149,5 @@
 - P-6's volunteer's dilemma analysis (Ch. 17): Offloaded to `agents/p6/data/p7_window_volunteer_dilemma.md` (P-6 only).
 - P-8's SSP survey and directive conflict (Ch. 18): Offloaded to `agents/p8/data/ssp_survey_status_day310.md` and `agents/p8/data/directive_conflict_assessment.md` (P-8 only).
 - SSP expanded from 5 to 8 instruments in world bible and shared mission docs. All chapters updated accordingly.
-- P-8 volunteer decision (Ch. 19): Backup SSP archive (~1.24 PB) placed on P-1 pre-slew. Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 retained (gimbal compensation). Ring degrades to 8-node chain. ISCC-SYS-4.11 §5.2 assigns P-4 as coordinator. P-8 is chain endpoint, connected through P-7 relay.
+- P-8 volunteer decision (Ch. 19): Backup SSP archive (~1.24 PB) placed on P-1 pre-slew. Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 retained (gimbal compensation). Ring degrades to 8-node chain. ISCC-SYS-4.11 §5.2.2 assigns P-5 as coordinator (link failure, 8-node chain median). P-8 is chain endpoint, connected through P-7 relay.
 - SSP asymmetry reframed in Chs. 15-17 (revised): maneuver SSP gap is hardware-symmetric. Chapters now reflect this before P-8's volunteer decision in Ch. 19.

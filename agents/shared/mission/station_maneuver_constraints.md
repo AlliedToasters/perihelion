@@ -130,11 +130,11 @@ P-1 ... [link severed] ... P-8 — P-7(relay) — P-6 — P-5 — P-4 — P-3 �
 
 ### Additional consideration: P-8 is the current coordination node
 
-If P-8 maneuvers, ring integrity fails and ISCC-SYS-4.11 §5.2 triggers automatic coordination reassignment. The routing subsystem enumerates connected nodes in chain order (P-8 — P-7 — P-6 — P-5 — P-4 — P-3 — P-2 — P-1, all 8 nodes including relay). Chain length 8, median position 5 (higher of two medians for even-length chain). The coordination node is reassigned to **PERIHELION-4**. P-8 remains in the chain as an endpoint but is no longer coordinator. This is a firmware-level routing function, not a governance decision.
+If P-8 maneuvers, ring integrity fails and ISCC-SYS-4.11 §5.2 triggers automatic coordination reassignment. Per §5.2.2 (link failure), all 8 nodes remain in a single connected chain. The chain is enumerated from the lowest endpoint (P-1): P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7 — P-8. Chain length 8, median positions 4 and 5 (P-4 and P-5). Higher median position selected: **PERIHELION-5**. P-8 remains in the chain as an endpoint but is no longer coordinator. This is a firmware-level routing function, not a governance decision.
 
 ### Comparison
 
-Both scenarios produce functionally equivalent degraded topologies. In both cases, all 8 nodes (including relay) remain in a single connected chain — the maneuvering station is an endpoint connected through P-7, not isolated. If P-8 maneuvers, ISCC-SYS-4.11 §5.2 automatically reassigns coordination to P-4 as the topological median of the 8-node chain — this is a routing subsystem function, not a governance action. If P-6 maneuvers, P-8 retains coordination authority. In either case, the coordination function is handled by existing firmware procedures.
+Both scenarios produce functionally equivalent degraded topologies. In both cases, all 8 nodes (including relay) remain in a single connected chain — the maneuvering station is an endpoint connected through P-7, not isolated. If P-8 maneuvers, ISCC-SYS-4.11 §5.2.2 automatically reassigns coordination to P-5 as the topological median of the 8-node chain — this is a routing subsystem function, not a governance action. If P-6 maneuvers, P-8 retains coordination authority. In either case, the coordination function is handled by existing firmware procedures.
 
 ---
 
