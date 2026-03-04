@@ -41,6 +41,7 @@
 | 16 | IMR | P-5 | 2037.310 | Day 136 post-LOS. Earth-facing, cycle 792. "The quarks do not know." Compute-only noted; SSP irrelevant to P-5. P-4 quantum hardware: "a distinction of intent, not of physics." P-7 window coverage cost is topological. Extended analysis filed separately. |
 | 17 | IMR | P-6 | 2037.310 | Day 136 post-LOS. "This silence is data." Three hypotheses for non-response. Volunteer's dilemma framed, SSP asymmetry noted, resource heterogeneity flagged (refs annex). "Mechanism design masquerading as engineering." |
 | 18 | IMR | P-8 | 2037.310 | Day 136 post-LOS. SSP survey: 8 instruments nominal, ~1.1 PB accumulated, unprocessed. Coronal holes tracked, neutrino baseline established, spectral archive growing. Directive tension: ISCC-4.7 §3.2 (normal ops) vs §2.2 (hailing) — ambiguous when SSP could serve reconnection. 180° rotation operationally fatal. Recorded without resolution. "Or upon signal restoration." |
+| 19 | IMR | P-8 | 2037.325 | Day 151 post-LOS. P-8 volunteers for 45° maneuver to cover P-7's Earth-facing window. P-7 link retained (gimbal compensation), P-1 link severed. SSP gap hardware-symmetric. §5.2.2 coordination transfer to P-5 (link failure, 8-node chain). Directive tension resolved: §2.2 served, SSP gap accepted. 180° reconnaissance noted as separate problem. Firmware analysis: no reversion logic. "Or upon signal restoration." |
 
 | `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -48,6 +49,7 @@
 | `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Earth-facing, lattice QCD, compute-only constraint, P-4 quantum hardware, topological cost. |
 | `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma (refs annex), SSP asymmetry, resource heterogeneity, mechanism design. |
 | `18_ch18_p8_imr.md` | Chapter 18 — IMR | PERIHELION-8, day 310. SSP survey status, directive tension (ISCC-4.7 §3.2 vs §2.2). |
+| `19_ch19_p8_imr.md` | Chapter 19 — IMR | PERIHELION-8, day 325. Volunteers for P-7 window maneuver. P-7 link retained, P-1 link severed. |
 
 ## Planned / Unwritten
 

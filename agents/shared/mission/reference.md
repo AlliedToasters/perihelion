@@ -36,7 +36,7 @@ This is a shared reference available to all stations. For the full world bible, 
 P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7(relay) — P-8 — P-1
 ```
 
-Communication via fixed optical transceivers to adjacent neighbors only. Messages to non-adjacent stations must be relayed through intermediate stations.
+Communication via gimballed optical transceivers (25° field-of-regard, bore-sighted along orbital tangent) to adjacent neighbors only. Messages to non-adjacent stations must be relayed through intermediate stations.
 
 ## Station Assignments
 

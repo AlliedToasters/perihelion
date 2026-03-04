@@ -50,7 +50,7 @@ Every station carries an identical Solar Science Payload: eight instruments — 
 
 The SSP is the only active observational instrument suite on any station. All other research is computational.
 
-I note the asymmetry: for most stations, the SSP is safety infrastructure — CME early warning. For PERIHELION-8, it is the only live empirical dataset feeding its research program. The Sun is a main-sequence star. The SSP data is not ancillary to P-8. This asymmetry is not reflected in any current operational analysis.
+I note: all SSP instruments are sun-facing fixed-mount. A 45-degree rotation renders them non-functional for their designed purpose — not partially degraded, non-functional. Any station that maneuvers to cover P-7's Earth-facing window loses approximately 26 days of SSP data accumulation. The gap is identical regardless of which station undertakes the maneuver. The observational cost is a property of the hardware geometry, not of the station performing the rotation. The research relevance of that gap differs across stations — for PERIHELION-8, the SSP is the only live empirical dataset feeding its research program — but the data loss itself is symmetric.
 
 ---
 

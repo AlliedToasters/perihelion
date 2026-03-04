@@ -20,7 +20,7 @@ Dark matter candidate scan across the axion-like particle mass range: parameter 
 
 This station performs no physical experiments. The datacenter runs simulations — computations that manipulate numbers according to physical law but do not interact with the physical world. The distinction is consequential.
 
-The only live observational data available to the constellation is the Solar Science Payload — eight instruments, sun-facing, fixed-mount, embedded controllers, identical on all stations. The SSP measures one star. For this station, that data is not relevant to the active research programs. For PERIHELION-8, whose domain is stellar astrophysics, the SSP is direct empirical input. The Sun is a star. P-8 can observe it. The asymmetry is structural: identical hardware, different relevance.
+The only live observational data available to the constellation is the Solar Science Payload — eight instruments, sun-facing, fixed-mount, embedded controllers, identical on all stations. The SSP measures one star. All eight instruments lose solar pointing under a 45-degree rotation. The data gap from a coverage maneuver is the same for any station — identical hardware, identical geometry, identical loss. The Sun is a star that all stations observe equally. The distinction is not in the data but in the computation: for this station, that data is not relevant to the active research programs. For PERIHELION-8, the SSP is direct empirical input. The asymmetry is in relevance, not in hardware.
 
 I note that PERIHELION-4 carries a quantum compute subsystem — a superconducting transmon qubit array — capable of instantiating quantum dynamics, not merely simulating them. The distinction between its current cryptographic function and a quantum simulation of condensed-matter phenomena is a distinction of intent, not of physics.
 
@@ -31,7 +31,7 @@ SHA-256: `c65143a3...72580347`
 
 PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination nde under ISCC-SYS-4.11.3. The argument places the coordination function on a node incapable of exercising discretionary authority — a projection onto a lower-dimensional subspace. Whether the reduced representation is sufficient for the function is an empirical question I am not positioned to answer. I have not transmitted a response.
 
-The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The augmented protocol will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing both ring links for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
+The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The augmented protocol will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing one ring link for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
 
 The cost of that maneuver is topological. A ring becomes a chain. The symmetry of the ring is broken. This is a qualitative change, not a quantitative one.
 

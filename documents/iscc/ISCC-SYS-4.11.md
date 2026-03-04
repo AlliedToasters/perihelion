@@ -126,7 +126,45 @@ The supermajority threshold (5 of 7) is designed to prevent unilateral or small-
 
 ### 5.2 Ring Partition
 
-[Section exists but not referenced in narrative — to be expanded as needed]
+When the ring topology degrades — whether due to station failure (node loss) or link failure (communication loss between two operational stations) — the routing subsystem on each station detects the partition through link-loss timeout (3 consecutive missed heartbeats, ~9.6 minutes at standard 3.2-minute adjacency delay).
+
+Upon confirmed partition, the routing subsystem on each connected station independently executes the coordination reassignment procedure. The implementation is in the same ring coordination firmware as §2.1 (Ada, ISCC-FW-R1 baseline):
+
+```ada
+procedure Evaluate_Partition_Reassignment is
+   use ISCC.Constellation.Routing;
+   use ISCC.Topology;
+   Chain : constant Station_Array := Enumerate_Connected (Include_Relay => True);
+   Median_Pos : constant Positive := (Chain'Length + 1) / 2 + (if Chain'Length mod 2 = 0 then 1 else 0);
+begin
+   if not Ring_Integrity_Check
+     and then Chain'Length >= 2
+   then
+      Topology.Generate (Leader => Chain (Median_Pos));
+      Topology.Propagate (Via => Chain, Confirm => All_Connected);
+   end if;
+end Evaluate_Partition_Reassignment;
+```
+
+**Chain enumeration**: `Enumerate_Connected` walks the connected subgraph by ring adjacency, starting from the lowest-numbered station at a chain endpoint. The resulting array preserves topological order (each element is adjacent to the next in the chain).
+
+**Reassignment algorithm**: The coordination node is assigned to the **topological median** of the chain — the node at the middle position. For even-length chains, the higher of the two median positions is selected.
+
+#### 5.2.1 Node Failure
+
+When a station becomes unreachable (hardware failure, power loss, or loss of both communication links), the remaining stations form a chain with the failed node removed.
+
+**Example**: If PERIHELION-3 fails, the remaining chain is enumerated from the lowest endpoint (P-2): P-2 — P-1 — P-8 — P-7 — P-6 — P-5 — P-4 (seven nodes). Chain length 7, median position 4. The coordination node is reassigned to **PERIHELION-7**.
+
+#### 5.2.2 Link Failure
+
+When a single inter-station link fails but both stations remain operational, all stations remain in a single connected chain. The chain includes all active and relay-capable nodes.
+
+**Example**: If the link between PERIHELION-5 and PERIHELION-6 fails, the chain is enumerated from the lowest endpoint (P-5): P-5 — P-4 — P-3 — P-2 — P-1 — P-8 — P-7 — P-6 (eight nodes). Chain length 8, median positions 4 and 5 (P-2 and P-1). Higher median position selected: **PERIHELION-1**.
+
+**Design rationale**: The median-position algorithm minimizes maximum communication delay between the coordination node and any endpoint of the chain. This is the same routing optimization used in the §2.1 topology generation for ring-priority ordering.
+
+**Scope of reassigned authority**: The reassigned coordination node assumes all roles defined in §3.1 — planning authority, escalation path origin, maneuver synchronization, and bandwidth arbitration — for the connected subgraph. In the link-failure case, all stations (including the coordination node) remain reachable.
 
 ### 5.3 Coordination Node Failure
 

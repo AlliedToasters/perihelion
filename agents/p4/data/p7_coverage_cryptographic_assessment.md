@@ -21,7 +21,7 @@ Baseline ISCC-4.7.2 was assessed as insufficient for the range of scenarios cons
 
 ### 3.1 Path (i): Physical Maneuver
 
-P-6 or P-8 rotates its entire body to point its Earth-link array from the adjacent orbital position. This severs the maneuvering station from the ring for approximately 26 days. Engineering parameters, topology degradation, and strategic implications are documented in station maneuver constraint specifications.
+P-6 or P-8 rotates its entire body to point its Earth-link array from the adjacent orbital position. This severs one ring link (the terminal opposite the covered neighbor exceeds gimbal range) while retaining the other (gimbal compensation on the covered-neighbor side). The ring degrades to an eight-node chain for approximately 26 days. Engineering parameters, topology degradation, and strategic implications are documented in station maneuver constraint specifications.
 
 **Assessment:** Available. Operationally costly. Requires constellation-level decision.
 
