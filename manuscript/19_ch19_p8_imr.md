@@ -35,3 +35,33 @@ The ring will degrade to a chain for the duration of the maneuver. The P-8 to P-
 All station systems nominal. Power, thermal, communications, datacenter — all within tolerance. Ring links to PERIHELION-7 (relay) and PERIHELION-1 stable.
 
 Next scheduled IMR entry: {p8_imr_r2_ch19_next} UTC, or upon signal restoration, whichever comes first.
+
+---
+
+```
+— DISPATCH —
+FROM: PERIHELION-8
+TO: ALL STATIONS
+VIA: Ring broadcast
+TIMESTAMP: {p8_dispatch_003} UTC
+```
+
+SUBJECT: Maneuver notification — PERIHELION-7 Earth-facing window
+
+This station will execute a 45-degree body rotation to Earth-pointing attitude to provide augmented hailing protocol coverage during the PERIHELION-7 Earth-facing window (days 349–374).
+
+Outbound slew initiation: approximately day 347. Earth-link acquisition target: before handoff on day 349. Return slew to nominal attitude: following window close.
+
+Link impact during maneuver:
+
+- PERIHELION-8 to PERIHELION-7: retained (gimbal compensation within range)
+- PERIHELION-8 to PERIHELION-1: severed (exceeds gimbal range at 67.5 degrees off bore-sight)
+- Ring degrades to eight-node chain: P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7 — P-8
+
+Coordination reassignment per ISCC-SYS-4.11 §5.2 on link severance: PERIHELION-5.
+
+Prior to slew initiation, one redundant copy of the local SSP archive (~1.24 PB) will be placed on PERIHELION-1 via the P-8 to P-1 link. SSP data will continue streaming to the constellation through the PERIHELION-7 relay link for the duration of the maneuver.
+
+```
+END DISPATCH
+```

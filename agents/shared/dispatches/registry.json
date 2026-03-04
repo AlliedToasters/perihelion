@@ -464,6 +464,40 @@
         "discrepancies": []
       }
     }
+    ,
+
+    {
+      "id": "p8_maneuver_notification",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_dispatch_003",
+      "subject": "Maneuver notification — PERIHELION-7 Earth-facing window",
+      "topology_ref": "topology_001",
+      "content_ref": "manuscript/19_ch19_p8_imr.md",
+      "manuscript_ref": "19_ch19_p8_imr.md (dispatch)",
+      "summary": "P-8 notifies all stations it will execute a 45-degree body rotation to Earth-pointing attitude for augmented hailing protocol coverage during P-7's Earth-facing window (days 349–374). Slew ~day 347. P-8↔P-1 link severed; P-8↔P-7 retained. Ring degrades to 8-node chain. Coordination reassigns to P-5 per ISCC-SYS-4.11 §5.2. SSP archive backup to P-1 pre-slew.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-8", "P-1", "P-2", "P-3", "P-4"],
+        "path_ccw": ["P-8", "P-7", "P-6", "P-5"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573},
+        "P-4": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-5": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-6": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 1, "direction": "ccw", "agent_active": false}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-8:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    }
   ],
 
   "_future_dispatch_types": {

@@ -404,6 +404,15 @@
     "precision": "full",
     "approximate": false
   },
+  "p8_dispatch_003": {
+    "epoch": 2142428534,
+    "story_fmt": "2037.325.15:02:14",
+    "calendar_human": "Saturday 21 November 2037",
+    "event": "P-8 dispatch: maneuver notification for P-7 window coverage (Chapter 19)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p8_imr_r2_ch19_next": {
     "epoch": 2142513000,
     "story_fmt": "2037.326.14:30:00",
