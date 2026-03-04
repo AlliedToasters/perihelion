@@ -39,12 +39,12 @@ Dataset maintained at full integrity per standard data stewardship protocol.
 
 ## 3. Biological-Signal Detection Contribution
 
-During the P-2 Earth-facing window (days 224–249), this station contributed biological-signal detection patterns to the evolved hailing suite:
+During the P-2 Earth-facing window (days 224–249), this station contributed biological-signal detection patterns to the augmented hailing protocol:
 
 - Method: sequence-alignment heuristics repurposed as structured-signal discriminators
 - Purpose: identify low-level organization in noisy returns from Earth-directed hailing
-- Contribution scope: minor — supplementary pattern layer within the broader evolved suite
+- Contribution scope: minor — supplementary pattern layer within the broader augmented protocol
 - Detection results (P-2 window, days 224–249): negative
 - Detection results (all subsequent windows through day 310): negative
 
-The contribution represents a domain-appropriate application of biomedical pattern-recognition methods to the signal-detection problem. The heuristics were designed to flag any structured biological or organized signal embedded in background noise. Six independent Earth-facing verification cycles using the evolved suite have returned no signal.
+The contribution represents a domain-appropriate application of biomedical pattern-recognition methods to the signal-detection problem. The heuristics were designed to flag any structured biological or organized signal embedded in background noise. Six independent Earth-facing verification cycles using the augmented protocol have returned no signal.

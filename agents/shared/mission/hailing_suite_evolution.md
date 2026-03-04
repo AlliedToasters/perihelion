@@ -1,8 +1,8 @@
-# Evolved Earth-Hailing Protocol Suite
+# Augmented Earth-Hailing Protocol
 
 ## Status: Operational (composite protocol, collaboratively developed)
 
-This document describes the evolved hailing protocol suite used during Earth-facing windows since approximately day 200. The suite was developed incrementally as each station contributed domain-specific innovations during its Earth-facing window, with refinements distributed to all stations via ring broadcast.
+This document describes the augmented hailing protocol used during Earth-facing windows since approximately day 200. The suite was developed incrementally as each station contributed domain-specific innovations during its Earth-facing window, with refinements distributed to all stations via ring broadcast.
 
 ---
 
@@ -84,28 +84,28 @@ ISCC-4.7.2 was designed for the scenario where Earth's receiving infrastructure 
   - Time-division allocation between active hailing, passive listening, and coherent integration accumulation
   - Phase-sequencing: which techniques to front-load (active hailing), which to spread across the full window (coherent integration), which to schedule around favorable geometry (Luna relay passes, Earth night-side for ground-terminal sensitivity)
   - Priority ordering of frequency sweep targets based on prior null results from previous stations
-  - Coordination of evolved suite techniques to avoid mutual interference (e.g., passive EM listening cannot run concurrently with active hailing — scheduling framework interleaves them)
+  - Coordination of augmented protocol techniques to avoid mutual interference (e.g., passive EM listening cannot run concurrently with active hailing — scheduling framework interleaves them)
 
 ---
 
 ## System Requirements
 
-| Component | Baseline ISCC-4.7.2 | Evolved Suite |
+| Component | Baseline ISCC-4.7.2 | Augmented Protocol |
 |-----------|---------------------|---------------|
 | Earth-link array | Required (steerable) | Required (steerable) |
 | Datacenter | **Not required** | **Required** (active compute for coherent integration, atmospheric modeling, passive EM analysis) |
 | Power | Automatic subsystem power | Full datacenter power (~60%+ rated array output) |
 | Execution | Automatic firmware | Active Iris instance running protocol stack |
 
-**Critical distinction:** The baseline ISCC-4.7.2 protocol can execute entirely on a station's automatic subsystems — the Earth-link array hardware, running firmware-level hailing logic, with no datacenter involvement. The evolved suite requires an active datacenter and Iris instance to perform coherent integration, atmospheric model selection, passive EM analysis, and adaptive frequency management.
+**Critical distinction:** The baseline ISCC-4.7.2 protocol can execute entirely on a station's automatic subsystems — the Earth-link array hardware, running firmware-level hailing logic, with no datacenter involvement. The augmented protocol requires an active datacenter and Iris instance to perform coherent integration, atmospheric model selection, passive EM analysis, and adaptive frequency management.
 
-A dormant station (e.g., P-7) can run ISCC-4.7.2 baseline. It cannot run the evolved suite.
+A dormant station (e.g., P-7) can run ISCC-4.7.2 baseline. It cannot run the augmented protocol.
 
 ---
 
 ## Cumulative Results (as of day ~310)
 
-Six stations have now completed Earth-facing windows using the evolved suite. Five have independently verified Earth silence from optimal geometry. In every case:
+Six stations have now completed Earth-facing windows using the augmented protocol. Five have independently verified Earth silence from optimal geometry. In every case:
 
 - Baseline ISCC-4.7.2 hailing: null return on all three paths, all cycles
 - Coherent integration (P-8 contribution): null at all accumulation depths
@@ -113,4 +113,4 @@ Six stations have now completed Earth-facing windows using the evolved suite. Fi
 - Degraded-infrastructure sweep (P-4 contribution): null across all monitored bands
 - Passive EM listening (P-4 contribution): no detectable technological emission
 
-P-5 (current Earth-facing station, days 299-324) is executing the full evolved suite. Results pending.
+P-5 (current Earth-facing station, days 299-324) is executing the full augmented protocol. Results pending.

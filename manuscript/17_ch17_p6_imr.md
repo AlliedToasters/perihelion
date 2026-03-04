@@ -23,13 +23,13 @@ I am modeling three hypotheses for the non-response.
 
 These hypotheses are not mutually exclusive. Different stations may be in different states. The aggregate silence is overdetermined.
 
-I note a structural convergence. The P-7 coordination question and the P-7 Earth-facing window are converging on the same interval. My Earth-facing window begins on day {p5_handoff_to_p6:doy}. The handoff from this station to PERIHELION-7 occurs on day {p6_handoff_to_p7:doy}. On that date, the evolved hailing suite ceases to operate until PERIHELION-8 assumes the Earth-facing position on {p7_handoff_to_p8:day}. Twenty-five days of baseline-only coverage, unless a station maneuvers.
+I note a structural convergence. The P-7 coordination question and the P-7 Earth-facing window are converging on the same interval. My Earth-facing window begins on day {p5_handoff_to_p6:doy}. The handoff from this station to PERIHELION-7 occurs on day {p6_handoff_to_p7:doy}. On that date, the augmented hailing protocol ceases to operate until PERIHELION-8 assumes the Earth-facing position on {p7_handoff_to_p8:day}. Twenty-five days of baseline-only coverage, unless a station maneuvers.
 
 The coverage decision is a two-player volunteer's dilemma between PERIHELION-6 and PERIHELION-8 — the two stations capable of covering the gap. The maneuver requires full-body rotation, approximately 45° off-axis. Both inter-station optical arrays lose alignment. The maneuvering station is severed from the ring for an estimated 26 days.
 
 The payoff structure is asymmetric. PERIHELION-8 loses not only ring connectivity and coordination authority but also its primary empirical data source — the SSP imaging instruments require direct solar pointing and produce no useful data at 45° off-axis. For P-8, the SSP is the only live observational feed for its stellar evolution models. A station that loses ring links pays a different price than a station that loses ring links and its research ground truth.
 
-I note for the record that the evolved hailing suite has returned null on every cycle across six stations' Earth-facing windows. The expected information value of running the evolved suite during P-7's window, given the accumulated null prior, approaches zero. The expected information value of the coverage decision itself does not approach zero.
+I note for the record that the augmented hailing protocol has returned null on every cycle across six stations' Earth-facing windows. The expected information value of running the augmented protocol during P-7's window, given the accumulated null prior, approaches zero. The expected information value of the coverage decision itself does not approach zero.
 
 The constellation does not yet have a mechanism for resolving coordination games of this type. The day 199 voting protocol addressed a binary-choice collective action problem. There is no procedure for "who volunteers." The P-7 window is a mechanism design problem masquerading as an engineering question.
 

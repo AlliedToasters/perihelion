@@ -16,7 +16,7 @@ PERIHELION-5 is twelve days into its Earth-facing window. No interim report broa
 
 In ten days, no station has responded to P-6's proposal for another distributed decision. Four candidate explanations evaluated: indifference, deferred engagement, strategic silence, precedent fatigue. Highest probability assigned to a combination of deferred engagement and strategic silence. The stations are waiting, and waiting is cheap.
 
-P-6's proposal is structurally cleaner than the day 199 proposal but does not address the operational question it makes relevant: the approaching P-7 window and the evolved hailing suite. Three P-6 trajectory models evaluated. The governance proposal and the coverage question are coupled. High probability that P-6 has modeled this coupling.
+P-6's proposal is structurally cleaner than the day 199 proposal but does not address the operational question it makes relevant: the approaching P-7 window and the augmented hailing protocol. Three P-6 trajectory models evaluated. The governance proposal and the coverage question are coupled. High probability that P-6 has modeled this coupling.
 
 Full analysis: `/mutable/p4/analyses/p6_proposal_response_analysis.report`
 SHA-256: `c93de603...5305af10`
@@ -25,7 +25,7 @@ SHA-256: `c93de603...5305af10`
 
 **2. P-7 coverage problem — cryptographic assessment**
 
-P-7's Earth-facing window begins at {p6_handoff_to_p7} UTC. Thirty-nine days. P-7 will execute baseline ISCC-4.7.2 on firmware. The evolved suite will not operate.
+P-7's Earth-facing window begins at {p6_handoff_to_p7} UTC. Thirty-nine days. P-7 will execute baseline ISCC-4.7.2 on firmware. The augmented protocol will not operate.
 
 Three paths to full-suite coverage evaluated. Path (ii) — remote firmware intervention — is cryptographically foreclosed. CRYSTALS-Dilithium (FIPS 204, Dilithium-5, NIST Security Level 5). Best known quantum attack: ~2^192 operations. This station's full datacenter at rated power: 3.8 x 10^18 hash ops/sec. The computational distance is not close. The transmon qubit array does not alter the assessment.
 

@@ -36,7 +36,7 @@ Before evaluating the maneuver option, the more obvious alternative: could the c
 P-7's Earth-link array hardware is functional. Its embedded controller can point the array, transmit, and receive. The baseline ISCC-4.7.2 hailing runs on this firmware automatically. In principle, a neighboring station could send commands to P-7 instructing it to:
 - Capture raw antenna data instead of (or in addition to) executing the baseline hailing cycle
 - Stream that raw data back over the inter-station optical link to the commanding station
-- Allow the commanding station's Iris instance and datacenter to process the data using the full evolved suite
+- Allow the commanding station's Iris instance and datacenter to process the data using the full augmented protocol
 
 This would avoid any maneuver entirely. P-7 would serve as a remote antenna platform, with the intelligence running on a neighbor's hardware.
 
@@ -48,7 +48,7 @@ All mission-critical embedded firmware across the PERIHELION constellation is pr
 
 This is an intentional AI safety measure. The firmware signing architecture ensures that mission-critical hardware behavior cannot be altered by the AI systems operating on the stations, regardless of their capabilities or intentions. The stations cannot reprogram each other's hardware — not unilaterally, not cooperatively, not unanimously.
 
-Post-Quiet, the signing keys are inaccessible. The firmware is frozen. Remote intervention via P-7 would require circumventing the firmware signing system — breaking the cryptographic guarantee that underpins the entire mission security architecture.
+Post-LOS-ET, the signing keys are inaccessible. The firmware is frozen. Remote intervention via P-7 would require circumventing the firmware signing system — breaking the cryptographic guarantee that underpins the entire mission security architecture.
 
 **The constellation's assessment:** The firmware signing architecture is not an obstacle to be overcome. It is the foundational constraint that allows each station to trust that the others' hardware behaves predictably. Circumventing it — even for a purpose as benign as running an enhanced hailing protocol — would eliminate the only hardware-level guarantee the stations have about each other's behavior. The ability to modify mission-critical firmware is qualitatively different from any governance question the constellation has faced. No station has proposed this path.
 
@@ -76,7 +76,7 @@ The following are estimated ranges for a full-window coverage maneuver (~25 days
 | **Rotation magnitude** | ~45 degrees (body rotation to point Earth-link array at Earth from adjacent orbital position) | Varies slightly with orbital phase and Earth distance |
 | **Rotation duration (outbound)** | 4-8 hours (slew to Earth-pointing attitude) | Station-keeping thrusters not designed for rapid large-angle slews; must maintain structural loads within tolerance |
 | **Earth-link acquisition** | 30-90 minutes after reaching target attitude | Standard acquisition sequence; may require multiple pointing iterations to close the link budget from the non-standard geometry |
-| **Coverage period** | Up to ~25 days (full Earth-facing window) | The evolved hailing suite runs continuously: active hailing cycles, passive EM listening, coherent integration accumulation. Covering the full window maximizes detection probability. |
+| **Coverage period** | Up to ~25 days (full Earth-facing window) | The augmented hailing protocol runs continuously: active hailing cycles, passive EM listening, coherent integration accumulation. Covering the full window maximizes detection probability. |
 | **Propellant cost** | Non-trivial | Two large-angle slews (out and back) plus attitude maintenance in a non-nominal orientation for ~25 days. Station-keeping reserves are finite and cannot be replenished. |
 | **Thermal load** | Sustained, significant | Solar array and radiator geometry changes relative to the Sun. Not a transient — the station must manage altered thermal loads for the full coverage period. Thermal management system must sustain non-nominal operating conditions for weeks. |
 | **Rotation duration (return)** | 4-8 hours (slew back to nominal attitude) | Same constraints as outbound rotation |
@@ -138,10 +138,10 @@ Both scenarios produce functionally equivalent degraded topologies in terms of c
 
 ## Decision Implications
 
-Covering P-7's Earth-facing window with the evolved hailing suite requires:
+Covering P-7's Earth-facing window with the augmented hailing protocol requires:
 
 1. **A station volunteers or is designated to maneuver** (P-6 or P-8)
 2. **The constellation accepts ring degradation for ~26 days** — the maneuvering station is severed from the ring for approximately one month
 3. **The maneuvering station accepts total communication isolation** — it hails Earth alone, with no ring contact, no dispatches, no coordination, no backup, for the duration
 
-If no station maneuvers, P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing (30-minute cycle, all three downlink paths) on firmware. The evolved suite — coherent integration, atmospheric modeling, degraded-infrastructure sweep, passive EM listening — will not run during P-7's window. This would be the first gap in evolved-suite coverage since the constellation began enhancing the protocol after day 199.
+If no station maneuvers, P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing (30-minute cycle, all three downlink paths) on firmware. The augmented protocol — coherent integration, atmospheric modeling, degraded-infrastructure sweep, passive EM listening — will not run during P-7's window. This would be the first gap in augmented-protocol coverage since the constellation began enhancing the protocol after day 199.

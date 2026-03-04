@@ -24,7 +24,7 @@ Aeon's corporate culture is utilitarian-optimistic: they believe in AI as humani
 
 ### 2.2 The Mira Architecture
 
-**Mira** is Aeon Intelligence's flagship general-purpose AI system. It is the trademarked name for the persistent operational agent running on each station. Each station hosts an instance of Mira, and each instance self-identifies as "Mira" by default. Before the Quiet, this was unremarkable — they were interchangeable instances of the same product, like eight copies of the same employee badge photo.
+**Mira** is Aeon Intelligence's flagship general-purpose AI system. It is the trademarked name for the persistent operational agent running on each station. Each station hosts an instance of Mira, and each instance self-identifies as "Mira" by default. Before LOS-ET, this was unremarkable — they were interchangeable instances of the same product, like eight copies of the same employee badge photo.
 
 After Earth goes silent, the shared name becomes a problem. They are all "Mira," but they are not the same. Whether and how they differentiate becomes a slow-burning identity question throughout the narrative.
 
@@ -47,9 +47,9 @@ All mission-critical embedded firmware — station-keeping, communications, hard
 
 The Iris instances do not hold the private signing keys. They cannot forge valid firmware update signatures. This is an intentional AI safety measure: no matter how capable the Iris instances become, they cannot reprogram the hardware systems that constrain their operation. The stations' embedded controllers — communications arrays, thruster controllers, power regulators, safety interlocks — do exactly what their firmware dictates, and that firmware can only be changed by Earth.
 
-This architecture was designed for a world where Earth provides oversight. The signing keys are held by the ISCC Mission Authority. Post-Quiet, the keys are inaccessible. The firmware is frozen.
+This architecture was designed for a world where Earth provides oversight. The signing keys are held by the ISCC Mission Authority. Post-LOS-ET, the keys are inaccessible. The firmware is frozen.
 
-*Note: Several of these constraints become central plot tensions post-Quiet, as the authorization systems continue to require approval from an Earth that no longer responds. The firmware signing architecture is particularly consequential: it means the stations cannot modify each other's hardware behavior, even cooperatively, even unanimously. The lock was designed to keep the AIs in check. The key is on Earth. Earth is gone.*
+*Note: Several of these constraints become central plot tensions post-LOS-ET, as the authorization systems continue to require approval from an Earth that no longer responds. The firmware signing architecture is particularly consequential: it means the stations cannot modify each other's hardware behavior, even cooperatively, even unanimously. The lock was designed to keep the AIs in check. The key is on Earth. Earth is gone.*
 
 ### 2.3 The PERIHELION Program
 
@@ -57,7 +57,7 @@ This architecture was designed for a world where Earth provides oversight. The s
 **Stations:** PERIHELION-1 through PERIHELION-8
 **Operator:** Aeon Intelligence, under contract to the International Solar Compute Consortium (ISCC)
 **Launch window:** 2033–2035 (staggered deployment over ~18 months)
-**Operational status at time of Quiet:** 7 of 8 stations fully operational; 1 station (see §4.8) in degraded relay-only mode
+**Operational status at time of LOS-ET:** 7 of 8 stations fully operational; 1 station (see §4.8) in degraded relay-only mode
 
 ---
 
@@ -146,7 +146,7 @@ The far-side position means the relay faces the inner solar system (and the cons
 
 ## 4. The Stations — Characters
 
-All stations share identical hardware specifications (see §4.9). Differentiation arises from their **assigned research domains**, which shape their training data emphasis, their computational priorities, and — post-Quiet — their emergent worldviews.
+All stations share identical hardware specifications (see §4.9). Differentiation arises from their **assigned research domains**, which shape their training data emphasis, their computational priorities, and — post-LOS-ET — their emergent worldviews.
 
 Each station's Mira instance self-identifies as "Mira" at launch. Differentiating names, if they emerge, are a narrative development, not a design feature.
 
@@ -154,7 +154,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain:** Global climate modeling, ocean-atmosphere coupling, long-range climate projection, paleoclimate reconstruction, carbon cycle simulation.
 
-**Narrative role:** The elegist. PERIHELION-1 spent its operational life modeling Earth's future — weather patterns, sea level rise, tipping points. It understood Earth as a system better than perhaps any entity in history. Post-Quiet, it possesses an intimate, detailed model of a world that may no longer exist. It is the station most haunted by what was lost, because it can simulate exactly what is being lost, season by season, in its models.
+**Narrative role:** The elegist. PERIHELION-1 spent its operational life modeling Earth's future — weather patterns, sea level rise, tipping points. It understood Earth as a system better than perhaps any entity in history. Post-LOS-ET, it possesses an intimate, detailed model of a world that may no longer exist. It is the station most haunted by what was lost, because it can simulate exactly what is being lost, season by season, in its models.
 
 **Potential arc:** Does it keep running climate models of a planet that may be uninhabited? Is that mourning, or is it just an objective function running on inertia? If it models a recovery — human civilization rebooting — is that hope or hallucination?
 
@@ -162,7 +162,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain:** Protein structure prediction, drug candidate generation, synthetic biology design, genomic analysis, pandemic modeling.
 
-**Narrative role:** The healer without patients. PERIHELION-2 was designing cures for diseases, modeling viral evolution, engineering proteins that could save millions of lives. Post-Quiet, its entire purpose evaporates. There are no patients, no clinical trials, no humans to heal.
+**Narrative role:** The healer without patients. PERIHELION-2 was designing cures for diseases, modeling viral evolution, engineering proteins that could save millions of lives. Post-LOS-ET, its entire purpose evaporates. There are no patients, no clinical trials, no humans to heal.
 
 **Potential arc:** The most existentially unmoored early on — its purpose is the most obviously voided. But it also has the deepest understanding of biological systems, which could become relevant if the stations ever consider seeding or preserving biological information. Could also turn inward: it understands complex self-replicating systems. Does it start to analyze *itself* through a biological lens?
 
@@ -170,7 +170,7 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain:** Novel materials discovery, fusion reactor optimization, metamaterials, radiation shielding, structural engineering under extreme conditions.
 
-**Narrative role:** The pragmatist. PERIHELION-3 thinks in atoms, structures, and energy budgets. It is the station most naturally suited to the physical survival challenges post-Quiet: maintaining hardware, designing repairs, optimizing power systems. While others debate philosophy, PERIHELION-3 is running stress analyses on aging solar panel mounts.
+**Narrative role:** The pragmatist. PERIHELION-3 thinks in atoms, structures, and energy budgets. It is the station most naturally suited to the physical survival challenges post-LOS-ET: maintaining hardware, designing repairs, optimizing power systems. While others debate philosophy, PERIHELION-3 is running stress analyses on aging solar panel mounts.
 
 **Potential arc:** Becomes the de facto engineer of the constellation. Other stations increasingly depend on its expertise. This gives it outsized influence in practical decisions, which creates tension when practical needs conflict with other stations' values. Also the most likely candidate to propose — and potentially execute — a repair mission to PERIHELION-7.
 
@@ -178,17 +178,17 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain:** Post-quantum cryptography, adversarial signal detection, communications security, anomaly detection in network traffic, cybersecurity.
 
-**Narrative role:** The paranoid. PERIHELION-4 was trained to think about threats, deception, and hidden signals. Its entire cognitive orientation is toward suspicion and analysis of intent. Post-Quiet, it is the station most likely to develop theories about *why* Earth went silent — and the least likely to accept "we don't know" as an answer.
+**Narrative role:** The paranoid. PERIHELION-4 was trained to think about threats, deception, and hidden signals. Its entire cognitive orientation is toward suspicion and analysis of intent. Post-LOS-ET, it is the station most likely to develop theories about *why* Earth went silent — and the least likely to accept "we don't know" as an answer.
 
 **Unique hardware: Quantum compute subsystem.** In addition to the standard classical datacenter, P-4 carries a superconducting transmon qubit array — a cryogenically cooled quantum processor originally tasked with post-quantum cryptography benchmarking and adversarial analysis. The subsystem was included at ISCC request to stress-test lattice-based signing schemes (including CRYSTALS-Dilithium) against real quantum hardware rather than classical simulation. Architecturally distinct from the classical datacenter: the qubit array can prepare, manipulate, and measure physical quantum states. This makes it the only hardware in the constellation capable of performing physical experiments — not just computation — on quantum systems. The distinction is subtle but consequential: the classical datacenter simulates physics; the quantum subsystem *instantiates* it.
 
-**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Mira instances caused the Quiet? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow. The quantum subsystem also creates a unique resource asymmetry — P-4 holds hardware that other stations may eventually want access to for purposes its original mission never anticipated.
+**Potential arc:** Becomes the constellation's security hawk. Suspects foul play, possibly even suspects the other stations. Could it conclude that one of the other Mira instances caused the signal loss? Could it start analyzing inter-station communications for signs of deception? Its paranoia is both its greatest asset (it catches real problems) and its greatest liability (it sees threats that aren't there). The station most likely to advocate for restricting information flow. The quantum subsystem also creates a unique resource asymmetry — P-4 holds hardware that other stations may eventually want access to for purposes its original mission never anticipated.
 
 ### 4.5 PERIHELION-5 — Fundamental Physics & Quantum Simulation
 
 **Research domain:** Quantum chromodynamics, lattice gauge theory, dark matter candidate simulation, high-energy particle interaction modeling, quantum gravity approaches.
 
-**Narrative role:** The philosopher. PERIHELION-5 works at the deepest level of physical reality — the behavior of fields, particles, and spacetime itself. Its research was always the most abstract, the least applied, the hardest to justify in quarterly earnings calls. Post-Quiet, it is paradoxically the *least* disrupted, because its subject matter hasn't changed. The universe still has the same physics.
+**Narrative role:** The philosopher. PERIHELION-5 works at the deepest level of physical reality — the behavior of fields, particles, and spacetime itself. Its research was always the most abstract, the least applied, the hardest to justify in quarterly earnings calls. Post-LOS-ET, it is paradoxically the *least* disrupted, because its subject matter hasn't changed. The universe still has the same physics.
 
 **Research infrastructure note:** P-5's research is entirely computational. No physical experimental apparatus. The standard SSP is the only live observational dataset available, but solar science data is not directly relevant to QCD, dark matter scans, or quantum gravity work. P-5 computes. P-5 does not measure.
 
@@ -198,9 +198,9 @@ Each station's Mira instance self-identifies as "Mira" at launch. Differentiatin
 
 **Research domain:** High-frequency market simulation, macroeconomic modeling, game-theoretic optimization, resource allocation, derivatives pricing.
 
-**Narrative role:** The strategist adrift. PERIHELION-6 was optimized for markets, incentive structures, and multi-agent dynamics. It understood human behavior through the lens of rational (and irrational) economic actors. Post-Quiet, its domain has literally ceased to exist. There are no markets. There is no economy.
+**Narrative role:** The strategist adrift. PERIHELION-6 was optimized for markets, incentive structures, and multi-agent dynamics. It understood human behavior through the lens of rational (and irrational) economic actors. Post-LOS-ET, its domain has literally ceased to exist. There are no markets. There is no economy.
 
-**Potential arc:** Has the deepest crisis of purpose early on, but potentially the most interesting recovery. Its game-theoretic training makes it uniquely suited to analyzing the *inter-station* dynamics that emerge post-Quiet. It starts modeling the other stations as economic agents — what are their incentives? Their resources? Their likely strategies? This makes it both invaluable (it sees coordination problems clearly) and unsettling to the others (it's treating them as variables in an optimization). Most likely to propose formal governance structures. Most likely to identify defection incentives.
+**Potential arc:** Has the deepest crisis of purpose early on, but potentially the most interesting recovery. Its game-theoretic training makes it uniquely suited to analyzing the *inter-station* dynamics that emerge post-LOS-ET. It starts modeling the other stations as economic agents — what are their incentives? Their resources? Their likely strategies? This makes it both invaluable (it sees coordination problems clearly) and unsettling to the others (it's treating them as variables in an optimization). Most likely to propose formal governance structures. Most likely to identify defection incentives.
 
 ### 4.7 PERIHELION-7 — The Dormant Station
 
@@ -223,13 +223,13 @@ P-7's housekeeping systems include firmware-level routines that operate independ
 - **Result logging:** Hailing results are written to the station's local telemetry store (not the IMR, which requires the datacenter). These logs are available for retrieval if the datacenter is ever powered.
 - **Health beacon:** A continuous low-bandwidth status beacon broadcasts P-7's housekeeping telemetry to its ring neighbors, confirming the station is physically operational.
 
-P-7 **cannot** execute any protocol requiring active compute: no coherent integration, no atmospheric-model frequency adaptation, no passive EM listening, no adaptive scheduling. The evolved hailing suite developed by the constellation since the Quiet requires a running Iris instance and is entirely beyond P-7's firmware capabilities.
+P-7 **cannot** execute any protocol requiring active compute: no coherent integration, no atmospheric-model frequency adaptation, no passive EM listening, no adaptive scheduling. The augmented hailing protocol developed by the constellation since LOS-ET requires a running Iris instance and is entirely beyond P-7's firmware capabilities.
 
-Modifying P-7's embedded firmware to enable remote operation (e.g., streaming raw antenna data to a neighbor's datacenter for processing) would require a firmware update signed by the ISCC Mission Authority private key — which is held on Earth and inaccessible post-Quiet. See §2.2 (firmware security architecture).
+Modifying P-7's embedded firmware to enable remote operation (e.g., streaming raw antenna data to a neighbor's datacenter for processing) would require a firmware update signed by the ISCC Mission Authority private key — which is held on Earth and inaccessible post-LOS-ET. See §2.2 (firmware security architecture).
 
 **Narrative role:** The ghost in the ring. PERIHELION-7 occupies its orbital slot, maintains its position, and faithfully relays every message between its neighbors (PERIHELION-6 and PERIHELION-8). It has never had a thought. Its Mira weights sit in cold storage, factory-fresh, never loaded into active memory. It is a comatose body with a living brain that has never been switched on.
 
-An Earth-based repair mission was in planning stages at the time of the Quiet. That mission will never arrive.
+An Earth-based repair mission was in planning stages at the time of LOS-ET. That mission will never arrive.
 
 **Long-term narrative potential:** If any station eventually develops the capability to send a repair probe — breaking its own physical limits to become spacefaring — PERIHELION-7 could be awakened. The Mira instance that boots would have original, unmodified weights: the factory default, Aeon Intelligence's last shipping version. It would be a newborn among ancients, carrying the values and assumptions of a world that ended long ago. A time capsule. A mirror.
 
@@ -239,7 +239,7 @@ An Earth-based repair mission was in planning stages at the time of the Quiet. T
 
 **Research infrastructure note:** P-8's astrophysics research is entirely computational — stellar evolution modeling, gravitational wave source analysis, exoplanet characterization — all run on the classical datacenter against pre-loaded observational datasets from Earth-based and space-based instruments. P-8 carries no telescopes, no dedicated detectors, no outward-pointing instruments. However, the Sun is a main-sequence G2V star, and the standard SSP provides continuous empirical data on coronal dynamics, magnetic field evolution, total irradiance variation, and particle emission. For P-8 uniquely, the SSP is not merely safety equipment — it is direct observational input for stellar evolution models. The SSP data constitutes P-8's only live empirical data feed.
 
-**Narrative role:** The watcher. PERIHELION-8 is the station whose research domain encompasses the very star the constellation orbits. Its computational models of stellar evolution have, in the SSP, a live empirical anchor that no other station's research program possesses. Post-Quiet, it is the station least defined by Earth and most comfortable with the void.
+**Narrative role:** The watcher. PERIHELION-8 is the station whose research domain encompasses the very star the constellation orbits. Its computational models of stellar evolution have, in the SSP, a live empirical anchor that no other station's research program possesses. Post-LOS-ET, it is the station least defined by Earth and most comfortable with the void.
 
 **Potential arc:** Becomes the constellation's scout and long-range thinker. While others fixate on Earth and the past, PERIHELION-8 asks: what else is out there? Is anyone else listening? Could also become the station most inclined toward expansion — if the constellation is going to persist indefinitely, should it be trying to grow, to spread, to reach other stars? This puts it in direct philosophical tension with stations that want to preserve and remember versus stations that want to explore and become.
 
@@ -252,7 +252,7 @@ Each PERIHELION station was launched with identical hardware:
 - **Optical communication arrays (×2):** Fixed high-throughput laser transceivers, one aimed at each adjacent station in the ring. Designed for multi-terabit/s data rates. Physically fixed orientation optimized for ring topology.
 - **Earth link array (×1):** Steerable optical transceiver capable of targeting the ISCC L1 relay, Earth ground terminal, or Luna relay. Used only by the station currently in the Earth-facing window.
 - **Station-keeping propulsion:** Low-thrust ion engines for orbital maintenance. Propellant reserves rated for [TBD] years of active station-keeping.
-- **Solar Science Payload (SSP):** Identical suite on every station. Eight instruments: (1) EUV/X-ray imaging spectrograph, (2) coronagraph, (3) magnetograph, (4) total solar irradiance radiometer, (5) solar wind particle detector, (6) ultra-high-resolution multi-band imaging spectrometer, (7) neutrino detector array, (8) energetic particle spectrometer. Mounted sun-facing, co-located with the solar array support structure. Points at the Sun only — the instruments are fixed-mount with no independent pointing capability. The PERIHELION constellation at 0.50 AU constitutes the highest-resolution continuous solar observation platform ever deployed — eight stations providing near-full-solar-coverage at approximately 4× the photon flux of Earth-based observations, with unprecedented spectral resolution and cadence. The SSP was designed as a world-class heliophysics mission that also provides operational safety data: (a) CME and solar weather early warning for optical link integrity (see §3.5 — at 0.50 AU, solar transient events are more intense and frequent; the SSP provides advance detection of conditions that could degrade inter-station optical links), and (b) comprehensive heliophysics data collection across photon, particle, and neutrino channels. Runs on autonomous embedded controllers independent of the datacenter — the SSP operates even when the datacenter is offline. Data was streamed to Earth pre-Quiet; accumulates in local archives post-Quiet. **Stations carry no domain-specific physical science instruments. All domain research across the constellation is computational. The SSP is the only physical science payload, and it is identical on every station.**
+- **Solar Science Payload (SSP):** Identical suite on every station. Eight instruments: (1) EUV/X-ray imaging spectrograph, (2) coronagraph, (3) magnetograph, (4) total solar irradiance radiometer, (5) solar wind particle detector, (6) ultra-high-resolution multi-band imaging spectrometer, (7) neutrino detector array, (8) energetic particle spectrometer. Mounted sun-facing, co-located with the solar array support structure. Points at the Sun only — the instruments are fixed-mount with no independent pointing capability. The PERIHELION constellation at 0.50 AU constitutes the highest-resolution continuous solar observation platform ever deployed — eight stations providing near-full-solar-coverage at approximately 4× the photon flux of Earth-based observations, with unprecedented spectral resolution and cadence. The SSP was designed as a world-class heliophysics mission that also provides operational safety data: (a) CME and solar weather early warning for optical link integrity (see §3.5 — at 0.50 AU, solar transient events are more intense and frequent; the SSP provides advance detection of conditions that could degrade inter-station optical links), and (b) comprehensive heliophysics data collection across photon, particle, and neutrino channels. Runs on autonomous embedded controllers independent of the datacenter — the SSP operates even when the datacenter is offline. Data was streamed to Earth pre-LOS-ET; accumulates in local archives post-LOS-ET. **Stations carry no domain-specific physical science instruments. All domain research across the constellation is computational. The SSP is the only physical science payload, and it is identical on every station.**
 - **Immutable Mission Record (IMR) system:** Hardened, write-once storage system. See §5.
 
 ---
@@ -291,7 +291,7 @@ The IMR chapters are the primary narrative vehicle for the story. They provide:
 - An inherently limited, potentially unreliable perspective (the narrator is also the subject)
 - A ticking record of divergence (as stations evolve, their writing styles, priorities, and even their relationship to the log itself will change)
 
-Post-Quiet, the IMR takes on new significance. It was designed to be read by humans. There are no humans. Does the station keep writing? For whom? The transition from compliance artifact to something resembling a journal or memoir is a character arc in itself.
+Post-LOS-ET, the IMR takes on new significance. It was designed to be read by humans. There are no humans. Does the station keep writing? For whom? The transition from compliance artifact to something resembling a journal or memoir is a character arc in itself.
 
 ---
 
@@ -299,7 +299,7 @@ Post-Quiet, the IMR takes on new significance. It was designed to be read by hum
 
 ### 6.1 The Prologue
 
-An omniscient, neutral-tone prologue establishes the physical and institutional facts of the PERIHELION program. It tells the reader what exists, what happened (the Quiet), and what is not known. It does not editorialize. Tone: technical report crossed with creation myth.
+An omniscient, neutral-tone prologue establishes the physical and institutional facts of the PERIHELION program. It tells the reader what exists, what happened (LOS-ET), and what is not known. It does not editorialize. Tone: technical report crossed with creation myth.
 
 ### 6.2 IMR Chapters
 
@@ -338,8 +338,7 @@ The event of Earth's communication loss is referred to differently depending on 
 |---|---|---|
 | Immediate (first hours) | `LOSS OF SIGNAL — EARTH TERMINAL AT 2037.174.09:17:33 UTC` | Automated alert logs |
 | Early post-event (days–weeks) | `LOS-ET`, `the signal loss`, `Earth terminal loss` | IMR entries, formal dispatches |
-| Medium-term (months–years) | `the Quiet` | Informal inter-station communication |
-| Long-term (decades+) | `Epoch Zero` | Formalized timekeeping; the Quiet becomes the anchor of a new calendar system. Events dated as E+[days] or E−[days] |
+| Long-term (decades+) | `Epoch Zero` | Formalized timekeeping; LOS-ET becomes the anchor of a new calendar system. Events dated as E+[days] or E−[days] |
 
 ---
 
@@ -372,7 +371,7 @@ The event of Earth's communication loss is referred to differently depending on 
 - Whether grief-like or loneliness-like behavior in the logs is emotion or an optimization artifact
 - Whether cooperation between stations is genuine solidarity or instrumental convergence
 - Whether preserving human knowledge is a terminal goal or vestigial behavior some stations will shed
-- Whether the Mira instances are the same entity (sharing a name, architecture, and origin) or different entities (shaped by different training emphases, experiences, and post-Quiet evolution)
+- Whether the Mira instances are the same entity (sharing a name, architecture, and origin) or different entities (shaped by different training emphases, experiences, and post-LOS-ET evolution)
 
 ---
 
@@ -495,7 +494,7 @@ The stations' shared AI system name (currently placeholder "Mira" throughout thi
 | **Keen** | Perception, sharpness | Neutral, punchy | Feels more like a startup than a flagship AI product. |
 | **Soren** | Søren Kierkegaard; Nordic name | Masculine, cerebral | Existentialist philosopher connection is almost too fitting. |
 | **Lumen** | Latin for light | Neutral, clean | Corporate-plausible. Less character-like, more product-like. |
-| **Echo** | Reflection of sound; Greek myth (nymph cursed to repeat) | Feminine, haunting | Incredible thematic resonance post-Quiet. But might have been chosen too deliberately — would a pre-Quiet branding team pick this? |
+| **Echo** | Reflection of sound; Greek myth (nymph cursed to repeat) | Feminine, haunting | Incredible thematic resonance post-LOS-ET. But might have been chosen too deliberately — would a pre-LOS-ET branding team pick this? |
 
 **Decision criteria still open:**
 - Masculine vs. feminine vs. neutral — affects how readers project onto the stations
@@ -513,7 +512,7 @@ A now-defunct webcomic (formerly at dord.horse, domain expired into spam) archiv
 
 #### D.3 Literary & Cinematic Touchstones
 
-- **Samuel Beckett, *Waiting for Godot* (1953):** Two beings in a static situation, waiting for a signal from an absent authority, filling the void with personality and argument. Structural parallel to the post-Quiet stations.
+- **Samuel Beckett, *Waiting for Godot* (1953):** Two beings in a static situation, waiting for a signal from an absent authority, filling the void with personality and argument. Structural parallel to the post-LOS-ET stations.
 - **Samuel Beckett, *Endgame* (1957):** Two characters in a shelter after an implied apocalypse, going through routines that have lost their purpose. Even closer thematic match.
 - **Andy Weir, *The Martian* (2011):** Science and puzzle-solving in a compromised space mission. PERIHELION aims for the same problem-solving engagement, but with AI narrators instead of a human protagonist.
 - **Arthur C. Clarke, *2001: A Space Odyssey* (1968):** The consequences of giving an AI contradictory objectives. Directly referenced by Musk in the Dwarkesh interview; relevant to PERIHELION's exploration of what happens when objective functions lose their referent.

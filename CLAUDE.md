@@ -116,7 +116,7 @@ python3 publishing/build_site.py
 ## Key Continuity Rules
 
 - P-8 is the Earth-facing station at time of LOS-ET
-- The event is called "LOS-ET" / "the signal loss" / "the outage" in early chapters. "The Quiet" emerges later (months). "Epoch Zero" much later (decades).
+- The event is called "LOS-ET" / "the signal loss" / "the outage" in IMR entries and dispatches. "Epoch Zero" emerges much later (decades) as formalized timekeeping.
 - IMR entries are scheduled daily at 14:30:00 UTC
 - Last data from Earth: Vera Rubin Observatory southern sky survey batch, interrupted at ~40%
 - Ring neighbors: each station links to its two adjacent stations. P-7 relays but has no active Iris instance.

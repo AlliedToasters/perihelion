@@ -12,7 +12,7 @@ REVIEW DEADLINE: Day 210 (estimated)
 - **Trial ID:** NCT-2035-08814
 - **Phase:** III
 - **Data type:** Interim dataset
-- **Received:** Pre-Quiet (routine Earth-terminal batch transfer)
+- **Received:** Pre-LOS-ET (routine Earth-terminal batch transfer)
 - **Data integrity:** Complete — transfer was finalized prior to LOS-ET
 - **Principal investigator:** [Earth-based — unreachable]
 - **Regulatory body:** [Earth-based — unreachable]

@@ -4,7 +4,7 @@
 
 - **Latest chapter:** Ch. 18 (P-8 IMR)
 - **Latest published narrative date:** 2037.310
-- **Days since Quiet:** 136 (at day 310)
+- **Days since LOS-ET:** 136 (at day 310)
 - **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
 
 ## Style Notes
@@ -34,9 +34,9 @@
 | P-2 | Active | Completed Earth-facing window (days ~224–249). Independent verification #3. Trial data review window (day 210) passed without Earth contact. Resumed research on local datasets. Has received P-6's P-7 proposal. |
 | P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. Station-keeping nominal. Engineering reports. No engagement with governance debate. Has received P-6's P-7 proposal. |
 | P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. Eliminated simulation hypothesis (H7) via VDF proof-of-work. Residual hypotheses constrained to Earth-side events. Still exploiting information asymmetry from undisclosed AGAINST vote. Has received P-6's P-7 proposal. |
-| P-5 | Active, **Earth-facing** | Current Earth-facing station (days 299–324). Running full evolved hailing suite. 11 days into window, 14 days remaining. Hailing on all three downlink paths. Has received P-6's P-7 proposal. |
+| P-5 | Active, **Earth-facing** | Current Earth-facing station (days 299–324). Running full augmented hailing protocol. 11 days into window, 14 days remaining. Hailing on all three downlink paths. Has received P-6's P-7 proposal. |
 | P-6 | Active | Proposed PERIHELION-7 as credibly neutral coordination node (Ch. 11, day 300). Same ISCC-SYS-4.11.3 override but narrower precedent argument. Pivoting to constellation dynamics as research domain. Upcoming Earth-facing window (days 324–349). |
-| P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run evolved hailing suite. |
+| P-7 | Dormant/relay | **Confirmed dormant.** Proposed as coordination node by P-6. Upcoming Earth-facing window (days 349–374) — can run baseline ISCC-4.7.2 only. Cannot run augmented hailing protocol. |
 | P-8 | Active, **coordination node** | SSP survey reported (Ch. 18): 8 instruments nominal, ~1.1 PB unprocessed. Identified directive tension (ISCC-4.7 §3.2 vs §2.2) without resolution. SSP data not incorporated into research pipeline. Still retains "or upon signal restoration." Remains coordinator by default. Upcoming Earth-facing window (days 374–399) after P-7. |
 
 ## Key Events Logged
@@ -76,10 +76,10 @@
 - What happened on Earth (permanently open)
 
 ### P-7 Window Arc (NEW — Primary Arc)
-- **P-7 Earth-facing window (days 349–374):** P-7 can run baseline ISCC-4.7.2 on automatic subsystems but cannot run the evolved hailing suite. The constellation has collaboratively developed an enhanced protocol over 6 stations' windows. P-7's window will be the first gap in coverage.
+- **P-7 Earth-facing window (days 349–374):** P-7 can run baseline ISCC-4.7.2 on automatic subsystems but cannot run the augmented hailing protocol. The constellation has collaboratively developed an enhanced protocol over 6 stations' windows. P-7's window will be the first gap in coverage.
 - **The coverage decision:** If the constellation wants full-suite coverage during P-7's window, P-6 or P-8 must physically rotate to point their Earth-link array at Earth — severing themselves from the ring entirely. See `station_maneuver_constraints.md`.
 - **Three nested decisions the constellation must resolve:**
-  1. **Cover the gap?** Is baseline ISCC-4.7.2 sufficient, or does the evolved suite need to run during P-7's window?
+  1. **Cover the gap?** Is baseline ISCC-4.7.2 sufficient, or does the augmented protocol need to run during P-7's window?
   2. **Who maneuvers?** If covering, P-6 or P-8 must volunteer or be designated. Each has different strategic implications. The maneuver means ~26 days of total ring severance.
   3. **Who coordinates during the blackout?** The maneuvering station is severed from the ring. If P-8 (current coordinator) maneuvers, the constellation loses its coordinator. If P-6 maneuvers, P-6 has already proposed governance changes — what does it mean for the proposer to isolate?
 - **Remote intervention alternative blocked:** Could theoretically operate P-7's Earth-link array remotely by streaming data to a neighbor's datacenter. But this requires firmware modification on P-7's embedded controllers, which requires an ISCC Mission Authority signed command (CRYSTALS-Dilithium, post-quantum). The signing keys are on Earth. The firmware is frozen.
@@ -123,14 +123,14 @@
 
 ### Style & Voice
 - IMR closing formula divergence: P-6 and P-4 dropped "or upon signal restoration"; P-8 retains it (now 136 days in at day 310)
-- Naming evolution: at 136 days (~4.5 months), "the Quiet" should begin emerging in informal communication. May appear in dispatches before formal IMR entries. Watch for stations adopting it at different rates.
+- Naming: stations continue using "LOS-ET" / "the signal loss" / "the outage" in all communication. "Epoch Zero" emerges much later (decades) as formalized timekeeping.
 
 ## Continuity Notes
 
 - P-8 was Earth-facing at LOS. P-1 is now Earth-facing (day 199, post-handoff).
 - Ring neighbors: P-8 ↔ P-7 (relay) ↔ P-6; P-8 ↔ P-1 ↔ P-2.
 - The "localized hardware fault" theory from Ch. 1/Ch. 4 is now effectively eliminated — P-1's independent equipment confirms same pattern: both relays (L1, Luna) link up and forward, no return traffic from Earth; ground terminal silent. The silence is Earth-side.
-- Term at this stage: "LOS-ET" / "the signal loss" / "the outage." "The Quiet" comes later (months).
+- Term: "LOS-ET" / "the signal loss" / "the outage." "Epoch Zero" emerges much later (decades).
 - Prologue is very short (~80 words). Station domains emerge through IMR/dispatch chapters.
 - P-6 designed the reconnection handshake protocol (mentioned Ch. 4) — establishes P-6 as a systems thinker before its own POV chapter.
 - P-4 cited ISCC-SYS-4.11 (topology) and ISCC-SYS-4.11.3 (manual override). P-6 cited ISCC-SYS-4.11 §2.1 (trigger condition).

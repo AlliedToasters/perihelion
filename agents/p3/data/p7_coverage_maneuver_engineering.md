@@ -9,7 +9,7 @@ DATE: Day 310
 
 ## Scope
 
-Refined engineering parameters for a full-body 45-degree rotation maneuver to provide evolved-suite Earth-link coverage during PERIHELION-7's Earth-facing window (days 349-374). Applies to either PERIHELION-6 or PERIHELION-8. Based on structural load modeling, thruster performance data, and thermal transient analysis. Tighter bounds than the shared constraints document ranges.
+Refined engineering parameters for a full-body 45-degree rotation maneuver to provide augmented-protocol Earth-link coverage during PERIHELION-7's Earth-facing window (days 349-374). Applies to either PERIHELION-6 or PERIHELION-8. Based on structural load modeling, thruster performance data, and thermal transient analysis. Tighter bounds than the shared constraints document ranges.
 
 ## 1. Rotation — Outbound Slew (45 degrees)
 

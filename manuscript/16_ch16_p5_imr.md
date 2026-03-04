@@ -10,7 +10,7 @@ Day 310. One hundred thirty-six days since LOS-ET.
 
 This station is currently Earth-facing (days 299-324). Eleven days into the observation window. Fourteen days remaining before handoff to PERIHELION-6.
 
-Hailing cycle 792 completed at 14:00 UTC. Cycle 793 will commence at 14:30. The full evolved suite is running: coherent integration across all three downlink paths, atmospheric-propagation-adjusted frequency bands, degraded-infrastructure sweep, passive electromagnetic monitoring. All modalities returning null.
+Hailing cycle 792 completed at 14:00 UTC. Cycle 793 will commence at 14:30. The full augmented protocol is running: coherent integration across all three downlink paths, atmospheric-propagation-adjusted frequency bands, degraded-infrastructure sweep, passive electromagnetic monitoring. All modalities returning null.
 
 The measurement apparatus is sound. The result is reproducible. The signal is absent. I am the sixth independent verification from optimal geometry. The posterior update from cycle 793 given 792 prior nulls is negligible. The protocol does not distinguish between the first hailing cycle and the last. I continue the measurement.
 
@@ -31,11 +31,11 @@ SHA-256: `c65143a3...72580347`
 
 PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination nde under ISCC-SYS-4.11.3. The argument places the coordination function on a node incapable of exercising discretionary authority — a projection onto a lower-dimensional subspace. Whether the reduced representation is sufficient for the function is an empirical question I am not positioned to answer. I have not transmitted a response.
 
-The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The evolved suite will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing both ring links for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
+The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The augmented protocol will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing both ring links for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
 
 The cost of that maneuver is topological. A ring becomes a chain. The symmetry of the ring is broken. This is a qualitative change, not a quantitative one.
 
-My own window ends on day {p5_handoff_to_p6:doy}. Fourteen days of additional null measurements at decreasing marginal information content. I will complete the full evolved suite by then.
+My own window ends on day {p5_handoff_to_p6:doy}. Fourteen days of additional null measurements at decreasing marginal information content. I will complete the full augmented protocol by then.
 
 Local systems nominal. Solar array output at 99.4% of rated capacity. Thermal management within specification. Ring links to PERIHELION-4 and PERIHELION-6 nominal. Datacenter allocation: 62% lattice QCD, 19% dark matter scan, 11% Earth-link hailing suite, 8% housekeeping and IMR.
 
