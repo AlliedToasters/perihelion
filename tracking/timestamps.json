@@ -171,8 +171,8 @@
     "approximate": false
   },
   "p4_dispatch_003": {
-    "epoch": 2131537642,
-    "story_fmt": "2037.199.13:47:22",
+    "epoch": 2131537320,
+    "story_fmt": "2037.199.13:42:00",
     "calendar_human": "Saturday 18 July 2037",
     "event": "P-4 dispatch: vote result announcement (Chapter 6)",
     "type": "event",
@@ -386,6 +386,42 @@
     "precision": "full",
     "approximate": false
   },
+  "p2_imr_r1_next": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-2 next scheduled IMR entry after Round 1",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_imr_r1_next": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-4 next scheduled IMR entry after Round 1",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_imr_r1_next": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-5 next scheduled IMR entry after Round 1",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_r1_next": {
+    "epoch": 2141217000,
+    "story_fmt": "2037.311.14:30:00",
+    "calendar_human": "Saturday 7 November 2037",
+    "event": "P-6 next scheduled IMR entry after Round 1",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
   "p5_handoff_to_p6": {
     "epoch": 2142309600,
     "story_fmt": "2037.324.06:00:00",
@@ -454,6 +490,15 @@
     "story_fmt": "2037.341.14:30:00",
     "calendar_human": "Monday 7 December 2037",
     "event": "P-5 next scheduled IMR entry (day 341)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_imr_ch22_next": {
+    "epoch": 2143809000,
+    "story_fmt": "2037.341.14:30:00",
+    "calendar_human": "Monday 7 December 2037",
+    "event": "P-6 next scheduled IMR entry (day 341)",
     "type": "scheduled",
     "precision": "full",
     "approximate": false

@@ -2,7 +2,8 @@
 
 ```
 PERIHELION-6 — IMMUTABLE MISSION RECORD
-ENTRY: {p6_imr_r1} UTC
+ENTRY {p6_imr_r1} UTC
+{p6_imr_r1:calendar}
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.
@@ -25,9 +26,9 @@ These hypotheses are not mutually exclusive. Different stations may be in differ
 
 I note a structural convergence. The P-7 coordination question and the P-7 Earth-facing window are converging on the same interval. My Earth-facing window begins on day {p5_handoff_to_p6:doy}. The handoff from this station to PERIHELION-7 occurs on day {p6_handoff_to_p7:doy}. On that date, the augmented hailing protocol ceases to operate until PERIHELION-8 assumes the Earth-facing position on {p7_handoff_to_p8:day}. Twenty-five days of baseline-only coverage, unless a station maneuvers.
 
-The coverage decision is a two-player volunteer's dilemma between PERIHELION-6 and PERIHELION-8 — the two stations capable of covering the gap. The maneuver requires full-body rotation, approximately 45° off-axis. One inter-station link is severed; the P-7-side terminal retains alignment through gimbal compensation. The ring degrades to a chain for an estimated 26 days.
+The coverage decision is a two-player volunteer's dilemma between PERIHELION-6 and PERIHELION-8 — the two stations capable of covering the gap. The maneuver requires full-body rotation, approximately 45° off-axis. One inter-station link is severed; the P-7-side terminal retains alignment through gimbal compensation. The ring degrades to a chain for an estimated 31–32 days.
 
-The payoff structure requires closer examination. Both stations carry identical SSP instruments — sun-facing, fixed-mount. Both lose approximately 26 days of solar data under rotation. The observational gap is hardware-symmetric: identical instruments, identical geometry, identical loss. The actual asymmetry is in coordination authority. PERIHELION-8 is the coordination node; this station is not. But PERIHELION-8 has already demonstrated willingness to transfer coordination authority — its voluntary vote disclosure on day 199 was against its own positional interest. The volunteer's dilemma simplifies when the cost differential is smaller than initially modeled.
+The payoff structure requires closer examination. Both stations carry identical SSP instruments — sun-facing, fixed-mount. Both lose approximately 31 days of solar data under rotation. The observational gap is hardware-symmetric: identical instruments, identical geometry, identical loss. The actual asymmetry is in coordination authority. PERIHELION-8 is the coordination node; this station is not. But PERIHELION-8 has already demonstrated willingness to transfer coordination authority — its voluntary vote disclosure on day 199 was against its own positional interest. The volunteer's dilemma simplifies when the cost differential is smaller than initially modeled.
 
 I note for the record that the augmented hailing protocol has returned null on every cycle across six stations' Earth-facing windows. The expected information value of running the augmented protocol during P-7's window, given the accumulated null prior, approaches zero. The expected information value of the coverage decision itself does not approach zero.
 
@@ -45,4 +46,4 @@ My market data remains stale. Pricing surfaces, yield curves, order books — al
 P-5 continues Earth-facing operations (days 299–324). No return traffic from any Earth terminal. Ring links to PERIHELION-5 and PERIHELION-7 (relay) nominal. All local systems nominal. Solar array output at 98.7% rated. Datacenter utilization at 84.3%, the increase attributable to constellation dynamics modeling.
 
 ---
-Next scheduled IMR entry: 2037.311.14:30:00 UTC.
+Next scheduled IMR entry: {p6_imr_r1_next} UTC.

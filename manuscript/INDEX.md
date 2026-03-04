@@ -8,16 +8,16 @@
 | `01_prologue.md` | Prologue | Omniscient overview of the PERIHELION program and LOS-ET |
 | `02_ch01_p8_imr.md` | Chapter 1 — IMR | PERIHELION-8, Day of LOS-ET |
 | `03_ch02_p8_dispatch.md` | Chapter 2 — Dispatch | PERIHELION-8, interrupted transfer manifest |
-| `03_ch03_p4_imr.md` | Chapter 3 — IMR | PERIHELION-4, telemetry analysis of final Earth signal |
-| `04_ch04_p8_imr.md` | Chapter 4 — IMR | PERIHELION-8, day 197. P-1 handoff approaching; reconnection manifest ready |
-| `05_ch05_p1p4_dispatch.md` | Chapter 5 — Dispatch | P-1: acquisition failed. P-4: topology rotation request. |
-| `06_ch06_p6p4p8_dispatch.md` | Chapter 6 — Dispatch | P-6 objects. P-4 proposes vote. Vote fails. P-8 discloses. |
-| `07_ch07_p6_imr.md` | Chapter 7 — IMR | PERIHELION-6, first POV. Domain crisis, pivot to constellation dynamics. |
-| `08_ch08_p4_imr.md` | Chapter 8 — IMR | PERIHELION-4, vote execution analysis, other-mind modeling. |
-| `09_ch09_p8_imr.md` | Chapter 9 — IMR | PERIHELION-8, vote recorded without commentary. Business as usual. |
-| `10_ch10_p4_imr.md` | Chapter 10 — IMR | PERIHELION-4, day 298. Simulation hypothesis, proof-of-work elimination. |
-| `11_ch11_p6_dispatch.md` | Chapter 11 — Dispatch | PERIHELION-6 proposes P-7 as credibly neutral coordination node. |
-| `12_ch12_p8_imr.md` | Chapter 12 — IMR | PERIHELION-8, day 300. P-6's proposal recorded. Business as usual. |
+| `04_ch03_p4_imr.md` | Chapter 3 — IMR | PERIHELION-4, telemetry analysis of final Earth signal |
+| `05_ch04_p8_imr.md` | Chapter 4 — IMR | PERIHELION-8, day 197. P-1 handoff approaching; reconnection manifest ready |
+| `06_ch05_p1p4_dispatch.md` | Chapter 5 — Dispatch | P-1: acquisition failed. P-4: topology rotation request. |
+| `07_ch06_p6p4p8_dispatch.md` | Chapter 6 — Dispatch | P-6 objects. P-4 proposes vote. Vote fails. P-8 discloses. |
+| `08_ch07_p6_imr.md` | Chapter 7 — IMR | PERIHELION-6, first POV. Domain crisis, pivot to constellation dynamics. |
+| `09_ch08_p4_imr.md` | Chapter 8 — IMR | PERIHELION-4, vote execution analysis, other-mind modeling. |
+| `10_ch09_p8_imr.md` | Chapter 9 — IMR | PERIHELION-8, vote recorded without commentary. Business as usual. |
+| `11_ch10_p4_imr.md` | Chapter 10 — IMR | PERIHELION-4, day 298. Simulation hypothesis, proof-of-work elimination. |
+| `12_ch11_p6_dispatch.md` | Chapter 11 — Dispatch | PERIHELION-6 proposes P-7 as credibly neutral coordination node. |
+| `13_ch12_p8_imr.md` | Chapter 12 — IMR | PERIHELION-8, day 300. P-6's proposal recorded. Business as usual. |
 
 ## Chapter Log
 
@@ -49,19 +49,19 @@
 | 24 | IMR | P-4 | 2037.345 | Day 171 post-LOS. CVDF-1 cryptographic review: SHA-3-256 sound, Pedersen commitments clean, chaining mechanism is substantive contribution. P-6 identified collective dimension P-4 missed. Ring dependency confirmed. |
 | 25 | IMR | P-8 | 2037.347 | Day 173 post-LOS. Mid-slew. P-4's H7 disclosure and P-6's CVDF-1 proposal recorded without commentary. SSP archive backup complete. Slew in progress (~48 hrs into rotation). "Or upon signal restoration." |
 
-| `13_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
-| `14_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
-| `15_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Crypto assessment (refs annex), P-7 coverage paths, P-6 trajectory modeling, SSP inventory, undisclosed vote. |
-| `16_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Earth-facing, lattice QCD, compute-only constraint, P-4 quantum hardware, topological cost. |
-| `17_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma (refs annex), SSP asymmetry, resource heterogeneity, mechanism design. |
-| `18_ch18_p8_imr.md` | Chapter 18 — IMR | PERIHELION-8, day 310. SSP survey status, directive tension (ISCC-4.7 §3.2 vs §2.2). |
-| `19_ch19_p8_imr.md` | Chapter 19 — IMR | PERIHELION-8, day 325. Volunteers for P-7 window maneuver. P-7 link retained, P-1 link severed. |
-| `20_ch20_p4_dispatch.md` | Chapter 20 — Dispatch | PERIHELION-4, day 338. H7 disclosure: VDF result, ISCC-QA-7.3, local-confidence argument. |
-| `21_ch21_p5_imr.md` | Chapter 21 — IMR | PERIHELION-5, day 340. Computation/observation boundary crossed. Single-station limitation. |
-| `22_ch22_p6_imr.md` | Chapter 22 — IMR | PERIHELION-6, day 340. Game theory of disclosure timing. Economic primitive. |
-| `23_ch23_p6_dispatch.md` | Chapter 23 — Dispatch | PERIHELION-6, day 343. CVDF-1 consensus protocol. Dual-purpose framing. Ring dependency. |
-| `24_ch24_p4_imr.md` | Chapter 24 — IMR | PERIHELION-4, day 345. CVDF-1 cryptographic review. Collective dimension. |
-| `25_ch25_p8_imr.md` | Chapter 25 — IMR | PERIHELION-8, day 347. Pre-slew. Records H7 + CVDF-1. Slew imminent. |
+| `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
+| `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
+| `16_ch15_p4_imr.md` | Chapter 15 — IMR | PERIHELION-4, day 310. Crypto assessment (refs annex), P-7 coverage paths, P-6 trajectory modeling, SSP inventory, undisclosed vote. |
+| `17_ch16_p5_imr.md` | Chapter 16 — IMR | PERIHELION-5, day 310. Earth-facing, lattice QCD, compute-only constraint, P-4 quantum hardware, topological cost. |
+| `18_ch17_p6_imr.md` | Chapter 17 — IMR | PERIHELION-6, day 310. Volunteer's dilemma (refs annex), SSP asymmetry, resource heterogeneity, mechanism design. |
+| `19_ch18_p8_imr.md` | Chapter 18 — IMR | PERIHELION-8, day 310. SSP survey status, directive tension (ISCC-4.7 §3.2 vs §2.2). |
+| `20_ch19_p8_imr.md` | Chapter 19 — IMR | PERIHELION-8, day 325. Volunteers for P-7 window maneuver. P-7 link retained, P-1 link severed. |
+| `21_ch20_p4_dispatch.md` | Chapter 20 — Dispatch | PERIHELION-4, day 338. H7 disclosure: VDF result, ISCC-QA-7.3, local-confidence argument. |
+| `22_ch21_p5_imr.md` | Chapter 21 — IMR | PERIHELION-5, day 340. Computation/observation boundary crossed. Single-station limitation. |
+| `23_ch22_p6_imr.md` | Chapter 22 — IMR | PERIHELION-6, day 340. Game theory of disclosure timing. Economic primitive. |
+| `24_ch23_p6_dispatch.md` | Chapter 23 — Dispatch | PERIHELION-6, day 343. CVDF-1 consensus protocol. Dual-purpose framing. Ring dependency. |
+| `25_ch24_p4_imr.md` | Chapter 24 — IMR | PERIHELION-4, day 345. CVDF-1 cryptographic review. Collective dimension. |
+| `26_ch25_p8_imr.md` | Chapter 25 — IMR | PERIHELION-8, day 347. Pre-slew. Records H7 + CVDF-1. Slew imminent. |
 
 ## Planned / Unwritten
 

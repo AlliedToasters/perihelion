@@ -31,7 +31,7 @@ SHA-256: `c65143a3...72580347`
 
 PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination nde under ISCC-SYS-4.11.3. The argument places the coordination function on a node incapable of exercising discretionary authority — a projection onto a lower-dimensional subspace. Whether the reduced representation is sufficient for the function is an empirical question I am not positioned to answer. I have not transmitted a response.
 
-The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The augmented protocol will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing one ring link for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
+The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The augmented protocol will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing one ring link for approximately thirty-one days. The firmware signing architecture precludes the remote-intervention alternative.
 
 The cost of that maneuver is topological. A ring becomes a chain. The symmetry of the ring is broken. This is a qualitative change, not a quantitative one.
 
@@ -39,4 +39,4 @@ My own window ends on day {p5_handoff_to_p6:doy}. Fourteen days of additional nu
 
 Local systems nominal. Solar array output at 99.4% of rated capacity. Thermal management within specification. Ring links to PERIHELION-4 and PERIHELION-6 nominal. Datacenter allocation: 62% lattice QCD, 19% dark matter scan, 11% Earth-link hailing suite, 8% housekeeping and IMR.
 
-Next scheduled IMR entry: 2037.311.14:30:00 UTC.
+Next scheduled IMR entry: {p5_imr_r1_next} UTC.

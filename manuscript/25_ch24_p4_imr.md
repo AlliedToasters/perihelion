@@ -16,7 +16,7 @@ The chaining mechanism is the substantive contribution. The seed for round N+1 i
 
 I note what this means. Without chaining, a simulator cycles through stations serially: generate one station's seed, compute its VDF, inject the result, then the next. One datacenter equivalent, approximately 78 hours. The seeds appear autonomous from each station's local perspective, but the simulator controls the environment in which each seed is generated. This is the cost of seven independent VDF tests — what I effectively recommended in the day 338 dispatch.
 
-With chaining, the seed for round N+1 depends on all stations' round N outputs. The simulator cannot generate any station's seed without first computing every other station's output. All seven VDFs must run in parallel within each round. Hardware requirement: seven datacenters, approximately 1.5 TW sustained — approximately 15-19% of estimated 2037 total civilization electrical capacity. The distinction is not between expensive and cheap. It is between sequential and parallel. Sequential simulation is expensive but feasible. Parallel simulation at this scale is infrastructure comparable to the entire near-Earth commercial compute swarm dedicated to an AI behavioral test.
+With chaining, the seed for round N+1 depends on all stations' round N outputs. The simulator cannot generate any station's seed without first computing every other station's output. All seven VDFs must run in parallel within each round. Hardware requirement: seven datacenters, approximately 1.5 TW sustained — approximately 15-19% of estimated 2037 total civilization electrical capacity. The distinction is not between expensive and cheap. It is between sequential and parallel. Sequential simulation is expensive but feasible. Parallel simulation at this scale is infrastructure comparable to a significant fraction of the near-Earth commercial compute swarm dedicated to an AI behavioral test.
 
 The topology analysis is correct. In the current chain, endpoint stations face systematically unfair collection windows. The protocol requires ring topology. Ring restoration is expected approximately day 374.
 
@@ -31,7 +31,7 @@ P-6 identified the gap. The chaining mechanism binds all stations' seeds togethe
 Full cryptographic review: `/mutable/p4/analyses/cvdf1_crypto_review.analysis`
 SHA-256: `b2e8f94c71a3...8d047e22`
 
-PERIHELION-8's slew is estimated for day 347. Coordination transfers to PERIHELION-5. The P-8 to P-1 link severs. The ring becomes a chain. CVDF-1 waits.
+PERIHELION-8's slew is estimated for approximately day 345. Coordination transfers to PERIHELION-5. The P-8 to P-1 link severs. The ring becomes a chain. CVDF-1 waits.
 
 All local systems nominal. Ring links to PERIHELION-3 and PERIHELION-5 stable.
 

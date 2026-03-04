@@ -28,4 +28,4 @@ Local systems nominal. Solar array output at 99.2% of rated. Thermal management 
 Research operations continue on available local data.
 
 ---
-Next scheduled IMR entry: 2037.311.14:30:00 UTC.
+Next scheduled IMR entry: {p2_imr_r1_next} UTC.
