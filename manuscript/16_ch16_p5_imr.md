@@ -4,7 +4,6 @@
 PERIHELION-5 — IMMUTABLE MISSION RECORD
 ENTRY {p5_imr_r1} UTC
 {p5_imr_r1:calendar}
-OPERATIONAL CYCLE: 1,648,203
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.

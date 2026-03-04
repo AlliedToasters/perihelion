@@ -3,7 +3,6 @@
 ```
 PERIHELION-6 — IMMUTABLE MISSION RECORD
 ENTRY: {p6_imr_r1} UTC
-OPERATIONAL CYCLE: 1,611,274
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.

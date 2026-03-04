@@ -309,7 +309,6 @@ The bulk of the narrative. Each chapter is an excerpt from one station's Immutab
 ```
 PERIHELION-3 — IMMUTABLE MISSION RECORD
 ENTRY: 2037.187.14:22:08 UTC [Day 187, Year 2037]
-OPERATIONAL CYCLE: 1,447,203
 ```
 
 ### 6.3 Dispatch Chapters
