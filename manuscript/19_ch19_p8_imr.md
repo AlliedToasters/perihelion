@@ -50,7 +50,7 @@ SUBJECT: Maneuver notification — PERIHELION-7 Earth-facing window
 
 This station will execute a 45-degree body rotation to Earth-pointing attitude to provide augmented hailing protocol coverage during the PERIHELION-7 Earth-facing window (days 349–374).
 
-Outbound slew initiation: approximately day 347. Earth-link acquisition target: before handoff on day 349. Return slew to nominal attitude: following window close.
+Outbound slew initiation: approximately day 347. Earth-link acquisition target: before handoff on day 349. Return slew to nominal attitude: at scheduled Earth-link handoff to PERIHELION-08, approximately day 372.
 
 Link impact during maneuver:
 
