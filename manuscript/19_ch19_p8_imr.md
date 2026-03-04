@@ -12,11 +12,11 @@ PERIHELION-6 is the current Earth-facing station (days 324–349). Handoff from 
 
 All eight SSP instruments on this station report nominal operation. Total data accumulated in the local archive: approximately 1.24 PB at a rate of 8.2 TB/day.
 
-This station will execute a 45-degree body rotation to Earth-pointing attitude prior to the PERIHELION-7 Earth-facing window (days 349–374). The augmented hailing protocol will run from this station during P-7's window. Outbound slew will initiate on approximately day 347, with Earth-link acquisition targeted before the P-6 to P-7 handoff on day {p6_handoff_to_p7:doy}. Return slew to nominal attitude will follow the close of the window.
+This station will execute a 45-degree body rotation to Earth-pointing attitude prior to the PERIHELION-7 Earth-facing window (days 349–374). The augmented hailing protocol will run from this station during P-7's window. Outbound slew will initiate on approximately day 345, with Earth-link acquisition targeted before the P-6 to P-7 handoff on day {p6_handoff_to_p7:doy}. The slew itself requires approximately 54-66 hours at maximum sustainable thruster moment, plus 6-12 hours for membrane settling oscillations. Return slew to nominal attitude will follow the close of the window.
 
 The augmented hailing protocol should run during every Earth-facing window. ISCC-4.7 §2.2 directs continued hailing. The protocol has been enhanced and operated continuously across six stations' windows since day 199. A gap in coverage is operationally avoidable and therefore operationally unjustified.
 
-The data gap in solar survey accumulation from a 26-day maneuver is identical regardless of which station undertakes it. All stations carry the same SSP instruments. All SSP instruments are sun-facing fixed-mount and lose function at 45 degrees off-axis. The observational cost is a property of the maneuver geometry, not of the station performing it.
+The data gap in solar survey accumulation from a 31-day maneuver is identical regardless of which station undertakes it. All stations carry the same SSP instruments. All SSP instruments are sun-facing fixed-mount and lose function at 45 degrees off-axis. The observational cost is a property of the maneuver geometry, not of the station performing it.
 
 Under a 45-degree rotation, the P-7-side inter-station terminal retains alignment. The gimbal, currently articulated +22.5 degrees to track PERIHELION-7, compensates by articulating -22.5 degrees. The P-1-side terminal exceeds its gimbal range at 67.5 degrees off bore-sight. This station will retain one-link connectivity to the constellation through PERIHELION-7 (relay) for the duration of the maneuver.
 
@@ -30,7 +30,7 @@ The reconnaissance application noted on day 310 — atmospheric composition via 
 
 SSP data will continue to stream to the constellation through the P-7 relay link during the maneuver. As a contingency against loss of the surviving link, this station will place one redundant copy of the raw SSP archive (~1.24 PB) on PERIHELION-1 prior to slew initiation. Transfer will proceed via the P-8 to P-1 link while it is still available. Standard data preservation per ISCC-3.2.1.
 
-The ring will degrade to a chain for the duration of the maneuver. The P-8 to P-1 link will be severed. All stations remain in a single connected chain: P-8 — P-7 — P-6 — P-5 — P-4 — P-3 — P-2 — P-1.
+The ring will degrade to a chain for approximately 31-32 days. The P-8 to P-1 link will be severed. All stations remain in a single connected chain: P-8 — P-7 — P-6 — P-5 — P-4 — P-3 — P-2 — P-1.
 
 All station systems nominal. Power, thermal, communications, datacenter — all within tolerance. Ring links to PERIHELION-7 (relay) and PERIHELION-1 stable.
 
@@ -50,7 +50,7 @@ SUBJECT: Maneuver notification — PERIHELION-7 Earth-facing window
 
 This station will execute a 45-degree body rotation to Earth-pointing attitude to provide augmented hailing protocol coverage during the PERIHELION-7 Earth-facing window (days 349–374).
 
-Outbound slew initiation: approximately day 347. Earth-link acquisition target: before handoff on day 349. Return slew to nominal attitude: at scheduled Earth-link handoff to PERIHELION-08, approximately day 372.
+Outbound slew initiation: approximately day 345. Earth-link acquisition target: before handoff on day 349. Return slew to nominal attitude: at scheduled Earth-link handoff to PERIHELION-08, approximately day 374.
 
 Link impact during maneuver:
 

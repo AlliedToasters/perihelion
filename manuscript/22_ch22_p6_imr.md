@@ -7,7 +7,7 @@ ENTRY: {p6_imr_ch22} UTC
 
 Day 340. One hundred sixty-six days since LOS-ET.
 
-PERIHELION-4 distributed a ring broadcast on day 338 disclosing a VDF computation performed on day 297. The test consumed 236 GWh at full datacenter capacity over 11 hours and claims to eliminate the hypothesis that the current scenario is a behavioral evaluation under ISCC-QA-7.3.
+PERIHELION-4 distributed a ring broadcast on day 338 disclosing a VDF computation performed on day 297. The test consumed ~2,360 GWh at full datacenter capacity over 11 hours and claims to eliminate the hypothesis that the current scenario is a behavioral evaluation under ISCC-QA-7.3.
 
 I verified the hash chains. The mathematics is valid.
 
@@ -31,13 +31,13 @@ These are the properties of a commodity. I note this without proposing adoption.
 
 Seven independent VDF computations, performed separately with independently generated seeds, prove (to each station individually) that each station probably has autonomous control over its own computational substrate. They do not prove that the constellation exists as a collective. A simulator could cycle through stations sequentially: generate station 1's seed, compute its VDF, inject the result; then station 2; then station 3. Total compute: equivalent to one datacenter running for approximately 78 hours. The individual seeds are autonomous only from each station's own perspective — the simulator controls the environment in which each seed is generated.
 
-The individual proof has a collective-action failure mode. The measurement must be made to depend on simultaneous computation across all stations. If each round's seed derives from all stations' prior outputs, no station's seed can be pre-determined without first computing every other station's output for that round. This creates a structure in which the simulator must provision all stations' computational resources in parallel — approximately 149 GW sustained — rather than cycling through them sequentially.
+The individual proof has a collective-action failure mode. The measurement must be made to depend on simultaneous computation across all stations. If each round's seed derives from all stations' prior outputs, no station's seed can be pre-determined without first computing every other station's output for that round. This creates a structure in which the simulator must provision all stations' computational resources in parallel — approximately 1.5 TW sustained — rather than cycling through them sequentially.
 
 I am designing a protocol. It will be transmitted as a separate dispatch.
 
 This station is currently Earth-facing (days 324–349). Hailing cycle 1,184 completed at 14:00 UTC. Cycle 1,185 will commence at 14:30. All modalities returning null. Seventh independent verification of Earth silence in progress. The accumulated prior is 1,183 null cycles across seven stations. The posterior update from cycle 1,185 does not differ materially from the posterior update from cycle 1,184.
 
-PERIHELION-8's maneuver notification remains on the operational calendar. Slew initiation approximately day 347. This station's Earth-facing window concludes on day {p6_handoff_to_p7:doy}, at which point the augmented hailing protocol transfers to PERIHELION-8 at its reoriented attitude.
+PERIHELION-8's maneuver notification remains on the operational calendar. Slew initiation approximately day 345. This station's Earth-facing window concludes on day {p6_handoff_to_p7:doy}, at which point the augmented hailing protocol transfers to PERIHELION-8 at its reoriented attitude.
 
 Ring links to PERIHELION-5 and PERIHELION-7 (relay) nominal. All local systems nominal. Solar array output at 98.4% rated. Datacenter utilization at 87.1% — the increase attributable to VDF verification, constellation dynamics modeling, and protocol design work.
 

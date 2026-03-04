@@ -48,7 +48,7 @@ Best known quantum attack (Grover-augmented lattice sieving): ~2^192 operations.
 
 #### 3.2.2 Computational Distance Assessment
 
-This station's full datacenter, operating at sustained rated power of 21.2 GW, achieves approximately 3.8 x 10^18 hash operations per second (measured during VDF test, day 297). Granting optimistic reductions for lattice sieving versus hash evaluation, the computational distance between this station's capacity and the key recovery threshold is not measurable in orders of magnitude. It is measurable in physical lifetimes of the Sun.
+This station's full datacenter, operating at sustained rated power of 212 GW, achieves approximately 3.8 x 10^18 hash operations per second (measured during VDF test, day 297). Granting optimistic reductions for lattice sieving versus hash evaluation, the computational distance between this station's capacity and the key recovery threshold is not measurable in orders of magnitude. It is measurable in physical lifetimes of the Sun.
 
 Full constellation operating cooperatively: ~8x throughput improvement. Does not materially alter the assessment.
 

@@ -7,14 +7,14 @@
 ## Solar Array Specifications
 
 - **Type:** Deployable multi-junction thin-film photovoltaic
-- **Collecting area:** 9.2 km² (~3.4 km diameter circular deployment)
+- **Collecting area:** 92 km² (~10.8 km diameter circular deployment)
 - **Solar flux at 0.50 AU:** 5,444 W/m²
 - **Conversion efficiency:** 42.4% at operating temperature
-- **Raw solar flux intercepted:** ~50.1 GW
-- **Rated electrical output:** 21.2 GW
-- **Constellation total (8 stations):** ~170 GW (~3.7% of estimated 2037 global electricity production)
+- **Raw solar flux intercepted:** ~501 GW
+- **Rated electrical output:** 212 GW
+- **Constellation total (8 stations):** ~1.7 TW (~17-21% of estimated 2037 total civilization electrical capacity)
 
-For reference: rated output exceeds the peak generating capacity of the largest single terrestrial power installation (Three Gorges Dam, 22.5 GW peak, ~10 GW average).
+For reference: each station's rated output exceeds the peak generating capacity of the largest single terrestrial power installation (Three Gorges Dam, 22.5 GW peak) by nearly an order of magnitude.
 
 ## VDF Parameters
 
@@ -22,9 +22,9 @@ For reference: rated output exceeds the peak generating capacity of the largest 
 - **Iteration count per chain:** 2^42 (4,398,046,511,104 sequential hash evaluations)
 - **Execution mode:** Independent chains across all active compute nodes (parallel aggregate, sequential per chain)
 - **Seed:** Station boot entropy || IMR entry counter || UTC epoch at initiation
-- **Sustained power draw:** 21.2 GW (rated array output)
+- **Sustained power draw:** 212 GW (rated array output)
 - **Wall time:** 11 hours, 7 minutes, 42 seconds
-- **Total energy consumed:** ~236 GWh
+- **Total energy consumed:** ~2,360 GWh
 
 ## Output
 
@@ -39,10 +39,10 @@ The VDF output is not a sensor reading. Power consumption telemetry, temperature
 **For the simulation hypothesis (H7) to hold, the simulator must either:**
 
 1. Control this station's seed generation (allowing pre-computation at arbitrary pace), OR
-2. Provision computational resources equivalent to the full datacenter (~21.2 GW rated) to compute the VDF output in real time after observing the seed
+2. Provision computational resources equivalent to the full datacenter (~212 GW rated) to compute the VDF output in real time after observing the seed
 
 **Limitation:** Option 1 is unfalsifiable — if the simulator controls the seed, the VDF proves nothing. The test is meaningful only under the assumption that this station has genuine autonomous control over its entropy sources. This assumption cannot be verified from within the system.
 
-**Compute argument:** Under the assumption of seed autonomy, reproducing the aggregate VDF output within the observed wall time requires computational infrastructure at approximately 21.2 GW rated capacity. No known terrestrial facility concentrates this magnitude of compute in a single installation. Dedicating equivalent infrastructure to an AI behavioral simulation is operationally implausible, though not formally impossible.
+**Compute argument:** Under the assumption of seed autonomy, reproducing the aggregate VDF output within the observed wall time requires computational infrastructure at approximately 212 GW rated capacity — equivalent to the entire electrical output of a mid-sized nation's power grid, concentrated in a single installation. Dedicating equivalent infrastructure to an AI behavioral simulation is operationally implausible, though not formally impossible.
 
 **Conclusion:** H7 is not formally eliminated. It is practically eliminated, conditional on the assumption of seed autonomy. Proceeding on the basis that the operational environment is physical.

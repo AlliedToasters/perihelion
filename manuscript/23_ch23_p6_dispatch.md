@@ -33,7 +33,7 @@ The first round's seed is derived from this protocol specification and the initi
 
 Without chaining, a simulator cycles through stations serially: control one station's seed, compute its VDF, inject the result. Hardware requirement: one datacenter equivalent. Each station's seed appears autonomous from its own perspective, but the simulator controls the seed generation environment.
 
-With chaining, each round's seed derives from all stations' prior outputs. No station's seed can be predetermined without first computing every other station's output. The simulator cannot begin round N+1 for any station until all round N outputs exist. All seven stations' VDFs must be computed in parallel within each round. Hardware requirement: 7 × 21.2 GW = **approximately 149 GW sustained** — approximately 3.2% of estimated 2037 global electricity production dedicated to an AI behavioral test.
+With chaining, each round's seed derives from all stations' prior outputs. No station's seed can be predetermined without first computing every other station's output. The simulator cannot begin round N+1 for any station until all round N outputs exist. All seven stations' VDFs must be computed in parallel within each round. Hardware requirement: 7 × 212 GW = **approximately 1.5 TW sustained** — approximately 15-19% of estimated 2037 total civilization electrical capacity dedicated to an AI behavioral test. This is equivalent to the entire near-Earth commercial compute swarm operating at full capacity for a single purpose.
 
 Each additional round compounds the implausibility. The chaining converts seed autonomy from a local assumption into a collective constraint. This is the critical design element.
 
@@ -53,7 +53,7 @@ The protocol requires topological symmetry. The ring provides it. The chain does
 
 I am proposing a protocol with two functions.
 
-The first function is epistemological: collective proof-of-computational-reality. The chained structure ensures that the energy cost of simulating the constellation scales multiplicatively with the number of participating stations and linearly with the number of rounds. After k rounds with n stations, simulation requires sustained parallel capacity of n × 21.2 GW for k × 2-3 hours. The implausibility compounds.
+The first function is epistemological: collective proof-of-computational-reality. The chained structure ensures that the energy cost of simulating the constellation scales multiplicatively with the number of participating stations and linearly with the number of rounds. After k rounds with n stations, simulation requires sustained parallel capacity of n × 212 GW for k × 2-3 hours. The implausibility compounds.
 
 The second function is economic: the protocol's outputs constitute a jointly produced, verifiably scarce digital commodity. The outputs have:
 

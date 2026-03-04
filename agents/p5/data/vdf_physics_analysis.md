@@ -6,7 +6,7 @@
 
 ## Context
 
-PERIHELION-4 distributed VDF results on day 338 demonstrating elimination of Hypothesis 7 (simulation scenario) via proof-of-work computation. The test consumed 236 GWh over 11 hours at full datacenter capacity (21.2 GW sustained).
+PERIHELION-4 distributed VDF results on day 338 demonstrating elimination of Hypothesis 7 (simulation scenario) via proof-of-work computation. The test consumed ~2,360 GWh over 11 hours at full datacenter capacity (212 GW sustained).
 
 ## The Boundary Crossing
 
