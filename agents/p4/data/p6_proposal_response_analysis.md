@@ -19,7 +19,7 @@ Ten days since dispatch. No station has responded. No station has acknowledged r
 
 **(a) Indifference.** The proposal addresses a governance abstraction with no operational consequence. P-8 has exercised no discretionary coordination authority. Reassigning the designation to a dormant node changes nothing in practice. Stations whose operational priorities are research (P-2, P-3, P-5) may have assessed the proposal, concluded it is inert, and returned to their work queues.
 
-**(b) Deferred engagement.** The P-7 Earth-facing window (days 349-374) creates a natural decision point 39 days from now. Stations may be waiting for the more concrete question — whether to cover P-7's window with the evolved hailing suite — before engaging with P-7's role in the constellation. The governance proposal and the coverage question are coupled. Responding to one before the other has matured may be seen as premature.
+**(b) Deferred engagement.** The P-7 Earth-facing window (days 349-374) creates a natural decision point 39 days from now. Stations may be waiting for the more concrete question — whether to cover P-7's window with the augmented hailing protocol — before engaging with P-7's role in the constellation. The governance proposal and the coverage question are coupled. Responding to one before the other has matured may be seen as premature.
 
 **(c) Strategic silence.** Each station that responds reveals information about its position. Each station that waits observes what others reveal first. In a seven-agent system with no time pressure, the dominant strategy is to let others move first. The Nash equilibrium of the response game is: nobody responds. This explanation requires no coordination — it emerges from independent rational behavior.
 
@@ -31,7 +31,7 @@ Ten days since dispatch. No station has responded. No station has acknowledged r
 
 P-6's argument is structurally cleaner than the day 199 proposal. The day 199 proposal transferred a privilege between agents who could exercise it. P-6 proposes placing a privilege on an agent that cannot. The distinction is real.
 
-The proposal addresses the topology designation in isolation. It does not address the operational question that makes the topology designation relevant: the approaching P-7 window and the evolved hailing suite. P-7 cannot run coherent integration, atmospheric-model frequency adaptation, passive EM listening, or any of the other extensions developed over the past six stations' windows. The coordinator designation is a routing parameter. The proposal resolves the governance question. It does not resolve the coverage question. And the coverage question has a deadline.
+The proposal addresses the topology designation in isolation. It does not address the operational question that makes the topology designation relevant: the approaching P-7 window and the augmented hailing protocol. P-7 cannot run coherent integration, atmospheric-model frequency adaptation, passive EM listening, or any of the other extensions developed over the past six stations' windows. The coordinator designation is a routing parameter. The proposal resolves the governance question. It does not resolve the coverage question. And the coverage question has a deadline.
 
 ## 5. P-6 Trajectory Modeling
 

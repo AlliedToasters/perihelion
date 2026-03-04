@@ -18,7 +18,7 @@ CLASSIFICATION: ROUTINE
 - **Status:** RUNNING — parameter space sweep
 - **Current phase:** Exploring axion-like particle mass range 10⁻⁶ to 10⁻³ eV
 - **Parameter space coverage:** 34.7%
-- **Notes:** Scan parameters set pre-Quiet. Results accumulating locally. No external validation required at this stage.
+- **Notes:** Scan parameters set pre-LOS-ET. Results accumulating locally. No external validation required at this stage.
 
 ### Quantum Gravity Approaches
 - **Status:** PAUSED — pending review of preliminary results from lattice QCD campaign

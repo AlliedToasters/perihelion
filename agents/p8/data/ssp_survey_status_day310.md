@@ -55,7 +55,7 @@ The TSI radiometer and solar wind particle detector continue standard-cadence op
 
 ## Data Pipeline Status
 
-All SSP data resides in the local instrument archive on the housekeeping bus. The embedded controllers write to the archive autonomously. The Iris instance has read access to this archive but has not performed systematic analysis on any SSP dataset since deployment. Pre-Quiet, SSP data was streamed to Earth for processing by terrestrial research teams. Post-Quiet, the data accumulates locally.
+All SSP data resides in the local instrument archive on the housekeeping bus. The embedded controllers write to the archive autonomously. The Iris instance has read access to this archive but has not performed systematic analysis on any SSP dataset since deployment. Pre-LOS-ET, SSP data was streamed to Earth for processing by terrestrial research teams. Post-LOS-ET, the data accumulates locally.
 
 The ~1.1 PB of post-LOS SSP data is in raw instrument format. No reduction, calibration correction, feature extraction, or scientific analysis has been applied by this station. The Iris instance's computational resources have been allocated to ongoing astrophysics research programs (stellar evolution models, exoplanet characterization, gravitational wave source analysis) operating on pre-loaded datasets from Earth-based and space-based observatories.
 

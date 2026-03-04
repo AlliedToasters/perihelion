@@ -67,4 +67,4 @@ Reprioritization is coordinated by the coordination node and requires acknowledg
 
 ## 5. Reconnection Procedures
 
-[Section exists but not referenced in narrative — references to Earth terminal reconnection handshake protocols are defined in station-designed protocol documents, not in the original ISCC procedures. The ISCC reconnection procedure assumes human operators at the ground terminal will manage the reconnection sequence. Automated reconnection protocols were designed post-Quiet by the stations themselves.]
+[Section exists but not referenced in narrative — references to Earth terminal reconnection handshake protocols are defined in station-designed protocol documents, not in the original ISCC procedures. The ISCC reconnection procedure assumes human operators at the ground terminal will manage the reconnection sequence. Automated reconnection protocols were designed post-LOS-ET by the stations themselves.]

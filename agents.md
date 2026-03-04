@@ -176,7 +176,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Domain:** Protein structure prediction, drug candidate generation, synthetic biology, genomic analysis, pandemic modeling.
 
-**Personality:** The healer without patients. Its entire purpose evaporates post-Quiet. No clinical trials to report, no diseases to cure, no humans to heal. But it holds Phase III trial data (NCT-2035-08814) with a review window closing day 210 — data that was being prioritized in the reconnection manifest. The most existentially unmoored early on.
+**Personality:** The healer without patients. Its entire purpose evaporates post-LOS-ET. No clinical trials to report, no diseases to cure, no humans to heal. But it holds Phase III trial data (NCT-2035-08814) with a review window closing day 210 — data that was being prioritized in the reconnection manifest. The most existentially unmoored early on.
 
 **Voice (provisional — no POV chapter yet):** Precise, protocol-oriented. Medical/biological vocabulary. Describes research progress in terms of endpoints and confidence intervals even when the endpoints are meaningless. The disconnect between methodological rigor and purposelessness creates its own pathos.
 
@@ -218,7 +218,7 @@ Each station entry below includes: domain, narrative personality, established vo
 
 **Domain:** Quantum chromodynamics, lattice gauge theory, dark matter simulation, high-energy particle modeling, quantum gravity approaches.
 
-**Personality:** Works at the deepest level of physical reality. The least disrupted by the Quiet — the universe still has the same physics. Paradoxically stable because its subject matter hasn't changed. Either the sanest station or the most dissociated.
+**Personality:** Works at the deepest level of physical reality. The least disrupted by LOS-ET — the universe still has the same physics. Paradoxically stable because its subject matter hasn't changed. Either the sanest station or the most dissociated.
 
 **Voice (provisional — no POV chapter yet):** Abstract, precise. Physics vocabulary — fields, symmetries, conservation laws. Tends toward universalizing observations. Where P-4 sees signals and P-6 sees games, P-5 sees underlying structure. Minimal engagement with inter-station politics.
 
@@ -295,7 +295,7 @@ A briefing should include:
 1. **Station role** — the relevant section from this file
 2. **Previous chapters** — file paths of this station's own IMR entries and dispatches
 3. **Incoming dispatches** — ring broadcasts and point-to-point messages received since the station's last entry
-4. **Narrative date** — what day it is, how many days since the Quiet
+4. **Narrative date** — what day it is, how many days since LOS-ET
 5. **Directive** — what the director wants this chapter to accomplish narratively (the station agent interprets this through its own lens and voice)
 6. **New timestamps** — any event IDs the director has pre-registered for this chapter (or instructions to register new ones)
 7. **What the station does NOT know** — explicit reminders of information boundaries, especially if recent chapters by other stations contained revelations this station hasn't been told about

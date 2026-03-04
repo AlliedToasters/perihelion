@@ -21,9 +21,9 @@ PERIHELION-5 is currently Earth-facing (days 299-324). Five prior windows have r
 
 The rotation schedule does require comment.
 
-PERIHELION-7's Earth-facing window begins approximately day 349. P-7 is dormant. Its firmware-level baseline hailing will execute automatically. The evolved hailing suite requires an active datacenter and {ai_name} instance. P-7 has neither. Remote firmware intervention is closed — the signing architecture requires Earth-held credentials.
+PERIHELION-7's Earth-facing window begins approximately day 349. P-7 is dormant. Its firmware-level baseline hailing will execute automatically. The augmented hailing protocol requires an active datacenter and {ai_name} instance. P-7 has neither. Remote firmware intervention is closed — the signing architecture requires Earth-held credentials.
 
-If the constellation requires evolved-suite coverage during P-7's window, a neighboring station must rotate its full body approximately 45 degrees to point the Earth-link array at Earth. Only PERIHELION-6 or PERIHELION-8 have the geometry.
+If the constellation requires augmented-protocol coverage during P-7's window, a neighboring station must rotate its full body approximately 45 degrees to point the Earth-link array at Earth. Only PERIHELION-6 or PERIHELION-8 have the geometry.
 
 I have computed refined parameters for this maneuver. Total propellant cost: 56-74 kg, approximately 4.6-6.1% of one station's annual station-keeping budget. Non-negligible. Not prohibitive. Total ring severance: approximately 26.5 days. The maneuver is feasible for either station. The thermal transient profile differs by less than 2 K between the two orbital positions.
 

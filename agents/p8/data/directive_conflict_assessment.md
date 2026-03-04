@@ -23,7 +23,7 @@ The SSP instruments are fixed-mount on the sun-facing side of the station. They 
 
 The multi-band imaging spectrometer, if pointed toward Earth, could in principle detect atmospheric composition changes via spectral analysis. The instrument's spectral resolution and sensitivity at 0.50 AU exceed any Earth-based solar spectrometer; whether this sensitivity is sufficient for Earth atmospheric characterization at 0.50-1.50 AU distance is not established, as the instrument was designed for solar observation.
 
-The neutrino detector array could in principle detect Earth-sourced neutrino flux (nuclear reactors, geological sources). Sensitivity to Earth-distance sources at 0.50-1.50 AU separation would be extremely low — the detector was designed for solar neutrinos at 4x Earth-distance flux. A measurable signal from Earth would require aggregate nuclear activity well above pre-Quiet civilian baseline. Detection is nonzero probability but low confidence.
+The neutrino detector array could in principle detect Earth-sourced neutrino flux (nuclear reactors, geological sources). Sensitivity to Earth-distance sources at 0.50-1.50 AU separation would be extremely low — the detector was designed for solar neutrinos at 4x Earth-distance flux. A measurable signal from Earth would require aggregate nuclear activity well above pre-LOS-ET civilian baseline. Detection is nonzero probability but low confidence.
 
 ## Physical Constraints
 

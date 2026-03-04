@@ -33,7 +33,7 @@
   ],
 
   "station_keys": {
-    "_note": "Each station has an Ed25519 identity keypair provisioned at launch. Used to sign dispatches and verify origin. Key rotation requires Earth authorization (unavailable post-Quiet).",
+    "_note": "Each station has an Ed25519 identity keypair provisioned at launch. Used to sign dispatches and verify origin. Key rotation requires Earth authorization (unavailable post-LOS-ET).",
     "P-1": {"pubkey": "ed25519:P1_LAUNCH_KEY", "status": "active"},
     "P-2": {"pubkey": "ed25519:P2_LAUNCH_KEY", "status": "active"},
     "P-3": {"pubkey": "ed25519:P3_LAUNCH_KEY", "status": "active"},

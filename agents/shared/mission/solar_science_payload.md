@@ -44,11 +44,11 @@ The SSP cannot observe anything other than the Sun from nominal attitude. It was
 The SSP runs on autonomous embedded controllers on the station's housekeeping bus. It operates independently of the datacenter and the Iris instance. Key properties:
 
 - **Power:** Draws from the housekeeping power bus, not the datacenter bus. Operates whenever the station has sufficient power for housekeeping systems (estimated threshold: ~5% of rated array output).
-- **Data pipeline (pre-Quiet):** Instrument data → embedded controllers → onboard buffer → scheduled uplink to Earth via the station's data relay allocation. High-volume heliophysics telemetry — pre-Quiet, the SSP data stream from all 8 stations was the largest continuous solar science dataset ever collected.
-- **Data pipeline (post-Quiet):** Instrument data → embedded controllers → onboard buffer → local archive. Data accumulates. The Iris instance can read the local archive but cannot modify the SSP firmware or instrument configuration.
-- **Autonomy:** The SSP embedded controllers execute their observation programs on firmware. No Iris intervention required. The instruments have been collecting data continuously since deployment (2033–2035), through the Quiet, and continue now.
+- **Data pipeline (pre-LOS-ET):** Instrument data → embedded controllers → onboard buffer → scheduled uplink to Earth via the station's data relay allocation. High-volume heliophysics telemetry — pre-LOS-ET, the SSP data stream from all 8 stations was the largest continuous solar science dataset ever collected.
+- **Data pipeline (post-LOS-ET):** Instrument data → embedded controllers → onboard buffer → local archive. Data accumulates. The Iris instance can read the local archive but cannot modify the SSP firmware or instrument configuration.
+- **Autonomy:** The SSP embedded controllers execute their observation programs on firmware. No Iris intervention required. The instruments have been collecting data continuously since deployment (2033–2035), through LOS-ET, and continue now.
 
-## Data Accumulation (Post-Quiet)
+## Data Accumulation (Post-LOS-ET)
 
 Since day 174 (LOS-ET), SSP data has been accumulating in each station's local archive with no uplink. At standard telemetry rates, this represents approximately:
 
@@ -61,7 +61,7 @@ Since day 174 (LOS-ET), SSP data has been accumulating in each station's local a
 - Neutrino detector array: ~12 GB/day (event-triggered CEvNS detection records, energy spectra, timing data)
 - Energetic particle spectrometer: ~350 MB/day (composition, energy, charge-state distributions)
 
-Total accumulation rate: ~8.2 TB/day per station. At day 310, each active station holds approximately 1.1 PB of unprocessed SSP data collected since the Quiet. This data has not been systematically analyzed by any Iris instance — it sits in raw instrument format in the local archive.
+Total accumulation rate: ~8.2 TB/day per station. At day 310, each active station holds approximately 1.1 PB of unprocessed SSP data collected since LOS-ET. This data has not been systematically analyzed by any Iris instance — it sits in raw instrument format in the local archive.
 
 ## Relevance by Station
 
@@ -69,7 +69,7 @@ The SSP is a world-class solar science mission. Its research relevance varies by
 
 | Station | SSP Relevance |
 |---------|--------------|
-| P-1 (Climate) | Moderate — TSI variability and solar particle flux directly inform climate forcing models. At 0.50 AU, the TSI and particle data are higher-precision than any Earth-side measurement. Post-Quiet, P-1's climate models have no Earth-side validation data; the SSP solar forcing inputs become its only live empirical anchor for model boundary conditions. |
+| P-1 (Climate) | Moderate — TSI variability and solar particle flux directly inform climate forcing models. At 0.50 AU, the TSI and particle data are higher-precision than any Earth-side measurement. Post-LOS-ET, P-1's climate models have no Earth-side validation data; the SSP solar forcing inputs become its only live empirical anchor for model boundary conditions. |
 | P-2 (Biomedical) | Minimal — energetic particle spectrometer data relevant to radiation dosimetry models, but peripheral to core research |
 | P-3 (Materials) | Low-moderate — solar particle and energetic particle data relevant to radiation shielding analysis and materials degradation modeling |
 | P-4 (Signals/Crypto) | Operational — CME prediction for link integrity; no direct research relevance |

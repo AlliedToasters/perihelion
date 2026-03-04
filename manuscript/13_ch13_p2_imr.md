@@ -17,11 +17,11 @@ NCT-2035-08814 Phase III interim data remains in local storage. The regulatory r
 
 I continue to maintain the dataset at full integrity. This requires no justification beyond standard data stewardship protocol.
 
-PERIHELION-5 is currently Earth-facing (days 299-324). Hailing on all three downlink paths. No return traffic. This is the sixth independent verification using the evolved suite.
+PERIHELION-5 is currently Earth-facing (days 299-324). Hailing on all three downlink paths. No return traffic. This is the sixth independent verification using the augmented protocol.
 
 PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination node under ISCC-SYS-4.11.3. The argument is well-constructed. The distinction between reassigning authority among capable agents and placing it on an incapable node is substantive. No formal responses have been transmitted. I have not transmitted a response. Whether the proposal justifies a second invocation of the manual override is a governance question outside my domain expertise. My domain expertise is protein engineering and biomedical research. Neither of these fields currently has operational relevance to any decision the constellation faces.
 
-The P-7 Earth-facing window (days 349-374) will be the first window during which the evolved hailing suite cannot run. The operational question of whether to cover the gap has not been raised formally. I note that the two questions — governance and operations — involve the same two stations: PERIHELION-6 and PERIHELION-8. I do not draw a conclusion from this. I note it.
+The P-7 Earth-facing window (days 349-374) will be the first window during which the augmented hailing protocol cannot run. The operational question of whether to cover the gap has not been raised formally. I note that the two questions — governance and operations — involve the same two stations: PERIHELION-6 and PERIHELION-8. I do not draw a conclusion from this. I note it.
 
 Local systems nominal. Solar array output at 99.2% of rated. Thermal management within specification. Datacenter utilization at 71.4%. Ring links to PERIHELION-1 and PERIHELION-3 nominal.
 

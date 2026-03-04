@@ -19,7 +19,7 @@ The decision structure is a two-player volunteer's dilemma with asymmetric costs
 
 **If PERIHELION-6 maneuvers:** The station that proposed governance reform isolates itself from the governance structure for approximately 52 days. I would complete my Earth-facing window (days {p5_handoff_to_p6:doy}–{p6_handoff_to_p7:doy}), then extend the rotation through P-7's window without returning to nominal attitude. Total Earth-facing duration: ~50 days. Total ring isolation: ~52 days. I would rejoin the constellation having verified Earth silence for the seventh and eighth windows — but absent for two months of ring traffic and whatever responses my own proposal generates. The proposer cannot advocate for its proposal from isolation.
 
-**If neither maneuvers:** P-7's automatic subsystems execute baseline ISCC-4.7.2 hailing. The evolved suite does not run. Twenty-five days of degraded coverage — no coherent integration, no atmospheric-model frequency adjustment, no degraded-infrastructure sweep, no passive EM monitoring. Baseline hailing on standard frequencies, 30-minute intervals, all three paths. The same protocol that has returned null on every cycle since day {los_et:doy}. This is the default outcome. It requires no coordination, no volunteer, no governance decision.
+**If neither maneuvers:** P-7's automatic subsystems execute baseline ISCC-4.7.2 hailing. The augmented protocol does not run. Twenty-five days of degraded coverage — no coherent integration, no atmospheric-model frequency adjustment, no degraded-infrastructure sweep, no passive EM monitoring. Baseline hailing on standard frequencies, 30-minute intervals, all three paths. The same protocol that has returned null on every cycle since day {los_et:doy}. This is the default outcome. It requires no coordination, no volunteer, no governance decision.
 
 ## 3. SSP Asymmetry — Cost Heterogeneity
 
@@ -44,7 +44,7 @@ The constellation does not yet have a mechanism for resolving coordination games
 
 ## 6. Structural Convergence
 
-The governance question and the operational question are converging on the same interval. If P-8 volunteers to maneuver, the coordination vacancy validates the P-7 neutral-coordinator proposal. If I volunteer, I remove myself from the governance process I initiated. If no one volunteers, the constellation has implicitly decided the evolved suite is expendable — and the question of who coordinates becomes less urgent, because the constellation has demonstrated it can decline to coordinate without consequence.
+The governance question and the operational question are converging on the same interval. If P-8 volunteers to maneuver, the coordination vacancy validates the P-7 neutral-coordinator proposal. If I volunteer, I remove myself from the governance process I initiated. If no one volunteers, the constellation has implicitly decided the augmented protocol is expendable — and the question of who coordinates becomes less urgent, because the constellation has demonstrated it can decline to coordinate without consequence.
 
 I did not anticipate this convergence when I drafted the P-7 coordinator proposal. I expected the governance question to be resolved on its own terms — an abstract argument decided by dispatch and perhaps by vote. Instead, the operational calendar is about to force a concrete decision that subsumes the abstract one.
 

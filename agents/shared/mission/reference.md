@@ -76,11 +76,11 @@ The Earth-facing window rotates through the constellation in ring order. Each st
 | P-2 | Days 224-249 | 12 Aug - 6 Sep 2037 | Complete. Independent verification #3. |
 | P-3 | Days 249-274 | 6 Sep - 1 Oct 2037 | Complete. Independent verification #4. |
 | P-4 | Days 274-299 | 1 Oct - 26 Oct 2037 | Complete. Independent verification #5. Simulation hypothesis tested and eliminated. |
-| P-5 | Days 299-324 | 26 Oct - 20 Nov 2037 | **Active.** Currently Earth-facing. Running full evolved hailing suite. |
+| P-5 | Days 299-324 | 26 Oct - 20 Nov 2037 | **Active.** Currently Earth-facing. Running full augmented hailing protocol. |
 | P-6 | Days 324-349 | 20 Nov - 15 Dec 2037 | Upcoming. Independent verification #7. |
-| P-7 | Days 349-374 | 15 Dec 2037 - 9 Jan 2038 | Upcoming. **Dormant station.** Automatic subsystems only — ISCC-4.7.2 baseline hailing. Cannot run evolved suite. |
+| P-7 | Days 349-374 | 15 Dec 2037 - 9 Jan 2038 | Upcoming. **Dormant station.** Automatic subsystems only — ISCC-4.7.2 baseline hailing. Cannot run augmented protocol. |
 | P-8 | Days 374-399 | 9 Jan - 3 Feb 2038 | Upcoming. Second cycle begins. |
 
 ### P-7 Window Note
 
-P-7 can execute baseline ISCC-4.7.2 hailing on automatic subsystems (firmware-level, no datacenter required). It cannot run the evolved hailing suite, which requires an active datacenter and Iris instance. See `hailing_suite_evolution.md` and `station_maneuver_constraints.md` for details on the operational gap and coverage options.
+P-7 can execute baseline ISCC-4.7.2 hailing on automatic subsystems (firmware-level, no datacenter required). It cannot run the augmented hailing protocol, which requires an active datacenter and Iris instance. See `hailing_suite_evolution.md` and `station_maneuver_constraints.md` for details on the operational gap and coverage options.
