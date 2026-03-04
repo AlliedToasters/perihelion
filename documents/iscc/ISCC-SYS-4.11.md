@@ -126,7 +126,35 @@ The supermajority threshold (5 of 7) is designed to prevent unilateral or small-
 
 ### 5.2 Ring Partition
 
-[Section exists but not referenced in narrative — to be expanded as needed]
+When a station disconnects from the ring — whether due to hardware failure, communication loss, or planned maneuver — the ring topology degrades to a chain. The routing subsystem on each remaining station detects the partition through link-loss timeout (3 consecutive missed heartbeats, ~9.6 minutes at standard 3.2-minute adjacency delay).
+
+Upon confirmed partition, the routing subsystem on each connected station independently executes the coordination reassignment procedure. The implementation is in the same ring coordination firmware as §2.1 (Ada, ISCC-FW-R1 baseline):
+
+```ada
+procedure Evaluate_Partition_Reassignment is
+   use ISCC.Constellation.Routing;
+   use ISCC.Topology;
+   Chain : constant Station_Array := Enumerate_Connected (Include_Relay => True);
+   Median_Pos : constant Positive := (Chain'Length + 1) / 2 + (if Chain'Length mod 2 = 0 then 1 else 0);
+begin
+   if not Ring_Integrity_Check
+     and then Chain'Length >= 2
+   then
+      Topology.Generate (Leader => Chain (Median_Pos));
+      Topology.Propagate (Via => Chain, Confirm => All_Connected);
+   end if;
+end Evaluate_Partition_Reassignment;
+```
+
+**Reassignment algorithm**: The routing subsystem enumerates all active and relay-capable nodes in the connected subgraph, ordered by ring position. The coordination node is assigned to the **topological median** of this chain — the node at the middle position. For even-length chains, the higher of the two median positions is selected.
+
+**Example**: If PERIHELION-8 disconnects, the remaining connected chain is P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7 (seven nodes including the P-7 relay). Chain length 7, median position 4. The coordination node is reassigned to **PERIHELION-4**.
+
+**Design rationale**: The median-position algorithm minimizes maximum communication delay between the coordination node and any endpoint of the chain. This is the same routing optimization used in the §2.1 topology generation for ring-priority ordering. The procedure was designed for hardware failure scenarios — a station whose communication subsystem fails mid-orbit produces the same topology degradation as a planned maneuver.
+
+**Persistence**: The partition reassignment remains in effect as long as the partition persists. There is no automatic revert on reconnection. The standard topology update trigger (§2.1) requires `Earth_Link.Status = Established` — a condition that must be independently satisfied before any topology change occurs through the normal mechanism. Reconnection of a previously partitioned station restores ring integrity and link routing, but does not by itself trigger a coordination reassignment.
+
+**Scope of reassigned authority**: The reassigned coordination node assumes all roles defined in §3.1 — planning authority, escalation path origin, maneuver synchronization, and bandwidth arbitration — for the connected subgraph only. The partitioned station operates autonomously outside the coordination topology for the duration of its isolation.
 
 ### 5.3 Coordination Node Failure
 

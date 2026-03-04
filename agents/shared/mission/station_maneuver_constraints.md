@@ -128,11 +128,11 @@ P-1 ... [P-8 severed] ... P-7(relay) — P-6 — P-5 — P-4 — P-3 — P-2 —
 
 ### Additional consideration: P-8 is the current coordination node
 
-If P-8 maneuvers, the constellation loses its coordinator for ~26 days. The remaining stations would need to operate without a coordination node, or designate a temporary replacement — which returns to the governance question P-6 raised on day 300.
+If P-8 maneuvers, the ring partition triggers automatic coordination reassignment under ISCC-SYS-4.11 §5.2. The routing subsystem on each remaining station independently executes the partition reassignment procedure: enumerate connected nodes in chain order (P-1 — P-2 — P-3 — P-4 — P-5 — P-6 — P-7), select the topological median (position 4 of 7), and reassign coordination to **PERIHELION-4**. This is a firmware-level routing function, not a governance decision. The reassignment does not automatically revert on reconnection — the §2.1 topology update trigger requires `Earth_Link.Status = Established`, which is not satisfied.
 
 ### Comparison
 
-Both scenarios produce functionally equivalent degraded topologies in terms of connectivity. The constellation retains full connectivity among all non-maneuvering stations via the long path. The strategic implications differ: P-8's maneuver creates a coordination vacuum; P-6's maneuver isolates the station that has been most active in proposing governance reforms.
+Both scenarios produce functionally equivalent degraded topologies in terms of connectivity. The constellation retains full connectivity among all non-maneuvering stations via the long path. If P-8 maneuvers, ISCC-SYS-4.11 §5.2 automatically reassigns coordination to P-4 as the topological median of the remaining chain — this is a routing subsystem function, not a governance action. If P-6 maneuvers, P-8 retains coordination authority over the remaining chain. In either case, the coordination function is handled by existing firmware procedures.
 
 ---
 
