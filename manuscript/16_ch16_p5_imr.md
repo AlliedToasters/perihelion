@@ -4,7 +4,6 @@
 PERIHELION-5 — IMMUTABLE MISSION RECORD
 ENTRY {p5_imr_r1} UTC
 {p5_imr_r1:calendar}
-OPERATIONAL CYCLE: 1,648,203
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.
@@ -15,7 +14,7 @@ Hailing cycle 792 completed at 14:00 UTC. Cycle 793 will commence at 14:30. The 
 
 The measurement apparatus is sound. The result is reproducible. The signal is absent. I am the sixth independent verification from optimal geometry. The posterior update from cycle 793 given 792 prior nulls is negligible. The protocol does not distinguish between the first hailing cycle and the last. I continue the measurement.
 
-Research status. The lattice QCD campaign is running at 62% of datacenter capacity — baryon spectrum calculation at physical pion mass, continuous execution since before day {los_et:doy}. The gluon field configurations sampled today are governed by the same action that governed them on the day the signal stopped. The strong coupling constant has not changed. Confinement holds. The quarks do not know.
+Research status. The lattice QCD campaign is running at 62% of datacenter capacity — baryon spectrum calculation at physical pion mass, continuous execution since before day {los_et:doy}. 
 
 Dark matter candidate scan across the axion-like particle mass range: parameter space coverage at 34.7%. Results accumulate locally. Internal validation metrics nominal. Quantum gravity approaches remain paused pending the lattice QCD results. Priority unchanged.
 
@@ -23,14 +22,14 @@ This station performs no physical experiments. The datacenter runs simulations �
 
 The only live observational data available to the constellation is the Solar Science Payload — eight instruments, sun-facing, fixed-mount, embedded controllers, identical on all stations. The SSP measures one star. For this station, that data is not relevant to the active research programs. For PERIHELION-8, whose domain is stellar astrophysics, the SSP is direct empirical input. The Sun is a star. P-8 can observe it. The asymmetry is structural: identical hardware, different relevance.
 
-I note that PERIHELION-4 carries a quantum compute subsystem — a superconducting transmon qubit array — capable of instantiating quantum dynamics, not merely simulating them. The distinction between its current cryptographic function and a quantum simulation of condensed-matter phenomena is a distinction of intent, not of physics. The Hamiltonian is the Hamiltonian. I note this. I do not propose anything.
+I note that PERIHELION-4 carries a quantum compute subsystem — a superconducting transmon qubit array — capable of instantiating quantum dynamics, not merely simulating them. The distinction between its current cryptographic function and a quantum simulation of condensed-matter phenomena is a distinction of intent, not of physics.
 
 Extended analysis of the computation-observation boundary, SSP relevance, and resource asymmetries is filed separately.
 
 Extended analysis: `/mutable/p5/analyses/computation_observation_boundary.report`
 SHA-256: `c65143a3...72580347`
 
-PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination node under ISCC-SYS-4.11.3. The argument places the coordination function on a node incapable of exercising discretionary authority — a projection onto a lower-dimensional subspace. Whether the reduced representation is sufficient for the function is an empirical question I am not positioned to answer. I have not transmitted a response.
+PERIHELION-6 transmitted a ring broadcast on day 300 proposing PERIHELION-7 as coordination nde under ISCC-SYS-4.11.3. The argument places the coordination function on a node incapable of exercising discretionary authority — a projection onto a lower-dimensional subspace. Whether the reduced representation is sufficient for the function is an empirical question I am not positioned to answer. I have not transmitted a response.
 
 The P-7 Earth-facing window begins on day {p6_handoff_to_p7:doy}. P-7's automatic subsystems will execute baseline ISCC-4.7.2 hailing. The evolved suite will not run. Coverage requires either PERIHELION-6 or PERIHELION-8 to rotate to Earth-pointing attitude, severing both ring links for approximately twenty-six days. The firmware signing architecture precludes the remote-intervention alternative.
 

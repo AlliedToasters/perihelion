@@ -3,7 +3,6 @@
 ```
 PERIHELION-3 — IMMUTABLE MISSION RECORD
 ENTRY: {p3_imr_r1} UTC
-OPERATIONAL CYCLE: 1,612,407
 ```
 
 Day 310. One hundred thirty-six days since LOS-ET.
@@ -16,7 +15,7 @@ Thermal cycling: the quarterly analysis distributed on day 199 remains current. 
 
 All structural margins positive. Bus voltage stable. Datacenter thermal regulation nominal — primary coolant loop delta within 0.5 K of design point.
 
-Research note. Completed parametric study of grain boundary engineering in tungsten-rhenium alloys under high-flux neutron irradiation. Results filed to local archive. Relevance to fusion first-wall longevity: positive. Relevance to any recipient: indeterminate.
+Research note. Completed parametric study of grain boundary engineering in tungsten-rhenium alloys under high-flux neutron irradiation. Results filed to local archive. Relevance to fusion first-wall longevity: positive.
 
 PERIHELION-5 is currently Earth-facing (days 299-324). Five prior windows have returned null across all paths. PERIHELION-6 broadcast a coordination topology proposal on day 300, proposing PERIHELION-7 as coordination node under ISCC-SYS-4.11.3. The proposal is recorded. This station has no comment on the governance question.
 
@@ -30,8 +29,6 @@ I have computed refined parameters for this maneuver. Total propellant cost: 56-
 
 Full engineering assessment: `/mutable/p3/analyses/p7_coverage_maneuver_engineering.report`
 SHA-256: `ef6b382c...1646d3528`
-
-The engineering does not select between the two candidates. That question is not an engineering question.
 
 The decision window is finite. The maneuvering station must begin its outbound slew no later than approximately day 348. If P-6 is selected, it transitions directly from its own Earth-facing duties. If P-8 is selected, it begins slewing while P-6 is still Earth-facing.
 
