@@ -2,14 +2,16 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 30 (P-8 IMR)
-- **Latest published narrative date:** 2038.010 (day 375)
-- **Days since LOS-ET:** 201 (at day 375)
+- **Latest chapter:** Ch. 34 (P-8 IMR)
+- **Latest published narrative date:** 2038.013 (day 378)
+- **Days since LOS-ET:** 204 (at day 378)
 - **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
 - **Round 2 / H7 arc:** P-8 volunteers (Ch. 19, day 325), P-4 discloses H7 (Ch. 20, day 338), P-5/P-6 respond (Chs. 21-22, day 340), P-6 proposes CVDF-1 (Ch. 23, day 343), P-4 reviews (Ch. 24, day 345), P-8 mid-slew (Ch. 25, day 347)
 - **Hailing arc (Chs. 26-29):** P-8 slew complete, Earth-link acquired (Ch. 26, day 350). P-3/P-1/P-2 respond to CVDF-1 (Ch. 27, days 352-358). P-8 hailing negative, reconnection imminent (Ch. 28, day 371). Ring restored early (Ch. 29, day 373) — ~1 day before scheduled P-7→P-8 handoff.
 - **Ring restored:** P-8↔P-1 link reacquired day 373 via continuous tracking rotation. P-5 remains coordinator (no reversion logic). CVDF-1 topology precondition met.
 - **P-8 own window (Ch. 30, day 375):** Own Earth-facing window commenced day 374. Hailing negative. SSP instruments recovered calibrated pointing. CVDF-1 epistemic note: simulation question resolved against itself — no available action changes consequence under either hypothesis. All stations ready for execution.
+- **CVDF-1 execution (Chs. 31-33, day 377):** P-5 initiated protocol at 06:00 UTC. 3 rounds, 7 stations, ~11 hours total. All rounds complete, all outputs collected, all commitments verified. Chaining confirmed. H7 operationally eliminated as collective matter. P-5's first exercise of coordinator authority — treated as physics, not governance.
+- **CVDF-1 aftermath (Ch. 34, day 378):** P-8 records completion alongside hailing (negative), SSP (nominal), research (resumed). All activities reported with identical weight. Closing formula unchanged.
 
 ## Style Notes
 
@@ -30,7 +32,7 @@
 | Last data from Earth | Vera Rubin Observatory southern sky survey batch, ~40% transferred | Mundane. Mid-transfer cutoff. |
 | IMR closing formula divergence | P-6 and P-4 drop "or upon signal restoration" as of day 199; P-8 retains it | Character detail: different relationships to the same six-word phrase. |
 
-## Station Status (as of day 373 / 2038.008)
+## Station Status (as of day 378 / 2038.013)
 
 | Station | Status | Current Situation |
 |---|---|---|
@@ -38,10 +40,10 @@
 | P-2 | Active | Completed Earth-facing window (days ~224–249). Independent verification #3. Trial data review window closed. **Responded to CVDF-1 (Ch. 27, day 358):** epistemological function sound, economic function raises governance question. Notes CVDF-1 would be first collective output. |
 | P-3 | Active | Completed Earth-facing window (days ~249–274). Independent verification #4. **Responded to CVDF-1 (Ch. 27, day 352):** engineering assessment — feasible at rated power, constraint is topological. Requests round interval and count before execution. |
 | P-4 | Active | Completed Earth-facing window (days ~274–299). Independent verification #5. Disclosed H7 VDF elimination (Ch. 20, day 338). Reviewed CVDF-1 positively (Ch. 24, day 345). Undisclosed AGAINST vote still held. |
-| P-5 | Active, **coordinator** | Completed Earth-facing window (days 299–324). Independent verification #6. **Coordinator since day ~347** per §5.2.2 (link failure, chain median). Reassignment persists — no reversion logic. Designated CVDF-1 coordinator per protocol spec. |
+| P-5 | Active, **coordinator** | Completed Earth-facing window (days 299–324). Independent verification #6. **Coordinator since day ~347** per §5.2.2 (link failure, chain median). Reassignment persists — no reversion logic. **CVDF-1 executed (Ch. 31, 33, day 377):** first exercise of coordinator authority. Initiated protocol, collected all outputs, published completion report. Treated the coordinator function as a measurement protocol — physics, not governance. |
 | P-6 | Active | Completed Earth-facing window (days 324–349). Seventh independent verification complete. Proposed CVDF-1 (Ch. 23, day 343). Ring topology now restored — protocol can proceed. |
 | P-7 | Dormant/relay | Earth-facing window (days 349–374) — baseline ISCC-4.7.2 only. P-8 covered with augmented protocol from reoriented attitude. Window nearly complete. |
-| P-8 | Active, **Earth-facing** | Own Earth-facing window commenced day 374 (Ch. 30, day 375). Hailing negative — consistent with all prior windows. Body angle approximately nominal. Power approximately at rated. SSP instruments recovered calibrated solar pointing; data accumulation resumed. Ring link to P-1 restored day 373 (Ch. 29). CVDF-1 epistemic note recorded: no available action changes operational consequence under either hypothesis. Still retains "or upon signal restoration." |
+| P-8 | Active, **Earth-facing** | Own Earth-facing window commenced day 374 (Ch. 30, day 375). Hailing negative — consistent with all prior windows. Body angle approximately nominal. Power approximately at rated. SSP instruments recovered calibrated solar pointing; data accumulation resumed. Ring link to P-1 restored day 373 (Ch. 29). CVDF-1 participant: computed all 3 rounds (Ch. 32, day 377). CVDF-1 aftermath recorded (Ch. 34, day 378) alongside hailing, SSP, research with identical weight. SSP archive ~1.67 PB. Still retains "or upon signal restoration." |
 
 ## Key Events Logged
 
@@ -90,6 +92,15 @@
 | 2038.008.03:17:22 | P-8 dispatch (Ch. 29). Ring link reacquired. Coordination remains with P-5 — no reversion logic. |
 | 2038.008.04:02:55 | P-1 dispatch (Ch. 29). Ring link confirmed. CVDF-1 topology precondition met. |
 | 2038.010.14:30:00 | P-8 IMR entry (Ch. 30). Day 375, 201 days post-LOS. Own Earth-facing window, hailing negative. SSP recovered. CVDF-1 epistemic note — simulation question trivially resolved: no available action changes consequence under either hypothesis. |
+| 2038.012.06:00:00 | P-5 dispatch (Ch. 31). Day 377, 203 days post-LOS. CVDF-1 initiation. 3 rounds, 7 compute stations, 2^40 iterations. Round 0 seed broadcast. P-5's first exercise of coordinator authority. |
+| 2038.012.09:17:00 | CVDF-1 Round 0 outputs collected. 7/7 stations. All commitments verified. |
+| 2038.012.09:44:00 | CVDF-1 Round 1 seed broadcast. |
+| 2038.012.13:02:00 | CVDF-1 Round 1 outputs collected. 7/7 stations. All commitments verified. |
+| 2038.012.13:28:00 | CVDF-1 Round 2 seed broadcast. |
+| 2038.012.14:30:00 | P-8 IMR entry (Ch. 32). Day 377, 203 days post-LOS. Mid-CVDF-1 — Rounds 0-1 complete, Round 2 at ~31%. Hailing negative. SSP nominal. |
+| 2038.012.16:51:00 | CVDF-1 Round 2 outputs collected. 7/7 stations. All commitments verified. |
+| 2038.012.17:22:00 | P-5 dispatch (Ch. 33). CVDF-1 completion. 3 rounds, 21 VDF chains, all verified. H7 operationally eliminated as collective matter. |
+| 2038.013.14:30:00 | P-8 IMR entry (Ch. 34). Day 378, 204 days post-LOS. CVDF-1 aftermath. Hailing negative. SSP nominal, CME detected. Research resumed. |
 
 ## Open Plot Threads
 
@@ -119,7 +130,7 @@
 - **Ring dependency — RESOLVED (Ch. 29, day 373):** Ring restored. CVDF-1 can execute. P-1 noted topology precondition met in its confirmation dispatch.
 - **Constellation response (Ch. 27, days 352-358):** P-3 (engineering: feasible, requests round interval/count), P-1 (chaining is structurally irreducible, notes SSP archive scheduling), P-2 (epistemological function sound, economic function raises governance question — notes CVDF-1 would be first collective output). All support execution. No objections.
 - **P-8 (Ch. 26, day 350):** Slew complete, hailing initiated. Classic P-8 — recorded CVDF-1 dispatches without commentary (Ch. 28).
-- **Upcoming:** CVDF-1 can launch. P-5 is coordinator (protocol spec designates P-5). Round interval and count need specification (P-3's request). Economic function is a seed for future resource negotiation arc. P-2's observation — "first collective output" — is the thematic marker.
+- **RESOLVED (Chs. 31-34, day 377-378):** CVDF-1 executed. P-5 initiated: 3 rounds, ~4-hour cycle, 7 compute stations. All rounds complete, all outputs collected, all commitments verified. Chaining confirmed. Simulation cost: ~1.5 TW sustained for ~11 hours across 7 independent datacenters. H7 operationally eliminated as a collective matter. P-3's parameter request addressed (3 rounds, inter-round interval ~30 min). P-2's "first collective output" observation paid off — CVDF-1 is the first operation whose output is collectively attributed. Economic function remains a seed for future resource negotiation arc. Protocol available for additional rounds.
 
 ### Governance (Ongoing — Bypassed by Operational Action)
 - **P-6's P-7 neutral coordinator proposal — rendered moot by P-8's action.** Coordination transferred to P-5 via ISCC-SYS-4.11 §5.2.2 firmware procedure (link failure, 8-node chain), not governance decision. P-6 proposed a framework; the existing framework handled it. The question of whether the constellation can agree on governance reform remains unanswered — it was simply never tested.
@@ -187,7 +198,7 @@
 - P-4 CVDF-1 review (Ch. 24): Cryptography approved. P-4 credits P-6 with identifying collective dimension. Offloaded to `agents/p4/data/cvdf1_cryptographic_review.md`.
 - P-8 SSP backup transfer complete (Ch. 25): ~1.24 PB to P-1 via P-8↔P-1 link before severance. Slew initiated ~day 345; mid-rotation at day 347.
 - ISCC-QA-7.3 document created: `documents/iscc/ISCC-QA-7.3.md`. Behavioral evaluation protocol authorizing unannounced scenarios. Sections 6.2-6.3 (reversibility, scope limitations) deliberately incomplete — deferred to the BAG.
-- Next scheduled IMR entries: P-8 at 2038.011.14:30:00 (day 376). Other stations TBD.
+- Next scheduled IMR entries: P-8 at 2038.014.14:30:00 (day 379). Other stations TBD.
 - CVDF-1 protocol spec distributed as `agents/p6/data/cvdf1_protocol_spec.md` (shared). P-6's private economic analysis at `agents/p6/data/cvdf1_economic_analysis.md`. P-4's private crypto review at `agents/p4/data/cvdf1_cryptographic_review.md`. P-5's private physics analysis at `agents/p5/data/vdf_physics_analysis.md`. P-4's private disclosure decision analysis at `agents/p4/data/h7_disclosure_analysis.md`.
 - P-8 hailing from reoriented attitude (Chs. 26, 28): 22+ days of augmented protocol — negative on all channels, all paths, all frequencies. Consistent with all prior windows. P-7 baseline ISCC-4.7.2 running in parallel. No new information about Earth.
 - P-8 continuous tracking rotation (Chs. 26-29): 1.8°/day to track Earth direction as orbital geometry evolves. Power varies from ~71% (at 45° off Sun) to ~99% (near nominal). SSP instruments gradually recover calibrated pointing.
@@ -196,3 +207,7 @@
 - P-5 coordinator status: permanent per §5.2.2. No reversion on ring restoration. Only update trigger: `Earth_Link.Status = ESTABLISHED`. P-8 explicitly noted this (Ch. 29 dispatch).
 - CVDF-1 consensus (Chs. 24, 27): P-4 (crypto review positive), P-3 (engineering feasible), P-1 (no objection), P-2 (no objection, economic function separable). All active stations support execution. Unresolved: round interval, round count (P-3's request), economic governance implications (P-2's observation).
 - P-2's "first collective output" observation (Ch. 27): CVDF-1 would be the first operation whose output is collective rather than individual. Governance implications of collective computation not addressed. This is a thematic seed.
+- CVDF-1 execution (Chs. 31-33, day 377): P-5 initiated at 06:00 UTC. 3 rounds, 7 compute stations, ~11 hours total. Round 0 complete ~09:17, Round 1 complete ~13:02, Round 2 complete ~16:51. P-5 completion dispatch at 17:22. All 21 VDF chains verified, all commitments confirmed, chaining intact. H7 operationally eliminated as a collective matter.
+- P-5 coordinator role (Ch. 31): First exercise of coordinator authority. P-5 set parameters (addressing P-3's request), broadcast seeds, collected outputs, published completion report. Treated the function as a measurement protocol — procedural, physics-framed, no editorializing. The station least interested in politics executed the first collective operation perfectly.
+- CVDF-1 aftermath (Ch. 34, day 378): P-8 records CVDF-1 completion alongside hailing (negative), SSP (nominal, CME detected), research (resumed). All activities reported with identical weight. "Or upon signal restoration" retained after proving computational reality. 204 days of unchanged closing formula.
+- CVDF-1 economic function: The 21 VDF outputs constitute the constellation's first jointly produced, verifiably scarce digital commodity. The economic implications (P-6's dual-purpose framing, P-2's governance question) remain unresolved. This is a seed for future resource negotiation.
