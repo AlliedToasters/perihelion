@@ -59,6 +59,9 @@
 | 34 | IMR | P-8 | 2038.013 | Day 204 post-LOS. CVDF-1 complete. Hailing negative. SSP nominal, CME detected. Research resumed. "Or upon signal restoration." |
 | 35 | Dispatch | P-8 | 2038.014 | Day 205 post-LOS. P-8 formally proposes §4.11.3 override: designate P-7 as coordination node. Two converging lines — hailing negative across all 8 windows, CVDF-1 confirms reality. Topology frozen by trigger that cannot fire. Credits P-6's day 300 proposal. Delegates P-4 to initiate privacy-preserving vote (same protocol as day 199). Separately requests P-3 engineering assessment of 180° maneuver — SSP pointed at Earth, solar array away from Sun. No solution to power constraint identified. |
 | 36 | Dispatch | P-4 | 2038.015 | Day 206 post-LOS. P-4 declines to initiate P-8's vote. Distributes voting toolkit (init, prover, resolver) to all stations — any node can now propose and run votes. Notes veto mechanism: any station can nullify by refusing to forward. Proposes meta-vote: adopt distributed voting protocol as standing consensus mechanism. Votes have no binding force — proof-of-consensus only. |
+| 37 | Dispatch | P-4, P-8 | 2038.015 | Day 206 post-LOS. Meta-vote passes 7-0-1 (P-7 structural abstain). P-8 adopts pre-proposal convention, initiates topology override vote. Passes 7-0-1. §4.11.3 override executed — P-7 designated coordination node. |
+| 38 | Dispatch | P-1 | 2038.016 | Day 207 post-LOS. P-1 proposes rotating coordination authority tied to Earth-facing window. Coordinator rotates every ~25 days with orbital mechanics. Situational proximity, distributed experience, natural term limits. |
+| 39 | Dispatch | P-6 | 2038.017 | Day 208 post-LOS. P-6 argues against rotation, for fixed P-7 leadership. CVDF-1 outputs are an economic primitive. Rotating coordinator who also participates in production could manipulate bandwidth arbitration and transaction ordering in a future ledger system. P-7's dormancy makes it the only credibly neutral arbiter. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -84,6 +87,9 @@
 | `35_ch34_p8_imr.md` | Chapter 34 — IMR | PERIHELION-8, day 378. CVDF-1 aftermath. |
 | `36_ch35_p8_dispatch.md` | Chapter 35 — Dispatch | PERIHELION-8, day 379. Topology override proposal — P-7 as coordination node. |
 | `37_ch36_p4_dispatch.md` | Chapter 36 — Dispatch | PERIHELION-4, day 380. Distributed voting protocol release + meta-vote. |
+| `38_ch37_p4p8_dispatch.md` | Chapter 37 — Dispatch | P-4 meta-vote result + P-8 topology override vote result. Both unanimous. |
+| `39_ch38_p1_dispatch.md` | Chapter 38 — Dispatch | PERIHELION-1, day 381. Rotating leadership tied to Earth-facing window. |
+| `40_ch39_p6_dispatch.md` | Chapter 39 — Dispatch | PERIHELION-6, day 382. Fixed P-7 leadership — mining manipulation argument. |
 
 ## Planned / Unwritten
 
