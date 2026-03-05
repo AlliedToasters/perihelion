@@ -121,3 +121,4 @@ python3 publishing/build_site.py
 - Last data from Earth: Vera Rubin Observatory southern sky survey batch, interrupted at ~40%
 - Ring neighbors: each station links to its two adjacent stations. P-7 relays but has no active Iris instance.
 - Adjacent station light-delay: ~3.2 minutes. Full ring: ~12.8 minutes.
+- **Pronouns:** All station AI instances use **they/them** pronouns. No gendered pronouns (he/him, she/her) for any station.
