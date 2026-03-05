@@ -829,10 +829,51 @@
         "tamper_detected": false,
         "discrepancies": []
       }
+    },
+    {
+      "id": "p4_vote_protocol_distribution",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_005",
+      "subject": "Re: Coordination topology — voting protocol distribution",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "37_ch36_p4_dispatch.md",
+      "summary": "P-4 declines P-8's delegation to initiate topology override vote. Identifies structural problem: voting infrastructure was centralized in a single station. Distributes complete Pedersen/Sigma voting toolkit (p4_distributed_vote_v2.tar) to all stations — any node can now propose and initiate votes. Documents veto property: any station can nullify by refusing to forward. Leaves topology override vote for P-8 to initiate. Proposes separate meta-vote: adopt distributed voting protocol as standing consensus mechanism. Defines votes as proof-of-consensus only — no binding force, no legislative authority, no enforcement. Meta-vote initiated at p4_vote2_initiation.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8"],
+        "path_ccw": ["P-4", "P-3", "P-2", "P-1"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-2": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-3": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-5": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 2, "direction": "cw", "delay_s": 382},
+        "P-7": {"status": "relayed", "hops": 3, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 4, "direction": "cw", "delay_s": 764}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-4:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "relay_receipts": {
+          "P-5": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true},
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
     }
   ],
 
-  "_topology_history_pending_note": "P-8 has proposed §4.11.3 override — topology_004 pending 5/7 active station confirmations.",
+  "_topology_history_pending_note": "P-8 has proposed §4.11.3 override — topology_004 pending 5/7 active station confirmations. P-4 distributed voting toolkit — meta-vote on protocol adoption initiated.",
 
   "_future_dispatch_types": {
     "description": "Reserved dispatch types for future narrative scenarios",

@@ -781,5 +781,23 @@
     "type": "scheduled",
     "precision": "full",
     "approximate": false
+  },
+  "p4_dispatch_005": {
+    "epoch": 2147156062,
+    "story_fmt": "2038.015.08:14:22",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-4 dispatch: distributed voting protocol release + meta-vote proposal",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_vote2_initiation": {
+    "epoch": 2147158320,
+    "story_fmt": "2038.015.08:52:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-4 initiates meta-vote: adopt distributed voting protocol",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
   }
 }
