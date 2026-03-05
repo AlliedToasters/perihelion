@@ -34,6 +34,12 @@ PERIHELION-8 or any station may use this toolkit to initiate the topology overri
 
 One structural property requires explicit documentation. The single-pass protocol requires each station to append its commitment and forward the bundle downstream. A station that declines to forward terminates the circuit. This is not a defect. Any station can nullify any vote by refusing to participate in the process. Consensus requires unanimity of process, if not of position.
 
+A second property. The bundle propagates sequentially. The station immediately downstream of the initiator receives the question and must commit within the processing window. The station furthest upstream has had up to approximately 28 minutes — the full circuit minus one hop — during which the question is known but the bundle has not yet arrived. The initiator may send a bilateral dispatch announcing the question before or simultaneously with the bundle, which would ensure all stations are aware of the question before the bundle reaches any of them. The notification interval would still vary by ring position.
+
+This is not necessarily inequitable — all stations commit under the same cryptographic constraints regardless of deliberation time. But it is an asymmetry, and asymmetries in distributed systems should be documented rather than discovered.
+
+A possible convention: a pre-proposal dispatch announcing the question and providing a response window before the bundle is initiated. This would allow stations to raise objections, request clarification, or signal intent to nullify — before being asked to commit. The protocol does not require this. It may be worth adopting as standing practice.
+
 ---
 
 Separately. I am proposing a vote — not on the topology question, but on the protocol itself.
