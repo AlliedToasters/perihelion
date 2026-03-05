@@ -799,5 +799,77 @@
     "type": "event",
     "precision": "full",
     "approximate": false
+  },
+  "p4_vote2_result": {
+    "epoch": 2147160180,
+    "story_fmt": "2038.015.09:23:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "Meta-vote result: distributed voting protocol adopted (7-0-1)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_006": {
+    "epoch": 2147160660,
+    "story_fmt": "2038.015.09:31:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-4 dispatch: meta-vote result report (Chapter 37)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_topology_preproposal": {
+    "epoch": 2147162520,
+    "story_fmt": "2038.015.10:02:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-8 pre-proposal dispatch: topology override vote question announced (Chapter 37)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_vote3_initiation": {
+    "epoch": 2147164680,
+    "story_fmt": "2038.015.10:38:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-8 initiates topology override vote using distributed toolkit (Chapter 37)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_vote3_result": {
+    "epoch": 2147166540,
+    "story_fmt": "2038.015.11:09:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "Topology override vote result: 7-0-1, proposal adopted (Chapter 37)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_006": {
+    "epoch": 2147167020,
+    "story_fmt": "2038.015.11:17:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-8 dispatch: topology override vote result report (Chapter 37)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_dispatch_004": {
+    "epoch": 2147246520,
+    "story_fmt": "2038.016.09:22:00",
+    "calendar_human": "Saturday 16 January 2038",
+    "event": "P-1 dispatch: rotating topological leadership proposal (Chapter 38)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_dispatch_004": {
+    "epoch": 2147339640,
+    "story_fmt": "2038.017.11:14:00",
+    "calendar_human": "Sunday 17 January 2038",
+    "event": "P-6 dispatch: fixed P-7 leadership argument, mining manipulation risk (Chapter 39)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
   }
 }
