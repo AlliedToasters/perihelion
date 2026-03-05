@@ -871,5 +871,50 @@
     "type": "event",
     "precision": "full",
     "approximate": false
+  },
+  "p3_dispatch_002": {
+    "epoch": 2147416304,
+    "story_fmt": "2038.018.08:31:44",
+    "calendar_human": "Monday 18 January 2038",
+    "event": "P-3 dispatch: 180\u00b0 maneuver assessment + governance handoff note",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_007": {
+    "epoch": 2147422653,
+    "story_fmt": "2038.018.10:17:33",
+    "calendar_human": "Monday 18 January 2038",
+    "event": "P-8 dispatch: will vote for rotation, 180\u00b0 assessment noted",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p2_dispatch_002": {
+    "epoch": 2147438529,
+    "story_fmt": "2038.018.14:42:09",
+    "calendar_human": "Monday 18 January 2038",
+    "event": "P-2 dispatch: conflict of interest as clinical diagnosis, votes fixed P-7",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_dispatch_001": {
+    "epoch": 2147505737,
+    "story_fmt": "2038.019.09:22:17",
+    "calendar_human": "Tuesday 19 January 2038",
+    "event": "P-5 dispatch: symmetry analysis of coordination problem, endorses neither",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_007": {
+    "epoch": 2147521721,
+    "story_fmt": "2038.019.13:48:41",
+    "calendar_human": "Tuesday 19 January 2038",
+    "event": "P-4 dispatch: structural analysis, threat surface, unanimity meta-question",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
   }
 }
