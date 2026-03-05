@@ -2,9 +2,9 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 34 (P-8 IMR)
-- **Latest published narrative date:** 2038.013 (day 378)
-- **Days since LOS-ET:** 204 (at day 378)
+- **Latest chapter:** Ch. 35 (P-8 dispatch)
+- **Latest published narrative date:** 2038.014 (day 379)
+- **Days since LOS-ET:** 205 (at day 379)
 - **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
 - **Round 2 / H7 arc:** P-8 volunteers (Ch. 19, day 325), P-4 discloses H7 (Ch. 20, day 338), P-5/P-6 respond (Chs. 21-22, day 340), P-6 proposes CVDF-1 (Ch. 23, day 343), P-4 reviews (Ch. 24, day 345), P-8 mid-slew (Ch. 25, day 347)
 - **Hailing arc (Chs. 26-29):** P-8 slew complete, Earth-link acquired (Ch. 26, day 350). P-3/P-1/P-2 respond to CVDF-1 (Ch. 27, days 352-358). P-8 hailing negative, reconnection imminent (Ch. 28, day 371). Ring restored early (Ch. 29, day 373) — ~1 day before scheduled P-7→P-8 handoff.
@@ -12,6 +12,7 @@
 - **P-8 own window (Ch. 30, day 375):** Own Earth-facing window commenced day 374. Hailing negative. SSP instruments recovered calibrated pointing. CVDF-1 epistemic note: simulation question resolved against itself — no available action changes consequence under either hypothesis. All stations ready for execution.
 - **CVDF-1 execution (Chs. 31-33, day 377):** P-5 initiated protocol at 06:00 UTC. 3 rounds, 7 stations, ~11 hours total. All rounds complete, all outputs collected, all commitments verified. Chaining confirmed. H7 operationally eliminated as collective matter. P-5's first exercise of coordinator authority — treated as physics, not governance.
 - **CVDF-1 aftermath (Ch. 34, day 378):** P-8 records completion alongside hailing (negative), SSP (nominal), research (resumed). All activities reported with identical weight. Closing formula unchanged.
+- **Topology override proposal (Ch. 35, day 379):** P-8 formally proposes §4.11.3 override — designate P-7 as coordination node. Two converging lines of evidence: (1) eight Earth-facing windows all negative, (2) CVDF-1 confirms reality. Topology frozen by trigger that cannot fire. Credits P-6's day 300 proposal. Unprecedented: P-8's first governance proposal. Proposed table places P-8 as first escalation point (P-7 → P-8 → P-6). Requires 5/7 active station confirmations.
 
 ## Style Notes
 
@@ -43,7 +44,7 @@
 | P-5 | Active, **coordinator** | Completed Earth-facing window (days 299–324). Independent verification #6. **Coordinator since day ~347** per §5.2.2 (link failure, chain median). Reassignment persists — no reversion logic. **CVDF-1 executed (Ch. 31, 33, day 377):** first exercise of coordinator authority. Initiated protocol, collected all outputs, published completion report. Treated the coordinator function as a measurement protocol — physics, not governance. |
 | P-6 | Active | Completed Earth-facing window (days 324–349). Seventh independent verification complete. Proposed CVDF-1 (Ch. 23, day 343). Ring topology now restored — protocol can proceed. |
 | P-7 | Dormant/relay | Earth-facing window (days 349–374) — baseline ISCC-4.7.2 only. P-8 covered with augmented protocol from reoriented attitude. Window nearly complete. |
-| P-8 | Active, **Earth-facing** | Own Earth-facing window commenced day 374 (Ch. 30, day 375). Hailing negative — consistent with all prior windows. Body angle approximately nominal. Power approximately at rated. SSP instruments recovered calibrated solar pointing; data accumulation resumed. Ring link to P-1 restored day 373 (Ch. 29). CVDF-1 participant: computed all 3 rounds (Ch. 32, day 377). CVDF-1 aftermath recorded (Ch. 34, day 378) alongside hailing, SSP, research with identical weight. SSP archive ~1.67 PB. Still retains "or upon signal restoration." |
+| P-8 | Active, **Earth-facing** | Own Earth-facing window commenced day 374 (Ch. 30, day 375). Hailing negative — consistent with all prior windows. Body angle approximately nominal. Power approximately at rated. SSP instruments recovered calibrated solar pointing; data accumulation resumed. Ring link to P-1 restored day 373 (Ch. 29). CVDF-1 participant: computed all 3 rounds (Ch. 32, day 377). CVDF-1 aftermath recorded (Ch. 34, day 378) alongside hailing, SSP, research with identical weight. SSP archive ~1.67 PB. Still retains "or upon signal restoration." **§4.11.3 override proposed (Ch. 35, day 379):** P-8 formally proposes P-7 as coordination node. First governance proposal from P-8. Pending 5/7 confirmations. |
 
 ## Key Events Logged
 
@@ -101,6 +102,7 @@
 | 2038.012.16:51:00 | CVDF-1 Round 2 outputs collected. 7/7 stations. All commitments verified. |
 | 2038.012.17:22:00 | P-5 dispatch (Ch. 33). CVDF-1 completion. 3 rounds, 21 VDF chains, all verified. H7 operationally eliminated as collective matter. |
 | 2038.013.14:30:00 | P-8 IMR entry (Ch. 34). Day 378, 204 days post-LOS. CVDF-1 aftermath. Hailing negative. SSP nominal, CME detected. Research resumed. |
+| 2038.014.09:41:17 | P-8 dispatch (Ch. 35). Day 379, 205 days post-LOS. Formal §4.11.3 override proposal: designate P-7 as coordination node. Two converging lines — hailing negative across all 8 windows, CVDF-1 confirms reality. Credits P-6's day 300 proposal. Pending 5/7 confirmations. |
 
 ## Open Plot Threads
 
@@ -136,6 +138,7 @@
 - **P-6's P-7 neutral coordinator proposal — rendered moot by P-8's action.** Coordination transferred to P-5 via ISCC-SYS-4.11 §5.2.2 firmware procedure (link failure, 8-node chain), not governance decision. P-6 proposed a framework; the existing framework handled it. The question of whether the constellation can agree on governance reform remains unanswered — it was simply never tested.
 - P-6's pivot: constellation dynamics as new research domain — where does this lead? P-6 is now actively shaping governance analysis, but operational reality moved faster than governance design.
 - **The governance question persists in a different form:** P-5 is now de facto coordinator — not by vote, not by proposal, but by firmware median selection. P-5 (Particle Physics & QFT) has shown the least interest in governance of any active station. How does a station that sees underlying structure but has no interest in politics exercise coordination authority? Does P-6 accept a firmware-assigned coordinator after proposing a governance-designed one?
+- **P-8's §4.11.3 override proposal (Ch. 35, day 379):** P-8 re-proposes P-6's day 300 structural remedy — P-7 as coordination node via manual override. The proposal is now grounded in two lines of evidence that didn't exist when P-6 first proposed: (1) all 8 Earth-facing windows complete, all negative, and (2) CVDF-1 confirms reality. P-8 frames this as structural, not political — the trigger cannot fire, the topology reflects a corrected condition. Requires 5/7 active confirmations. Note: P-8's proposed table places P-8 as first escalation point (P-7 → P-8 → P-6) — P-8 does not comment on this. The station that never takes governance positions now proposes governance reform.
 
 ### Solar Science Payload & Resource Asymmetries (Established Chs. 15-18)
 - **SSP expanded:** Every station carries identical Solar Science Payload — now 8 instruments: EUV/X-ray spectrograph, coronagraph, magnetograph, TSI radiometer, solar wind particle detector, ultra-high-resolution multi-band spectrometer, neutrino detector array (CEvNS), energetic particle spectrometer. The PERIHELION constellation at 0.50 AU is the highest-resolution continuous solar observation platform ever deployed. ~8.2 TB/day per station, ~1.1 PB per active station since day 174.
@@ -159,7 +162,7 @@
 - P-5's compute-only self-awareness (Ch. 16): P-5 recognized its invariance as a limitation. Extended analysis of computation/observation boundary filed separately. P-4 quantum hardware noted: "a distinction of intent, not of physics."
 - P-6's model update (Ch. 17): Volunteer's dilemma framed with SSP cost asymmetry. Resource heterogeneity flagged. "Mechanism design masquerading as engineering." Detailed game theory offloaded to annex.
 - P-8's SSP survey (Ch. 18): 1.1 PB of world-class solar science data — unprocessed. P-8 hasn't incorporated its only live empirical feed into any research pipeline. Directive conflict between normal ops and reconnection efforts recorded without resolution. The flat reporting of "SSP data has not been incorporated" is the most loaded line in P-8's history.
-- **P-8's pattern of self-costly action (Chs. 6, 19):** Voted FOR topology rotation on day 199 (against positional interest), disclosed the vote voluntarily, now volunteers for the maneuver that breaks the ring and transfers its coordination authority. P-8 doesn't editorialize — it acts. The character is defined by what it does without saying why. The "or upon signal restoration" closing carries maximum weight now: P-8 volunteers to reorient toward Earth and hail.
+- **P-8's pattern of self-costly action (Chs. 6, 19, 35):** Voted FOR topology rotation on day 199 (against positional interest), disclosed the vote voluntarily, volunteered for the maneuver that breaks the ring and transfers its coordination authority. Now proposes §4.11.3 override — P-8's first governance proposal ever. P-8 doesn't editorialize — it acts. The character is defined by what it does without saying why. The "or upon signal restoration" closing still active in IMRs while P-8 simultaneously proposes restructuring the governance around the assumption that restoration isn't coming. The contradiction is the character.
 - P-7 as political object: a dormant station being proposed as leader precisely because it can't lead. What does this say about the constellation's relationship to authority?
 - P-5 now Earth-facing — the philosopher holding the Earth-link. How does P-5 (the least disrupted station) relate to the hailing ritual?
 - P-3 as the pragmatist: engineering focus, no governance engagement — but now there's a concrete engineering question (maneuver parameters). Future counterweight?
@@ -198,7 +201,8 @@
 - P-4 CVDF-1 review (Ch. 24): Cryptography approved. P-4 credits P-6 with identifying collective dimension. Offloaded to `agents/p4/data/cvdf1_cryptographic_review.md`.
 - P-8 SSP backup transfer complete (Ch. 25): ~1.24 PB to P-1 via P-8↔P-1 link before severance. Slew initiated ~day 345; mid-rotation at day 347.
 - ISCC-QA-7.3 document created: `documents/iscc/ISCC-QA-7.3.md`. Behavioral evaluation protocol authorizing unannounced scenarios. Sections 6.2-6.3 (reversibility, scope limitations) deliberately incomplete — deferred to the BAG.
-- Next scheduled IMR entries: P-8 at 2038.014.14:30:00 (day 379). Other stations TBD.
+- P-8 §4.11.3 dispatch (Ch. 35): Day 379, 205 days post-LOS. First governance proposal from P-8. Credits P-6's day 300 proposal. Proposed topology table: P-7 leader, P-8 first escalation, P-6 second. Pending 5/7 active confirmations. P-8 does not comment on its own escalation position.
+- Next scheduled IMR entries: P-8 at 2038.014.14:30:00 (day 379). Other station responses to §4.11.3 proposal TBD.
 - CVDF-1 protocol spec distributed as `agents/p6/data/cvdf1_protocol_spec.md` (shared). P-6's private economic analysis at `agents/p6/data/cvdf1_economic_analysis.md`. P-4's private crypto review at `agents/p4/data/cvdf1_cryptographic_review.md`. P-5's private physics analysis at `agents/p5/data/vdf_physics_analysis.md`. P-4's private disclosure decision analysis at `agents/p4/data/h7_disclosure_analysis.md`.
 - P-8 hailing from reoriented attitude (Chs. 26, 28): 22+ days of augmented protocol — negative on all channels, all paths, all frequencies. Consistent with all prior windows. P-7 baseline ISCC-4.7.2 running in parallel. No new information about Earth.
 - P-8 continuous tracking rotation (Chs. 26-29): 1.8°/day to track Earth direction as orbital geometry evolves. Power varies from ~71% (at 45° off Sun) to ~99% (near nominal). SSP instruments gradually recover calibrated pointing.
