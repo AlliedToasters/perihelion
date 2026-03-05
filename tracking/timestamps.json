@@ -655,5 +655,23 @@
     "type": "scheduled",
     "precision": "full",
     "approximate": false
+  },
+  "p8_imr_ch30": {
+    "epoch": 2146746600,
+    "story_fmt": "2038.010.14:30:00",
+    "calendar_human": "Sunday 10 January 2038",
+    "event": "P-8 IMR entry, day 375 \u2014 CVDF-1 epistemic note, SSP recovery, hailing negative",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch30_next": {
+    "epoch": 2146833000,
+    "story_fmt": "2038.011.14:30:00",
+    "calendar_human": "Monday 11 January 2038",
+    "event": "P-8 next scheduled IMR entry (day 376)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
   }
 }

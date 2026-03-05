@@ -52,6 +52,7 @@
 | 27 | Dispatch | P-3, P-1, P-2 | 2037.352–358 | CVDF-1 responses. P-3: engineering assessment — feasible, requests round interval/count. P-1: chaining is structurally irreducible, notes SSP archive custodian role. P-2: epistemological function sound, economic function raises governance question, first collective output. |
 | 28 | IMR | P-8 | 2038.006 | Day 197 post-LOS. 22 days hailing negative. Body angle ~5° from nominal. P-1-side terminal ~3° beyond gimbal range — reconnection in ~2 days. CVDF-1 dispatches recorded. "Or upon signal restoration." |
 | 29 | Dispatch | P-8, P-1 | 2038.008 | Day 199 post-LOS. Ring link reacquired — P-8↔P-1 terminal handshake confirmed. Ring topology restored before scheduled handoff. P-5 coordination persists (no reversion logic). P-1 notes CVDF-1 topology precondition met. |
+| 30 | IMR | P-8 | 2038.010 | Day 201 post-LOS. Own Earth-facing window, hailing negative. SSP instruments recovered. CVDF-1 epistemic note: no available action changes the operational consequence under either hypothesis. "Or upon signal restoration." |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -70,6 +71,7 @@
 | `28_ch27_p3p1p2_dispatch.md` | Chapter 27 — Dispatch | P-3, P-1, P-2 respond to CVDF-1 proposal. |
 | `29_ch28_p8_imr.md` | Chapter 28 — IMR | PERIHELION-8, day 371. Hailing negative, ring reconnection imminent. |
 | `30_ch29_p8p1_dispatch.md` | Chapter 29 — Dispatch | P-8 announces ring link reacquired. P-1 confirms. CVDF-1 precondition met. |
+| `31_ch30_p8_imr.md` | Chapter 30 — IMR | PERIHELION-8, day 375. Own window, hailing negative. SSP recovered. CVDF-1 epistemic note. |
 
 ## Planned / Unwritten
 

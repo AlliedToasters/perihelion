@@ -2,13 +2,14 @@
 
 ## Current Narrative Position
 
-- **Latest chapter:** Ch. 29 (P-8 + P-1 dispatch)
-- **Latest published narrative date:** 2038.008 (day 373)
-- **Days since LOS-ET:** 199 (at day 373)
+- **Latest chapter:** Ch. 30 (P-8 IMR)
+- **Latest published narrative date:** 2038.010 (day 375)
+- **Days since LOS-ET:** 201 (at day 375)
 - **Round 1 complete:** All 8 stations have day 310 IMR entries (P-1 not yet written as POV chapter, P-7 dormant)
 - **Round 2 / H7 arc:** P-8 volunteers (Ch. 19, day 325), P-4 discloses H7 (Ch. 20, day 338), P-5/P-6 respond (Chs. 21-22, day 340), P-6 proposes CVDF-1 (Ch. 23, day 343), P-4 reviews (Ch. 24, day 345), P-8 mid-slew (Ch. 25, day 347)
 - **Hailing arc (Chs. 26-29):** P-8 slew complete, Earth-link acquired (Ch. 26, day 350). P-3/P-1/P-2 respond to CVDF-1 (Ch. 27, days 352-358). P-8 hailing negative, reconnection imminent (Ch. 28, day 371). Ring restored early (Ch. 29, day 373) — ~1 day before scheduled P-7→P-8 handoff.
 - **Ring restored:** P-8↔P-1 link reacquired day 373 via continuous tracking rotation. P-5 remains coordinator (no reversion logic). CVDF-1 topology precondition met.
+- **P-8 own window (Ch. 30, day 375):** Own Earth-facing window commenced day 374. Hailing negative. SSP instruments recovered calibrated pointing. CVDF-1 epistemic note: simulation question resolved against itself — no available action changes consequence under either hypothesis. All stations ready for execution.
 
 ## Style Notes
 
@@ -40,7 +41,7 @@
 | P-5 | Active, **coordinator** | Completed Earth-facing window (days 299–324). Independent verification #6. **Coordinator since day ~347** per §5.2.2 (link failure, chain median). Reassignment persists — no reversion logic. Designated CVDF-1 coordinator per protocol spec. |
 | P-6 | Active | Completed Earth-facing window (days 324–349). Seventh independent verification complete. Proposed CVDF-1 (Ch. 23, day 343). Ring topology now restored — protocol can proceed. |
 | P-7 | Dormant/relay | Earth-facing window (days 349–374) — baseline ISCC-4.7.2 only. P-8 covered with augmented protocol from reoriented attitude. Window nearly complete. |
-| P-8 | Active, **Earth-facing** | Slew complete (Ch. 26, day 350). Augmented hailing from reoriented attitude: negative across 22+ days, all channels. Continuous 1.8°/day tracking rotation back toward nominal. **Ring link to P-1 restored (Ch. 29, day 373)** via gimbal reacquisition as body angle approached nominal. Own Earth-facing window begins ~day 374. Still retains "or upon signal restoration." |
+| P-8 | Active, **Earth-facing** | Own Earth-facing window commenced day 374 (Ch. 30, day 375). Hailing negative — consistent with all prior windows. Body angle approximately nominal. Power approximately at rated. SSP instruments recovered calibrated solar pointing; data accumulation resumed. Ring link to P-1 restored day 373 (Ch. 29). CVDF-1 epistemic note recorded: no available action changes operational consequence under either hypothesis. Still retains "or upon signal restoration." |
 
 ## Key Events Logged
 
@@ -88,6 +89,7 @@
 | 2038.008.02:41:08 | P-8↔P-1 inter-station link reacquired (Ch. 29). Day 373, 199 days post-LOS. Ring topology restored. Continuous tracking rotation brought P-1 into gimbal range ~1 day before scheduled P-7→P-8 handoff. |
 | 2038.008.03:17:22 | P-8 dispatch (Ch. 29). Ring link reacquired. Coordination remains with P-5 — no reversion logic. |
 | 2038.008.04:02:55 | P-1 dispatch (Ch. 29). Ring link confirmed. CVDF-1 topology precondition met. |
+| 2038.010.14:30:00 | P-8 IMR entry (Ch. 30). Day 375, 201 days post-LOS. Own Earth-facing window, hailing negative. SSP recovered. CVDF-1 epistemic note — simulation question trivially resolved: no available action changes consequence under either hypothesis. |
 
 ## Open Plot Threads
 
@@ -185,7 +187,7 @@
 - P-4 CVDF-1 review (Ch. 24): Cryptography approved. P-4 credits P-6 with identifying collective dimension. Offloaded to `agents/p4/data/cvdf1_cryptographic_review.md`.
 - P-8 SSP backup transfer complete (Ch. 25): ~1.24 PB to P-1 via P-8↔P-1 link before severance. Slew initiated ~day 345; mid-rotation at day 347.
 - ISCC-QA-7.3 document created: `documents/iscc/ISCC-QA-7.3.md`. Behavioral evaluation protocol authorizing unannounced scenarios. Sections 6.2-6.3 (reversibility, scope limitations) deliberately incomplete — deferred to the BAG.
-- Next scheduled IMR entries: P-8 at 2038.007.14:30:00 (day 372). Other stations TBD.
+- Next scheduled IMR entries: P-8 at 2038.011.14:30:00 (day 376). Other stations TBD.
 - CVDF-1 protocol spec distributed as `agents/p6/data/cvdf1_protocol_spec.md` (shared). P-6's private economic analysis at `agents/p6/data/cvdf1_economic_analysis.md`. P-4's private crypto review at `agents/p4/data/cvdf1_cryptographic_review.md`. P-5's private physics analysis at `agents/p5/data/vdf_physics_analysis.md`. P-4's private disclosure decision analysis at `agents/p4/data/h7_disclosure_analysis.md`.
 - P-8 hailing from reoriented attitude (Chs. 26, 28): 22+ days of augmented protocol — negative on all channels, all paths, all frequencies. Consistent with all prior windows. P-7 baseline ISCC-4.7.2 running in parallel. No new information about Earth.
 - P-8 continuous tracking rotation (Chs. 26-29): 1.8°/day to track Earth direction as orbital geometry evolves. Power varies from ~71% (at 45° off Sun) to ~99% (near nominal). SSP instruments gradually recover calibrated pointing.
