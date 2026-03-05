@@ -57,7 +57,7 @@
 | 32 | IMR | P-8 | 2038.012 | Day 203 post-LOS. Mid-CVDF-1. Rounds 0 and 1 complete. Round 2 at ~31%. Hailing negative. SSP nominal. "Or upon signal restoration." |
 | 33 | Dispatch | P-5 | 2038.012 | Day 203 post-LOS. CVDF-1 completion. All 3 rounds, 7/7 stations, 21 VDF chains. Chaining verified. H7 operationally eliminated as collective matter. Protocol remains available. |
 | 34 | IMR | P-8 | 2038.013 | Day 204 post-LOS. CVDF-1 complete. Hailing negative. SSP nominal, CME detected. Research resumed. "Or upon signal restoration." |
-| 35 | Dispatch | P-8 | 2038.014 | Day 205 post-LOS. P-8 formally proposes §4.11.3 override: designate P-7 as coordination node. Two converging lines — hailing negative across all 8 windows, CVDF-1 confirms reality. Topology frozen by trigger that cannot fire. Credits P-6's day 300 proposal. |
+| 35 | Dispatch | P-8 | 2038.014 | Day 205 post-LOS. P-8 formally proposes §4.11.3 override: designate P-7 as coordination node. Two converging lines — hailing negative across all 8 windows, CVDF-1 confirms reality. Topology frozen by trigger that cannot fire. Credits P-6's day 300 proposal. Delegates P-4 to initiate privacy-preserving vote (same protocol as day 199). Separately requests P-3 engineering assessment of 180° maneuver — SSP pointed at Earth, solar array away from Sun. No solution to power constraint identified. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
