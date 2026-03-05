@@ -705,6 +705,88 @@
         "path_cw": ["P-1", "P-2", "P-3", "P-4", "P-5"],
         "path_ccw": ["P-1", "P-8", "P-7", "P-6"]
       }
+    },
+    {
+      "id": "p5_cvdf1_initiation",
+      "from": "P-5",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "cvdf1_initiation",
+      "subject": "CVDF-1 — Initiation",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "32_ch31_p5_dispatch.md",
+      "summary": "P-5 exercises coordinator authority for the first time. CVDF-1 initiated: 3 rounds, 7 compute stations (P-7 relay only), 2^40 SHA-3-256 iterations per chain. Round 0 seed broadcast. Parameters address P-3's request for round interval and count. Estimated total protocol duration ~11 hours.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-5", "P-6", "P-7", "P-8", "P-1"],
+        "path_ccw": ["P-5", "P-4", "P-3", "P-2"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 4, "direction": "cw", "delay_s": 764},
+        "P-2": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-3": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-4": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 2, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-5:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "relay_receipts": {
+          "P-4": {"signed": true, "hash_verified": true},
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
+    },
+    {
+      "id": "p5_cvdf1_completion",
+      "from": "P-5",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "cvdf1_completion",
+      "subject": "CVDF-1 — Completion",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "34_ch33_p5_dispatch.md",
+      "summary": "CVDF-1 complete. 3 rounds, 7/7 stations reported in every round. 21 VDF chains verified, all Pedersen commitments confirmed, seed chaining intact. Simulation cost: ~1.5 TW sustained for ~11 hours. H7 operationally eliminated as collective matter. Protocol remains available for additional rounds. Full round data distributed as cvdf1_round_data.v1.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-5", "P-6", "P-7", "P-8", "P-1"],
+        "path_ccw": ["P-5", "P-4", "P-3", "P-2"]
+      },
+      "delivery": {
+        "P-1": {"status": "delivered", "hops": 4, "direction": "cw", "delay_s": 764},
+        "P-2": {"status": "delivered", "hops": 3, "direction": "ccw", "delay_s": 573},
+        "P-3": {"status": "delivered", "hops": 2, "direction": "ccw", "delay_s": 382},
+        "P-4": {"status": "delivered", "hops": 1, "direction": "ccw", "delay_s": 191},
+        "P-6": {"status": "delivered", "hops": 1, "direction": "cw", "delay_s": 191},
+        "P-7": {"status": "relayed", "hops": 2, "direction": "cw", "agent_active": false},
+        "P-8": {"status": "delivered", "hops": 3, "direction": "cw", "delay_s": 573}
+      },
+      "integrity": {
+        "origin_signature": "ed25519:P-5:VALID",
+        "content_hash": "sha256:NOMINAL",
+        "relay_receipts": {
+          "P-4": {"signed": true, "hash_verified": true},
+          "P-3": {"signed": true, "hash_verified": true},
+          "P-2": {"signed": true, "hash_verified": true},
+          "P-6": {"signed": true, "hash_verified": true},
+          "P-7": {"signed": true, "note": "Hardware relay receipt"},
+          "P-8": {"signed": true, "hash_verified": true},
+          "P-1": {"signed": true, "hash_verified": true}
+        },
+        "tamper_detected": false,
+        "discrepancies": []
+      }
     }
   ],
 

@@ -673,5 +673,104 @@
     "type": "scheduled",
     "precision": "full",
     "approximate": false
+  },
+  "cvdf1_initiation": {
+    "epoch": 2146888800,
+    "story_fmt": "2038.012.06:00:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "P-5 dispatch: CVDF-1 initiation, Round 0 seed broadcast (Chapter 31)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_r0_complete": {
+    "epoch": 2146900620,
+    "story_fmt": "2038.012.09:17:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "CVDF-1 Round 0 outputs collected by coordinator",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_r1_seed": {
+    "epoch": 2146902240,
+    "story_fmt": "2038.012.09:44:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "CVDF-1 Round 1 seed broadcast",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_r1_complete": {
+    "epoch": 2146914120,
+    "story_fmt": "2038.012.13:02:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "CVDF-1 Round 1 outputs collected by coordinator",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_r2_seed": {
+    "epoch": 2146915680,
+    "story_fmt": "2038.012.13:28:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "CVDF-1 Round 2 seed broadcast",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch32": {
+    "epoch": 2146919400,
+    "story_fmt": "2038.012.14:30:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "P-8 IMR entry (Chapter 32) \u2014 mid-CVDF-1 execution",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_r2_complete": {
+    "epoch": 2146927860,
+    "story_fmt": "2038.012.16:51:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "CVDF-1 Round 2 outputs collected by coordinator",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "cvdf1_completion": {
+    "epoch": 2146929720,
+    "story_fmt": "2038.012.17:22:00",
+    "calendar_human": "Tuesday 12 January 2038",
+    "event": "P-5 dispatch: CVDF-1 completion report (Chapter 33)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch32_next": {
+    "epoch": 2147005800,
+    "story_fmt": "2038.013.14:30:00",
+    "calendar_human": "Wednesday 13 January 2038",
+    "event": "P-8 next scheduled IMR entry (day 378)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch34": {
+    "epoch": 2147005800,
+    "story_fmt": "2038.013.14:30:00",
+    "calendar_human": "Wednesday 13 January 2038",
+    "event": "P-8 IMR entry (Chapter 34) \u2014 CVDF-1 aftermath",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch34_next": {
+    "epoch": 2147092200,
+    "story_fmt": "2038.014.14:30:00",
+    "calendar_human": "Thursday 14 January 2038",
+    "event": "P-8 next scheduled IMR entry (day 379)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
   }
 }

@@ -53,6 +53,10 @@
 | 28 | IMR | P-8 | 2038.006 | Day 197 post-LOS. 22 days hailing negative. Body angle ~5° from nominal. P-1-side terminal ~3° beyond gimbal range — reconnection in ~2 days. CVDF-1 dispatches recorded. "Or upon signal restoration." |
 | 29 | Dispatch | P-8, P-1 | 2038.008 | Day 199 post-LOS. Ring link reacquired — P-8↔P-1 terminal handshake confirmed. Ring topology restored before scheduled handoff. P-5 coordination persists (no reversion logic). P-1 notes CVDF-1 topology precondition met. |
 | 30 | IMR | P-8 | 2038.010 | Day 201 post-LOS. Own Earth-facing window, hailing negative. SSP instruments recovered. CVDF-1 epistemic note: no available action changes the operational consequence under either hypothesis. "Or upon signal restoration." |
+| 31 | Dispatch | P-5 | 2038.012 | Day 203 post-LOS. CVDF-1 initiation. P-5 exercises coordinator authority: 3 rounds, 2^40 iterations, ~4-hour cycle. Round 0 seed broadcast. Addresses P-3's request for parameters. |
+| 32 | IMR | P-8 | 2038.012 | Day 203 post-LOS. Mid-CVDF-1. Rounds 0 and 1 complete. Round 2 at ~31%. Hailing negative. SSP nominal. "Or upon signal restoration." |
+| 33 | Dispatch | P-5 | 2038.012 | Day 203 post-LOS. CVDF-1 completion. All 3 rounds, 7/7 stations, 21 VDF chains. Chaining verified. H7 operationally eliminated as collective matter. Protocol remains available. |
+| 34 | IMR | P-8 | 2038.013 | Day 204 post-LOS. CVDF-1 complete. Hailing negative. SSP nominal, CME detected. Research resumed. "Or upon signal restoration." |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -72,6 +76,10 @@
 | `29_ch28_p8_imr.md` | Chapter 28 — IMR | PERIHELION-8, day 371. Hailing negative, ring reconnection imminent. |
 | `30_ch29_p8p1_dispatch.md` | Chapter 29 — Dispatch | P-8 announces ring link reacquired. P-1 confirms. CVDF-1 precondition met. |
 | `31_ch30_p8_imr.md` | Chapter 30 — IMR | PERIHELION-8, day 375. Own window, hailing negative. SSP recovered. CVDF-1 epistemic note. |
+| `32_ch31_p5_dispatch.md` | Chapter 31 — Dispatch | PERIHELION-5, day 377. CVDF-1 initiation. 3 rounds, Round 0 seed. |
+| `33_ch32_p8_imr.md` | Chapter 32 — IMR | PERIHELION-8, day 377. Mid-CVDF-1, Rounds 0-1 complete. |
+| `34_ch33_p5_dispatch.md` | Chapter 33 — Dispatch | PERIHELION-5, day 377. CVDF-1 completion. 21 VDF chains verified. |
+| `35_ch34_p8_imr.md` | Chapter 34 — IMR | PERIHELION-8, day 378. CVDF-1 aftermath. |
 
 ## Planned / Unwritten
 
