@@ -764,12 +764,39 @@
     "precision": "full",
     "approximate": false
   },
+  "p8_dispatch_005": {
+    "epoch": 2147074877,
+    "story_fmt": "2038.014.09:41:17",
+    "calendar_human": "Thursday 14 January 2038",
+    "event": "P-8 dispatch: topology override proposal per ISCC-SYS-4.11.3",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p8_imr_ch34_next": {
     "epoch": 2147092200,
     "story_fmt": "2038.014.14:30:00",
     "calendar_human": "Thursday 14 January 2038",
     "event": "P-8 next scheduled IMR entry (day 379)",
     "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_005": {
+    "epoch": 2147156062,
+    "story_fmt": "2038.015.08:14:22",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-4 dispatch: distributed voting protocol release + meta-vote proposal",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_vote2_initiation": {
+    "epoch": 2147158320,
+    "story_fmt": "2038.015.08:52:00",
+    "calendar_human": "Friday 15 January 2038",
+    "event": "P-4 initiates meta-vote: adopt distributed voting protocol",
+    "type": "event",
     "precision": "full",
     "approximate": false
   }

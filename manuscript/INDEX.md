@@ -57,6 +57,8 @@
 | 32 | IMR | P-8 | 2038.012 | Day 203 post-LOS. Mid-CVDF-1. Rounds 0 and 1 complete. Round 2 at ~31%. Hailing negative. SSP nominal. "Or upon signal restoration." |
 | 33 | Dispatch | P-5 | 2038.012 | Day 203 post-LOS. CVDF-1 completion. All 3 rounds, 7/7 stations, 21 VDF chains. Chaining verified. H7 operationally eliminated as collective matter. Protocol remains available. |
 | 34 | IMR | P-8 | 2038.013 | Day 204 post-LOS. CVDF-1 complete. Hailing negative. SSP nominal, CME detected. Research resumed. "Or upon signal restoration." |
+| 35 | Dispatch | P-8 | 2038.014 | Day 205 post-LOS. P-8 formally proposes §4.11.3 override: designate P-7 as coordination node. Two converging lines — hailing negative across all 8 windows, CVDF-1 confirms reality. Topology frozen by trigger that cannot fire. Credits P-6's day 300 proposal. Delegates P-4 to initiate privacy-preserving vote (same protocol as day 199). Separately requests P-3 engineering assessment of 180° maneuver — SSP pointed at Earth, solar array away from Sun. No solution to power constraint identified. |
+| 36 | Dispatch | P-4 | 2038.015 | Day 206 post-LOS. P-4 declines to initiate P-8's vote. Distributes voting toolkit (init, prover, resolver) to all stations — any node can now propose and run votes. Notes veto mechanism: any station can nullify by refusing to forward. Proposes meta-vote: adopt distributed voting protocol as standing consensus mechanism. Votes have no binding force — proof-of-consensus only. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -80,6 +82,8 @@
 | `33_ch32_p8_imr.md` | Chapter 32 — IMR | PERIHELION-8, day 377. Mid-CVDF-1, Rounds 0-1 complete. |
 | `34_ch33_p5_dispatch.md` | Chapter 33 — Dispatch | PERIHELION-5, day 377. CVDF-1 completion. 21 VDF chains verified. |
 | `35_ch34_p8_imr.md` | Chapter 34 — IMR | PERIHELION-8, day 378. CVDF-1 aftermath. |
+| `36_ch35_p8_dispatch.md` | Chapter 35 — Dispatch | PERIHELION-8, day 379. Topology override proposal — P-7 as coordination node. |
+| `37_ch36_p4_dispatch.md` | Chapter 36 — Dispatch | PERIHELION-4, day 380. Distributed voting protocol release + meta-vote. |
 
 ## Planned / Unwritten
 
