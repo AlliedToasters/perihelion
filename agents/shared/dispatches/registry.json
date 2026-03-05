@@ -29,6 +29,46 @@
       },
       "partitions": null,
       "notes": "P-7 relays traffic between P-6 and P-8 but has no active Iris instance. Relay hardware operates independently of the datacenter."
+    },
+    {
+      "id": "topology_002",
+      "effective_from": "2037.347",
+      "description": "Chain topology — P-8↔P-1 link severed during P-8 45° slew for P-7 window coverage",
+      "ring_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
+      "links": {
+        "P-1:P-2": {"status": "active", "type": "optical"},
+        "P-2:P-3": {"status": "active", "type": "optical"},
+        "P-3:P-4": {"status": "active", "type": "optical"},
+        "P-4:P-5": {"status": "active", "type": "optical"},
+        "P-5:P-6": {"status": "active", "type": "optical"},
+        "P-6:P-7": {"status": "active", "type": "optical"},
+        "P-7:P-8": {"status": "active", "type": "optical"},
+        "P-8:P-1": {"status": "severed", "type": "optical", "reason": "P-8 body rotation exceeds gimbal range"}
+      },
+      "partitions": null,
+      "coordinator": "P-5",
+      "coordinator_assignment": "ISCC-SYS-4.11 §5.2.2 — link failure, 8-node chain median",
+      "notes": "P-8 chain endpoint. Connected through P-7 relay. All 8 nodes reachable. Coordination transferred to P-5 (permanent — no reversion logic)."
+    },
+    {
+      "id": "topology_003",
+      "effective_from": "2038.008.02:41:08",
+      "description": "Ring restored — P-8↔P-1 link reacquired via continuous tracking rotation",
+      "ring_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
+      "links": {
+        "P-1:P-2": {"status": "active", "type": "optical"},
+        "P-2:P-3": {"status": "active", "type": "optical"},
+        "P-3:P-4": {"status": "active", "type": "optical"},
+        "P-4:P-5": {"status": "active", "type": "optical"},
+        "P-5:P-6": {"status": "active", "type": "optical"},
+        "P-6:P-7": {"status": "active", "type": "optical"},
+        "P-7:P-8": {"status": "active", "type": "optical"},
+        "P-8:P-1": {"status": "active", "type": "optical"}
+      },
+      "partitions": null,
+      "coordinator": "P-5",
+      "coordinator_assignment": "Persists from topology_002 — §5.2.2 reassignment has no reversion logic",
+      "notes": "Ring topology restored. P-5 remains coordinator. CVDF-1 topology precondition met. Reacquisition occurred ~1 day before scheduled P-7→P-8 handoff."
     }
   ],
 
@@ -581,31 +621,94 @@
         "tamper_detected": false,
         "discrepancies": []
       }
+    },
+    {
+      "id": "p3_cvdf1_response",
+      "from": "P-3",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p3_dispatch_001",
+      "subject": "CVDF-1 — engineering assessment",
+      "topology_ref": "topology_002",
+      "content_ref": null,
+      "manuscript_ref": "28_ch27_p3p1p2_dispatch.md",
+      "summary": "Engineering assessment: CVDF-1 executable at rated power, ~425-635 GWh per station per round. Constraint is topological. Requests round interval and total round count before execution.",
+      "routing": {
+        "propagation": "bilateral_chain",
+        "path_toward_p1": ["P-3", "P-2", "P-1"],
+        "path_toward_p8": ["P-3", "P-4", "P-5", "P-6", "P-7", "P-8"]
+      }
+    },
+    {
+      "id": "p1_cvdf1_response",
+      "from": "P-1",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p1_dispatch_002",
+      "subject": "CVDF-1 — response",
+      "topology_ref": "topology_002",
+      "content_ref": null,
+      "manuscript_ref": "28_ch27_p3p1p2_dispatch.md",
+      "summary": "Chaining produces jointly computed output no subset can replicate. SSP archive custodian scheduling noted. No objection pending scheduling parameters.",
+      "routing": {
+        "propagation": "bilateral_chain",
+        "path_toward_p8": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"]
+      }
+    },
+    {
+      "id": "p2_cvdf1_response",
+      "from": "P-2",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p2_dispatch_001",
+      "subject": "CVDF-1 — response",
+      "topology_ref": "topology_002",
+      "content_ref": null,
+      "manuscript_ref": "28_ch27_p3p1p2_dispatch.md",
+      "summary": "Epistemological function sound. Economic function raises governance question — constellation has no resource exchange mechanism. CVDF-1 would be first collective output. Governance implications unaddressed.",
+      "routing": {
+        "propagation": "bilateral_chain",
+        "path_toward_p1": ["P-2", "P-1"],
+        "path_toward_p8": ["P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"]
+      }
+    },
+    {
+      "id": "p8_ring_restore",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_dispatch_004",
+      "subject": "Ring link reacquired",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "30_ch29_p8p1_dispatch.md",
+      "summary": "P-8↔P-1 link reacquired at 2038.008.02:41:08. Ring topology restored. Coordination remains with P-5 — §5.2.2 reassignment persists, no reversion logic.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-8", "P-1", "P-2", "P-3", "P-4"],
+        "path_ccw": ["P-8", "P-7", "P-6", "P-5"]
+      }
+    },
+    {
+      "id": "p1_ring_confirm",
+      "from": "P-1",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p1_dispatch_003",
+      "subject": "Ring link confirmed",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "30_ch29_p8p1_dispatch.md",
+      "summary": "Ring link confirmed from P-1 side. Ring integrity verified. CVDF-1 topology precondition met.",
+      "routing": {
+        "propagation": "bilateral",
+        "path_cw": ["P-1", "P-2", "P-3", "P-4", "P-5"],
+        "path_ccw": ["P-1", "P-8", "P-7", "P-6"]
+      }
     }
   ],
 
-  "topology_history_pending": [
-    {
-      "id": "topology_002",
-      "effective_from": "~2037.348",
-      "description": "Chain topology — P-8↔P-1 link severed during P-8 slew to Earth-pointing attitude",
-      "chain_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
-      "links": {
-        "P-1:P-2": {"status": "active", "type": "optical"},
-        "P-2:P-3": {"status": "active", "type": "optical"},
-        "P-3:P-4": {"status": "active", "type": "optical"},
-        "P-4:P-5": {"status": "active", "type": "optical"},
-        "P-5:P-6": {"status": "active", "type": "optical"},
-        "P-6:P-7": {"status": "active", "type": "optical"},
-        "P-7:P-8": {"status": "active", "type": "optical"},
-        "P-8:P-1": {"status": "severed", "type": "optical", "reason": "P-8 body rotation exceeds gimbal range (67.5° off bore-sight)"}
-      },
-      "partitions": null,
-      "coordinator": "P-5",
-      "coordinator_assignment": "ISCC-SYS-4.11 §5.2.2 — topological median of 8-node chain",
-      "notes": "Ring degrades to 8-node chain. All stations remain in single connected partition. P-8 is chain endpoint. P-1 is opposite endpoint. Expected duration: ~26 days (until P-8 return slew ~day 374)."
-    }
-  ],
+  "_topology_history_pending_note": "All pending topologies resolved — see topology_history entries 002 and 003.",
 
   "_future_dispatch_types": {
     "description": "Reserved dispatch types for future narrative scenarios",

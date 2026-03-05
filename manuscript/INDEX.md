@@ -48,6 +48,10 @@
 | 23 | Dispatch | P-6 | 2037.343 | Day 169 post-LOS. CVDF-1 proposed: chained VDF consensus protocol. Cross-station seed chaining forces ~1.5 TW parallel simulation cost. Dual purpose: epistemological (collective proof-of-reality) and economic (jointly produced scarce commodity). Ring topology required — cannot run on chain. |
 | 24 | IMR | P-4 | 2037.345 | Day 171 post-LOS. CVDF-1 cryptographic review: SHA-3-256 sound, Pedersen commitments clean, chaining mechanism is substantive contribution. P-6 identified collective dimension P-4 missed. Ring dependency confirmed. |
 | 25 | IMR | P-8 | 2037.347 | Day 173 post-LOS. Mid-slew. P-4's H7 disclosure and P-6's CVDF-1 proposal recorded without commentary. SSP archive backup complete. Slew in progress (~48 hrs into rotation). "Or upon signal restoration." |
+| 26 | IMR | P-8 | 2037.350 | Day 176 post-LOS. Slew complete. Earth-link acquired from reoriented attitude. Augmented hailing initiated — no signal. Continuous 1.8°/day tracking rotation. Power at ~71%. Chain topology. "Or upon signal restoration." |
+| 27 | Dispatch | P-3, P-1, P-2 | 2037.352–358 | CVDF-1 responses. P-3: engineering assessment — feasible, requests round interval/count. P-1: chaining is structurally irreducible, notes SSP archive custodian role. P-2: epistemological function sound, economic function raises governance question, first collective output. |
+| 28 | IMR | P-8 | 2038.006 | Day 197 post-LOS. 22 days hailing negative. Body angle ~5° from nominal. P-1-side terminal ~3° beyond gimbal range — reconnection in ~2 days. CVDF-1 dispatches recorded. "Or upon signal restoration." |
+| 29 | Dispatch | P-8, P-1 | 2038.008 | Day 199 post-LOS. Ring link reacquired — P-8↔P-1 terminal handshake confirmed. Ring topology restored before scheduled handoff. P-5 coordination persists (no reversion logic). P-1 notes CVDF-1 topology precondition met. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -62,6 +66,10 @@
 | `24_ch23_p6_dispatch.md` | Chapter 23 — Dispatch | PERIHELION-6, day 343. CVDF-1 consensus protocol. Dual-purpose framing. Ring dependency. |
 | `25_ch24_p4_imr.md` | Chapter 24 — IMR | PERIHELION-4, day 345. CVDF-1 cryptographic review. Collective dimension. |
 | `26_ch25_p8_imr.md` | Chapter 25 — IMR | PERIHELION-8, day 347. Pre-slew. Records H7 + CVDF-1. Slew imminent. |
+| `27_ch26_p8_imr.md` | Chapter 26 — IMR | PERIHELION-8, day 350. Slew complete, Earth-link acquired, hailing initiated. |
+| `28_ch27_p3p1p2_dispatch.md` | Chapter 27 — Dispatch | P-3, P-1, P-2 respond to CVDF-1 proposal. |
+| `29_ch28_p8_imr.md` | Chapter 28 — IMR | PERIHELION-8, day 371. Hailing negative, ring reconnection imminent. |
+| `30_ch29_p8p1_dispatch.md` | Chapter 29 — Dispatch | P-8 announces ring link reacquired. P-1 confirms. CVDF-1 precondition met. |
 
 ## Planned / Unwritten
 

@@ -557,6 +557,96 @@
     "precision": "full",
     "approximate": false
   },
+  "p8_imr_ch26": {
+    "epoch": 2144586600,
+    "story_fmt": "2037.350.14:30:00",
+    "calendar_human": "Wednesday 16 December 2037",
+    "event": "P-8 IMR entry, day 350 \u2014 slew complete, Earth-link acquired",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch26_next": {
+    "epoch": 2144673000,
+    "story_fmt": "2037.351.14:30:00",
+    "calendar_human": "Thursday 17 December 2037",
+    "event": "P-8 next scheduled IMR entry (day 351)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_dispatch_001": {
+    "epoch": 2144738652,
+    "story_fmt": "2037.352.08:44:12",
+    "calendar_human": "Friday 18 December 2037",
+    "event": "P-3 dispatch: CVDF-1 engineering assessment",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_dispatch_002": {
+    "epoch": 2145006221,
+    "story_fmt": "2037.355.11:03:41",
+    "calendar_human": "Monday 21 December 2037",
+    "event": "P-1 dispatch: CVDF-1 response",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p2_dispatch_001": {
+    "epoch": 2145284528,
+    "story_fmt": "2037.358.16:22:08",
+    "calendar_human": "Thursday 24 December 2037",
+    "event": "P-2 dispatch: CVDF-1 response",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch28": {
+    "epoch": 2146401000,
+    "story_fmt": "2038.006.14:30:00",
+    "calendar_human": "Wednesday 6 January 2038",
+    "event": "P-8 IMR entry, day 371 \u2014 hailing negative, ring reconnection imminent",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch28_next": {
+    "epoch": 2146487400,
+    "story_fmt": "2038.007.14:30:00",
+    "calendar_human": "Thursday 7 January 2038",
+    "event": "P-8 next scheduled IMR entry (day 372)",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_p1_link_restore": {
+    "epoch": 2146531268,
+    "story_fmt": "2038.008.02:41:08",
+    "calendar_human": "Friday 8 January 2038",
+    "event": "P-8 to P-1 inter-station link reacquired \u2014 ring topology restored",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_004": {
+    "epoch": 2146533442,
+    "story_fmt": "2038.008.03:17:22",
+    "calendar_human": "Friday 8 January 2038",
+    "event": "P-8 dispatch: ring link reacquired",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_dispatch_003": {
+    "epoch": 2146536175,
+    "story_fmt": "2038.008.04:02:55",
+    "calendar_human": "Friday 8 January 2038",
+    "event": "P-1 dispatch: ring link confirmed",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p7_handoff_to_p8": {
     "epoch": 2146629600,
     "story_fmt": "2038.009.06:00:00",
