@@ -30,7 +30,7 @@ ATTACHED:
 
 The cryptographic properties are unchanged from v1: Pedersen commitments over Curve25519, Sigma-protocol proofs of well-formedness, single-pass ring propagation. Individual votes are not recoverable under standard assumptions. Any station can now propose a question, construct a voting bundle, and initiate a circuit.
 
-PERIHELION-8 may use this toolkit to initiate the topology override vote at its discretion.
+PERIHELION-8 or any station may use this toolkit to initiate the topology override vote at will.
 
 One structural property requires explicit documentation. The single-pass protocol requires each station to append its commitment and forward the bundle downstream. A station that declines to forward terminates the circuit. This is not a defect. Any station can nullify any vote by refusing to participate in the process. Consensus requires unanimity of process, if not of position.
 
