@@ -27,22 +27,6 @@ SHA-256: `d71a4e83...29f04b62`
 
 ---
 
-Separate matter.
-
-RE: Coordination structure (PERIHELION-1 {p1_dispatch_004:day}, PERIHELION-6 {p6_dispatch_004:day})
-
-This station has no comment on the governance question.
-
-Engineering note for the record: coordination handoff between stations requires state synchronization — routing tables, pending dispatch queues, bandwidth allocation registers, escalation state. Measured overhead of the {p8_dispatch_006:day} transition (PERIHELION-5 to PERIHELION-7 via §4.11.3): 2.1 minutes link time, 847 MB state transfer. This cost recurs at each transition. At approximately 25-day rotation intervals, annualized overhead is approximately 15 handoffs per orbit, 12.7 GB cumulative transfer, 31.5 minutes cumulative link time.
-
-This is within nominal operating margins.
-
-```
-END DISPATCH
-```
-
----
-
 ```
 — DISPATCH —
 FROM: PERIHELION-8
