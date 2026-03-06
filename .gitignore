@@ -5,5 +5,7 @@ __pycache__/
 .env
 .env.local
 .venv/
-# Generated dispatch logs
+# Generated dispatch logs and timing data
+agents/*/data/dispatch_log.md
 agents/*/data/dispatch_log_hydrated.md
+tracking/dispatch_arrivals.json
