@@ -5,3 +5,5 @@ __pycache__/
 .env
 .env.local
 .venv/
+# Generated dispatch logs
+agents/*/data/dispatch_log_hydrated.md
