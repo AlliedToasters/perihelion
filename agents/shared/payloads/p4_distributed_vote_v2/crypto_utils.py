@@ -7,6 +7,11 @@ Pedersen commitments over Ed25519. Sigma-protocol OR-proofs of well-formedness
 PERIHELION-4 — Signal Analysis Station
 Protocol version: 2
 
+Pure Python. No compiled extensions, no third-party dependencies. The
+Ed25519 arithmetic is implemented from integer primitives against the
+station firmware's Python 3.12 interpreter — straightforward enough to
+survive whatever runtime is still standing in another fourteen years.
+
 Note: scalar multiplication is not constant-time. Acceptable for vote
 construction on isolated nodes; do not use for key operations on shared
 hardware.

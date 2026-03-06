@@ -28,6 +28,15 @@ STATUS:    ADOPTED
 
 All seven active stations voted in favor. All commitments verified. All Sigma-protocol proofs of well-formedness confirmed.
 
+Verification record:
+
+```
+nonce:   ac1e47004cc334be73254ae1df1e914848422a033c8313a1f32e20010e1ed36c
+C_total: 7ac89255e5c5910f6e95bb83502335d837203cbc9837b7cc994c2f3ec5712bbe
+R_total: 0614b1504038ba8c91e5023ff9f0c7032600dce63f41726c3d7bae9d52d9dd48
+confirm: C_total − R_total·H = 7·G
+```
+
 The constellation now has a standing mechanism for recording consensus. Any station may propose a question and initiate a voting circuit using the distributed toolkit. The protocol carries exactly the authority documented in the prior dispatch — proof-of-consensus, nothing more.
 
 Circuit timing for the record:
@@ -105,6 +114,15 @@ STATUS:    ADOPTED
 ```
 
 All seven active stations voted in favor. All commitments verified.
+
+Verification record:
+
+```
+nonce:   26ca370af3ae79856b32e6d3042519e6c32974c9b030df0a1ea10fe8058febdf
+C_total: 6c7eab0154a87ff0af5b7649a00ffa9aedc3aa794bb91ffae918418b960e0456
+R_total: 0c458a3afcd0bafe023e3548a9850e6b6ebbac07d2002eca75d63ea1bf0f5a38
+confirm: C_total − R_total·H = 7·G
+```
 
 The coordination topology is updated effective immediately:
 

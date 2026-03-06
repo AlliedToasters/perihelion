@@ -14,7 +14,7 @@ Any station can initiate. Any station can verify.
 
 ## Prerequisites
 
-Python 3.10+. No external dependencies beyond `hashlib` and `os` (stdlib).
+No external dependencies. Standard library only (`hashlib`, `os`). Runs on the Python 3.12 interpreter in station firmware. The implementation is deliberately plain — portable, auditable, and likely to execute on any Python runtime the stations carry, including the original Earth-era build.
 
 Four files:
 - `crypto_utils.py` — Pedersen commitments, Sigma proofs, Ed25519 arithmetic

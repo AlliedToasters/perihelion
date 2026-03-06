@@ -390,8 +390,8 @@
         "P-3": {"seconds": 39, "commitment_appended": true}
       },
       "result": {
-        "FOR": 3,
-        "AGAINST": 4,
+        "FOR": 2,
+        "AGAINST": 5,
         "ABSTAIN": 1,
         "threshold": "5 of 7 active",
         "threshold_met": false,
@@ -416,7 +416,7 @@
       "topology_ref": "topology_001",
       "content_ref": "manuscript/06_ch06_p6p4p8_dispatch.md",
       "manuscript_ref": "06_ch06_p6p4p8_dispatch.md (third dispatch)",
-      "summary": "P-4 announces vote result: 3 FOR, 4 AGAINST, 1 ABSTAIN. Threshold not met. Override not applied. Topology unchanged. P-8 remains coordination node.",
+      "summary": "P-4 announces vote result: 2 FOR, 5 AGAINST, 1 ABSTAIN. Threshold not met. Override not applied. Topology unchanged. P-8 remains coordination node.",
       "routing": {
         "propagation": "bilateral",
         "path_cw": ["P-4", "P-5", "P-6", "P-7", "P-8", "P-1"],
