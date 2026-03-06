@@ -4,8 +4,7 @@
 
 | File | Section | Description |
 |---|---|---|
-| `00_epigraph.md` | Epigraph | Pre-prologue quote |
-| `01_prologue.md` | Prologue | Omniscient overview of the PERIHELION program and LOS-ET |
+| `00_epigraph.md` | Epigraph | Opening quote |
 | `02_ch01_p8_imr.md` | Chapter 1 — IMR | PERIHELION-8, Day of LOS-ET |
 | `03_ch02_p8_dispatch.md` | Chapter 2 — Dispatch | PERIHELION-8, interrupted transfer manifest |
 | `04_ch03_p4_imr.md` | Chapter 3 — IMR | PERIHELION-4, telemetry analysis of final Earth signal |
