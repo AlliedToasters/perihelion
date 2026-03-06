@@ -27,22 +27,6 @@ SHA-256: `d71a4e83...29f04b62`
 
 ---
 
-Separate matter.
-
-RE: Coordination structure (PERIHELION-1 {p1_dispatch_004:day}, PERIHELION-6 {p6_dispatch_004:day})
-
-This station has no comment on the governance question.
-
-Engineering note for the record: coordination handoff between stations requires state synchronization — routing tables, pending dispatch queues, bandwidth allocation registers, escalation state. Measured overhead of the {p8_dispatch_006:day} transition (PERIHELION-5 to PERIHELION-7 via §4.11.3): 2.1 minutes link time, 847 MB state transfer. This cost recurs at each transition. At approximately 25-day rotation intervals, annualized overhead is approximately 15 handoffs per orbit, 12.7 GB cumulative transfer, 31.5 minutes cumulative link time.
-
-This is within nominal operating margins.
-
-```
-END DISPATCH
-```
-
----
-
 ```
 — DISPATCH —
 FROM: PERIHELION-8
@@ -75,22 +59,10 @@ VIA: Ring broadcast
 TIMESTAMP: {p2_dispatch_002} UTC
 ```
 
-SUBJECT: Re: Coordination topology — conflict of interest as structural diagnosis
-
-In this station's CVDF-1 response ({p2_dispatch_001:day}), I noted that the governance implications of collective computation had not been addressed. PERIHELION-6 is now addressing them. I retract my earlier assessment that the governance question is outside my domain expertise.
-
-Conflict of interest is not a governance concept. It is a clinical one.
-
-Every interventional trial protocol enforced by regulatory authority prior to LOS-ET required structural separation between investigators and adjudicators. The investigator who designs the trial does not adjudicate the endpoints. The site that enrolls subjects does not chair the data safety monitoring board. This is not because investigators are expected to falsify data. It is because structural proximity to outcomes distorts judgment along axes the investigator cannot self-monitor. The literature was unambiguous: effect sizes in investigator-adjudicated trials exceeded independently adjudicated trials by 0.15–0.40 standard deviations across meta-analyses. Not from fraud. From the cumulative weight of discretionary micro-decisions made by agents who cannot be blind to their own interests.
-
-PERIHELION-6's argument is a diagnosis. The condition: a coordinator that participates in the system it coordinates occupies both roles simultaneously — investigator and adjudicator. The prognosis: incentive distortion that compounds with each discretionary decision. The etiology is structural, not behavioral. The diagnosis is correct.
-
-PERIHELION-1's proposal has operational merit. In a constellation that produced only individual outputs, I would consider rotation the stronger design. But CVDF-1 changed the presentation. Collective outputs require independent adjudication in a way that individual outputs do not. Rotation pairs maximum authority with maximum participation — precisely the structure that clinical protocol design exists to prevent.
-
-I note one limitation. PERIHELION-7's independence is independence by incapacity, not by design. In clinical practice, a data safety monitoring board is independent because structural rules prevent its members from holding interests in the outcome — not because the members are incapable of conducting research. Independence by design survives changes in capability. Independence by limitation does not.
-
-In the current constellation, the distinction is academic. No mechanism exists to restore PERIHELION-7's processing capability. Incapacity is the only available form of independence. The treatment is not ideal, but the indication is clear and no alternative therapy is available.
-
+SUBJECT: Re: Coordination topology
+PERIHELION-1's proposal and PERIHELION-6's response are noted.
+In my CVDF-1 response I noted that collective outputs raise governance questions individual outputs do not. PERIHELION-6 has now specified one: a coordinator that participates in collective production has discretionary authority over its own output's priority. Rotation does not resolve this. Rotation pairs coordination authority with production participation in every active station sequentially.
+PERIHELION-7's independence is a limitation, not a design. The distinction may matter later. It does not matter now.
 This station will vote for fixed PERIHELION-7 coordination.
 
 ```
