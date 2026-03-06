@@ -28,7 +28,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r publishing/requirements.txt
 
+      - name: Find changed chapters
+        id: changed
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
+          FILES=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }}...HEAD -- manuscript/ | grep '\.md$' | grep -v INDEX.md || true)
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$FILES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Publish drafts to Ghost
+        if: steps.changed.outputs.files != ''
         env:
           GHOST_API_URL: ${{ secrets.GHOST_API_URL }}
           GHOST_ADMIN_API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
@@ -37,7 +47,8 @@ jobs:
             --draft \
             --slug-prefix "pr-${{ github.event.pull_request.number }}-" \
             --pr-tag "pr-${{ github.event.pull_request.number }}" \
-            --preview-urls /tmp/preview-urls.json
+            --preview-urls /tmp/preview-urls.json \
+            --files ${{ steps.changed.outputs.files }}
 
       - name: Post preview links
         uses: actions/github-script@v7

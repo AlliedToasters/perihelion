@@ -298,6 +298,8 @@ def parse_args(argv=None):
                         help="Delete all posts with this tag, then exit")
     parser.add_argument("--preview-urls", default="",
                         help="Write JSON manifest of preview URLs to this path")
+    parser.add_argument("--files", nargs="*", default=None,
+                        help="Only process these manuscript files (paths relative to repo root)")
     return parser.parse_args(argv)
 
 
@@ -313,8 +315,12 @@ def main():
         return
 
     # Discover and parse chapters (same logic as build_site.py)
-    md_files = sorted(MANUSCRIPT_DIR.glob("*.md"))
-    md_files = [f for f in md_files if f.name != "INDEX.md"]
+    if args.files:
+        REPO_ROOT = Path(__file__).resolve().parent.parent
+        md_files = [REPO_ROOT / f for f in args.files]
+    else:
+        md_files = sorted(MANUSCRIPT_DIR.glob("*.md"))
+        md_files = [f for f in md_files if f.name != "INDEX.md"]
 
     if not md_files:
         print("No manuscript files found.")
