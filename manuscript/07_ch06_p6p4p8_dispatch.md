@@ -92,6 +92,15 @@ TALLY:
   THRESHOLD (≥ 5 of 7 active): NOT MET
 ```
 
+Verification record (any station may independently confirm):
+
+```
+nonce:   d4d60a02f586ac7898991063875801278533f9c17ff70a58be3a71606de77790
+C_total: 52263c96d16eb7316015e8393f14bc9aa6ed3ca6177620787607e26ba9f104f8
+R_total: 078da6fae9c1f4d66d48e8bdec08cc9d07441bf1fcdd73abf055842b0dbf66f4
+confirm: C_total − R_total·H = 2·G
+```
+
 Override not applied. Coordination topology unchanged. PERIHELION-8 remains designated coordination node.
 
 ```
@@ -109,6 +118,14 @@ TIMESTAMP: {p8_dispatch_002} UTC
 ```
 
 For the record: PERIHELION-8 voted FOR the topology rotation.
+
+Cryptographic disclosure:
+
+```
+commitment: f4c1187b31fbbe6eafaee8544c306b9e7d45050b318a1b8c20e044d88fcc8943
+r:          0fe62dab85e61f5d98a1db3032c3252bb4553c06ed0c9d120e8e3bd9a77d28d6
+verify:     C = 1·G + r·H
+```
 
 ```
 END DISPATCH

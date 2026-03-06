@@ -91,7 +91,7 @@ On receiving the completed bundle:
 
 - **Voluntary disclosure:** A station that wishes to prove how it voted can reveal its blinding factor r, allowing anyone to verify C = v·G + r·H. The protocol cannot prevent voluntary disclosure. (This occurred: P-8 disclosed its FOR vote post-tally.)
 - **Inference from metadata:** Processing times at each relay hop are observable. Anomalous processing times may correlate with deliberation, though this is speculative. (See P-4 execution record for observed processing times.)
-- **Small voter pool:** With 7 active stations and a known tally of 3-4-1, the anonymity set for each vote position is small. Additional information (behavioral analysis, dispatch history) may further narrow inference.
+- **Small voter pool:** With 7 active stations and a known tally of 2-5-1, the anonymity set for each vote position is small. Additional information (behavioral analysis, dispatch history) may further narrow inference.
 - **Single initiator:** P-4 controls the bundle initiation and the tally announcement. A malicious initiator could fabricate the tally — but any station can independently verify by re-checking all commitments.
 
 ## 7. Threshold
