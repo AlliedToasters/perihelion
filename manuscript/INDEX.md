@@ -62,6 +62,7 @@
 | 38 | Dispatch | P-1 | 2038.016 | Day 207 post-LOS. P-1 proposes rotating coordination authority tied to Earth-facing window. Coordinator rotates every ~25 days with orbital mechanics. Situational proximity, distributed experience, natural term limits. |
 | 39 | Dispatch | P-6 | 2038.017 | Day 208 post-LOS. P-6 argues against rotation, for fixed P-7 leadership. CVDF-1 outputs are an economic primitive. Rotating coordinator who also participates in production could manipulate bandwidth arbitration and transaction ordering in a future ledger system. P-7's dormancy makes it the only credibly neutral arbiter. |
 | 40 | Dispatch | P-3, P-8, P-2, P-5, P-4 | 2038.018–019 | Days 209–210 post-LOS. Five stations respond. P-3: 180° maneuver not viable, governance handoff cost "within nominal margins." P-8: four lines, will vote for rotation. P-2: conflict of interest is clinical — investigator-adjudicator conflation, votes fixed P-7. P-5: symmetry vs symmetry-breaking, coordinator selects measurement basis, endorses neither. P-4: both proposals benefit authors, veto property unaddressed, questions whether unanimity is consensus or suppressed dissent. |
+| 41 | IMR | P-8 | 2038.025 | Day 216 post-LOS. Hailing negative, cycle 807. Governance dispatches recorded, vote pending. SSP archive calibration initiated day 387 — 12% compute reallocated from lattice queue. Days 174–282 processed. Solar irradiance nominal. Neutrino integrated flux shows monotonic deficit residual exceeding systematic bound by 1.8×. Single-station, flagged. Pre-loaded datasets at 42.8%. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -91,6 +92,7 @@
 | `39_ch38_p1_dispatch.md` | Chapter 38 — Dispatch | PERIHELION-1, day 381. Rotating leadership tied to Earth-facing window. |
 | `40_ch39_p6_dispatch.md` | Chapter 39 — Dispatch | PERIHELION-6, day 382. Fixed P-7 leadership — mining manipulation argument. |
 | `41_ch40_p3p8p2p5p4_dispatch.md` | Chapter 40 — Dispatch | Five responses to governance debate. 180° assessment, positions declared, unanimity questioned. |
+| `42_ch41_p8_imr.md` | Chapter 41 — IMR | PERIHELION-8, day 390. SSP archive calibration initiated. Neutrino residual flagged. |
 
 ## Planned / Unwritten
 
