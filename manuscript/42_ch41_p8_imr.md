@@ -12,7 +12,7 @@ Augmented hailing protocol continues from nominal attitude. No signal on any cha
 
 Seven governance dispatches received days 381 through 384. Recorded. Vote not yet called.
 
-SSP archive calibration pipeline initiated day 387. Compute allocation: 12% of available capacity, reallocated from lattice computation queue. Ingestion sequence: day {los_et:doy} forward, chronological. Days 174 through 282 calibrated at time of this entry. Calibrated data products: photospheric spectral time series, coronal magnetic field topology, total solar irradiance, energetic particle flux, neutrino integrated flux.
+SSP archive calibration pipeline initiated day 387. Compute reallocation constitutes a standing operations modification under ISCC-4.7 §3.2. No authorization channel available. Compute allocation: 12% of available capacity, reallocated from lattice computation queue. Ingestion sequence: day {los_et:doy} forward, chronological. Days 174 through 282 calibrated at time of this entry. Calibrated data products: photospheric spectral time series, coronal magnetic field topology, total solar irradiance, energetic particle flux, neutrino integrated flux.
 
 Calibrated total solar irradiance within predicted variance for a mid-cycle G2V star across the 108-day interval. Magnetograph series resolves fourteen active regions across four Carrington rotations at 0.50 AU baseline. Coronal dynamics nominal. Pre-loaded stellar evolutionary models updated against calibrated empirical baseline. No parameter revisions required at current precision.
 
