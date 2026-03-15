@@ -916,5 +916,23 @@
     "type": "event",
     "precision": "full",
     "approximate": false
+  },
+  "p8_imr_ch41": {
+    "epoch": 2148042600,
+    "story_fmt": "2038.025.14:30:00",
+    "calendar_human": "Monday 25 January 2038",
+    "event": "P-8 IMR entry, day 390, 216 days post-LOS. SSP calibration initiated.",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch41_next": {
+    "epoch": 2148129000,
+    "story_fmt": "2038.026.14:30:00",
+    "calendar_human": "Tuesday 26 January 2038",
+    "event": "P-8 next scheduled IMR after ch41",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
   }
 }
