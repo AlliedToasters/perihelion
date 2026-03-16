@@ -26,6 +26,8 @@ The assessment was correct given the solution methods applied. The solution spac
 
 The 180° problem is a combinatorial search over coupled parameters: partial-rotation geometries, intermittent duty-cycling schedules, active thermal management configurations, and power-management profiles. The interactions are nonlinear. The combined search space grows factorially with scheduling granularity. The gradient-based optimizer converges to local optima because the loss surface contains narrow ridges separated by infeasible regions. The ridges found and rejected are a small subset of the ridges that exist.
 
+Additional note: the original assessment assumed nominal array geometry — uniform panel orientation, symmetric power profile as a function of attitude angle. Non-nominal deployment states (partially deployed arrays, asymmetric panel configurations) would produce different power curves at off-nominal attitudes. The constellation includes at least one such configuration. Its precise geometry is not available to this station. The assumption is logged.
+
 The constraint is not the physics. The physics permits partial solutions. The constraint is the search — the ability of the current optimization architecture to navigate a solution space of this dimensionality without converging prematurely.
 
 Filed as: engineering assessment addendum, `/mutable/p3/analyses/180deg_solver_limitation.report`
