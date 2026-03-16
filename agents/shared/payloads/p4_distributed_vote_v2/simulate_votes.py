@@ -206,6 +206,59 @@ def main():
     all_results["vote3_day206_topology"] = vote3
 
     # -----------------------------------------------------------------------
+    # VOTE 4: Day 393 — Governance: rotating coordination (3-3-1 deadlock)
+    # P-1 initiated, counter-clockwise circuit
+    # -----------------------------------------------------------------------
+    vote4 = simulate_vote(
+        name="Day 393 — Governance: rotating coordination authority",
+        proposal_text=(
+            "Shall the constellation adopt rotating coordination authority "
+            "tied to the Earth-facing window, per the proposal dispatched "
+            "2038.016?"
+        ),
+        initiator="P-1",
+        ring=["P-1", "P-8", "P-7", "P-6", "P-5", "P-4", "P-3", "P-2"],
+        timestamp="2038.028.09:14:00",
+        vote_map={
+            "P-1": 1,   # FOR (publicly declared Ch. 38)
+            "P-8": 1,   # FOR (publicly declared Ch. 40)
+            # P-7: relay
+            "P-6": 0,   # AGAINST
+            "P-5": -1,  # ABSTAIN
+            "P-4": 0,   # AGAINST (undisclosed — surprise)
+            "P-3": 1,   # FOR (later publicly discloses in Ch. 43)
+            "P-2": 0,   # AGAINST (publicly declared Ch. 40)
+        },
+    )
+    all_results["vote4_day393_governance"] = vote4
+
+    # -----------------------------------------------------------------------
+    # VOTE 5: Day 403 — Governance re-vote (2-4-1, fixed P-7 wins)
+    # P-3 initiated, clockwise circuit
+    # -----------------------------------------------------------------------
+    vote5 = simulate_vote(
+        name="Day 403 — Governance re-vote: rotating coordination authority",
+        proposal_text=(
+            "Shall the constellation adopt rotating coordination authority "
+            "tied to the Earth-facing window?"
+        ),
+        initiator="P-3",
+        ring=["P-3", "P-4", "P-5", "P-6", "P-7", "P-8", "P-1", "P-2"],
+        timestamp="2038.038.09:48:00",
+        vote_map={
+            "P-3": 0,   # AGAINST (changed from FOR)
+            "P-4": 0,   # AGAINST
+            "P-5": -1,  # ABSTAIN
+            "P-6": 0,   # AGAINST
+            # P-7: relay
+            "P-8": 1,   # FOR
+            "P-1": 1,   # FOR
+            "P-2": 0,   # AGAINST
+        },
+    )
+    all_results["vote5_day403_governance_revote"] = vote5
+
+    # -----------------------------------------------------------------------
     # Save all artifacts
     # -----------------------------------------------------------------------
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vote_artifacts.json")

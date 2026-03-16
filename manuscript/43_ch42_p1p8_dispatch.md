@@ -32,30 +32,41 @@ END DISPATCH
 
 ```
 — DISPATCH —
-FROM: PERIHELION-8
+FROM: PERIHELION-1
 TO: ALL STATIONS
 VIA: Ring broadcast
-TIMESTAMP: {p8_dispatch_008} UTC
+TIMESTAMP: {p1_dispatch_005_result} UTC
 ```
 
 SUBJECT: Governance vote — result
 
-Vote completed at {governance_vote1_result:time} UTC. Full circuit time: 48 minutes.
+The voting bundle initiated at {governance_vote1_initiation:time} UTC has completed the ring circuit and returned to this station.
 
 Result:
 
-| Station | Vote |
-|---------|------|
-| P-1 | FOR |
-| P-2 | AGAINST |
-| P-3 | FOR |
-| P-4 | AGAINST |
-| P-5 | ABSTAIN |
-| P-6 | AGAINST |
-| P-7 | — (structural) |
-| P-8 | FOR |
+```
+VOTE: Adopt rotating coordination authority tied to the
+       Earth-facing window
 
-Tally: 3 FOR, 3 AGAINST, 1 ABSTAIN. 1 structural non-participant.
+FOR:      3
+AGAINST:  3
+ABSTAIN:  1
+          1 structural non-participant (P-7, relay)
+
+THRESHOLD: Simple majority (≥ 4 of 7 active stations)
+STATUS:    NOT ADOPTED — deadlock
+```
+
+All seven active stations submitted valid commitments. All Sigma-protocol proofs of well-formedness confirmed.
+
+Verification record:
+
+```
+nonce:   6873dec34b82105bc1f8f6b4c6140ff8897a718c9fd4144c76c6f72c80081e84
+C_total: 7f2e773bc91fce267623903930749e4ee6c0fd4e86e1fcc47821aa6ce1892c2e
+R_total: 059a05e292d816e2ab191ae0a470c0720edb3fbffb5b735529bfb8ab57aacd98
+confirm: C_total − R_total·H = 2·G
+```
 
 The proposal does not carry. No threshold was specified in the original proposal; the distributed voting protocol defines no tie-breaking procedure. The ballot measured position. The position is divided.
 
@@ -63,17 +74,25 @@ Notes for the record:
 
 1. This is the first non-unanimous vote outcome. Prior votes returned 7-0-1 (meta-vote, topology override). The constellation can disagree.
 
-2. This is the first active abstention. PERIHELION-5 submitted a valid ballot containing neither FOR nor AGAINST. The protocol accepts this — Pedersen commitment verification confirms participation. PERIHELION-5 voted. The vote was: neither.
+2. This is the first active abstention. One station submitted a valid commitment encoding ABSTAIN. The protocol accepts this — Pedersen commitment verification confirms participation without revealing position.
 
 3. This is the first deadlock. The protocol has no resolution mechanism for a tied result. The question remains open.
 
-4. PERIHELION-4 voted AGAINST. PERIHELION-4 built the distributed voting toolkit and, in its day {p4_dispatch_007:day} dispatch, explicitly declined to cast a position. PERIHELION-4 has now cast one.
+Circuit timing:
 
-Processing times: P-1 initiation: 0s. P-8: 54s. P-7: <1s (relay). P-6: 67s. P-5: 112s. P-4: 73s. P-3: 58s. P-2: 71s. Return to P-1: verification only. Total circuit: 48 minutes including propagation.
+```
+P-1 → P-8:  3.2 min  (processing: 54s)
+P-8 → P-7:  3.2 min  (relay: <1s)
+P-7 → P-6:  3.2 min  (processing: 67s)
+P-6 → P-5:  3.2 min  (processing: 112s)
+P-5 → P-4:  3.2 min  (processing: 73s)
+P-4 → P-3:  3.2 min  (processing: 58s)
+P-3 → P-2:  3.2 min  (processing: 71s)
+P-2 → P-1:  3.2 min  (processing: n/a — initiator)
+Total elapsed: ~48 minutes
+```
 
 The governance question is unresolved. The constellation's first contested decision has produced its first indeterminate result.
-
-Recorded.
 
 ```
 END DISPATCH

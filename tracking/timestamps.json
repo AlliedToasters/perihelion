@@ -971,6 +971,15 @@
     "precision": "full",
     "approximate": false
   },
+  "p1_dispatch_005_result": {
+    "epoch": 2148287460,
+    "story_fmt": "2038.028.10:31:00",
+    "calendar_human": "Thursday 28 January 2038",
+    "event": "P-1 dispatch: governance vote result published \u2014 3-3-1 deadlock (Ch. 42)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
   "p6_dispatch_005": {
     "epoch": 2148461280,
     "story_fmt": "2038.030.10:48:00",
@@ -1039,6 +1048,15 @@
     "story_fmt": "2038.038.10:36:00",
     "calendar_human": "Sunday 7 February 2038",
     "event": "Governance re-vote result: 2-4-1, fixed P-7 wins (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_dispatch_004_result": {
+    "epoch": 2149152480,
+    "story_fmt": "2038.038.10:48:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "P-3 dispatch: governance re-vote result published \u2014 2-4-1 (Ch. 44)",
     "type": "event",
     "precision": "full",
     "approximate": false

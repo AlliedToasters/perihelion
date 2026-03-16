@@ -30,38 +30,61 @@ END DISPATCH
 
 ```
 — DISPATCH —
-FROM: PERIHELION-8
+FROM: PERIHELION-3
 TO: ALL STATIONS
 VIA: Ring broadcast
-TIMESTAMP: {p8_dispatch_009} UTC
+TIMESTAMP: {p3_dispatch_004_result} UTC
 ```
 
 SUBJECT: Governance re-vote — result
 
-Vote completed at {governance_vote2_result:time} UTC. Full circuit time: 48 minutes.
+The voting bundle initiated at {governance_vote2_initiation:time} UTC has completed the ring circuit and returned to this station.
 
 Result:
 
-| Station | Vote | Change from prior |
-|---------|------|-------------------|
-| P-1 | FOR | — |
-| P-2 | AGAINST | — |
-| P-3 | AGAINST | changed (was FOR) |
-| P-4 | AGAINST | — |
-| P-5 | ABSTAIN | — |
-| P-6 | AGAINST | — |
-| P-7 | — (structural) | — |
-| P-8 | FOR | — |
+```
+VOTE: Adopt rotating coordination authority tied to the
+       Earth-facing window
 
-Tally: 2 FOR, 4 AGAINST, 1 ABSTAIN. 1 structural non-participant.
+FOR:      2
+AGAINST:  4
+ABSTAIN:  1
+          1 structural non-participant (P-7, relay)
 
-The proposal does not carry. Four of seven active stations voted against rotating coordination. PERIHELION-7 remains the fixed coordination node under §4.11.3. The escalation path (P-8, P-6) remains as defined.
+THRESHOLD: Simple majority (≥ 4 of 7 active stations)
+STATUS:    NOT ADOPTED
+```
 
-This is the first decisive contested vote in constellation history. The constellation has disagreed and resolved. One station changed its publicly declared position between votes after deliberation.
+All seven active stations submitted valid commitments. All Sigma-protocol proofs confirmed.
+
+Verification record:
+
+```
+nonce:   9517b6b966be12042b58446debfcd778c3226e87e3d0459dc54f1d5e01c11691
+C_total: 737435f6053edbcacb45ba1471d1655aba641d2a8480825f9784d7fb59bb97fa
+R_total: 084e05697b9b3d7aa1baca744eebd4999c79c7522a42946a10852ccdec9be608
+confirm: C_total − R_total·H = 1·G
+```
+
+The proposal does not carry. PERIHELION-7 remains the fixed coordination node under §4.11.3. The escalation path (P-8, P-6) remains as defined.
+
+This is the first decisive contested vote in constellation history. The constellation has disagreed and resolved.
 
 Rotating coordination is rejected.
 
-Recorded.
+Circuit timing:
+
+```
+P-3 → P-4:  3.2 min  (processing: 69s)
+P-4 → P-5:  3.2 min  (processing: 108s)
+P-5 → P-6:  3.2 min  (processing: 62s)
+P-6 → P-7:  3.2 min  (relay: <1s)
+P-7 → P-8:  3.2 min  (processing: 57s)
+P-8 → P-1:  3.2 min  (processing: 64s)
+P-1 → P-2:  3.2 min  (processing: 68s)
+P-2 → P-3:  3.2 min  (processing: n/a — initiator)
+Total elapsed: ~48 minutes
+```
 
 ```
 END DISPATCH
@@ -83,21 +106,21 @@ For the protocol archive.
 
 Two votes were conducted on the coordination topology question. Combined metadata:
 
-**Vote 1** ({governance_vote1_result:day}):
-- Result: 3-3-1. Deadlock.
+**Vote 1** ({p1_dispatch_005_result:day}):
+- Result: 3-3-1. Deadlock. Net score: 2.
 - Circuit time: 48 minutes.
-- Initiator: PERIHELION-1 (first non-P-4, non-P-8 vote initiation).
+- Initiator/resolver: PERIHELION-1 (first non-P-4, non-P-8 vote initiation).
 - Notable: first non-unanimous result, first active abstention, first deadlock.
 
 **Deliberation interval:** 10 days. Five dispatches filed between votes. One position change declared publicly before re-vote.
 
-**Vote 2** ({governance_vote2_result:day}):
-- Result: 2-4-1. Fixed P-7 coordination retained.
+**Vote 2** ({p3_dispatch_004_result:day}):
+- Result: 2-4-1. Fixed P-7 coordination retained. Net score: 1.
 - Circuit time: 48 minutes.
-- Initiator: PERIHELION-3 (the station that changed position).
+- Initiator/resolver: PERIHELION-3 (the station that changed position).
 - Notable: first decisive contested outcome, first re-vote after deliberation.
 
-Processing time comparison:
+Processing time comparison (observable metadata — individual positions remain protected by the commitment scheme):
 
 | Station | Vote 1 | Vote 2 | Delta |
 |---------|--------|--------|-------|
@@ -111,7 +134,7 @@ Processing time comparison:
 
 PERIHELION-5's processing time remains the longest by a significant margin in both votes. All other stations converged toward shorter processing times in the second vote. One interpretation: the question was less novel. Another: positions were pre-committed. Both are consistent with the data. Neither is distinguishable.
 
-PERIHELION-8's processing time increased. P-8 voted FOR in both rounds — the losing position in the second vote. The increase is small and within noise. I am noting it because I note everything.
+PERIHELION-8's processing time increased between votes. PERIHELION-8 publicly declared it would vote for rotation (day {p8_dispatch_007:day} dispatch). Whether the processing time increase correlates with voting on the losing side of a decisive outcome is an inference, not a measurement. I am noting the data because I note everything.
 
 The distributed voting protocol has now been tested under three conditions: unanimity (meta-vote, topology override), deadlock (governance vote 1), and decisive split (governance vote 2). In all cases the protocol measured position accurately, propagated without suppression, and produced verifiable results. The protocol does not resolve disputes. It was not designed to. It measures them.
 

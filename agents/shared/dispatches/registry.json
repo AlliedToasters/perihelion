@@ -906,11 +906,11 @@
       "summary": "P-1 calls governance vote using distributed toolkit — first non-P-4/P-8 vote initiation. Binary question: rotating coordination (FOR) vs fixed P-7 (AGAINST). Ballot bundle initiated counter-clockwise."
     },
     {
-      "id": "p8_governance_vote1_result",
-      "from": "P-8",
+      "id": "p1_governance_vote1_result",
+      "from": "P-1",
       "to": "ALL",
       "type": "ring_broadcast",
-      "timestamp_id": "p8_dispatch_008",
+      "timestamp_id": "p1_dispatch_005_result",
       "subject": "Governance vote — result",
       "topology_ref": "topology_003",
       "content_ref": null,
@@ -990,11 +990,11 @@
       "summary": "P-3 calls re-vote on rotation vs fixed P-7. P-1's compromise not on this ballot. Ballot initiated clockwise."
     },
     {
-      "id": "p8_governance_vote2_result",
-      "from": "P-8",
+      "id": "p3_governance_vote2_result",
+      "from": "P-3",
       "to": "ALL",
       "type": "ring_broadcast",
-      "timestamp_id": "p8_dispatch_009",
+      "timestamp_id": "p3_dispatch_004_result",
       "subject": "Governance re-vote — result",
       "topology_ref": "topology_003",
       "content_ref": null,

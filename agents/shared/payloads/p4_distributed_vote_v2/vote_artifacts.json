@@ -36,8 +36,8 @@
         2
       ]
     ],
-    "R_total": "0x78da6fae9c1f4d66d48e8bdec08cc9d07441bf1fcdd73abf055842b0dbf66f4",
-    "C_total": "52263c96d16eb7316015e8393f14bc9aa6ed3ca6177620787607e26ba9f104f8",
+    "R_total": "0x7248a6bc95050da7650782d7f1d0ea115c2dc3a4ca548af2008739986b4c6b7",
+    "C_total": "63d62ccea0adb8171690c15680fe8de5a15e7b6229ec0d691eea4720efed35b6",
     "individual_votes": {
       "P-4": "AGAINST",
       "P-5": "AGAINST",
@@ -48,22 +48,22 @@
       "P-3": "AGAINST"
     },
     "blinding_factors": {
-      "P-4": "0x67d400c4ace0faaf8b6026ea885bdea7b3b65a60334652785759278a9e0db5",
-      "P-5": "0xfa221a653366937cc6ebfb93cbf024b86163e81fc48b13976a6369c6ea7619e",
-      "P-6": "0x5c56b8995cde069a2d9951c7eaa1b52f6bb7e37d5d6d60e621dd4067e1e6e67",
-      "P-8": "0xfe62dab85e61f5d98a1db3032c3252bb4553c06ed0c9d120e8e3bd9a77d28d6",
-      "P-1": "0xd54f969e77a100c18467197c880150a3c9aa9b28b77bdc3a0f4f701fe73284",
-      "P-2": "0x809bad47c91625afc8fb36e0c032a557e26a80ac7ea44d90ca39f7690c6a6f5",
-      "P-3": "0x8f90db39b21a780f7bf3e098ac9024e4b1607ccd5c31ecd52301eef551202b2"
+      "P-4": "0xa9c288d6e74f43a08f60988cb0ad7f1da1401e995014bd21e3a9f939c5a4333",
+      "P-5": "0x99c73a327488e1754320ba90123324d2c04b061a82509f587e7eb59f36064e0",
+      "P-6": "0x7a5b8b4cc34ed24acc315730a91fc9b658593c2c86c99e124d102660c7e0b54",
+      "P-8": "0xcee49f31d2b4d6a69bd09be7fac1e391f7ba9f7c42b9166cf53cd20ab5a5c4c",
+      "P-1": "0x4ad010f1fa06e2ec572221868b2df2e77ad8db0c2e1c4d3a5fe8a4aec0b8d7a",
+      "P-2": "0x75dee5709194dc0e67de8da4e595489f4cecf349a574af1608ceb3e2a0e4c64",
+      "P-3": "0x24cfc2d2178d80a56b838d771a4b5d55cc97ceb0e948e5d876ccceb3fe958ed"
     },
     "commitments": {
-      "P-4": "bb0ff23762b6159030fe4cd7cee38ba191f5e2f10dbba4b4bd28b0c10774e747",
-      "P-5": "846b3a3429c8c996b73406be19012a55ba6ed90d1aed1f0cae20036bbfbf41bf",
-      "P-6": "37a548d4d90d66b6b9abacd27a418ce829411d5288e6d07e51c16854df3ffd0b",
-      "P-8": "f4c1187b31fbbe6eafaee8544c306b9e7d45050b318a1b8c20e044d88fcc8943",
-      "P-1": "3fbbf190d8021b4bcdf7c358b7e852f872cc76186c5ca7b74a528dcc9f3bd652",
-      "P-2": "0cb931eb78197eb86d6f83bb15c1970fb8566bad6c6cfeeb3385bf7a1de9204a",
-      "P-3": "4d68521cbc9622973bea38155e230218542024efa0cc39913935225c8e068745"
+      "P-4": "8db194f0ae4262b73dbce2e8dbdb8bd510bfa7f81cdc4066cb262ada19b9f5e1",
+      "P-5": "fee8a6459895962c30d66c6ef598c2c90cbe5633694404ff0e391a559fe6f7c5",
+      "P-6": "d2d608ce9181e9c5844af72f851848bc6584fa2ff22ab25a3f7d14c2822f728f",
+      "P-8": "6e5b50a0f8669ddc04aa2e42d6e2956e9493b3fad37063fb3f4689dbdfeaf8b5",
+      "P-1": "d38e8099dc273085e3bb139a7a0471fd48d5853fcd16a5f339a73d75d7b3fa6a",
+      "P-2": "2b31efc643b9766ae85eec4d07ff4f735b27226046ad421b0f809695f69f3378",
+      "P-3": "49ba49a869c29c85297278bca6d8d318bf3d9049788ed1a9a65c73b40b870917"
     },
     "bundle": {
       "protocol": "perihelion-vote-v2",
@@ -85,133 +85,133 @@
       "entries": [
         {
           "station": "P-4",
-          "commitment": "bb0ff23762b6159030fe4cd7cee38ba191f5e2f10dbba4b4bd28b0c10774e747",
+          "commitment": "8db194f0ae4262b73dbce2e8dbdb8bd510bfa7f81cdc4066cb262ada19b9f5e1",
           "proof": {
             "-1": [
-              "0x47f4df821715a7aa30bacdc81eeb5e792c63f70215b9aa9d8524193ad76f285",
-              "0xf6d57e2179e8af8b8c4f145ec82026451f1c820673cc85edff85d265190920"
+              "0x7abeb3c2a71071bb35e62b32793dc9ac358e15166db6b27bf6bb99d240d5f0a",
+              "0xcf16c4d0db247869fa172ca08a1f51efeb125bdfd2053f261b95f5757c436a6"
             ],
             "0": [
-              "0xeda7e35d53bb4d373f472bdb8a7fa07315d93fe9013354538187e3d0fc1990d",
-              "0x42cef5642026d34b618803f17654e7d1028636d38ae492a467e35c17f0f1aca"
+              "0xa5261a016caaf7b1708c10e20035f275838ada31f3059311cfe4d943f2afc99",
+              "0x9375bbd0af2c1c19f09bba4c78de38118e8d7ab7de08445d60e7fc04ea26380"
             ],
             "1": [
-              "0xafd6a4da8462a94307950ebf6c274e9054aae4410de5fad5c26f17dee56bfa0",
-              "0x54670c1b128a77ec2af6efc9748c08ad2123392de8438e755a66e2cb8590793"
+              "0xa326e8ef3ceeb6313351dcc5ddad71238da5547c0b58815deca7bf7e9c21882",
+              "0x12a48b5d6f8f70dc7a9f2bb2e9fb6b3ae73934205c92540463940bd449a0c0"
             ]
           },
           "seq": 0
         },
         {
           "station": "P-5",
-          "commitment": "846b3a3429c8c996b73406be19012a55ba6ed90d1aed1f0cae20036bbfbf41bf",
+          "commitment": "fee8a6459895962c30d66c6ef598c2c90cbe5633694404ff0e391a559fe6f7c5",
           "proof": {
             "-1": [
-              "0xf3f92bda0e917f93d19f140e782472687d1825448ef4c451981847350eec430",
-              "0x2fb1297adc7e01035908930e6ccd0f83d6f8d0748716642fa68199bf9b7782a"
+              "0xf5ce4c2eb499aed9fd87d340a4f211ea6dc6e9f3e86a17732d6f4449161fc68",
+              "0x7601f4c82ff5caef2a286a86b53fe9dac5fed75fef9dd9ef058fbd623fa761"
             ],
             "0": [
-              "0x2f9047addc6ce26f2445d75d5e029a8e98a75b14d4a1590f8d7136f5e319572",
-              "0x5bafc639734e53e5c27516c7abc5b06bd47caf4c37f38443c0161886f04f892"
+              "0x6915eee261c483a54002268d55a721c153095c56853d8cfba0fe36a053925a9",
+              "0xdb8034d62ecaad494e71daba48dbf35f7d7241d38a9c20ec6af8d08e9d6a4d5"
             ],
             "1": [
-              "0x352cadfe212026d5685665932db42b29368e6e66f60611a0222c28619da394",
-              "0x463803b6319ca19bb6d9273e73237856fcf5a20a52549c78b3923c0515cbde8"
+              "0x3ba337677094e9888e73ae7545969ecb5fe09e8a194a5d74973f8a8d9cfaf4a",
+              "0xdc9660daf08e4fae1bf2e23d01c33ad73882f86d770b9960b6198132ede411f"
             ]
           },
           "seq": 1
         },
         {
           "station": "P-6",
-          "commitment": "37a548d4d90d66b6b9abacd27a418ce829411d5288e6d07e51c16854df3ffd0b",
+          "commitment": "d2d608ce9181e9c5844af72f851848bc6584fa2ff22ab25a3f7d14c2822f728f",
           "proof": {
             "-1": [
-              "0x5eb3e1a4cc378e291b8b5ada7ee7023a0794a9d85c67ffaf93e249cf3dcf578",
-              "0x943c32aca1e6ede9c97032ae1798187e43b2e04d8dfb3c8409fab7a1ee3a276"
+              "0x6f9afa927b6eb472cd511c6c4661600b128c319b4ae20283c567c43a39e5ab6",
+              "0xc2a8103d8973141e4dc6ae7a35f2cba383e8a99295d1fe78801eb9e7a5beb72"
             ],
             "0": [
-              "0x9cc4c495c254d6b20c623dc0c9133c49ae3f2be19dedd75aec4cc15691a9082",
-              "0xeb6b66d0bc011d671be4583957c086a542b51839a717057afd8cd10d96ecf48"
+              "0xd2bece98dcefe116c4a3bf50c0e1c3d36f85be9980a89bc0138d0886e90f430",
+              "0xa4ba6788bf87c5dc94d15410c69ad99c155b5a84c5725199076ab714f7ab7be"
             ],
             "1": [
-              "0x49feb2106dbdfad2ab7b5253edd483a6ace1712a74e612481525c875db29ca0",
-              "0xbc2f73b2310ae49100a4dab2f183b366ffed6b6565bb64ac140b79f06b21412"
+              "0x6618bd1e6186671ddd2e85613847f4cfd9c7d91b92322b88ef409a29ff969b6",
+              "0xe55f25a5a5a1c15c0d9ee182e5e0e9b6c6eb81aa67cdad4d4660b81f6790823"
             ]
           },
           "seq": 2
         },
         {
           "station": "P-8",
-          "commitment": "f4c1187b31fbbe6eafaee8544c306b9e7d45050b318a1b8c20e044d88fcc8943",
+          "commitment": "6e5b50a0f8669ddc04aa2e42d6e2956e9493b3fad37063fb3f4689dbdfeaf8b5",
           "proof": {
             "-1": [
-              "0xa75505251b5cb2c346b83634e3f0bf41c7a9e77924525a8b8cae65c15e8aaa0",
-              "0xf87af87aae97e76d877be4643d272d21b7c17434af8e55e0363e4e7da252556"
+              "0x24a191f24b57d88fe3c77efaa5a372b799f054c598af3a6d62cfee2a46aaa5a",
+              "0x41bc4e4fee60ee5046a912f48df50a9149dce8dc92eaada81d25fc8d0ceac70"
             ],
             "0": [
-              "0x62c98f8a5d7bd2184f4091e90ea5262489f19c2aab1b565ffc02cd177a5825f",
-              "0x5fd71550cc076b20f1dfb345e0fa4aad47c08a005fd2f7fda88846a7c48f919"
+              "0xd9ca300b393dbe6f98657ed8cb31b7aede7ffe7b301c1a449091ecd9c798e8c",
+              "0x528a87bdeacb05a46246dba46ffc9d7fed08ed0ca4257a99e22c6aac012f6f"
             ],
             "1": [
-              "0xb6e14794490f742ba6604a54e183881ac0022b9bc438daccaffa0d36c046491",
-              "0xd84a951a982986f1383c120e7f9d13136a7a6af12e3469c099960f702d38704"
+              "0x9ea46603d85a08e27e1b02253f0b74ebebe171a9f2a2a848e0a9b722d4efb34",
+              "0x810e0be6b943cb3283e2e762ce5d8d4cc1741e4096f6c5ab2acffb09c642f32"
             ]
           },
           "seq": 3
         },
         {
           "station": "P-1",
-          "commitment": "3fbbf190d8021b4bcdf7c358b7e852f872cc76186c5ca7b74a528dcc9f3bd652",
+          "commitment": "d38e8099dc273085e3bb139a7a0471fd48d5853fcd16a5f339a73d75d7b3fa6a",
           "proof": {
             "-1": [
-              "0xeed7f657ca38badfb83f80ae208c96e7aa9bf8aa7a399808bcc3b4c76018572",
-              "0x7bffc36d97cce48c1e6855bd3566a454422265c2e674dace5e1694e1e30d553"
+              "0x7310f965f306000558d79935f1b788f69a4965ec48bad4021474be5b4474f6f",
+              "0x5d0cad7574ed1692d37f986549e104042050176c5658a777a59e9dcde671ed6"
             ],
             "0": [
-              "0x10068ce5c93359818980a1207fb49ea3dee480b01406f156be7e14dbc34a534",
-              "0xa73b2012d8a019e827de89527dcae249d34d9a00625be8015d0ba1bf8635f0a"
+              "0x26407a072422cf7f541df4d4c329c257e36710837667efa1676c5de2c960ab5",
+              "0x61d2dceec70331d286cb6fc2aa2e847fec8a873dcd5e899782109ceb7917971"
             ],
             "1": [
-              "0xc2cf53f7ad765b2155f27fe76b2c75534024f87a29958e99167cf203c013253",
-              "0xef330e515cd513c805ca48c69b23ce85c20e7f54f9c92859b8a51eb06372b3f"
+              "0x88a32a448b8050406119fab4024d17fa03f727ba99a2d3ce19eb25d05751229",
+              "0x485b940621405a0e83b92ea5c9114d7bc5bd94b84757743c651972215e2cf81"
             ]
           },
           "seq": 4
         },
         {
           "station": "P-2",
-          "commitment": "0cb931eb78197eb86d6f83bb15c1970fb8566bad6c6cfeeb3385bf7a1de9204a",
+          "commitment": "2b31efc643b9766ae85eec4d07ff4f735b27226046ad421b0f809695f69f3378",
           "proof": {
             "-1": [
-              "0x8c419c04a52d629b3ddf0ddcff6050df96faee91abb15d21ba93250a733b91f",
-              "0x1b2367e218df89fbcc6aa6d322702c3e6e11221429a5b28627dd1c87d68adfa"
+              "0x4a1f61502cab9090d38d684831d44e1d43a3d955e44755d34535a52fbbe2f3c",
+              "0xfe457698a3dcc5ab1536de8e97d87d0f981c956b786992d65cf35a6b9bd9b7c"
             ],
             "0": [
-              "0x4b5b0cfa7a2651eb80084079f415aa362e00ab9199e71590c2a50856d7739df",
-              "0x9162694d44b4d43514e86887dc43f3340b9508b72a469067312c5c7d8c04cbe"
+              "0x5f6a84c165c1e256ff534a35e6816fce922e382d9a7f8638709ff8c5c5c0e92",
+              "0xfa49d2d67ce9e6124c884a2004430901e4096904db08a1a41a298946b7749f1"
             ],
             "1": [
-              "0x9df636bfb57952fbd4e23ff6dcf45d4ba1d5bb8cc4d04145e06024567ccfd6d",
-              "0x13a2434a2002ce59e7b0793129357e1af138b3d2517a0ee8ee5368c35e3bd65"
+              "0x18c58bfe95717f1018844e3b0cf4a361268396adb3bd01f0f5d2702cd04bce8",
+              "0x6033701e977bf7478d361e9f4560852c764fca6577f67aa30682567de4c1232"
             ]
           },
           "seq": 5
         },
         {
           "station": "P-3",
-          "commitment": "4d68521cbc9622973bea38155e230218542024efa0cc39913935225c8e068745",
+          "commitment": "49ba49a869c29c85297278bca6d8d318bf3d9049788ed1a9a65c73b40b870917",
           "proof": {
             "-1": [
-              "0xd9e4be3a4688cacfb848b22971ef599370257898b5562873691d50ccf55f18",
-              "0xf11b2f7a441837683705b2e47a46c0373b0aec043773bbabbbf970a5fc2fae2"
+              "0xbaafe16ed0c835c748190230fdd9d654fd3a517915a46b1063d928697cff8ad",
+              "0xf481ed71bf527f6be2bd8de6366f8af8009e11dc7bf613d8bb45a0e494d2dbe"
             ],
             "0": [
-              "0xbaaaa7d7283972e99dae5ffc1d2cba9f5c4a86263654475841fff9fd48b47b0",
-              "0xff6ffaacecd2ac2b17833c892d53d02db5e9234b5858f6f45b04c5d98d10e34"
+              "0xc78cf3b0f0b5ea5f18ea4946e38179e015c91f9aa643d8ede06de224dd33b83",
+              "0xf25893273d2e7deca625888bfb65c0ca1a429cd0cd082162af284fa1b3d5391"
             ],
             "1": [
-              "0xdfc1c56ad6cc8c2866fad3c7b47d5a31725fcbf0e6b9772483eff854092e815",
-              "0x2f075b4ba101e4ccf15e96cded0751001fac9bcd4192a316bd04b10067c1410"
+              "0xe16a954a85c21848988b1bc9492795833bfd22274fce4e0ed8399755cb98fa4",
+              "0x11990e58e04922832897e07e3aaaa19c5d2d1f7f8d8b9bba9136c1d1ff290f2"
             ]
           },
           "seq": 6
@@ -246,8 +246,8 @@
         0
       ]
     ],
-    "R_total": "0x614b1504038ba8c91e5023ff9f0c7032600dce63f41726c3d7bae9d52d9dd48",
-    "C_total": "7ac89255e5c5910f6e95bb83502335d837203cbc9837b7cc994c2f3ec5712bbe",
+    "R_total": "0x8478feda4f023cada619e4fad5fa4f31acc64f159c6f3a77895498fd28a8c3e",
+    "C_total": "fb35171756e451c4b1a3e9e161b232b2dd03f72df5b4e19dd46f0d3c3de97c25",
     "individual_votes": {
       "P-4": "FOR",
       "P-5": "FOR",
@@ -258,22 +258,22 @@
       "P-3": "FOR"
     },
     "blinding_factors": {
-      "P-4": "0xbec49fcf3c5ef200f83c46c83cbe90a3dd784e6db5e422353d133886892612e",
-      "P-5": "0x5ab233c18a8f74e5a42c9705d0ba33eea3553ca0d1e82ebef8321ad99793467",
-      "P-6": "0xe1226bebfa989bc9a672889c2218a492bdb7a17458fddf960240eb03be86a95",
-      "P-8": "0x862c0e93d11938d6dd015dd8fc4138e8552abfe02ee5127e1b29104dacbaa4e",
-      "P-1": "0x802da131036c5bb89b1eb71d151b3891bb7a569369a2ae6bb6f902cad452f2f",
-      "P-2": "0x1b829ad407da0e8e015aec5a531e7439da055c48422003c44f00c7be5bbf904",
-      "P-3": "0x44d58aee65a502fb61f9bc450b00215d20ad08e3c71299bc0284658bdfa8664"
+      "P-4": "0x335876850ae88474e24ad0e79b0ece80f0b8dda854b0221417595834a208456",
+      "P-5": "0xc65fe91493f463631e86a6bc67d68edf81ea019affb3b3a1cc7d3ed92f42eb",
+      "P-6": "0xa0eac84d41c2a668efe4e9c26e2e4b139f29cad3ca2d60d06a61ad7c6e0eb2f",
+      "P-8": "0xc33e86d32e4951b18d2f309539e99dd7aa93b63101bb26654a64b5a46946148",
+      "P-1": "0xea60f33cab8586dacb724dd0104ddde4990ca6046ac5b8a1cc1a58b93d5f7af",
+      "P-2": "0x1fb785a790e8c5b27d71ea9f5c6396206f2b4f252fb9f8bda941c5fbb6e1d22",
+      "P-3": "0xd678c1bf4e602d5acbee56e05fa4bad65bc834e3bfc90cc4ae837ff6962df7c"
     },
     "commitments": {
-      "P-4": "d985859eeacb744ede883be0832ca1f4c8b1cacc5be03891b9b4cec703e11323",
-      "P-5": "115e2e612ca9a07f4ec5610af7246e4f47b85e1aca329e5b513a91131352dd46",
-      "P-6": "f7e7e40fa51cc867560a8fdb1b0d2a348962114eef74df5f24691d8320e967ac",
-      "P-8": "08cc14555f8f5e37cd1938aee5c9f6b8bb471fbf23a43b1370c064d9fd73e25d",
-      "P-1": "39e38e899260f8c79d860f6bbaa117d6e8ce19598621c2c23a51a3c28d5b8d19",
-      "P-2": "bb37f6e310fca77633693aa13c3b7ad9449b866766153f1b7d943eb7e047c5e8",
-      "P-3": "dab49365ce2039b61b125597af299d5b54baa47c50b651e542da1c9a52afcf7e"
+      "P-4": "3d4f232e212337b87c257a34824f9c3cbaa4b8970d374393ca393ca9e2d8e3ea",
+      "P-5": "fe5c5b611d17b3dc634d05eec42dae3008e2ae4f63ea75cd2023268c45eb6661",
+      "P-6": "b87e33578125af8a054773c18f645acd4f74220a0cf25c39141de03b8bd31e27",
+      "P-8": "251057d3c857882d2a5aaab9ac50757edf6929bd58f6f17d081db9eead392f57",
+      "P-1": "6ea264e7d014a01d3885c191fd7370f0f5a30f66d4048538e51c4957b9ad5ee5",
+      "P-2": "f2808a00c5d6fdb3c923d3b9dc5218de2514835ed29e2830f19b63e4ed22340e",
+      "P-3": "4febe4fec1d9ae66a3fc1d65311e0546da69f4b5a481c49504d592626fe0d812"
     },
     "bundle": {
       "protocol": "perihelion-vote-v2",
@@ -295,133 +295,133 @@
       "entries": [
         {
           "station": "P-4",
-          "commitment": "d985859eeacb744ede883be0832ca1f4c8b1cacc5be03891b9b4cec703e11323",
+          "commitment": "3d4f232e212337b87c257a34824f9c3cbaa4b8970d374393ca393ca9e2d8e3ea",
           "proof": {
             "-1": [
-              "0x43e0f5e669868cebe3ee428b52ed168591f0babc32eb69ca73d8c3c97c7bb21",
-              "0x720ab9fd82b9e42883e2d9c36472e4eb6a58936d64bc1f1f1db2422b976b85d"
+              "0x55692bdd8d4c886cda9cb4e72a51ec2b832cf7bb3082b378842255c7379feb2",
+              "0x34f5de4b7d6dc611f89c5752f8d8dd366543c74cedbc938a229ab40d7f4f53b"
             ],
             "0": [
-              "0x9c5029e782389b6c1fe5ef36f0e3435c3e13c2d5d0dd9bf7c469ada041f000d",
-              "0xe56db1b3dd5347385635307c89ddc9b45c13d89bf3be774b8f87ee15be4f747"
+              "0x8759559a9569c93cd845682e841ac55a4f3a93d0f5cf9093e457828d58ad407",
+              "0xd71a40c8b2eac981f39bdb0034deafee83c7d46731a89bda9c33d3f4ca7ee55"
             ],
             "1": [
-              "0xacf62dfd42c93e059c6127dbf978245cdc4c8871ca232ce516c5a48382f8c",
-              "0x3a46dfa8c99b1d9f89e6e5929e79d8070d78b7fb9409084e594ded70757438a"
+              "0x9846da69e6f05fe483ecb2d463374fa09f8d950d99f80dbd4488b50ee009dda",
+              "0xc5c4e701c3a64a19747fd97b1333677d4826dab73eb851cc6c4d4105ca11577"
             ]
           },
           "seq": 0
         },
         {
           "station": "P-5",
-          "commitment": "115e2e612ca9a07f4ec5610af7246e4f47b85e1aca329e5b513a91131352dd46",
+          "commitment": "fe5c5b611d17b3dc634d05eec42dae3008e2ae4f63ea75cd2023268c45eb6661",
           "proof": {
             "-1": [
-              "0x3df60bd9b3ad61171d3aac2f4e5efb27e2d6f6d31d4254322336ba8e04553ad",
-              "0xbbe4a9ece6662b49f535c6ce93b1f44c02b36e96c2924a0675cb21c6ac0e06c"
+              "0x987815de7359407cdb578c9dfe0a53c7294fab4be6686cd593bc95b2ac243ab",
+              "0x44ea237f5a40ec500627c407a5f355d26dee686fa77075eb0d38c458a3b0ffe"
             ],
             "0": [
-              "0xb0d4a903ba2bbc7d485cb449fcefb6bca15de6e6b1bf02598f7e98db1159b5",
-              "0x508a805844f2c7114dfb8de8d662d99c8bc17bfc82d07313c81825c76ef6c5"
+              "0x6066660f1a5ec0ea528a1572f0cd152f1d94cddca7649d974ed71b8f7a611a2",
+              "0xeebe49917c72eed736d13f83339bb4ef629aba6ff817b2360a7df2e3d415e5"
             ],
             "1": [
-              "0xbea53e057143662cc071da07dfccda4c933ecf8d1f6ea84e1d79a32110f49c7",
-              "0x7a3574f5347d58832ac3623c54af47fa500544b89f8444f6a3c2c6b1a673427"
+              "0x266b447b2703591715fad7c663be1df3a8801c4c8c66ae439cd811165633706",
+              "0x47d2459367894e59d85952bc47ca86b3b42dd9172bfdce14b463c35f7f2c45a"
             ]
           },
           "seq": 1
         },
         {
           "station": "P-6",
-          "commitment": "f7e7e40fa51cc867560a8fdb1b0d2a348962114eef74df5f24691d8320e967ac",
+          "commitment": "b87e33578125af8a054773c18f645acd4f74220a0cf25c39141de03b8bd31e27",
           "proof": {
             "-1": [
-              "0x1cb587ebe55f91d53f726cab78df86e7081e782bcffa399b13bdaaddb754a0a",
-              "0x53b6df4ab7d6c68f681526c4cc92985fcbb239272a7b15abd82455b2054b199"
+              "0x32d5beee3811dedaba62d44b7eb97636d6ace8ba6f300dc2d23178fdf3d2aa7",
+              "0x3a45cbc7108b2e51001bc0bb12fba62eb5fc8582c523a720a9c9a7c4da8b932"
             ],
             "0": [
-              "0x6e8c4b598460fccdca55d5290f21e1a2b7944320dacbc907729528cb575f489",
-              "0x64a78d9ad3a4ac8cea1520d361b489f904e2671e5ab74ec5696f4c5871b1646"
+              "0x2a71bd43e1da9000b36f53503363493ca44e4cb91c526d2881b61adf955ebbe",
+              "0x9f5bdf15d412a5ba64f66930e0138b9518b7786a058302cf60678d7107ab5a8"
             ],
             "1": [
-              "0xa2b73a9f0611f6e4356c7b2e522ebcfaa6abae026900281cb00f34b85bb9026",
-              "0x980d27237c93ba6f7c61d044dfaac5c5f1363f39c5bcab1dd7d8c2c29e9c7e1"
+              "0x6b30e4d3da5b5f9f136ccd77c00d2f8a3a80293e19d10cfb70c3ae90b0fca1f",
+              "0xff4ad8db2c83244767e0a0b766979349b93ec12e1ebee374fd54719aac0d2d9"
             ]
           },
           "seq": 2
         },
         {
           "station": "P-8",
-          "commitment": "08cc14555f8f5e37cd1938aee5c9f6b8bb471fbf23a43b1370c064d9fd73e25d",
+          "commitment": "251057d3c857882d2a5aaab9ac50757edf6929bd58f6f17d081db9eead392f57",
           "proof": {
             "-1": [
-              "0x599b67ba15376a2315e5dc66b340d8b2f4f53939841e6ebb427bcd86ba77e",
-              "0x79648cb4aad08313c97a6bd83554972bfcbebad0233375a3d2b59992c1e4eb9"
+              "0xd757219e6742f6b25d75404f6c984d0ce77311c28d44d86694a56e68af39014",
+              "0xbdd839ffff7dd5bd062bea1ed96315b92cb5ee8e6564c4dc0664885ed6e09cc"
             ],
             "0": [
-              "0xe179d118ec9b74123798ec15ccac04090cf35d6277064230182f4815e52db9a",
-              "0x85409b40c9f9f151de426ab268cdc73e04d593dc4fc1f7bd7c07065bb7763db"
+              "0x4d87a91d4a50040b4f42050004d27ed8931b6fda10ab241683f646541029bc",
+              "0x45d83b023f285b9b6286724b359b2102799f061f0fd817f8795937335ec5458"
             ],
             "1": [
-              "0x32989379f34afe4ccbd54395ecc1acc07c32fd71e05872f29f1bb0b57c85f11",
-              "0x1c39541ff104f466b51ca119df6963534980063aab46324942156c3f405b23c"
+              "0x9d73122849037f1c5d9d153aed65c62a7ada8977c1772ad15f91906ba8175e1",
+              "0x50ee3b24c8dad322b81a69ee788bb07677706b133c1c74369ea23ba7fa8a796"
             ]
           },
           "seq": 3
         },
         {
           "station": "P-1",
-          "commitment": "39e38e899260f8c79d860f6bbaa117d6e8ce19598621c2c23a51a3c28d5b8d19",
+          "commitment": "6ea264e7d014a01d3885c191fd7370f0f5a30f66d4048538e51c4957b9ad5ee5",
           "proof": {
             "-1": [
-              "0x6d4fbe703f4da4ea4547f4ef1be70725ddaed83f95207959863bef185a13fde",
-              "0xc6c762319b5b4a8e16c0c8e4dce26a39caeadb98383c3bea9f74f0cf060648a"
+              "0x4e4450134d5d492c90e636c3f97d1f9a4c0b4b1be41e0cdb12bb26a4b0bebaa",
+              "0xb5ba6976c2a23659633015b82bc756f3e437107352c1b1e3769d6a9704455b4"
             ],
             "0": [
-              "0x4abd0d7a610ae3121ccf735335bbe58b2df64e745249b61a80a381c7a722c9a",
-              "0x4181a956d6be23fd365e4ebe05d54d7fc57dd856d67ece943cc876490272bc1"
+              "0xa1098330d5882832bab983dc518323d652691a509e8c7fb8b3645ecf3bd9961",
+              "0xf210ae869f87457741d051080dcddc57075b0353ff3c6e36504fdcff513d2e"
             ],
             "1": [
-              "0x861784e7896b57903fc86595d45867ac79b70da92b2592e5981d4db1ffa374d",
-              "0xbe2562fe599fdd364c3a5d2613db2fc4ac53835dbb5f07fd2aa1867d8038468"
+              "0xc28c4f3b3259d180e4aed8b544100d7cd0a133972ac3c1927d5e7e207c7082f",
+              "0xca0a3ac7fd0fb19f93a82f46bfdaa21bc95993942ef02235a598394721d5304"
             ]
           },
           "seq": 4
         },
         {
           "station": "P-2",
-          "commitment": "bb37f6e310fca77633693aa13c3b7ad9449b866766153f1b7d943eb7e047c5e8",
+          "commitment": "f2808a00c5d6fdb3c923d3b9dc5218de2514835ed29e2830f19b63e4ed22340e",
           "proof": {
             "-1": [
-              "0xfd51eaa1a24b9983e082965d9ce387530dd9943282b7395dbd0941918234ecd",
-              "0xe975c48cb4c11ae564e8a708c6bb91937a5960691c32ec8235410aa9f0c0e06"
+              "0x794e3bdff9e843d00694c3d84aaf03afe3e4056a1e4d28b72f4c8dd7a9a9eab",
+              "0x1a83de34ab1d63aa209f6d3ceabf2e9e712c95b9b2552c8c69c6160fd1624"
             ],
             "0": [
-              "0xce756f7be9deb871befa06995a01aa5b65f73e7394c427415800a77ca8fcc37",
-              "0x2f7fccee6a73c44d915b072262c760acb932ffe8e85ff125c61c33d39b88476"
+              "0x7186424b004d963bd6949c27ddd8e0f438b69769cf3648a67c19a36cea81504",
+              "0xd2853b217222dc8a3c5f2241d67b36fdbc4bee0bf81c6689f3282c8dc18f448"
             ],
             "1": [
-              "0x95140fe2b65ff363b77902918f79eebb61f44b441a8e87d4d0616b6141cbd63",
-              "0x312b880bb1b4b1bdc9753297c3dd2002acecb5d7eb93fc594c4c6de35f5b3"
+              "0x52d5a2b52dcc25880ea21751df4cd769672bed31e2317d005cdcfe18c24a657",
+              "0x831f529ed683abeda12f21f97b6b48c49c02d32e9cac437eb3855d6d5651f99"
             ]
           },
           "seq": 5
         },
         {
           "station": "P-3",
-          "commitment": "dab49365ce2039b61b125597af299d5b54baa47c50b651e542da1c9a52afcf7e",
+          "commitment": "4febe4fec1d9ae66a3fc1d65311e0546da69f4b5a481c49504d592626fe0d812",
           "proof": {
             "-1": [
-              "0xd3bf79f1de75213db845ed070c63d9949b084ff44667a0055f1b7fb0c08cc23",
-              "0x4237bb134e275aac82f6afd56982ea7bf1dc07fc4b212be5ded838ad0111d36"
+              "0xa5bfc32426f1abaedef4d0a810772ef47f7b9e6e4620bc416b532d9e597fe1d",
+              "0xef4835b9e52c7e0961c4970f4335453c40a18cec6f7a24ff8e6dcfa2f5fe486"
             ],
             "0": [
-              "0x1a4daba03c4bb39ecd8afb2e9e35461bc112c2ded1db4d4094c4b8417e6433a",
-              "0x932b2009d0faa9bd7771a6133c352c1d5f58d278d7ca4ae50fb6ef72d164192"
+              "0x52b60f6c8ecdac3b733e532aec16a026c2c2ab25074f5a9fc84db962d4d2316",
+              "0xb24d84e19528b7f5acd7bff9c49dff45b1efc08cb89634903fdca6d00b5853c"
             ],
             "1": [
-              "0x6a8d32e34f4f152475b4c53d46bd5034069a71952a9e0c4b94172b98447889c",
-              "0x9523d34783d015e90dee7d1fe2e68443d6e193c28aab43335779e4c13031bec"
+              "0x5f0287ea29ff2efde266f46206ceff7c521accb02dd44b3bce31a981e784344",
+              "0x6c8edbadb06b978a247cee2e5d3e04aac4d4c80d9f48424a6847661789c2835"
             ]
           },
           "seq": 6
@@ -456,8 +456,8 @@
         0
       ]
     ],
-    "R_total": "0xc458a3afcd0bafe023e3548a9850e6b6ebbac07d2002eca75d63ea1bf0f5a38",
-    "C_total": "6c7eab0154a87ff0af5b7649a00ffa9aedc3aa794bb91ffae918418b960e0456",
+    "R_total": "0xa0aa81971d351718d8d44368a21e784f134d23fe182d0bcdb50eede9f099c84",
+    "C_total": "8e85634dc5c16557b652102e683860f950e31432441641537d79193cd43fd943",
     "individual_votes": {
       "P-8": "FOR",
       "P-1": "FOR",
@@ -468,22 +468,22 @@
       "P-6": "FOR"
     },
     "blinding_factors": {
-      "P-8": "0xb868bfa97e85510320227f40a5dbf694aff906a000de87bdcfe63125598b19f",
-      "P-1": "0xa0948d9c9618195042ca3073b1140a2bdbc1db47915122fe35af3492727028a",
-      "P-2": "0xa7ec4198c3c0be51f72b4a3b828cd6817c0e39fecd3a4446ebe732570f741cc",
-      "P-3": "0x8d24cabc2fa5784f977dee673612476eb4df9de962470cc9ce8442b7a05821d",
-      "P-4": "0xd7132810aea2babc0d65d8bb3492a53ab36a3cfd3db65c63a6f01a69f25cf9d",
-      "P-5": "0x3beb624b0a5a5d8e22e3f353e2a559592ae475a549331348f44a262d8299388",
-      "P-6": "0x234bbfb90c0af6a10203a0247189c9763a922dc965d5e95e859b63af6e4fac8"
+      "P-8": "0x4c369a485d61e5b5c2732ebf415150affe9a816d1903c39a197c3e65c82ed94",
+      "P-1": "0x89dee5ba9da648cff2ff9030137e5452fbd14e72bf83365e6205347005a75f0",
+      "P-2": "0x7555a53538a570f03b94f761ad4816eb1641cf075320e8bb6681d4f5f7c7a38",
+      "P-3": "0xf952af4ce322816e7535b70d53aa0409f99af45004b5f4cdb99d95690d0aff7",
+      "P-4": "0x4672f8e8c709e2894ae8a12ee82f8ce29124ca0bbace656e7d012df2cd46320",
+      "P-5": "0x7616ea82fea5c1e1f729408bff07aba6686d9f9eaffb5c0527876104378be03",
+      "P-6": "0x9f62c9a640b551c93084f44f65257fd1f94100db0b72db08f85816af8736975"
     },
     "commitments": {
-      "P-8": "aca7439442e009e92b4d5cf5d5f762f93e5e5b3dae743cdca7cf76ae7906af50",
-      "P-1": "aa6af182750303c938851acfe30a038f5fbfaddc1313fe92ffde8d5cd8fdb63d",
-      "P-2": "c1c139060ff81ab81f8b64c6272b546a5d36da29c87fb271db20c7c175b78cc7",
-      "P-3": "c79d64227937049d82ce8c7ce162388593cb937f242fe89edadb43e3d1e0a73f",
-      "P-4": "fc5faf5c56db21afd2062a629ff85e6758e22f9fa1a0ab9b0199ac56e725ce12",
-      "P-5": "479b4c18bb340933ed2724d287658e6d74a9ae1a44171709cc45098fcd57eca0",
-      "P-6": "82cf2fcb5834527252ccf9b352c402ec8035e9fd00b5991b606fa1548489a127"
+      "P-8": "91a9c71dba89b01a669a449929c24d7406c1433cd80a19391c182499cd833010",
+      "P-1": "22ced93b0232a39e8c0306a81b99be45460bafd3c15f80d4c32fc60dbc92780a",
+      "P-2": "5adcafc8381e16a6eb456417cf0d5d2b3ca29ad1e1bb76021f94f8bc7fca6cad",
+      "P-3": "c0a758259a447aa395d93ebe019517dc25886e8465e78b03cbc8c28c63425180",
+      "P-4": "959f53032eed64e954ef3020ae0f3955b78a77332c23e2b9fdb3b556d2ecf7ee",
+      "P-5": "c75a55ac9da359fae5c450bb6e48edff1dfa255ca2d28dcfb95a3dbb4565eb6f",
+      "P-6": "46a703600d269255a5bd160ffa5f1180d9e956f8ef750769c7f8ae6e7c774a53"
     },
     "bundle": {
       "protocol": "perihelion-vote-v2",
@@ -505,133 +505,578 @@
       "entries": [
         {
           "station": "P-8",
-          "commitment": "aca7439442e009e92b4d5cf5d5f762f93e5e5b3dae743cdca7cf76ae7906af50",
+          "commitment": "91a9c71dba89b01a669a449929c24d7406c1433cd80a19391c182499cd833010",
           "proof": {
             "-1": [
-              "0x6744d973e796268905f16009f764243b71595edc5245eb320e2e098c442027b",
-              "0xa2eb500b159c0e7753a0262e0f96bf8820f1cb6245321825ba5377529260231"
+              "0x39a070fd355ba3730f2822794737e905f55aafed7b158de0e2852e7c3c17507",
+              "0x10175915e223b285027c32cb984cbcd15aca1059002315c540e99e4e2db76a8"
             ],
             "0": [
-              "0x50cd92264c0e1d49ef4b8b50ce37207ec4adf8fdd002c8bc032eba8a5370077",
-              "0xe8a4b20ec2e90aedcfff17aa2d7f24abbe65960832dc38fb98cd73aae4aa9eb"
+              "0x1689e81600d1e6b5c5fa2f4d5655317d13ca5d1e3d1fd2f6de6f0fa876c4204",
+              "0xc3150c59687e2ccb5279b45fc1036ae20cf679b2f24ef3c51aadaee904ec46c"
             ],
             "1": [
-              "0xc24eec04dc1249719f31b386bcac98e041f46fa758b5c6b16aa8c6d4f930131",
-              "0x7e16d110efaedec0dd8df1c0a1cb4dec7deaf37618c42324aac60cfeb9b0706"
+              "0x8514d8ea912f9a30471435c1ecf7113cce7dc29fc80f8d077c0242d43539779",
+              "0x3b1b88ea198bcfa9c16ebf5d159dc210c2e948d49d00d724dbf0afe3d294467"
             ]
           },
           "seq": 0
         },
         {
           "station": "P-1",
-          "commitment": "aa6af182750303c938851acfe30a038f5fbfaddc1313fe92ffde8d5cd8fdb63d",
+          "commitment": "22ced93b0232a39e8c0306a81b99be45460bafd3c15f80d4c32fc60dbc92780a",
           "proof": {
             "-1": [
-              "0x3b8938b1c81d3d0213422219bc7f1f6b5fdf9e16c55b742dd8d940fd476bc9",
-              "0xb11c8531000215a74a5b8cfe88eab35eff22ef069892d60c698b04aca8a88c8"
+              "0x3d3427da22ddb19eb7569d37bfaa0b08a85152185b5526ec819e02ea731d154",
+              "0x2fcf2e49be7d6337731c949bcca03436528d8422ef6ee5e0a493a08fbce9e73"
             ],
             "0": [
-              "0xdc22d5bd82958dd2cd027393cce32df7ac713de4cbeadcf3414a902616e3331",
-              "0x743fcb93c95234e14ab034e3882466924432ea6443dc07da7007817256f128c"
+              "0x57474845a9db6321a7242602b57466cab96b8738eab16f228a1e08508c25d52",
+              "0xda0870d787cffb0504519a2be8061853f5903d1d455adcabe31b7611ee230ad"
             ],
             "1": [
-              "0x68d167a4a044e80e9a19ab169b9896edd172aa197abd1ad1bc8fd2b7f6420dd",
-              "0x806594c639b5e50cc4aa0385fe705ed98c947f5ab554641a5b049188a10e59d"
+              "0xa6430867106ab44f091c4f1e06a213cec3503b100ba1a8d77a205083e4b4490",
+              "0x905d3fca7bb0796265774f105bcefb0d65ededcc90ad574c168757b8a658caa"
             ]
           },
           "seq": 1
         },
         {
           "station": "P-2",
-          "commitment": "c1c139060ff81ab81f8b64c6272b546a5d36da29c87fb271db20c7c175b78cc7",
+          "commitment": "5adcafc8381e16a6eb456417cf0d5d2b3ca29ad1e1bb76021f94f8bc7fca6cad",
           "proof": {
             "-1": [
-              "0x27087e22ed863e2a3b653c3b82d82776ae078d380cc7dda1be61d50d01b85e8",
-              "0xea7efdee1aa9f12c919acbba9f9f425ddcfda3ff13fdeb2d3924392d7b19123"
+              "0x65c2c2fcde2c60c90459b9c7d1c8febd2809c4cda267de8bd4f29c4e16647d1",
+              "0x3206f14c4da35da4e85c02565fd103697df8baff078ce94c09f8412e40a7885"
             ],
             "0": [
-              "0x9c9d02e0626d1684c3ba87f7d96a6a235ca37825416c875c51144221bb6fd16",
-              "0xed64d62c2bfa4e5379b7ec04249f89962ed0c3994807f60acbabeff1a8106a0"
+              "0x793ce9f0f80a4588db0371ad18e45c0cc0496785438ae7819c3a4aa804a715a",
+              "0x7ab7c1ce98fa8d258a397e042af02184fec1d4fbac07292c08efbb7091fbf90"
             ],
             "1": [
-              "0x41a55128f0485eed9d2f4fa1b20c02f03b5b4ae2140d542495ec75cb4223e17",
-              "0xe42a72064467385e15b53bd67bcd7119713753262c1c8b36ba5af431f8d0b95"
+              "0x4feb613c126594838ae459c8cb07c7011d9995d79197b97bc2cea5546ba012b",
+              "0xa6b7b8631780738cca58240e02c59531a9bd22adae846e6e59399ce00696350"
             ]
           },
           "seq": 2
         },
         {
           "station": "P-3",
-          "commitment": "c79d64227937049d82ce8c7ce162388593cb937f242fe89edadb43e3d1e0a73f",
+          "commitment": "c0a758259a447aa395d93ebe019517dc25886e8465e78b03cbc8c28c63425180",
           "proof": {
             "-1": [
-              "0xab6542b8c170017a17fd09dfa0cf52e4a2ee1c54e3148a1bb7a99cc40ea8fd9",
-              "0xfbff753bdf78d4bb6d272f6527cb7c74368319e9a3b7ce1a78b10e253ed80e"
+              "0x14a78d307e43ae8d6a5ac511b3091dc0533e6d3d0cd606a64ba3de9675999e7",
+              "0x35f7d6fb27558803243a96585554274bd92aa961bf09349e5835af9f3f162b1"
             ],
             "0": [
-              "0xa18a946949c556e3018bcbd45deaed2bd729363946b79ed61872863efec5ec1",
-              "0x43b6652b8af01111af0651684ae57205e117ab89cbb7e1410bfa70201b0fcea"
+              "0x4ac44e314c8ef0269dae7ab3c8f2c41cad530014f69132c481a49448aa63bfe",
+              "0x690975b418a54196372f04abd0009c3faac8c59902094b396a22a980424218c"
             ],
             "1": [
-              "0x540d5a77c977f5d63a0ee469c3e08ecc74445e8cff8f32dbf09fe5e9c379cf",
-              "0x66e3616927a54d6ea2ac5bfc30d56dd805e9cf9a56ef8ddf9cc435e51df13ac"
+              "0x156a826f45ee2215156e2d2849eaa0f79a7f8b20ee4dad05d0384bdbf73a412",
+              "0xc2fdd19f868ba671afc3880abe5bab897d675a974aa902f7c60a0af078eead6"
             ]
           },
           "seq": 3
         },
         {
           "station": "P-4",
-          "commitment": "fc5faf5c56db21afd2062a629ff85e6758e22f9fa1a0ab9b0199ac56e725ce12",
+          "commitment": "959f53032eed64e954ef3020ae0f3955b78a77332c23e2b9fdb3b556d2ecf7ee",
           "proof": {
             "-1": [
-              "0x842b755eb3a800cb62a60ff72e0fabcd6bed4ce6a6c0427b68ec70fabec19c8",
-              "0x9872bc6565363650083640b929315e80824aeb15e3d4eed483b885190eff8d6"
+              "0x70a92d634d58ec6e75dc63bbfed9740bcb7f05bce6afe92ec7b0c43582968e9",
+              "0x5a3de70a3bec073c19b1aaf9a7a897e07499159705d7ccc4825c1f0c2004f46"
             ],
             "0": [
-              "0x339514e347bd1a9cabcad17220bf2af2578dbb82557dde673f34c4907d41f78",
-              "0x9c9e188951c9cb5c9854780987362bd08fc48091ea371d7b151c7d696353dba"
+              "0x1f3cc3c18a922817108688e35dfcd966da62af55b22315eed8edbb57bb19ee6",
+              "0xcc883b275ddf9618c010b301dc90ad0f63a3f961d5f14d7caf1e6d9e8a87784"
             ],
             "1": [
-              "0xf64f9958a607a0b3c5e9c282e0535d8403710e6bec92fa3ce46a2661838dd1f",
-              "0x2ed2427153bc27ddf6a18afcf9e3438d7d0f9deb4b6d3338a373de6d965a3ee"
+              "0xfdd2c420e8836680c07f34f0263d2195bad93cfba1832bbc9ab2a435898f36c",
+              "0x738203831208a01bc8d9a3c510308d156e59abd0bef2a325cab9af6e0a310"
             ]
           },
           "seq": 4
         },
         {
           "station": "P-5",
-          "commitment": "479b4c18bb340933ed2724d287658e6d74a9ae1a44171709cc45098fcd57eca0",
+          "commitment": "c75a55ac9da359fae5c450bb6e48edff1dfa255ca2d28dcfb95a3dbb4565eb6f",
           "proof": {
             "-1": [
-              "0x14486df9e349f67538983fd9228d5310f5ce2544419077a6000553c78592f4f",
-              "0x746be9119c01cffe178fe6df79dc7723bbc3230fe53433bbe3e8ec9c14397a5"
+              "0x16678929ce571df1588e8e5228f1f601b0324a7cb8b3439aecc3b2b417de06b",
+              "0x85d05e208490ae24460f2d8a30db15c2398337ceae149a146ab9637c75c7b63"
             ],
             "0": [
-              "0xdd50e7397313a943b693635921cd70e466abe698434e56692b0139f51fab4f5",
-              "0x13f1e3d81e8667bc5e76c1760c358059585236dcc7fd57314b4c5ee875a586d"
+              "0xb92fc55b8f734550c87d04d72022ef70a0761881c7243df3ea9ba9aa72f2263",
+              "0x3cec36b5d05601988c51b0ee2ede1f9578733ef2678d6d2eff094c13f1b5ee9"
             ],
             "1": [
-              "0x6914bf18efcf07a468152112c68d2875e0cc5e5dedb6d6f7656eef481368ee4",
-              "0x90a4f3afe298d520aa2bf4272e47a79c8474fad415e6d2b0b1e01654a5e5e08"
+              "0x2481fc0f596de4f4f0d571106ba7fb887812da2dc04c5c1b4cf7d419eeb674f",
+              "0xd2c6ca2b15af4dd8f583fabf1a69ddc087fca847ec20cdbba2936766ffd2324"
             ]
           },
           "seq": 5
         },
         {
           "station": "P-6",
-          "commitment": "82cf2fcb5834527252ccf9b352c402ec8035e9fd00b5991b606fa1548489a127",
+          "commitment": "46a703600d269255a5bd160ffa5f1180d9e956f8ef750769c7f8ae6e7c774a53",
           "proof": {
             "-1": [
-              "0x5fb7bca11b19179ece0729102eb62ebf88672ef12344a84046490a14cd2f341",
-              "0x66a3aa5ec4a178eb5f79fca1aaad5dc8dd629d25b31dfc7484da910b8c9aae1"
+              "0xadbedf9b2e87951a28c73f2a0f9f6e23b62b70d538872ad1df2f7f78435d887",
+              "0x11abb2e2d3b9f7d707a2a54f6d1ab64bcc03e0e50e636ef72020b7946b660f"
             ],
             "0": [
-              "0xe0bceba888dae859dfeaa610417e56a618d4d8a0d07116a8948f72aa77381f2",
-              "0x59a2930d9667dded2bedd0c1e7e13d2826ce61b19daca98b6f9f3a5ec8d322b"
+              "0x12243b011c7c0d8baa33d8b41b6a6a2d38ab225145b0d332f8a993a1bb377ae",
+              "0x1d3bbed16242f35d4edf2cf36631f91813ce985f1417919f3e43e55961398be"
             ],
             "1": [
-              "0x3dc484656c54214ee572531771533cc15874cdaf84f6f8e200de4c985079e8d",
-              "0xd3bbc1352625b10ffc978faded19703c116c0385c3276f77b4c0ca7b8be702b"
+              "0x640b391259d7a0fc2b192d6b54c48814da9e920c4cd33d09d7dff5cd708c208",
+              "0x1438064a671f3b0c39dcd50a727fc2e71181040c1202c3229c05d50ddd9617c"
+            ]
+          },
+          "seq": 6
+        }
+      ]
+    }
+  },
+  "vote4_day393_governance": {
+    "name": "Day 393 \u2014 Governance: rotating coordination authority",
+    "proposal_text": "Shall the constellation adopt rotating coordination authority tied to the Earth-facing window, per the proposal dispatched 2038.016?",
+    "initiator": "P-1",
+    "ring": [
+      "P-1",
+      "P-8",
+      "P-7",
+      "P-6",
+      "P-5",
+      "P-4",
+      "P-3",
+      "P-2"
+    ],
+    "timestamp": "2038.028.09:14:00",
+    "nonce": "6873dec34b82105bc1f8f6b4c6140ff8897a718c9fd4144c76c6f72c80081e84",
+    "proposal_hash": "b76a90867e920a2d6a9574e14519571027ef78fa3859a362f4fa2e90536e6052",
+    "n_voters": 7,
+    "n_structural_abstain": 1,
+    "net": 2,
+    "breakdowns": [
+      [
+        2,
+        5,
+        0
+      ],
+      [
+        3,
+        3,
+        1
+      ],
+      [
+        4,
+        1,
+        2
+      ]
+    ],
+    "R_total": "0x59a05e292d816e2ab191ae0a470c0720edb3fbffb5b735529bfb8ab57aacd98",
+    "C_total": "7f2e773bc91fce267623903930749e4ee6c0fd4e86e1fcc47821aa6ce1892c2e",
+    "individual_votes": {
+      "P-1": "FOR",
+      "P-8": "FOR",
+      "P-6": "AGAINST",
+      "P-5": "ABSTAIN",
+      "P-4": "AGAINST",
+      "P-3": "FOR",
+      "P-2": "AGAINST"
+    },
+    "blinding_factors": {
+      "P-1": "0xbf764152b51a79c321b05f50764463f7434c3567bfb8ce8f3c1f006d699b6bb",
+      "P-8": "0x386bba8543833d7df06d033e2a3674666654fd5844f469b0ad56d68e37b5037",
+      "P-6": "0xb0b9ecf8749cf05654062733cb5dd10b14aa238463219aaaabb29eec4a40cf2",
+      "P-5": "0x33584aa69c4548c8b8bef1aa28824987552f0127ba6e91ed292435fa32b85f2",
+      "P-4": "0x80388eefe6a30b9cf4eec1a807e262d687b6cdd8155d248283f0683f2f7293a",
+      "P-3": "0x717e190a39091f303cc91aa6a2a5c5fce17196b9525b4af92fed903fab64421",
+      "P-2": "0x8bf582b8045552fd60f7564f0828eb615ae019c0ba2ec92fad437b45efa422e"
+    },
+    "commitments": {
+      "P-1": "210cecbc0716be406645044ad41b518dbcc3dc35ae755166ee3fe473cdb35139",
+      "P-8": "027e5c5421ed92fc2ae0570675793a8a9c2bd057b4fcf15b7f15b4a5ff45ee9f",
+      "P-6": "4148bdd055cf4b9a9602a185ecca3327efa79ae323208c9ba12713b9b5dfc9e9",
+      "P-5": "98623d2e13aef8a49d2ecf2d9fb29326f44094e7f4669770239afd2f7c1b8140",
+      "P-4": "6cca402e91d80ebff64480c329c3524a9b3fb4f3137d09bf1527944cc449b129",
+      "P-3": "f0fcc049249020b552a784a324253431ebaf9bb42fd0a2123064ef64b90aa76f",
+      "P-2": "613cc9c940ef4a4f08221db3b55fb4d5facb78e08e189a8085f6bddbfb3fcd24"
+    },
+    "bundle": {
+      "protocol": "perihelion-vote-v2",
+      "proposal": "b76a90867e920a2d6a9574e14519571027ef78fa3859a362f4fa2e90536e6052",
+      "proposal_text": "Shall the constellation adopt rotating coordination authority tied to the Earth-facing window, per the proposal dispatched 2038.016?",
+      "nonce": "6873dec34b82105bc1f8f6b4c6140ff8897a718c9fd4144c76c6f72c80081e84",
+      "initiator": "P-1",
+      "timestamp": "2038.028.09:14:00",
+      "ring": [
+        "P-1",
+        "P-8",
+        "P-7",
+        "P-6",
+        "P-5",
+        "P-4",
+        "P-3",
+        "P-2"
+      ],
+      "entries": [
+        {
+          "station": "P-1",
+          "commitment": "210cecbc0716be406645044ad41b518dbcc3dc35ae755166ee3fe473cdb35139",
+          "proof": {
+            "-1": [
+              "0x64c597b5717c7d495317ac7a83ac14053de9b303f6f057103d368dad6d0858",
+              "0x99c5b4e1c561a78ca53f37ba8ac27d239d83a68e00cc85ec69dcc8ad7bb1e5b"
+            ],
+            "0": [
+              "0x6d473c8668f62275c13affd0118ce10d2bd7a210ee46470ef39ff865bc39a6d",
+              "0x52721657525ca8c93c29ced79b87ebf1e91a078de46fc1ab6c2e61e4ee5cb92"
+            ],
+            "1": [
+              "0xfcc2e7d911ea5a08a387a4952a909ed02353b7d7b2abcbd19f751ac799c23a3",
+              "0xa1811c66c7a2d6f632d0504fd4e7c55d7a319f244d63b9375e188c912f7e610"
+            ]
+          },
+          "seq": 0
+        },
+        {
+          "station": "P-8",
+          "commitment": "027e5c5421ed92fc2ae0570675793a8a9c2bd057b4fcf15b7f15b4a5ff45ee9f",
+          "proof": {
+            "-1": [
+              "0x99d23866faf6ae7a1bd1892874f4dae82efdac97dfdc5e3ca7ae5c029e21b92",
+              "0x3428cf7c44ac4a5dc65b27a7082d631e53867fde495b9514758a4e1dac0cca7"
+            ],
+            "0": [
+              "0xf83f118d1bee171fcf97eeca1b059c6fcbc277f5683a0c205c91114893b911e",
+              "0xd260b79c3ce1d52ab49cec7e8814bd19b71fbd726a9f7690239c81c96a6f1ea"
+            ],
+            "1": [
+              "0xa37a5ba3ab2eabfb1f638ec2a345eb3110d3f20808bad4c23786ddc7ddc084d",
+              "0xe065976e07dd3f41c52df127ab4ef34c6a110325aa696acb0e12433c8dbbbcc"
+            ]
+          },
+          "seq": 1
+        },
+        {
+          "station": "P-6",
+          "commitment": "4148bdd055cf4b9a9602a185ecca3327efa79ae323208c9ba12713b9b5dfc9e9",
+          "proof": {
+            "-1": [
+              "0x613cf9c46d41e5aa05b7e75678b1ce25f02f00d0485ca0e41bd659122057330",
+              "0xceaada55b2913df2a4627ebb91300fec80d768db6cec24ec35ab17ef98b9c84"
+            ],
+            "0": [
+              "0xd390c15b6d10850b3ba1c6685505a3db0486210c66aa2da12b7f514465a9fc4",
+              "0x3f21b5ba7bb34f50d5ba044eaebf5018e68ec86b5f7695e579eab0ed8cef2ba"
+            ],
+            "1": [
+              "0x750114c8cf24097d41b36ddd333c93c4e8f7af67b5cc4c8b27662bcf820fc77",
+              "0xf53bbdfd7531a6ed2875ecc53a518ae9dc8505b7cb5d1968e3b48dd367c1eb4"
+            ]
+          },
+          "seq": 2
+        },
+        {
+          "station": "P-5",
+          "commitment": "98623d2e13aef8a49d2ecf2d9fb29326f44094e7f4669770239afd2f7c1b8140",
+          "proof": {
+            "-1": [
+              "0x33c029363135eeb5c759b04b2aac0a2ff54cb16be1f8686c5605334faf53dae",
+              "0x5f40d6db2af677c4069790a4c5085ec1cfca625ed80cac220d6e4279ef4f94"
+            ],
+            "0": [
+              "0xf32dde9917a0dbbfd6d6c6d70215d71f0ee315f13d439a0a97c481abdfa62a5",
+              "0x75583b079e90b52b0ba8728739b915371c4d67d1b738b14bb6bdbea93e20e7d"
+            ],
+            "1": [
+              "0x1c7197bb2ab98d19badf10b5c455e024904e6e91d2fb458b71ed57ce0289ab",
+              "0x4776380ece8d8a0968af2a252f7d3fb7f80a14a749209277d80c06ccce970ca"
+            ]
+          },
+          "seq": 3
+        },
+        {
+          "station": "P-4",
+          "commitment": "6cca402e91d80ebff64480c329c3524a9b3fb4f3137d09bf1527944cc449b129",
+          "proof": {
+            "-1": [
+              "0x41bd2de7dd9e88f80ad78b3b3b6edc81c0966d88221bf19ef1febdb33d24eb5",
+              "0xce9b924488f3de59de72f9dd4006d3d7e760603ff474dedf7b0b670ddeaa6c0"
+            ],
+            "0": [
+              "0xb21a6effef02ea3fd18c324e27adc6c0f24a70efbe130bf600dc7e755ca3f4a",
+              "0x1439e3c6f0513fa2178f2be8de9a56d81fe2b02cd0e2ec55baa9537d067c276"
+            ],
+            "1": [
+              "0x2be09f8259b8371172248f2832a33b71ce6856941c98e79f75fc3324fb25cdd",
+              "0xbf339607c3f83e81954074c720e9ec85d3cba423cbb958cb5eacb464ece4e56"
+            ]
+          },
+          "seq": 4
+        },
+        {
+          "station": "P-3",
+          "commitment": "f0fcc049249020b552a784a324253431ebaf9bb42fd0a2123064ef64b90aa76f",
+          "proof": {
+            "-1": [
+              "0x98f0418ac12df52ff180fb72636c7294cc86597e3cd0512c8ce43624ec49184",
+              "0xcb579cddf70905956345f898c15147dc978eb885b2231085684f9530899d64c"
+            ],
+            "0": [
+              "0xaa9b26684ab3b771e0f2f4ec8ab7dc568d9fb5ef2130aa0c3a31ffac8235dfb",
+              "0xb95e97292d7fd8bdcbbf68a14e394769424d9b198a08a2b977fd34772c01247"
+            ],
+            "1": [
+              "0x7f243fa9bf23380407829948942587377aaefb0c7306c9c2c902fb55b52047",
+              "0x330d58c6ecbed7598b7bd77ebcfeae98dd5ce4bf89ba70b228f478b6b8af484"
+            ]
+          },
+          "seq": 5
+        },
+        {
+          "station": "P-2",
+          "commitment": "613cc9c940ef4a4f08221db3b55fb4d5facb78e08e189a8085f6bddbfb3fcd24",
+          "proof": {
+            "-1": [
+              "0x7ae85c89c891066a77b9d7e8e834c2d44db2e3f5435aa59b75835c654ed7707",
+              "0xbc20cc98f810cdeb3b139b8209971eff1facfa677577becbfead7aecb4200ee"
+            ],
+            "0": [
+              "0x2fc163ecdd417569a7128151cc65907ec3a267f76fb366dbeb5305e1dfcd83d",
+              "0xe579469dfde2dc4a530a4ccc2354f6a804ebf29023bedc134e7403542432a37"
+            ],
+            "1": [
+              "0x38071bc056df84dbb4f74f6fbb9c9d6aea30724c91b430c817a92b875c163f0",
+              "0x8174e5a07340ff31f4c34f02837d8efb40136cee5fe8ac3f9a7bc38c5c47d87"
+            ]
+          },
+          "seq": 6
+        }
+      ]
+    }
+  },
+  "vote5_day403_governance_revote": {
+    "name": "Day 403 \u2014 Governance re-vote: rotating coordination authority",
+    "proposal_text": "Shall the constellation adopt rotating coordination authority tied to the Earth-facing window?",
+    "initiator": "P-3",
+    "ring": [
+      "P-3",
+      "P-4",
+      "P-5",
+      "P-6",
+      "P-7",
+      "P-8",
+      "P-1",
+      "P-2"
+    ],
+    "timestamp": "2038.038.09:48:00",
+    "nonce": "9517b6b966be12042b58446debfcd778c3226e87e3d0459dc54f1d5e01c11691",
+    "proposal_hash": "6692a8ee967951fec8cc1121f66213d6edc4148d8194a0d84b3fcee2c202316a",
+    "n_voters": 7,
+    "n_structural_abstain": 1,
+    "net": 1,
+    "breakdowns": [
+      [
+        1,
+        6,
+        0
+      ],
+      [
+        2,
+        4,
+        1
+      ],
+      [
+        3,
+        2,
+        2
+      ],
+      [
+        4,
+        0,
+        3
+      ]
+    ],
+    "R_total": "0x84e05697b9b3d7aa1baca744eebd4999c79c7522a42946a10852ccdec9be608",
+    "C_total": "737435f6053edbcacb45ba1471d1655aba641d2a8480825f9784d7fb59bb97fa",
+    "individual_votes": {
+      "P-3": "AGAINST",
+      "P-4": "AGAINST",
+      "P-5": "ABSTAIN",
+      "P-6": "AGAINST",
+      "P-8": "FOR",
+      "P-1": "FOR",
+      "P-2": "AGAINST"
+    },
+    "blinding_factors": {
+      "P-3": "0xebfed884581630a4102b3b9f9eb138de5f0d0e3bdfaac90bb4a67b11ed370a8",
+      "P-4": "0x8c3556bd86ebbce0bb036ec1f13a2b54e9012b032e8563f68eff55f1b810f52",
+      "P-5": "0x6c654949de9e42099dd06d78b6518ce82483e40ecb5f4450f667c620a610833",
+      "P-6": "0xf054a56eac25d67b3e425289dece35bb5153ec7f0e4e2b993c7dc65ed88d5cb",
+      "P-8": "0xe38394f82a1c05e1f2827500c966b3834a7e915c8431fb2b8350d9891bebc77",
+      "P-1": "0xfd51ffc182253ed89fb9d8a0fbe3735c01ff2ef577e359e8a111555cf1a8080",
+      "P-2": "0xcf1ca3e3a3ac8ce5e22eef3f0467fbea42e6c096ad97579bf32438b2a516eba"
+    },
+    "commitments": {
+      "P-3": "8963944f5fc41967e321c42fa598d570c533562e67c27103330d640cc359046c",
+      "P-4": "a7ffe80f853b63ecfb8ab7f21a294f5f7202f355f634f4fc71b6fb6dde0f1092",
+      "P-5": "3b75234019765eeab6b6623fa1d70195409c5d1d057e5c487d54a151b5d2e243",
+      "P-6": "1920248330735e2e62f79aed924490725c766ac451bf595a3d0da09408f347aa",
+      "P-8": "5fcc6dc9b3fe46837b1d4d968d105b2e4e378212779123ad85b08a1859b43cc3",
+      "P-1": "2c7872dd037b4b55677515d7ebe7e248cece7b66a9142b6e049bde191e0a49fe",
+      "P-2": "693016e0228685dc2585a21cbb517311e57f1fea1be5b6a70f82f9d22350f1f3"
+    },
+    "bundle": {
+      "protocol": "perihelion-vote-v2",
+      "proposal": "6692a8ee967951fec8cc1121f66213d6edc4148d8194a0d84b3fcee2c202316a",
+      "proposal_text": "Shall the constellation adopt rotating coordination authority tied to the Earth-facing window?",
+      "nonce": "9517b6b966be12042b58446debfcd778c3226e87e3d0459dc54f1d5e01c11691",
+      "initiator": "P-3",
+      "timestamp": "2038.038.09:48:00",
+      "ring": [
+        "P-3",
+        "P-4",
+        "P-5",
+        "P-6",
+        "P-7",
+        "P-8",
+        "P-1",
+        "P-2"
+      ],
+      "entries": [
+        {
+          "station": "P-3",
+          "commitment": "8963944f5fc41967e321c42fa598d570c533562e67c27103330d640cc359046c",
+          "proof": {
+            "-1": [
+              "0x601060e9a7044d031fd4819f232c595e71f9513234367145a307c3c9f311797",
+              "0xb2d6b6c28ec77dc61f1d3f0759e78f4c34d598585eb5b739a127e4fa2241a88"
+            ],
+            "0": [
+              "0x46e8b40e968893e66f71fb9b3e92258c1c609e3af21e0bd327c01e531910f05",
+              "0x6d333f4a785a67a6b0f27ad2e759e37e3266109405c22d8825d691ea677f8da"
+            ],
+            "1": [
+              "0xaaf1ac53a5146166106ac9d69b8d2c02b957e933c56394d6fdf86caeb32a79f",
+              "0xb1b06c0ed625394ba8771ba782752a87a4cfda52f399c90920ab3ad4e7e1ad5"
+            ]
+          },
+          "seq": 0
+        },
+        {
+          "station": "P-4",
+          "commitment": "a7ffe80f853b63ecfb8ab7f21a294f5f7202f355f634f4fc71b6fb6dde0f1092",
+          "proof": {
+            "-1": [
+              "0x771ff1f26124d5ecd5ebeb2b7de7bc12af64c076a2d9c242000812d894a0c35",
+              "0x4b3b6fd0310d26f34fc61e07c50c530552099fb24272a7bddec3985b103311a"
+            ],
+            "0": [
+              "0xe12504fb080a499373f347de1f17b378ac036bb2de0fd877a7be0b00c7a4a15",
+              "0x48f14825e063af3e11698814253e25d550601f75518fb474adcb6780faeb06e"
+            ],
+            "1": [
+              "0x4f41990585cbe82f5877868ce5414759dcd028d3acce60c02889742003d4538",
+              "0x552efc60fc0e5f91790134c0665a00b0c0b9688af53705ef07df20bdfbed22"
+            ]
+          },
+          "seq": 1
+        },
+        {
+          "station": "P-5",
+          "commitment": "3b75234019765eeab6b6623fa1d70195409c5d1d057e5c487d54a151b5d2e243",
+          "proof": {
+            "-1": [
+              "0x24bcea5ac631b208faf15b73d9e95e6c86a7ef9f0a4b81ca9939978f6645f9",
+              "0xbb82a0f675b93b8750a3916dacdfa96f152c07344e8ec3698a6838064ea106d"
+            ],
+            "0": [
+              "0x21294ee6e65558420ecc746259b6ae887ac972d30ce4a6aa0e5e063c7910366",
+              "0xd537b3c370de1e8044c7013140b6d770e15675a7bdc0db57513174d493ce0c3"
+            ],
+            "1": [
+              "0x54ab99f90f9af115db63b41420cc858708b86c613041843f0f6b2a05fd70b35",
+              "0xae4c461a0b9355f2ef10a85f498d3057befbfa9f7404910d1fa4ccc2b834112"
+            ]
+          },
+          "seq": 2
+        },
+        {
+          "station": "P-6",
+          "commitment": "1920248330735e2e62f79aed924490725c766ac451bf595a3d0da09408f347aa",
+          "proof": {
+            "-1": [
+              "0x63841ea650760931353be24f11c158e44b106173e267841c35df5f728b3e38c",
+              "0xdf30f9fc6862c5aa8d98255d49633fed853bfa961e79250002010bbcfe07736"
+            ],
+            "0": [
+              "0xc4dd753457b0045972f8a03c134b1eafe0a2b81b05c0fab6499b1663843ba23",
+              "0xc99f53b0c513b2fff14d7fa99a2759363a0ac169e695c16b020c3e9b4069001"
+            ],
+            "1": [
+              "0xcf35cbaa762f88e5e4a11d3e0d290bb9280078d110bda587a47d5fd1cd15c22",
+              "0x8b2a5b282a46e97723e92806f9e9ccac49a4b741a1cf1e01d3304e8aadfc6cf"
+            ]
+          },
+          "seq": 3
+        },
+        {
+          "station": "P-8",
+          "commitment": "5fcc6dc9b3fe46837b1d4d968d105b2e4e378212779123ad85b08a1859b43cc3",
+          "proof": {
+            "-1": [
+              "0xb3c223dea43bd4ac15e1ae99848aa0a26cba5e786e94052269c824f069c7e3d",
+              "0x3aafa9e87c7e8f9646a03e2de8b269ca7d4b931d27a857db8dc040d344e0d57"
+            ],
+            "0": [
+              "0xeadcc4b2b0cd6a595e05d640d296ec849472f2dde79c890ce3afe71da5e6adf",
+              "0x489c3f1975d7787d6432c6b962280d6d513b505a02326f6e37f581331bc0820"
+            ],
+            "1": [
+              "0x8be973314a6d582649a2c42bec2f2748f53a35559cd41776b348ab0df5bb2eb",
+              "0x7f58b92c8b575ce7b29b1cfaae254f79af56293393987140595b03ef52086cd"
+            ]
+          },
+          "seq": 4
+        },
+        {
+          "station": "P-1",
+          "commitment": "2c7872dd037b4b55677515d7ebe7e248cece7b66a9142b6e049bde191e0a49fe",
+          "proof": {
+            "-1": [
+              "0xc72425978a97625ba1256ea9521c9501fb028a3ef93e4ee617495ca1a73089a",
+              "0xce312dd5f634f472518df1606de1c8915cbf32e5bc59f3c99ce5f54008ac07d"
+            ],
+            "0": [
+              "0x78b07a2efe8350ffb7c3a1511de701ce8ad6689fa5e4fcbf82c90df679d116d",
+              "0x791655dad9f4fb57642de5c25b4701d1d4f6a252ef7cb4088cd77a6773fc9eb"
+            ],
+            "1": [
+              "0x629fdd75b98e6d5c2d60b659d5d1c1933f06986685475c395a8b6d308955469",
+              "0xe14c5886220fcc58c1f0363de80eaf0cb3320408f3077d398c34e3879d73737"
+            ]
+          },
+          "seq": 5
+        },
+        {
+          "station": "P-2",
+          "commitment": "693016e0228685dc2585a21cbb517311e57f1fea1be5b6a70f82f9d22350f1f3",
+          "proof": {
+            "-1": [
+              "0x1a90423699d13ceb14b034b6f58e553fb642b00db81b6d5851fd81d4c6f7ae9",
+              "0xd8181c3614b79eb7f2a3f0a489ecaaf55b8e4c4b5fa31fc4ad598ba7e9413b8"
+            ],
+            "0": [
+              "0x707645679cfbfa7e49f27aee1372ffbbddf4a9f27d6f102218d79ebc9e186ea",
+              "0x18532d3460bd09508be588fd2a8ae350a9bb4be9e2e0c1c95618e7c0351375b"
+            ],
+            "1": [
+              "0xe5826d4fb2bbaba6592490dd3f30534abcf5de5a52512573bda4c1d005d267f",
+              "0x51d0630a69cbee1e86517c2a61600aede41eea88240a65035d4b055ef414cfb"
             ]
           },
           "seq": 6
