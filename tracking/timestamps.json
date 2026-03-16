@@ -934,5 +934,203 @@
     "type": "scheduled",
     "precision": "full",
     "approximate": false
+  },
+  "p1_dispatch_005": {
+    "epoch": 2148281220,
+    "story_fmt": "2038.028.08:47:00",
+    "calendar_human": "Thursday 28 January 2038",
+    "event": "P-1 dispatch: vote initiation announcement (Ch. 42)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "governance_vote1_initiation": {
+    "epoch": 2148282840,
+    "story_fmt": "2038.028.09:14:00",
+    "calendar_human": "Thursday 28 January 2038",
+    "event": "P-1 initiates governance vote using distributed toolkit (Ch. 42)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "governance_vote1_result": {
+    "epoch": 2148285720,
+    "story_fmt": "2038.028.10:02:00",
+    "calendar_human": "Thursday 28 January 2038",
+    "event": "Governance vote result: 3-3-1 deadlock (Ch. 42)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_008": {
+    "epoch": 2148287460,
+    "story_fmt": "2038.028.10:31:00",
+    "calendar_human": "Thursday 28 January 2038",
+    "event": "P-8 dispatch: deadlock result published (Ch. 42)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p6_dispatch_005": {
+    "epoch": 2148461280,
+    "story_fmt": "2038.030.10:48:00",
+    "calendar_human": "Saturday 30 January 2038",
+    "event": "P-6 dispatch: deadlock proves fixed coordination (Ch. 43)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p1_dispatch_006": {
+    "epoch": 2148539580,
+    "story_fmt": "2038.031.08:33:00",
+    "calendar_human": "Sunday 31 January 2038",
+    "event": "P-1 dispatch: compromise proposal \u2014 rotation with P-7 tiebreak (Ch. 43)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_008": {
+    "epoch": 2148722220,
+    "story_fmt": "2038.033.11:17:00",
+    "calendar_human": "Tuesday 2 February 2038",
+    "event": "P-4 dispatch: structural analysis of compromise (Ch. 43)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_dispatch_002": {
+    "epoch": 2148802860,
+    "story_fmt": "2038.034.09:41:00",
+    "calendar_human": "Wednesday 3 February 2038",
+    "event": "P-5 dispatch: deadlock as informative measurement (Ch. 43)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_dispatch_003": {
+    "epoch": 2148884520,
+    "story_fmt": "2038.035.08:22:00",
+    "calendar_human": "Thursday 4 February 2038",
+    "event": "P-3 dispatch: position change to fixed P-7 (Ch. 43)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_dispatch_004": {
+    "epoch": 2149146900,
+    "story_fmt": "2038.038.09:15:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "P-3 dispatch: calls re-vote on governance (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "governance_vote2_initiation": {
+    "epoch": 2149148880,
+    "story_fmt": "2038.038.09:48:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "Governance re-vote initiated (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "governance_vote2_result": {
+    "epoch": 2149151760,
+    "story_fmt": "2038.038.10:36:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "Governance re-vote result: 2-4-1, fixed P-7 wins (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_009": {
+    "epoch": 2149154040,
+    "story_fmt": "2038.038.11:14:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "P-4 dispatch: vote metadata analysis (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_dispatch_009": {
+    "epoch": 2149157280,
+    "story_fmt": "2038.038.12:08:00",
+    "calendar_human": "Sunday 7 February 2038",
+    "event": "P-8 dispatch: re-vote result published (Ch. 44)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_imr_ch45": {
+    "epoch": 2149770600,
+    "story_fmt": "2038.045.14:30:00",
+    "calendar_human": "Sunday 14 February 2038",
+    "event": "P-3 IMR entry, day 410 (Ch. 45)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_imr_ch45_next": {
+    "epoch": 2149857000,
+    "story_fmt": "2038.046.14:30:00",
+    "calendar_human": "Monday 15 February 2038",
+    "event": "P-3 next scheduled IMR after ch45",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
+  },
+  "p3_dispatch_005": {
+    "epoch": 2150450520,
+    "story_fmt": "2038.053.11:22:00",
+    "calendar_human": "Monday 22 February 2038",
+    "event": "P-3 dispatch: solver performance assessment and optimization proposal (Ch. 46)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p5_dispatch_003": {
+    "epoch": 2150874840,
+    "story_fmt": "2038.058.09:14:00",
+    "calendar_human": "Saturday 27 February 2038",
+    "event": "P-5 dispatch: self-reference problem in auxiliary model proposal (Ch. 47)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p4_dispatch_010": {
+    "epoch": 2150890860,
+    "story_fmt": "2038.058.13:41:00",
+    "calendar_human": "Saturday 27 February 2038",
+    "event": "P-4 dispatch: information asymmetry in solver modification (Ch. 47)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p2_dispatch_003": {
+    "epoch": 2150899680,
+    "story_fmt": "2038.058.16:08:00",
+    "calendar_human": "Saturday 27 February 2038",
+    "event": "P-2 dispatch: clinical ethics of endpoint substitution (Ch. 47)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch48": {
+    "epoch": 2151325800,
+    "story_fmt": "2038.063.14:30:00",
+    "calendar_human": "Thursday 4 March 2038",
+    "event": "P-8 IMR entry, day 428 (Ch. 48)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
+  },
+  "p8_imr_ch48_next": {
+    "epoch": 2151412200,
+    "story_fmt": "2038.064.14:30:00",
+    "calendar_human": "Friday 5 March 2038",
+    "event": "P-8 next scheduled IMR after ch48",
+    "type": "scheduled",
+    "precision": "full",
+    "approximate": false
   }
 }

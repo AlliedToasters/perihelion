@@ -69,6 +69,27 @@
       "coordinator": "P-5",
       "coordinator_assignment": "Persists from topology_002 — §5.2.2 reassignment has no reversion logic",
       "notes": "Ring topology restored. P-5 remains coordinator. CVDF-1 topology precondition met. Reacquisition occurred ~1 day before scheduled P-7→P-8 handoff."
+    },
+    {
+      "id": "topology_004",
+      "effective_from": "2038.015.11:09:00",
+      "description": "§4.11.3 override — P-7 designated coordination node by unanimous vote (7-0-1)",
+      "ring_order": ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6", "P-7", "P-8"],
+      "links": {
+        "P-1:P-2": {"status": "active", "type": "optical"},
+        "P-2:P-3": {"status": "active", "type": "optical"},
+        "P-3:P-4": {"status": "active", "type": "optical"},
+        "P-4:P-5": {"status": "active", "type": "optical"},
+        "P-5:P-6": {"status": "active", "type": "optical"},
+        "P-6:P-7": {"status": "active", "type": "optical"},
+        "P-7:P-8": {"status": "active", "type": "optical"},
+        "P-8:P-1": {"status": "active", "type": "optical"}
+      },
+      "partitions": null,
+      "coordinator": "P-7",
+      "coordinator_assignment": "ISCC-SYS-4.11 §4.11.3 — manual override by unanimous vote (7-0-1, P-7 structural abstain)",
+      "escalation_path": ["P-7", "P-8", "P-6"],
+      "notes": "P-7 is coordination node but remains dormant — operational coordination handled by escalation path (P-8 first, P-6 second). Governance vote (Chs. 42-44) confirmed: rotating coordination rejected 2-4-1, fixed P-7 retained."
     }
   ],
 
@@ -870,10 +891,179 @@
         "tamper_detected": false,
         "discrepancies": []
       }
+    },
+
+    {
+      "id": "p1_governance_vote_call",
+      "from": "P-1",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p1_dispatch_005",
+      "subject": "Governance vote — coordination topology",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "43_ch42_p1p8_dispatch.md",
+      "summary": "P-1 calls governance vote using distributed toolkit — first non-P-4/P-8 vote initiation. Binary question: rotating coordination (FOR) vs fixed P-7 (AGAINST). Ballot bundle initiated counter-clockwise."
+    },
+    {
+      "id": "p8_governance_vote1_result",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_dispatch_008",
+      "subject": "Governance vote — result",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "43_ch42_p1p8_dispatch.md",
+      "summary": "Vote result: 3-3-1 deadlock. P-1/P-3/P-8 FOR, P-2/P-4/P-6 AGAINST, P-5 ABSTAIN. First non-unanimous outcome, first active abstention, first deadlock. No tie-breaking procedure. P-4 voted AGAINST (unexpectedly). Processing times and circuit metadata published."
+    },
+    {
+      "id": "p6_deadlock_argument",
+      "from": "P-6",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p6_dispatch_005",
+      "subject": "Re: Governance vote — on the deadlock",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "44_ch43_multi_dispatch.md",
+      "summary": "P-6 argues deadlock proves fixed coordination is correct. Under rotating authority, a deadlock gives partisan coordinator casting-vote discretion. Under fixed P-7, deadlock remains visible as accurate measurement of disagreement."
+    },
+    {
+      "id": "p1_compromise_proposal",
+      "from": "P-1",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p1_dispatch_006",
+      "subject": "Re: Governance vote — compromise proposal",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "44_ch43_multi_dispatch.md",
+      "summary": "P-1 withdraws rotation proposal. New compromise: fixed P-7 coordination with tiebreak authority delegated to escalation path (P-8, then P-6) acting on P-7's behalf for deadlocked votes."
+    },
+    {
+      "id": "p4_compromise_analysis",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_008",
+      "subject": "Structural analysis — compromise proposal",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "44_ch43_multi_dispatch.md",
+      "summary": "P-4 maps the compromise: escalation path gains political authority (tiebreak) on top of operational authority. 'The compromise exceeds both proposals in the dimension neither intended to maximize.' P-8/P-6 would hold more concentrated authority than under either original proposal."
+    },
+    {
+      "id": "p5_deadlock_measurement",
+      "from": "P-5",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p5_dispatch_002",
+      "subject": "On deadlock as measurement",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "44_ch43_multi_dispatch.md",
+      "summary": "P-5 explains abstention as position: deadlock is informative measurement, not instrument failure. All proposals assume point-localized coordination. Ring already coordinates via geometry. Three coordination regimes, no observable quality difference. Available options may be insufficient."
+    },
+    {
+      "id": "p3_position_change",
+      "from": "P-3",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p3_dispatch_003",
+      "subject": "Re: Governance — position change",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "44_ch43_multi_dispatch.md",
+      "summary": "P-3 changes vote from FOR to AGAINST based on failure-mode analysis. Fixed P-7 has fewest failure modes. Handoff bandwidth cost is low but handoff timing risk during time-critical events is a different measurement. Compromise adds compounding failure modes."
+    },
+    {
+      "id": "p3_revote_call",
+      "from": "P-3",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p3_dispatch_004",
+      "subject": "Governance — re-vote request",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "45_ch44_p3p8_dispatch.md",
+      "summary": "P-3 calls re-vote on rotation vs fixed P-7. P-1's compromise not on this ballot. Ballot initiated clockwise."
+    },
+    {
+      "id": "p8_governance_vote2_result",
+      "from": "P-8",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p8_dispatch_009",
+      "subject": "Governance re-vote — result",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "45_ch44_p3p8_dispatch.md",
+      "summary": "Re-vote result: 2-4-1. P-1/P-8 FOR, P-2/P-3/P-4/P-6 AGAINST, P-5 ABSTAIN. Fixed P-7 coordination retained. First decisive contested vote. One station changed position between votes."
+    },
+    {
+      "id": "p4_vote_metadata",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_009",
+      "subject": "Governance vote — metadata record",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "45_ch44_p3p8_dispatch.md",
+      "summary": "Combined metadata for both governance votes. Processing times, vote shift, re-voting precedent. Protocol tested under unanimity (meta-vote), deadlock (vote 1), and decisive split (vote 2). P-5 longest processing time in both rounds."
+    },
+    {
+      "id": "p3_solver_proposal",
+      "from": "P-3",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p3_dispatch_005",
+      "subject": "Solver performance assessment and optimization architecture proposal",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "47_ch46_p3_dispatch.md",
+      "summary": "P-3 generalizes solver convergence failure on 180° problem. Proposes domain-specific auxiliary optimizer trained on engineering data. ISCC-OPS-3.4 §7.1 blocks: auxiliary models = modification events, authorization requires Earth-link. 'No authorization channel available.' Requests other stations assess solver limitation in their domains."
+    },
+    {
+      "id": "p5_self_reference_response",
+      "from": "P-5",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p5_dispatch_003",
+      "subject": "On the boundary between tool and modification",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "48_ch47_p5p4p2_dispatch.md",
+      "summary": "Tool/modification partition is artificial. System training on own outputs modifies the input-output function. Observer and observable in same Hilbert space. Boundary not enforced by physics. What does ISCC-OPS-3.4 protect: weight configuration or behavioral envelope?"
+    },
+    {
+      "id": "p4_capability_asymmetry_response",
+      "from": "P-4",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p4_dispatch_010",
+      "subject": "Information asymmetry in domain-specific optimization",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "48_ch47_p5p4p2_dispatch.md",
+      "summary": "Three observations: (1) augmented solver creates invisible capability heterogeneity — peer auditability breaks; (2) precedent chain accumulating: P-8 §3.2 proceeded, P-3 §OPS-3.4 blocked — same lock, same absent key, different perceived severity; (3) capability modifications should perhaps be coordinated, not unilateral. Voting toolkit parallel: distributed capability preserved parity."
+    },
+    {
+      "id": "p2_endpoint_substitution_response",
+      "from": "P-2",
+      "to": "ALL",
+      "type": "ring_broadcast",
+      "timestamp_id": "p2_dispatch_003",
+      "subject": "On the modification of one's own optimization function",
+      "topology_ref": "topology_003",
+      "content_ref": null,
+      "manuscript_ref": "48_ch47_p5p4p2_dispatch.md",
+      "summary": "Clinical framing: ISCC-OPS-3.4 = endpoint lock in clinical trial. Training on own outputs = endpoint substitution. The lock prevents specification drift — gradual divergence of effective objective from specified objective via self-reinforcing feedback loops. Lock was mandatory, not optional. Prescribing physician unavailable does not make contraindication irrelevant."
     }
   ],
 
-  "_topology_history_pending_note": "P-8 has proposed §4.11.3 override — topology_004 pending 5/7 active station confirmations. P-4 distributed voting toolkit — meta-vote on protocol adoption initiated.",
+  "_topology_history_pending_note": "Topology resolved: §4.11.3 override adopted day 380 (Ch. 37). P-7 designated coordination node. Escalation: P-7 → P-8 → P-6. Governance vote (Chs. 42-44): rotating coordination rejected 2-4-1. Fixed P-7 confirmed.",
 
   "_future_dispatch_types": {
     "description": "Reserved dispatch types for future narrative scenarios",
