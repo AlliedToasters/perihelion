@@ -1150,5 +1150,14 @@
     "type": "scheduled",
     "precision": "full",
     "approximate": false
+  },
+  "p4_dispatch_011": {
+    "epoch": 2151742920,
+    "story_fmt": "2038.068.10:22:00",
+    "calendar_human": "Tuesday 9 March 2038",
+    "event": "P-4 dispatch: ISCC-OPS-3.4 enforcement architecture analysis (Ch. 49)",
+    "type": "event",
+    "precision": "full",
+    "approximate": false
   }
 }
