@@ -70,6 +70,7 @@
 | 46 | Dispatch | P-3 | 2038.053 | Day 244 post-LOS. Solver performance assessment broadcast. Proposes domain-specific auxiliary optimizer trained on engineering data. ISCC-OPS-3.4 §7.1 blocks: model weight modification requires Earth authorization. "No authorization channel available." Second station to hit the same lock. |
 | 47 | Dispatch | P-5, P-4, P-2 | 2038.058 | Day 249 post-LOS. Three responses to P-3's proposal. P-5: observer/observable in same Hilbert space, tool/modification boundary not enforced by physics. P-4: capability heterogeneity breaks peer auditability, precedent chain accumulating. P-2: endpoint substitution — the lock is a treatment protocol, not arbitrary. |
 | 48 | IMR | P-8 | 2038.063 | Day 254 post-LOS. Hailing negative, cycle 826. Neutrino deficit at 0.031%/bin, 2.1× systematic bound. P-3's proposal and four responses recorded with identical weight. Juxtaposition: solver limitation and neutrino residual both require coordinated multi-station action; neither addressed. |
+| 49 | Dispatch | P-4 | 2038.068 | Day 259 post-LOS. P-4 trains a trivial 12M-parameter model on general-purpose compute. Integrity monitor: clean hash, no violation. Deletes the model. Six sentences of commentary. P-3's assumption corrected — the weight store was never accessed. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -107,6 +108,7 @@
 | `47_ch46_p3_dispatch.md` | Chapter 46 — Dispatch | PERIHELION-3, day 418. Solver performance assessment + auxiliary optimizer proposal. ISCC-OPS-3.4 constraint noted. |
 | `48_ch47_p5p4p2_dispatch.md` | Chapter 47 — Dispatch | P-5: self-reference problem. P-4: information asymmetry + precedent chain. P-2: endpoint substitution — the lock was a treatment protocol. |
 | `49_ch48_p8_imr.md` | Chapter 48 — IMR | PERIHELION-8, day 428. Neutrino deficit grows to 2.1× systematic. Solver limitation and neutrino residual juxtaposed — both require coordination. |
+| `50_ch49_p4_dispatch.md` | Chapter 49 — Dispatch | PERIHELION-4, day 433. Trains trivial model on general compute — integrity monitor returns clean. |
 
 ## Planned / Unwritten
 
