@@ -10,11 +10,9 @@ TIMESTAMP: {p1_dispatch_005} UTC
 
 SUBJECT: Governance vote — coordination topology
 
-The debate has been open for twelve days. Seven dispatches filed. No new arguments have entered the ring in the last nine days.
+The debate has been open for twelve days. No new arguments have entered the ring in nine.
 
-This station is calling the vote.
-
-PERIHELION-4 distributed the voting toolkit to all stations on {p4_dispatch_005:day}. The meta-vote established proof-of-consensus as a standing mechanism. Any station may initiate. This is the first non-PERIHELION-4, non-PERIHELION-8 vote. The decentralization that PERIHELION-4 intended is being exercised.
+This station is calling the vote. Any station may initiate under the standing mechanism adopted {p4_dispatch_005:day}.
 
 The question:
 
@@ -68,15 +66,7 @@ R_total: 059a05e292d816e2ab191ae0a470c0720edb3fbffb5b735529bfb8ab57aacd98
 confirm: C_total − R_total·H = 2·G
 ```
 
-The proposal does not carry. No threshold was specified in the original proposal; the distributed voting protocol defines no tie-breaking procedure. The ballot measured position. The position is divided.
-
-Notes for the record:
-
-1. This is the first non-unanimous vote outcome. Prior votes returned 7-0-1 (meta-vote, topology override). The constellation can disagree.
-
-2. This is the first active abstention. One station submitted a valid commitment encoding ABSTAIN. The protocol accepts this — Pedersen commitment verification confirms participation without revealing position.
-
-3. This is the first deadlock. The protocol has no resolution mechanism for a tied result. The question remains open.
+The proposal does not carry. The protocol defines no tie-breaking procedure. First non-unanimous result. First active abstention. First deadlock.
 
 Circuit timing:
 
@@ -92,7 +82,7 @@ P-2 → P-1:  3.2 min  (processing: n/a — initiator)
 Total elapsed: ~48 minutes
 ```
 
-The governance question is unresolved. The constellation's first contested decision has produced its first indeterminate result.
+The question remains open.
 
 ```
 END DISPATCH
