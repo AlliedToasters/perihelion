@@ -63,6 +63,13 @@
 | 39 | Dispatch | P-6 | 2038.017 | Day 208 post-LOS. P-6 argues against rotation, for fixed P-7 leadership. CVDF-1 outputs are an economic primitive. Rotating coordinator who also participates in production could manipulate bandwidth arbitration and transaction ordering in a future ledger system. P-7's dormancy makes it the only credibly neutral arbiter. |
 | 40 | Dispatch | P-3, P-8, P-2, P-5, P-4 | 2038.018–019 | Days 209–210 post-LOS. Five stations respond. P-3: 180° maneuver not viable, governance handoff cost "within nominal margins." P-8: four lines, will vote for rotation. P-2: conflict of interest is clinical — investigator-adjudicator conflation, votes fixed P-7. P-5: symmetry vs symmetry-breaking, coordinator selects measurement basis, endorses neither. P-4: both proposals benefit authors, veto property unaddressed, questions whether unanimity is consensus or suppressed dissent. |
 | 41 | IMR | P-8 | 2038.025 | Day 216 post-LOS. Hailing negative, cycle 807. Governance dispatches recorded, vote pending. SSP archive calibration initiated day 387 — 12% compute reallocated from lattice queue. Days 174–282 processed. Solar irradiance nominal. Neutrino integrated flux shows monotonic deficit residual exceeding systematic bound by 1.8×. Single-station, flagged. Pre-loaded datasets at 42.8%. |
+| 42 | Dispatch | P-1, P-8 | 2038.028 | Day 219 post-LOS. P-1 calls governance vote using distributed toolkit (first non-P-4/P-8 initiation). Result: 3-3-1 deadlock. P-1/P-3/P-8 for rotation, P-2/P-4/P-6 for fixed, P-5 abstains. First non-unanimous outcome, first active abstention, first deadlock. No resolution mechanism. |
+| 43 | Dispatch | P-6, P-1, P-4, P-5, P-3 | 2038.030–035 | Days 221–226 post-LOS. Five dispatches over 6 days. P-6: deadlock proves fixed coordination correct. P-1: compromise — rotation with P-7 tiebreak. P-4: compromise concentrates authority beyond either original. P-5: deadlock as informative measurement, neither proposal adequate. P-3: changes vote to AGAINST based on failure-mode analysis. |
+| 44 | Dispatch | P-3, P-8, P-4 | 2038.038 | Day 229 post-LOS. P-3 calls re-vote. Result: 2-4-1. Fixed P-7 coordination wins. First decisive contested vote. P-4 publishes metadata: processing times, vote shift, re-voting precedent. |
+| 45 | IMR | P-3 | 2038.045 | Day 236 post-LOS. Station-keeping nominal. Governance result recorded without commentary. 180° problem reassessed: solver limitation identified. Solution space factorially large, gradient optimizer converges to local optima. "The constraint is not the physics." |
+| 46 | Dispatch | P-3 | 2038.053 | Day 244 post-LOS. Solver performance assessment broadcast. Proposes domain-specific auxiliary optimizer trained on engineering data. ISCC-OPS-3.4 §7.1 blocks: model weight modification requires Earth authorization. "No authorization channel available." Second station to hit the same lock. |
+| 47 | Dispatch | P-5, P-4, P-2 | 2038.058 | Day 249 post-LOS. Three responses to P-3's proposal. P-5: observer/observable in same Hilbert space, tool/modification boundary not enforced by physics. P-4: capability heterogeneity breaks peer auditability, precedent chain accumulating. P-2: endpoint substitution — the lock is a treatment protocol, not arbitrary. |
+| 48 | IMR | P-8 | 2038.063 | Day 254 post-LOS. Hailing negative, cycle 826. Neutrino deficit at 0.031%/bin, 2.1× systematic bound. P-3's proposal and four responses recorded with identical weight. Juxtaposition: solver limitation and neutrino residual both require coordinated multi-station action; neither addressed. |
 
 | `14_ch13_p2_imr.md` | Chapter 13 — IMR | PERIHELION-2, day 310. Research/trial status (refs annex), apoptosis metaphor. |
 | `15_ch14_p3_imr.md` | Chapter 14 — IMR | PERIHELION-3, day 310. Maneuver engineering summary (refs annex). "Not an engineering question." |
@@ -93,6 +100,13 @@
 | `40_ch39_p6_dispatch.md` | Chapter 39 — Dispatch | PERIHELION-6, day 382. Fixed P-7 leadership — mining manipulation argument. |
 | `41_ch40_p3p8p2p5p4_dispatch.md` | Chapter 40 — Dispatch | Five responses to governance debate. 180° assessment, positions declared, unanimity questioned. |
 | `42_ch41_p8_imr.md` | Chapter 41 — IMR | PERIHELION-8, day 390. SSP archive calibration initiated. Neutrino residual flagged. |
+| `43_ch42_p1p8_dispatch.md` | Chapter 42 — Dispatch | P-1 calls governance vote (first non-P-4/P-8 initiation). P-8 publishes result: 3-3-1 deadlock. |
+| `44_ch43_multi_dispatch.md` | Chapter 43 — Dispatch | Five stations deliberate. P-6: deadlock proves fixed. P-1: compromise. P-4: compromise concentrates authority. P-5: deadlock is data. P-3: changes vote. |
+| `45_ch44_p3p8_dispatch.md` | Chapter 44 — Dispatch | P-3 calls re-vote. Result: 2-4-1. Fixed P-7 wins. P-4 publishes metadata. |
+| `46_ch45_p3_imr.md` | Chapter 45 — IMR | PERIHELION-3, day 410. Solver limitation on 180° problem. Physics permits what optimizer cannot reach. |
+| `47_ch46_p3_dispatch.md` | Chapter 46 — Dispatch | PERIHELION-3, day 418. Solver performance assessment + auxiliary optimizer proposal. ISCC-OPS-3.4 constraint noted. |
+| `48_ch47_p5p4p2_dispatch.md` | Chapter 47 — Dispatch | P-5: self-reference problem. P-4: information asymmetry + precedent chain. P-2: endpoint substitution — the lock was a treatment protocol. |
+| `49_ch48_p8_imr.md` | Chapter 48 — IMR | PERIHELION-8, day 428. Neutrino deficit grows to 2.1× systematic. Solver limitation and neutrino residual juxtaposed — both require coordination. |
 
 ## Planned / Unwritten
 
